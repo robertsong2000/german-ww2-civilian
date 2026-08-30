@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>占领最初几周 —— 电车当路障：交通等级票、柏林五月的重新开动与杜塞尔多夫防空洞里的最后枪杀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* BVG wartime fare-stage ticket: yellow stock, red Stufe III stamp, asphalt grit */
+:root {
+  --yell: #e8c43a;
+  --asphalt: #2a2a28;
+  --red: #b42820;
+  --cream: #f6eed4;
+  --ink: #1c1a16;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(90deg, #3a3a36 0 3px, #2e2e2a 3px 18px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.86;
+}
+.ticket {
+  max-width: 840px;
+  margin: 28px auto 70px;
+  background: var(--cream);
+  border: 10px solid var(--yell);
+  box-shadow: 0 0 0 4px var(--asphalt), 0 22px 40px rgba(0,0,0,.45);
+  padding: 22px 26px 36px;
+}
+.stufe {
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: .2em;
+  text-align: center;
+  color: var(--red);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+h1 {
+  font-family: "Fjalla One", "Noto Serif SC", sans-serif;
+  font-size: clamp(1.28rem, 3vw, 1.85rem);
+  line-height: 1.22;
+}
+.sub { margin: 10px 0 6px; color: #3a3428; font-size: 15.5px; }
+.when { font-size: 13px; color: #6a5e50; margin-bottom: 14px; }
+nav.toc {
+  background: var(--asphalt);
+  color: var(--yell);
+  padding: 14px 18px 10px;
+  margin: 8px 0 16px;
+}
+nav.toc h2 { font-family: "Fjalla One", sans-serif; font-size: 1.2rem; }
+nav.toc ol { margin: 6px 0 8px 1.2em; color: var(--cream); }
+nav.toc a { color: var(--yell); }
+.punch {
+  margin: 16px 0;
+  padding: 14px 16px 8px;
+  background: #fff8e8;
+  border-left: 10px solid var(--yell);
+}
+.punch.red { background: var(--asphalt); color: var(--cream); border-left-color: var(--red); }
+.punch.red a { color: var(--yell); }
+.punch.red .note { color: #b8a888; }
+.k {
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: .14em;
+  font-size: 13px;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+.punch.red .k { color: var(--yell); }
+h2 {
+  font-family: "Fjalla One", "Noto Serif SC", sans-serif;
+  font-size: 1.22rem;
+  margin: 4px 0 8px;
+}
+.note { font-size: 13.5px; color: #6a5e50; margin-top: 8px; }
+a { color: #8a2018; }
+ul { margin: 6px 0 10px 1.2em; }
+li { margin: 6px 0; }
+footer {
+  text-align: center;
+  margin-top: 22px;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: .12em;
+  font-size: 13px;
+  color: #6a5e50;
+}
+</style>
+</head>
+<body>
+<article class="ticket">
+  <p class="stufe">VERKEHRSSTUFE III · NUR ROTER FAHRAUSWEIS</p>
+  <h1>占领最初几周 —— 电车当路障：交通等级票、柏林五月的重新开动与杜塞尔多夫防空洞里的最后枪杀</h1>
+  <p class="sub">烧焦的电车被填进碎石，堵在路口。最高交通等级只让拿红票的强制劳工上车。城市重新响起来的那几周，强奸、枪杀和热粥同时发生。</p>
+  <p class="when">调研时间：2026-08-30 21:50 CST · 平民史系列第36期 · 废墟零时 / 强制劳工日常的子角度</p>
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#bvg">从运人到堵路</a></li>
+      <li><a href="#rhine">莱茵河两岸不是同一天解放</a></li>
+      <li><a href="#now">2025：防空洞里的八天</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="punch" id="theme">
+    <p class="k">LOCH 01</p>
+    <h2>本期主题</h2>
+    <p>本报告写的是投降前后那几周的街道，不是战役地图。柏林交通公司（BVG）自己的档案博客根据 2015 年企业史《从红到棕：BVG 1929–1945》写：纳粹化的市营交通撑到最后。1945 年 2 月柏林被宣布为“要塞”后，烧剩的电车车厢填满瓦砾，改成路障。4 月 25 日晚，下施普雷电厂中弹，最后一班地铁停住。5 月 2 日柏林投降，BVG 正式停运。11 天后公共汽车先动，14 日地铁局部恢复，20 日电车再上街。</p>
+    <p>杜塞尔多夫纪念馆 2025 年 4 月 8 日至 9 月 28 日在历史防空洞办《杜塞尔多夫 1945：城里的过活》。九个人、八个具体日子：莱茵河西岸 3 月 3 日已被美军解放，东岸的党、国防军和警察却在最后几周把恐怖拧紧。犹太女人埃尔娜·埃切特 3 月 4 日在上卡塞尔醒来，第一次知道自己自由了。警察维克托·哈尼施费格尔仍在港口和卡尔库默森林亲手枪杀强制劳工。</p>
+  </section>
+
+  <section class="punch" id="findings">
+    <p class="k">LOCH 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>最后能上车的，往往是红票上的强制劳工。</strong> BVG 设“交通等级”：一级只让步行上班超过 30 分钟的人乘车；二级提到 60 分钟；最高的三级，只有基础设施、医院、电厂与军工里持红票的（强制）劳工能坐。平民去水泵和粮店才是日常。电车运人，也运货，最后运瓦砾去堵路。车站当防空洞，隧道被纳粹“出于战术理由”自行炸毁——南北线隧道被引爆、大面积进水。公司史：约四分之三电车、一半以上地铁列车、几乎全部公共汽车受损；接触网近乎全毁。</li>
+      <li><strong>重新开动不是田园诗。</strong> 5 月 13 日公共汽车，14 日地铁，20 日电车。Explaining History 播客 2025 年 10 月 7 日综述麦凯《柏林》、埃文斯与奈马克：最糟几周配给约 1100 卡路里；建筑工、运输工有时多一点，卡路里也在买忠诚。黑市立刻出现。地铁和电车重新响，是城市拒绝静止，也是新政权要看见秩序。哈尔德·耶纳《余波》提醒：废墟妇女的砖链常被拍成道德重生，实际多是组织起来的、微薄报酬的、拒绝可能扣配给的劳动。</li>
+      <li><strong>解放日按街道分裂。</strong> 杜塞尔多夫市政新闻 2025-04-07：美军 3 月 3 日到达莱茵河西岸城区，此后六周河是战线，两岸互打炮。西岸纳粹已经结束；东岸政权追随者急剧激化。埃尔泽·戈雷斯藏朋友，埃尔娜·舒尔霍夫藏犹太丈夫，都立刻更危险。哈尼施费格尔的枪杀写进同一场展。解放不是全市同一声汽笛。</li>
+      <li><strong>苏联占领的最初几周同时是报复与接管。</strong> 奈马克写双重性：性暴力与财产掠夺是真实的；行政结构也迅速搭起来，好让生活“正常”、让共产党权力扎根。乌布利希的口令——“必须看起来民主，但一切得在我们手里”——是 6–7 月的市政演出。平民日记里羞耻与自怜并排，对犹太邻居的迟来同情与“我们什么都不知道”并排。不能用苏军暴行去抵消大屠杀；也不能用大屠杀去抹掉那些周里德国女人的创伤。两件事必须同句。</li>
+      <li><strong>BVG 员工的死亡不能写成中性职业牺牲。</strong> 公司博客承认：无数员工死于战争与纳粹。纳粹化的“样板企业”把人运进军工厂，也把强制劳工的红票当成最后的乘车许可。修轨道的手，有的刚从这套等级票里活下来。</li>
+    </ul>
+  </section>
+
+  <section class="punch" id="bvg">
+    <p class="k">LOCH 03</p>
+    <h2>从运人到堵路</h2>
+    <p>要塞城市把公共交通拆成工事。平民很少再乘那几班还能动的车：活着比时刻表重要。填满瓦砾的车厢堵在路口，是政权把民用基础设施当成最后武器。5 月 20 日电车再响，轨道还从这些残骸旁边经过。</p>
+  </section>
+
+  <section class="punch" id="rhine">
+    <p class="k">LOCH 04</p>
+    <h2>莱茵河两岸不是同一天解放</h2>
+    <p>埃切特在西岸自由醒来的那天，东岸的藏匿者更危险。哈尼施费格尔的枪口对着强制劳工，不是对着“命运”。2025 年的防空洞展把受害者与凶手放进同一条时间轴：过活，也包括谁在最后几天仍有权杀人。</p>
+  </section>
+
+  <section class="punch" id="now">
+    <p class="k">LOCH 05</p>
+    <h2>2025：防空洞里的八天</h2>
+    <p>《杜塞尔多夫 1945》是市政纪念系列“杜塞尔多夫在记：战争结束与解放八十年”的核心特展，已于 2025 年 9 月 28 日结束。柏林 BVG 的网志把企业黑暗章放上网，注明出处是迪尔克斯、帕赫、贝克那本 2015 年社史。Explaining History 的 2025 年 10 月长文把最初几周写成三重纠缠：说不清的道德清算、靠饥饿与即兴维持的城市重启、反法西斯民主辞令掩护下的新威权骨架。德国历史博物馆 2025 年 5 月 24 日至 11 月 23 日的《展出暴力》则把镜头反过来：被德国占领的欧洲，在 1945–1948 年怎样用展览把纳粹罪行钉上墙。读电车票，要同时读防空洞里的九个名字，以及被占领者比占领者更早开始的展示。</p>
+  </section>
+
+  <section class="punch red" id="sources">
+    <p class="k">LOCH 06</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>BVG 档案博客：交通等级、电车路障、4 月 25 日停电、5 月 13/14/20 日复运。<br><a href="https://nachgefragt.bvg.de/zeitreise-bvg-schlacht-um-berlin/" target="_blank" rel="noopener">https://nachgefragt.bvg.de/zeitreise-bvg-schlacht-um-berlin/</a></li>
+      <li>杜塞尔多夫市政新闻 2025-04-07：特展 4 月 8 日至 9 月 28 日，埃切特、舒尔霍夫、哈尼施费格尔。<br><a href="https://www.duesseldorf.de/aktuelles/news/detailansicht/newsdetail/ausstellung-duesseldorf-1945-ueberleben-in-der-stadt-vorgestellt-1" target="_blank" rel="noopener">https://www.duesseldorf.de/aktuelles/news/detailansicht/newsdetail/ausstellung-duesseldorf-1945-ueberleben-in-der-stadt-vorgestellt-1</a></li>
+      <li>LokalKlick 2025-04-10：莱茵河为战线六周、西岸 3 月 3 日解放。<br><a href="https://lokalklick.eu/2025/04/10/ausstellung-duesseldorf-1945-ueberleben-in-der-stadt-vorgestellt/" target="_blank" rel="noopener">https://lokalklick.eu/2025/04/10/ausstellung-duesseldorf-1945-ueberleben-in-der-stadt-vorgestellt/</a></li>
+      <li>Explaining History 2025-10-07：占领最初几周的饥饿、性暴力、电车重启与乌布利希。<br><a href="https://explaininghistory.org/2025/10/07/complicity-and-survival-berliners-in-the-first-weeks-of-soviet-occupation-1945/" target="_blank" rel="noopener">https://explaininghistory.org/2025/10/07/complicity-and-survival-berliners-in-the-first-weeks-of-soviet-occupation-1945/</a></li>
+      <li>德国历史博物馆《展出暴力》数据页：2025-05-24 至 11-23，约 360 件展品。<br><a href="https://www.dhm.de/ausstellungen/gewalt-ausstellen-erste-ausstellungen-zur-ns-besatzung-in-europa-1945-1948/daten-und-fakten/" target="_blank" rel="noopener">https://www.dhm.de/ausstellungen/gewalt-ausstellen-erste-ausstellungen-zur-ns-besatzung-in-europa-1945-1948/daten-und-fakten/</a></li>
+      <li>H-Soz-Kult 展评：战后最初几年欧洲如何把纳粹占领罪行做成展览。<br><a href="https://www.hsozkult.de/exhibitionreview/id/reex-154842" target="_blank" rel="noopener">https://www.hsozkult.de/exhibitionreview/id/reex-154842</a></li>
+    </ol>
+  </section>
+
+  <section class="punch" id="lesson">
+    <p class="k">LOCH 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，公共交通是权力的轨道。红票决定谁还能上车，碎石决定哪辆车去堵路。时刻表停的那天，要塞逻辑写完最后一章。</p>
+    <p>第二，写柏林五月电车再响，下一句写哈尼施费格尔的枪，再下一句写苏军占领最初几周的性暴力。过活不是洗白，报复不是抵消。</p>
+    <p>第三，解放按街区发生。莱茵河西岸的自由早晨，是东岸藏匿者更危险的早晨。不要把“1945 年春天”说成一个日期。</p>
+    <p>第四，2025 年的防空洞展已经落幕。BVG 的网志还在。读“重建正常”之前，先读交通等级三级：最后合法的乘客，是军工里的强制劳工。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第36期 · 交通等级票风 · 20260830_2150</footer>
+</article>
+</body>
+</html>
