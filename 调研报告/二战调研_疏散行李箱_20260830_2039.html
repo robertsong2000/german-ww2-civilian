@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>只带一只箱子 —— 七十五厘米的限额：防空洞行李、外汇局清单与仍在寻找主人的私人物品</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Evacuation suitcase stencil: luggage tags, destination stickers, worn leather */
+:root {
+  --leather: #3d2a1c;
+  --tag: #f3e6c8;
+  --ink: #1a120c;
+  --red: #b42318;
+  --navy: #1c3d66;
+  --string: #c4a574;
+  --worn: #6b4a32;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(135deg, #4a3426 0 18px, #3d2a1c 18px 36px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.84;
+}
+.case {
+  max-width: 860px;
+  margin: 28px auto 72px;
+  background:
+    radial-gradient(ellipse at 80% 0, rgba(196,165,116,.25), transparent 40%),
+    var(--tag);
+  padding: 22px 24px 36px;
+  box-shadow: 0 18px 0 var(--leather), 12px 12px 0 rgba(0,0,0,.25);
+  border: 10px solid var(--leather);
+  position: relative;
+}
+.case::after {
+  content: "";
+  position: absolute;
+  top: 18px; right: 22px;
+  width: 54px; height: 54px;
+  border: 3px solid var(--red);
+  border-radius: 50%;
+  opacity: .35;
+  transform: rotate(-12deg);
+}
+.handle {
+  font-family: "Stardos Stencil", sans-serif;
+  letter-spacing: .16em;
+  text-align: center;
+  color: var(--red);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+h1 {
+  font-family: "Stardos Stencil", "Noto Serif SC", sans-serif;
+  font-size: clamp(1.34rem, 3.2vw, 1.88rem);
+  line-height: 1.22;
+}
+.sub { margin: 10px 0 6px; color: #4a3428; font-size: 15.5px; }
+.when { font-size: 13px; color: var(--worn); margin-bottom: 14px; }
+nav.toc {
+  background: var(--navy);
+  color: var(--tag);
+  padding: 14px 18px 10px;
+  margin: 8px 0 16px;
+  transform: rotate(-0.4deg);
+  box-shadow: 4px 4px 0 var(--leather);
+}
+nav.toc h2 {
+  font-family: "Stardos Stencil", sans-serif;
+  font-size: 1.28rem;
+  color: #f0d48a;
+}
+nav.toc ol { margin: 6px 0 8px 1.2em; }
+nav.toc a { color: #f3e6c8; }
+.tag {
+  margin: 16px 0;
+  padding: 16px 18px 10px 28px;
+  background: #fff8e8;
+  border: 2px solid var(--leather);
+  position: relative;
+  box-shadow: 3px 4px 0 rgba(61,42,28,.2);
+}
+.tag::before {
+  content: "";
+  position: absolute;
+  left: 8px; top: 18px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--string);
+  box-shadow: inset 0 0 0 3px var(--leather);
+}
+.tag.navy { background: var(--navy); color: var(--tag); }
+.tag.navy a { color: #f0d48a; }
+.tag.navy .note { color: #c8b896; }
+.tag.red { background: #f8e0d4; border-color: var(--red); }
+.k {
+  font-family: "Stardos Stencil", sans-serif;
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+.tag.navy .k { color: #f0d48a; }
+.tag h2 {
+  font-family: "Stardos Stencil", "Noto Serif SC", sans-serif;
+  font-size: 1.24rem;
+  margin-bottom: 8px;
+}
+p { margin: 0 0 11px; }
+ul, ol.body { margin: 0 0 11px 1.2em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 10px 0 14px;
+  padding: 8px 14px;
+  border-left: 5px solid var(--red);
+  font-style: italic;
+  background: rgba(180,35,24,.08);
+}
+.note { font-size: 13.5px; color: #5a4636; }
+.sources a { color: #8a2818; word-break: break-all; }
+footer {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 3px dashed var(--leather);
+  text-align: center;
+  font-family: "Stardos Stencil", sans-serif;
+  letter-spacing: .1em;
+  color: var(--worn);
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .case { margin: 10px; padding: 14px 12px 28px; border-width: 6px; }
+}
+</style>
+</head>
+<body>
+<!-- Evacuation suitcase stencil: luggage tags, destination stickers, worn leather -->
+<article class="case">
+  <p class="handle">1 KOFFER · 75 CM · NICHT MEHR</p>
+  <header>
+    <h1>只带一只箱子 —— 七十五厘米的限额：防空洞行李、外汇局清单与仍在寻找主人的私人物品</h1>
+    <p class="sub">德国人被允许带一只约七十五厘米的箱子进掩体。犹太人每个箱子要交一份打字清单。集中营里的箱子被拆开，戒指和照片至今还在阿罗尔森等家人</p>
+    <p class="when">调研时间：2026-08-30 20:39 CST · 平民史系列第29期 · 儿童疏送 / 空袭邻里的子角度</p>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#bunker">掩体门口那只多出来的箱子</a></li>
+      <li><a href="#list">清单比箱子先走</a></li>
+      <li><a href="#now">2025–2026：箱子还在路上</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="tag" id="theme">
+    <p class="k">ETIKETT 01 · ABFAHRT</p>
+    <h2>本期主题</h2>
+    <p>本报告不写东部大逃亡的雪路，写更早、更日常的那只箱子：空袭警报响了，能带什么进掩体；被炸后能带什么去疏散点；被迫出境时，箱子里的每一件东西要先变成表格。</p>
+    <p>巴登—符腾堡学校门户转引米夏埃尔·福德罗维茨《掩体世界》：1942 年 9 月 18 日《防空掩体规章》补则——因空间不足，每人只准带一件约 75 厘米长的箱子大小的行李。多出来的，放到门外侧墙，别挡路。被炸过、只剩最后一点家当的人，最恨这条。</p>
+  </section>
+
+  <section class="tag" id="findings">
+    <p class="k">ETIKETT 02 · INHALT</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>掩体行李是被规训过的恐惧。</strong>人们逐渐只带配给卡、证件、照片、存折、首饰、手电筒、防毒面具、毯子和换洗衣物，预备房子没了。孩子的“固定掩体行李”是最喜欢的玩具。有人仍用手推车塞满东西。掩体管理员把多出来的拦在门外。福德罗维茨记下争吵：理智若不胜，带太多行李的人会被拒绝进入。</li>
+      <li><strong>犹太人的箱子先经过外汇局。</strong>法兰克福外汇局 S 处 1939 年须知：原则上只准带 1933 年 1 月 1 日以前的“旧产”；金、铂、银、宝石、珍珠压到最低——自己的婚戒、银怀表、每人两套四件银餐具，其余银器每件不超过 40 克、每人总计不超过 200 克。每个箱子、每只货箱都要单独打字清单，一式两份。专家上门核对。假报按外汇法严惩。</li>
+      <li><strong>清单写完，箱子仍可能被拍卖。</strong>汉堡关键文献网亨德里克·阿尔特霍夫：贝蒂·莱维 1939 年 11 月起走汉堡外汇局程序，清单十页；现金兑换手续费 1936 年 10 月起 81%，1939 年 9 月起 96%。DEGO 税通常等于购价的 100%。1940 年 2 月 25 日母女经阿姆斯特丹去南非，货运因战争滞留汉堡—艾尔贝克恩斯特·福格特运输行。1941 年 9 月盖世太保查封，肖普曼拍卖行公开拍卖。约 3000 只被称为“犹太人箱子”的集装箱滞留汉堡港，不来梅哈芬约 1000 只。LostLift 数据库正在把这些货还原给后人。</li>
+      <li><strong>集中营里的私人物品被编成“财物”。</strong>阿罗尔森档案 #StolenMemory：1963 年馆藏超过 4700 个装前囚犯私人物品的信封；至今约一半已归还本人或后代。拉文斯布吕克纪念地 2026 年 7 月 9 日至 8 月 5 日在原指挥部前院展出折叠式海运集装箱巡展，免费，每日 10–18 时。2025 年 7 月，哈利娜·库哈奇克的孙女们在纪念地领回祖母的戒指。涅奥涅拉·多博伊奇娜 1944 年 5 月被盖世太保送进拉文斯布吕克，首饰与题词照片仍在等家人。</li>
+      <li><strong>2026 年箱子同时出现在三条展线上。</strong>斯图加特“行李箱故事”：7 月 27 日起分散在十个地点，10 月 9 日回到巴登—符腾堡故乡之家五十周年。维利·勃兰特故居“一只柏林箱子”：6 月 5 日至 9 月 27 日展出工人摄影师菲德·施特鲁克 1941 年在吕措广场用旧报纸包好、装进木箱的约三千张底片；2015 年 5 月 24 日儿子在距装箱处两公里的地方打开它，现展约 120 幅。</li>
+    </ul>
+  </section>
+
+  <section class="tag red" id="bunker">
+    <p class="k">ETIKETT 03 · LUFTSCHUTZ</p>
+    <h2>掩体门口那只多出来的箱子</h2>
+    <blockquote>因空间不足，每位掩体来访者只准携带一件约七十五厘米长的箱子大小的行李。——1942 年 9 月 18 日防空掩体规章补则</blockquote>
+    <p>这是“民族同志”的限额。它把恐惧量化成厘米。门外那只多出来的箱子，对刚被炸光的人是最后的家；对管理员是堵塞逃生通道的障碍。争吵写进北德掩体史，不是因为德国人小气，是因为国家把生存空间分配到了门口。</p>
+  </section>
+
+  <section class="tag navy" id="list">
+    <p class="k">ETIKETT 04 · DEVISEN</p>
+    <h2>清单比箱子先走</h2>
+    <p>同一套政权，对犹太人的箱子更早、更细。不得写“一批内衣”，要写“五块桌布、十二条厨房巾”。冰箱、收音机、打字机、钢琴要写品牌和出厂编号。专家上门。莱维为被划掉的电炉申辩：到了国外她也许必须在同一间房里做饭和睡觉。货物仍没跟上人。港里的“犹太人箱子”被打开、被拍卖。买的人是邻居、是商人、是整个协作网。</p>
+    <p>德国主妇把玩具塞进 75 厘米箱子的时候，另一套清单已经把银勺按克称过。读疏散，下一句写没收。</p>
+  </section>
+
+  <section class="tag" id="now">
+    <p class="k">ETIKETT 05 · 2026</p>
+    <h2>2025–2026：箱子还在路上</h2>
+    <p>故乡之家问参观者：若只能带一只箱子，你会装什么。问法温柔，历史不温柔。阿罗尔森把被偷走的记忆装进四个改装集装箱走欧洲；2026 年 8 月 20–27 日还到了基辅“克拉科夫”文化集群。菲德·施特鲁克的木箱活过了战争，因为他是柏林工人摄影师，不是被点名的犹太人。三种箱子不要被做成同一种感伤。</p>
+  </section>
+
+  <section class="tag sources" id="sources">
+    <p class="k">ETIKETT 06 · QUELLEN</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。</p>
+    <ol class="body">
+      <li>巴登—符腾堡学校门户转引福德罗维茨：1942-09-18 掩体行李 75 厘米限额。<br><a href="https://www.schule-bw.de/faecher-und-schularten/gesellschaftswissenschaftliche-und-philosophische-faecher/landeskunde-landesgeschichte/module/epochen/nachkriegszeit/tiefbunker_feuerbacher_bahnhof-luftschutzraum-fluechtlingsunterkunft-atombunker/D1_Gepaeck.pdf" target="_blank" rel="noopener">https://www.schule-bw.de/faecher-und-schularten/gesellschaftswissenschaftliche-und-philosophische-faecher/landeskunde-landesgeschichte/module/epochen/nachkriegszeit/tiefbunker_feuerbacher_bahnhof-luftschutzraum-fluechtlingsunterkunft-atombunker/D1_Gepaeck.pdf</a></li>
+      <li>法兰克福 1933–1945：外汇局 S 处 1939 年犹太移民搬家货物须知。<br><a href="https://www.frankfurt1933-1945.de/beitraege/auswanderung-und-zuzug-von-ausserhalb/beitrag/dokument-merkblatt-der-devisenstelle-s-frankfurt-fuer-die-mitnahme-von-umzugsgut-durch-juedische-auswanderer-1939" target="_blank" rel="noopener">https://www.frankfurt1933-1945.de/beitraege/auswanderung-und-zuzug-von-ausserhalb/beitrag/dokument-merkblatt-der-devisenstelle-s-frankfurt-fuer-die-mitnahme-von-umzugsgut-durch-juedische-auswanderer-1939</a></li>
+      <li>汉堡关键文献：贝蒂·莱维搬家清单、DEGO、盖世太保拍卖与 LostLift。<br><a href="https://schluesseldokumente.net/beitrag/althoff-umzugsgutverzeichnis-betty-levy" target="_blank" rel="noopener">https://schluesseldokumente.net/beitrag/althoff-umzugsgutverzeichnis-betty-levy</a></li>
+      <li>勃兰登堡纪念地基金会：#StolenMemory 拉文斯布吕克巡展 2026-07-09 至 08-05。<br><a href="https://www.stiftung-bg.de/en/news/stolenmemory-traveling-exhibition-2026/" target="_blank" rel="noopener">https://www.stiftung-bg.de/en/news/stolenmemory-traveling-exhibition-2026/</a></li>
+      <li>阿罗尔森档案：#StolenMemory（1963 年逾 4700 封，约一半已归还）。<br><a href="https://arolsen-archives.org/en/participate/stolenmemory/" target="_blank" rel="noopener">https://arolsen-archives.org/en/participate/stolenmemory/</a></li>
+      <li>巴登—符腾堡故乡之家：行李箱故事，2026-07-27 起，10-09 汇合。<br><a href="https://www.hdhbw.de/koffer-geschichten" target="_blank" rel="noopener">https://www.hdhbw.de/koffer-geschichten</a></li>
+      <li>维利·勃兰特故居之友：一只柏林箱子，2026-06-05 至 09-27。<br><a href="https://www.fkwbh.de/ausstellung/ein-berliner-koffer" target="_blank" rel="noopener">https://www.fkwbh.de/ausstellung/ein-berliner-koffer</a></li>
+    </ol>
+  </section>
+
+  <section class="tag" id="lesson">
+    <p class="k">ETIKETT 07 · LEKTION</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，行李限额是政治。75 厘米写的是掩体秩序，也写谁的家当可以留在门外。</p>
+    <p>第二，犹太人的箱子先变成表格。打字清单、旧产截止日期、按克称的银勺，是掠夺的办公手续。人走了，港里的货还可能被拍卖给邻居。</p>
+    <p>第三，有的私人物品从未被允许带走。阿罗尔森仍在找 1963 年那四千多封的另一半家人。2026 年集装箱停在拉文斯布吕克指挥部前院。</p>
+    <p>第四，展览爱问“你会装什么”。先回答：谁有权装，谁的箱子被打开，谁的戒指还在档案袋里。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第29期 · 疏散行李箱贴纸风 · 20260830_2039
+  </footer>
+</article>
+</body>
+</html>
