@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时照相机 —— 快门上的国界：还能把胶卷寄回家的人，以及必须上交机身的人</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Darkroom safelight, bellows black, brass lens ring */
+:root {
+  --safe: #c43b28;
+  --bellows: #121014;
+  --brass: #c4a574;
+  --paper: #ece4d4;
+  --mute: #7a6e62;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 18% 12%, #5a1814 0%, var(--bellows) 42%),
+    repeating-linear-gradient(180deg, #1a1618 0 3px, #121014 3px 6px);
+  color: var(--paper);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.bellows {
+  max-width: 820px;
+  margin: 32px auto 80px;
+  background: #1c181a;
+  border: 1px solid var(--brass);
+  box-shadow: 0 28px 50px rgba(0,0,0,.55), inset 0 0 80px rgba(196,59,40,.08);
+  padding: 24px 26px 36px;
+  position: relative;
+}
+.bellows::after {
+  content: "";
+  position: absolute;
+  left: 18px; right: 18px; bottom: 10px;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, #2a2428 0 10px, #161214 10px 14px);
+  opacity: .7;
+}
+.kicker {
+  font-family: "Prata", serif;
+  letter-spacing: .22em;
+  font-size: 13px;
+  color: var(--safe);
+  text-align: center;
+}
+h1 {
+  font-family: "Prata", "Noto Serif SC", serif;
+  font-size: clamp(1.22rem, 3.4vw, 1.82rem);
+  font-weight: 400;
+  line-height: 1.28;
+  margin: 8px 0 10px;
+}
+.sub { font-size: 15.5px; color: #ddd4c4; }
+.when { font-size: 13.5px; color: var(--mute); margin: 8px 0 14px; }
+nav.toc {
+  background: #2a1210;
+  border-left: 4px solid var(--safe);
+  padding: 12px 16px 10px;
+  margin: 8px 0 16px;
+}
+nav.toc h2 { font-family: "Prata", serif; font-size: 1.25rem; color: var(--brass); }
+nav.toc ol { margin: 6px 0 4px 1.3em; }
+nav.toc a { color: #e8c4b8; }
+.neg {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #241c1e;
+  border-bottom: 3px solid var(--brass);
+}
+.neg.light {
+  background: var(--paper);
+  color: #1a1412;
+  border-bottom-color: var(--safe);
+}
+.neg.light a { color: #8a2e22; }
+.st {
+  font-family: "Prata", serif;
+  letter-spacing: .14em;
+  font-size: 12px;
+  color: var(--safe);
+  margin-bottom: 4px;
+}
+.neg.light .st { color: #8a2e22; }
+h2 {
+  font-family: "Prata", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 4px 0 8px;
+}
+.neg ul { margin: 6px 0 4px 1.2em; }
+.neg li { margin: 8px 0; }
+a { color: var(--brass); }
+footer {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: var(--mute);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<article class="bellows">
+  <p class="kicker">ASA 64 · RSHA 1941 · FELDPOST</p>
+  <h1>战时照相机 —— 快门上的国界：还能把胶卷寄回家的人，以及必须上交机身的人</h1>
+  <p class="sub">德国平民把相机写成还能留下一张脸。犹太人必须登记并交出机身。邻居用同一类镜头拍摄被押走的人。胶卷可以寄回家，机身不许带上遣送列车。</p>
+  <p class="when">调研时间：2026-08-31 03:35 CST · 平民史系列第58期 · 战争信件日记 / 配给种族边界的子角度</p>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#topic">本期主题</a></li>
+      <li><a href="#find">核心发现</a></li>
+      <li><a href="#film">胶卷</a></li>
+      <li><a href="#shutter">上交</a></li>
+      <li><a href="#now">2026：暗房还在讲，表格还在问“您有画吗”</a></li>
+      <li><a href="#src">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="neg light" id="topic">
+    <p class="st">F/01</p>
+    <h2>本期主题</h2>
+    <p>本报告写快门上的国界。克里斯托夫·克罗伊茨穆勒统计：1927 年德国约有两百万台相机，约占人口百分之三；到 1939 年约百分之十。多数人用的是廉价盒式相机，不是徕卡。标准黑白片感光度约 64 ASA，要有足够的光。1942 年 3 月起，高速公路、铁道和列车也禁止入镜。德国男人还把胶卷塞进战地邮局，寄回家冲。</p>
+    <p>同一只镜头，对犹太人写成没收。1941 年 11 月，系统遣送开始的同时，帝国保安总局下令禁止犹太人拥有相机。传单写明：遣送列车上不许带相机。亚伯拉罕·皮萨雷克 1941 年被完全禁止摄影，必须上交机身，去蔡司—伊康做强制劳工。卡罗拉·勒布 1941 年 10 月 13 日写信给孩子：我们坐在行李中间，人们拍照、围观。德国邻居的快门还在响。响已经不是中性的。</p>
+  </section>
+
+  <section class="neg" id="find">
+    <p class="st">F/02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>拍照先被写成民族共同体的消遣。</strong> 克罗伊茨穆勒：到开战前，约十分之一的德国人有相机。官方禁拍的是工事和航空视角，后来加上公路与列车。德国平民还被鼓励把照片寄给前线。相册写成亲密，也写成资格：谁还被允许按快门。</li>
+      <li><strong>胶卷可以回家，机身不许上车。</strong> 卡尔斯霍斯特德俄博物馆：威廉·迈尔把占领区拍的胶卷经战地邮局寄回布克斯特胡德冲印；遗孀交出二十二卷 135 胶卷，装在战时美极汤料纸盒里。条目 2025 年 2 月 5 日仍在更新。德国士兵的底片能回家。犹太人的机身不许上遣送列车。</li>
+      <li><strong>1941 年 11 月把镜头从犹太手里抽走。</strong> 美国大屠杀纪念馆：当局要求犹太人交出“对战争重要”的财物，包括收音机、相机、自行车、电器。克罗伊茨穆勒：并非人人都立刻服从保安总局的令。不服从的下一句写在传单上：车上不许带。</li>
+      <li><strong>职业摄影师先被关进犹太机构，再被收走机器。</strong> 《摄影史》2026 年第 180 期：皮萨雷克 1933 年起只能给犹太报刊和机构拍照，留下五千余张犹太自助的影像；1941 年摄影被彻底禁止，相机上交，强制劳动于蔡司—伊康。他能活下来，靠的是“特权混合婚姻”，以及 1943 年 2 月罗森街抗议。</li>
+      <li><strong>厂把民用相机让给军队。</strong> 阿罗尔森：莱茨厂在战时几乎转为军用光学；1942 年起只为国防军生产相机。宣传连用它拍前线。强制劳工住在厂旁营房。韦茨拉尔 2025/26 年为艾尔西·屈恩—莱茨办展。走进展厅之前，先问：当年谁的机身必须交出去。</li>
+    </ul>
+  </section>
+
+  <section class="neg light" id="film">
+    <p class="st">F/03</p>
+    <h2>胶卷</h2>
+    <p>德国女人把寄回家的胶卷写成还能看见。看见的是被承认有权留下影像的人。汤料盒里的二十二卷，写的是还被允许按快门的下巴。胶卷已经不是中性的。</p>
+  </section>
+
+  <section class="neg" id="shutter">
+    <p class="st">F/04</p>
+    <h2>上交</h2>
+    <p>上交不是借用。上交是把取景器从一种人手里拧下来，再交给另一种人去拍摄前者被押走。勒布坐在行李上，人们拍照、围观。皮萨雷克把机身交出去。邻居的快门还在响。</p>
+  </section>
+
+  <section class="neg light" id="now">
+    <p class="st">F/05</p>
+    <h2>2026：暗房还在讲，表格还在问“您有画吗”</h2>
+    <p>《摄影史》第 180 期 2026 年刊出皮萨雷克专文，注释写着 2026 年 1 月 15 日仍在核对生平库。卡尔斯霍斯特胶卷盒条目 2025 年 2 月 5 日更新。勃兰登堡州主档 2026 年 4 月 13 日上线网上展《您有画吗？》：遣送前的表格要犹太人申报财产；约四万二千份帝国财政档案将核到 2026 年 9 月底。相机若出现在那张表上，已经不是业余爱好。</p>
+  </section>
+
+  <section class="neg" id="src">
+    <p class="st">F/06</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>美国大屠杀纪念馆：犹太人须交出收音机、相机、自行车等“对战争重要”的财物。<br><a href="https://encyclopedia.ushmm.org/content/en/article/german-jews-during-the-holocaust" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/en/article/german-jews-during-the-holocaust</a></li>
+      <li>克罗伊茨穆勒：相机普及率、1941 年 11 月禁持、遣送列车禁带相机；勒布 1941-10-13 信中写人们拍照围观。<br><a href="https://doi.org/10.1515/9783110746464-010" target="_blank" rel="noopener">https://doi.org/10.1515/9783110746464-010</a></li>
+      <li>《摄影史》2026 年第 180 期：皮萨雷克 1941 年上交相机，强制劳动于蔡司—伊康。<br><a href="https://fotogeschichte.info/bisher-erschienen/hefte-ab-176/180/fruebis" target="_blank" rel="noopener">https://fotogeschichte.info/bisher-erschienen/hefte-ab-176/180/fruebis</a></li>
+      <li>阿罗尔森：莱茨厂军用相机、强制劳工与韦茨拉尔 2025/26 展览。<br><a href="https://arolsen-archives.org/stories/welttag-der-fotografie/" target="_blank" rel="noopener">https://arolsen-archives.org/stories/welttag-der-fotografie/</a></li>
+      <li>卡尔斯霍斯特博物馆：迈尔经战地邮局寄回的阿克发胶卷盒，元数据更新 2025-02-05。<br><a href="https://berlin.museum-digital.de/object/82052" target="_blank" rel="noopener">https://berlin.museum-digital.de/object/82052</a></li>
+      <li>勃兰登堡州主档：2026-04-13 网上展《您有画吗？》，遣送前财产申报。<br><a href="https://blha.brandenburg.de/blha/de/kontakt/presse/ansicht/~13-04-2026-online-ausstellung-besitzen-sie-gemaelde-ns-kunstraub-in-den-akten-der-finanzverwaltung" target="_blank" rel="noopener">https://blha.brandenburg.de/blha/de/kontakt/presse/ansicht/~13-04-2026-online-ausstellung-besitzen-sie-gemaelde-ns-kunstraub-in-den-akten-der-finanzverwaltung</a></li>
+    </ol>
+  </section>
+
+  <section class="neg light" id="lesson">
+    <p class="st">F/07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，相册不只管纪念，也管谁还能按快门。谁能把胶卷寄回家，谁必须上交机身，写在同一场遣送里。</p>
+    <p>第二，写德国平民拍照，下一句写 1939 年约十分之一的人有相机。再下一句写 1941 年 11 月犹太人被禁止拥有相机。再下一句写邻居对着行李堆按快门。取景器不是中性的。</p>
+    <p>第三，不要把“大家都爱拍照”写成所有人共用一只镜头。拍照的下一句是：车上不许带相机。</p>
+    <p>第四，2026 年期刊还在给皮萨雷克写注释，财政档案还在问“您有画吗”。走进展厅之前，先问：当年谁的机身必须交出去。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第58期 · 暗袋红灯风 · 20260831_0335</footer>
+</article>
+</body>
+</html>
