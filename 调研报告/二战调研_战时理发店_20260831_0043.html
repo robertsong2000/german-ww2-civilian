@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时理发店 —— 镜子里的国界：同行砸店、分开的剃刀，以及毒气室前仍要剪发的手艺</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Chrome salon mirror: tile grout, clipper steel, rouge accent */
+:root {
+  --tile: #f3eee6;
+  --chrome: #b8c2c8;
+  --grout: #d4cdc2;
+  --steel: #2a3034;
+  --rouge: #9c3a32;
+  --ink: #1c1814;
+  --mute: #6a6258;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    linear-gradient(90deg, #2a3034 0 28px, transparent 28px),
+    repeating-linear-gradient(0deg, #e8e2d8 0 47px, var(--grout) 47px 48px),
+    repeating-linear-gradient(90deg, #e8e2d8 0 47px, var(--grout) 47px 48px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.mirror {
+  max-width: 820px;
+  margin: 28px auto 72px;
+  background: var(--tile);
+  border: 14px solid var(--chrome);
+  box-shadow:
+    inset 0 0 0 2px #eef2f4,
+    0 18px 40px rgba(0,0,0,.35);
+  padding: 22px 26px 36px;
+}
+.kicker {
+  font-family: "Poiret One", sans-serif;
+  text-align: center;
+  letter-spacing: .22em;
+  font-size: 14px;
+  color: var(--rouge);
+  margin-bottom: 8px;
+}
+h1 {
+  font-family: "Poiret One", "Noto Serif SC", sans-serif;
+  font-size: clamp(1.2rem, 3.2vw, 1.72rem);
+  line-height: 1.28;
+}
+.sub { margin: 10px 0 6px; font-size: 15.5px; }
+.when { font-size: 13.5px; color: var(--mute); margin-bottom: 12px; }
+nav.toc {
+  background: var(--steel);
+  color: var(--tile);
+  padding: 12px 16px 8px;
+  margin: 8px 0 16px;
+}
+nav.toc h2 { font-family: "Poiret One", sans-serif; font-size: 1.2rem; }
+nav.toc ol { margin: 6px 0 8px 1.25em; }
+nav.toc a { color: var(--chrome); }
+.chair {
+  margin: 14px 0;
+  padding: 14px 16px 10px;
+  background: #fffaf3;
+  border-bottom: 4px solid var(--chrome);
+  box-shadow: 0 1px 0 var(--grout);
+}
+.chair.dark {
+  background: var(--steel);
+  color: var(--tile);
+  border-bottom-color: var(--rouge);
+}
+.chair.dark a { color: var(--chrome); }
+.chair.dark .st { color: var(--chrome); }
+.st {
+  font-family: "Poiret One", sans-serif;
+  font-size: 14px;
+  letter-spacing: .14em;
+  color: var(--rouge);
+}
+h2 {
+  font-family: "Poiret One", "Noto Serif SC", sans-serif;
+  font-size: 1.22rem;
+  margin: 4px 0 8px;
+}
+a { color: var(--rouge); }
+ul { margin: 6px 0 10px 1.2em; }
+li { margin: 7px 0; }
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Poiret One", sans-serif;
+  font-size: 13px;
+  color: var(--mute);
+  letter-spacing: .08em;
+}
+</style>
+</head>
+<body>
+<article class="mirror">
+  <p class="kicker">DAMEFRISÖR · JUDE RAUS · NICHT DIESELBE KLINGE</p>
+  <h1>战时理发店 —— 镜子里的国界：同行砸店、分开的剃刀，以及毒气室前仍要剪发的手艺</h1>
+  <p class="sub">德国女人照着镜子烫头，把战争写成还能出门的日子。街对面的犹太理发师先被同业砸店，再被条例赶出手工业。镜子还在。坐进椅子的资格已经分层。</p>
+  <p class="when">调研时间：2026-08-31 00:43 CST · 平民史系列第44期 · 战时女性 / 配给种族边界的子角度</p>
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#salon">同业的镜子</a></li>
+      <li><a href="#blade">分开的剃刀</a></li>
+      <li><a href="#now">2025–2026：日常史里的椅子</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="chair" id="theme">
+    <p class="st">SCHNITT 01</p>
+    <h2>本期主题</h2>
+    <p>本报告写理发椅上的国界。1933 年 4 月 1 日抵制日之后，冲锋队已经会堵在“犹太店”门口。手工业里的理发店特别近：同街、同业、同镜子。斯图加特加布伦贝格的雅各布·普罗伊斯 1927 年开女宾店，周一给退休者和失业者减价，雇到六个人。1933 年 5 月 22 日，“主要是理发师”的人群冲进店，砸、抢、把他打到失聪。同业会刊把这写成“净化不适合手工业的分子”。店招在欢呼里被摘下。</p>
+    <p>1938 年 11 月 12 日戈林签署《将犹太人排除出德国经济生活条例》，自 1939 年 1 月 1 日起禁止犹太人独立经营手工业。德国历史博物馆 LeMO：1938/39 财年帝国收入至少百分之九来自“雅利安化”进项。美国大屠杀纪念馆中文条目 2025 年 4 月 21 日仍写：到 1938 年约三分之二犹太企业停业或贱卖。战争打响后，德国平民继续去“自己人”的店里剪头。椅子空出来的方式，不是时尚。</p>
+  </section>
+
+  <section class="chair" id="findings">
+    <p class="st">SCHNITT 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>同业先于法令动手。</strong> 普罗伊斯案里，行会阻挠他考师傅，报纸称他“著名的共产党、而且还是犹太人”——战后赔偿档案找不到他入党的证据。暴力被写成维护价格。德国理发师站在自己的店门口，看着邻居的镜子被砸碎。这不是抽象的“经济排犹”，是同一条街上的抢生意。</li>
+      <li><strong>法令把剪刀收归种族。</strong> GHDI 收录的条例原文：犹太人不得经营零售、邮购、独立手工业，违者警察关闭。LeMO 写：小城商人、医生、律师欢迎对犹太竞争者的抵制。理发店属于会被欢迎关掉的那种近身行业。镜子换主人，顾客可以假装什么都没换。</li>
+      <li><strong>占领区把“还能刮脸”做成羞辱时刻表。</strong> 犹太电讯社 1939 年 9 月：摩拉维亚格丁区禁止犹太人进入“雅利安”理发店。1941 年 8 月 13 日报道波希米亚—摩拉维亚：犹太人只能在周二、周五下午 2 点到 3 点去理发店，给犹太人刮脸的剃刀必须与非犹太顾客分开。同一把椅子，刀片先分类。布拉格 1942 年 5 月 29 日进一步禁止犹太人进理发店，也禁止理发师上门。</li>
+      <li><strong>德国犹太人连家里的剪刀也被收走。</strong> 维克多·克莱姆佩勒日记脉络（纽克里蒂恩 2021 年综述）：禁令清单长到包括交回理发推子、发剪和梳子。德国客厅里的“自己剪”也被禁止。卫生、仪表、出入店门，全部写成种族行政。</li>
+      <li><strong>手艺在特雷布林卡被改成谋杀工序。</strong> 特雷布林卡博物馆：亚伯拉罕·邦巴 1913 年生于比托姆，在琴斯托霍瓦当理发师，1942 年 9 月 25 日与家人运到特雷布林卡二号营。家人死于毒气室。他先分拣衣物，数周后编入“剪发突击队”，在女囚进毒气室前剪头发。他记得有一天，同事被迫给自己的妻子和姐妹剃头。美国大屠杀纪念馆保存朗兹曼《浩劫》在以色列理发店里的访谈：假装给顾客剪头，讲的是毒气室。德国街上的“正常发型”，和营里被命令“别剪成猴子、让她们以为要洗澡”，是同一套手艺的两端。</li>
+    </ul>
+  </section>
+
+  <section class="chair dark" id="salon">
+    <p class="st">SCHNITT 03</p>
+    <h2>同业的镜子</h2>
+    <p>德国女人在战时仍去女宾店，把烫头写成没有崩溃的证据。肥皂和热水已经配给，店里的泡沫变少，镜子还亮。亮着的镜子证明：这把椅子是留给被承认的人的。普罗伊斯逃到圣保罗再开女宾店。斯图加特的同业会刊不必再提他。缺席被写成行业净化。</p>
+  </section>
+
+  <section class="chair" id="blade">
+    <p class="st">SCHNITT 04</p>
+    <h2>分开的剃刀</h2>
+    <p>保护国的一小时时段不是方便犹太人，是把他们从下午的客流里剜出去。分开的剃刀把“污染”做成可操作的卫生。德国平民顾客看见的是自己准时坐上椅子。他们不必看见刀片柜的另一格。</p>
+  </section>
+
+  <section class="chair dark" id="now">
+    <p class="st">SCHNITT 05</p>
+    <h2>2025–2026：日常史里的椅子</h2>
+    <p>格尔利茨收藏馆 2025 年 3 月 21 日至 2026 年 2 月 15 日在凯泽特鲁茨堡展《格尔利茨的国家社会主义——战争结束八十年》，强调 1933–1945 的日常经验和中间色：协会被雅利安化，街上有人消失。万湖会议纪念教育中心 2025 年 3 月 6 日至 4 月 3 日承办巡展《恶性循环》；该馆长期用朗兹曼片中特雷布林卡理发师片段培训学徒，题目就是“审美规范与种族主义”。斯图加特 Stolpersteine 页仍钉着普罗伊斯的店址。美国馆雅利安化条目 2025 年 4 月 21 日修订。镜子还在街上。看发型之前，先看谁被允许坐下来。</p>
+  </section>
+
+  <section class="chair" id="sources">
+    <p class="st">SCHNITT 06</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>斯图加特 Stolpersteine：犹太理发师雅各布·普罗伊斯，1933-05-22 同业砸店。<br><a href="https://www.stolpersteine-stuttgart.de/biografien/jakob-preuss-gablenberger-hauptstr-29/" target="_blank" rel="noopener">https://www.stolpersteine-stuttgart.de/biografien/jakob-preuss-gablenberger-hauptstr-29/</a></li>
+      <li>GHDI：1938-11-12《将犹太人排除出德国经济生活条例》，1939-01-01 起禁止独立手工业。<br><a href="https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/verordnung-zur-ausschaltung-der-juden-aus-dem-deutschen-wirtschaftsleben-12-november-1938" target="_blank" rel="noopener">https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/verordnung-zur-ausschaltung-der-juden-aus-dem-deutschen-wirtschaftsleben-12-november-1938</a></li>
+      <li>DHM / LeMO：“雅利安化”，1938/39 财年至少百分之九的帝国收入来自该项。<br><a href="https://www.dhm.de/lemo/kapitel/ns-regime/wirtschaft/arisierung" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/ns-regime/wirtschaft/arisierung</a></li>
+      <li>USHMM 百科中文“雅利安化”：约三分之二企业停业或贱卖（页脚印 2025-04-21）。<br><a href="https://encyclopedia.ushmm.org/content/zh/article/aryanization" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/zh/article/aryanization</a></li>
+      <li>犹太电讯社 1939-09-22：格丁区禁止犹太人进雅利安理发店。<br><a href="https://www.jta.org/archive/anti-jewish-curbs-enforced-in-bohemia-moravia" target="_blank" rel="noopener">https://www.jta.org/archive/anti-jewish-curbs-enforced-in-bohemia-moravia</a></li>
+      <li>犹太电讯社 1941-08-13：保护国犹太人仅周二、五 14–15 时理发，剃刀必须分开。<br><a href="https://www.jta.org/archive/new-humiliating-laws-issued-for-jews-in-the-czech-protectorate" target="_blank" rel="noopener">https://www.jta.org/archive/new-humiliating-laws-issued-for-jews-in-the-czech-protectorate</a></li>
+      <li>特雷布林卡博物馆：亚伯拉罕·邦巴，剪发突击队。<br><a href="https://muzeumtreblinka.eu/en/informacje/bomba-abraham/" target="_blank" rel="noopener">https://muzeumtreblinka.eu/en/informacje/bomba-abraham/</a></li>
+      <li>USHMM：朗兹曼《浩劫》邦巴理发店访谈。<br><a href="https://perspectives.ushmm.org/item/shoah-outtake-with-abraham-bomba" target="_blank" rel="noopener">https://perspectives.ushmm.org/item/shoah-outtake-with-abraham-bomba</a></li>
+      <li>格尔利茨收藏馆：日常史展 2025-03-21 至 2026-02-15。<br><a href="https://www.goerlitzer-sammlungen.de/de/nationalsozialismus-in-goerlitz.html" target="_blank" rel="noopener">https://www.goerlitzer-sammlungen.de/de/nationalsozialismus-in-goerlitz.html</a></li>
+    </ol>
+  </section>
+
+  <section class="chair" id="lesson">
+    <p class="st">SCHNITT 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，近身行业的排挤最像邻里纠纷。同业砸店比帝国公报更早到达镜子。</p>
+    <p>第二，写德国女人烫头维持体面，下一句写犹太理发师被同行赶走。再下一句写保护国把剃刀分成两格。再下一句写特雷布林卡命令理发师“假装在剪头”。体面不是中性的。</p>
+    <p>第三，手艺可以被征用。剪刀在街上是生意，在营里是让受害者走进毒气室时还以为要洗澡。</p>
+    <p>第四，2026 年的地方展仍把日常经验和雅利安化放在同一条街上。看发型杂志之前，先看谁的店招被摘下来。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第44期 · 理发镜铬风 · 20260831_0043</footer>
+</article>
+</body>
+</html>
