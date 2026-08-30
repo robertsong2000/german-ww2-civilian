@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1944 最后一个战时圣诞 —— 两枚鸡蛋与一棵本地树：特配票、鲍曼通告与印着“Jude”的空白</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Wartime ration-stamp collage: perforated coupons, colored cards, rubber-stamp ink */
+:root {
+  --paper: #f4ead2;
+  --ink: #1c1712;
+  --stamp: #b4281c;
+  --bread: #d9a08a;
+  --meat: #3d5e78;
+  --fat: #d4b43a;
+  --milk: #4e7a58;
+  --egg: #f7f1e0;
+  --void: #2a221c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(90deg, rgba(180,40,28,.05) 0 12px, transparent 12px 48px),
+    repeating-linear-gradient(0deg, rgba(61,94,120,.06) 0 10px, transparent 10px 40px),
+    #c9b896;
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.84;
+}
+.sheet {
+  max-width: 880px;
+  margin: 28px auto 72px;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(212,180,58,.18), transparent 28%),
+    var(--paper);
+  box-shadow: 8px 12px 0 rgba(42,34,28,.18);
+  padding: 22px 26px 36px;
+  border: 2px solid #8a6a3a;
+  position: relative;
+}
+.sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #8a6a3a 1.4px, transparent 1.6px);
+  background-size: 14px 14px;
+  background-position: -7px 0;
+  opacity: .22;
+  mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+}
+.banner {
+  font-family: "Big Shoulders Display", sans-serif;
+  letter-spacing: .14em;
+  font-size: 13px;
+  color: var(--stamp);
+  text-align: center;
+  margin-bottom: 6px;
+}
+h1 {
+  font-family: "Big Shoulders Display", "Noto Serif SC", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.42rem, 3.4vw, 2.05rem);
+  line-height: 1.18;
+  text-transform: none;
+}
+.sub { margin: 10px 0 6px; font-size: 15.5px; color: #4a3a2a; }
+.when { font-size: 13px; color: #6a5a48; margin-bottom: 14px; }
+nav.toc {
+  background: var(--void);
+  color: var(--egg);
+  padding: 14px 18px 12px;
+  margin: 8px 0 18px;
+  border-left: 8px solid var(--stamp);
+}
+nav.toc h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: .08em;
+  color: var(--fat);
+}
+nav.toc ol { margin: 6px 0 4px 1.2em; }
+nav.toc a { color: #f0d9a0; }
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.ticket {
+  padding: 16px 18px 10px;
+  border: 1.5px dashed #6a4a28;
+  position: relative;
+  background: rgba(255,250,238,.72);
+}
+.ticket.bread { background: linear-gradient(180deg, #f3d4c8, #ead0c0); border-color: #8a4a38; }
+.ticket.meat { background: #2f4a5e; color: #f4ead2; border-color: #8ab0c8; }
+.ticket.meat a { color: #f0d9a0; }
+.ticket.meat .note { color: #c8d4dc; }
+.ticket.fat { background: linear-gradient(180deg, #efe08a, #e0c84a); }
+.ticket.milk { background: linear-gradient(180deg, #cfe0c8, #9cbc9a); }
+.k {
+  font-family: "Big Shoulders Display", sans-serif;
+  letter-spacing: .18em;
+  font-size: 12px;
+  color: var(--stamp);
+  margin-bottom: 4px;
+}
+.ticket.meat .k { color: #f0d9a0; }
+.ticket h2 {
+  font-family: "Big Shoulders Display", "Noto Serif SC", sans-serif;
+  font-size: 1.32rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+p { margin: 0 0 11px; }
+ul, ol.body { margin: 0 0 11px 1.2em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 10px 0 14px;
+  padding: 8px 14px;
+  border-left: 5px solid var(--stamp);
+  font-style: italic;
+  background: rgba(180,40,28,.08);
+}
+.ticket.meat blockquote { background: rgba(0,0,0,.22); border-left-color: var(--fat); }
+.note { font-size: 13.5px; color: #5a4a38; }
+.sources a { color: #8a2818; word-break: break-all; }
+.stamps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 14px;
+}
+.chip {
+  font-family: "Big Shoulders Display", sans-serif;
+  letter-spacing: .06em;
+  font-size: 13px;
+  border: 1.5px dashed currentColor;
+  padding: 4px 8px;
+}
+.chip.r { color: #8a2818; background: #f3d4c8; }
+.chip.b { color: #1e3a52; background: #c8d8e4; }
+.chip.y { color: #5a4808; background: #efe08a; }
+.chip.g { color: #1e4a28; background: #cfe0c8; }
+.chip.w { color: #3a3028; background: #fff; }
+footer {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 2px dashed #8a6a3a;
+  text-align: center;
+  font-family: "Big Shoulders Display", sans-serif;
+  letter-spacing: .08em;
+  color: #6a5a48;
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .sheet { margin: 10px; padding: 14px 12px 26px; }
+}
+</style>
+</head>
+<body>
+<!-- Ration-stamp collage: perforated coupons, colored cards, rubber-stamp ink -->
+<article class="sheet">
+  <p class="banner">REICHSKARTE · SONDERZUTEILUNG · WEIHNACHTEN 1944</p>
+  <header>
+    <h1>1944 最后一个战时圣诞 —— 两枚鸡蛋与一棵本地树：特配票、鲍曼通告与印着“Jude”的空白</h1>
+    <p class="sub">德国主妇剪下一枚蛋票，报纸喊“胜利当礼物”。同一套配给制度早把犹太人从特配里除名。圣诞树是情绪工程，鸡蛋是种族账本</p>
+    <p class="when">调研时间：2026-08-30 20:30 CST · 平民史系列第28期 · 配给 / 宗教生活的子角度</p>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#tree">树是通告，蛋是票</a></li>
+      <li><a href="#jude">谁领不到这两枚鸡蛋</a></li>
+      <li><a href="#now">2025–2026：档案上的圣诞</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <div class="row">
+    <section class="ticket bread" id="theme">
+      <p class="k">ABSCHNITT 01 · BROT</p>
+      <h2>本期主题</h2>
+      <p>本报告写的是 1944 年 12 月 24 日的餐桌，不是战役。第六个战时圣诞：西线已打进帝国，亚琛两个月前陷落，东线失地切断了掠夺来的粮。配给卡仍在发。特配仍在报纸上“被召唤”。树仍被当成必须发到有孩子的家里的象征物。</p>
+      <p>联邦档案馆公开鲍曼 12 月 9 日通告：圣诞树有“高度象征意义”，缺了会有“情绪上令人担忧的后果”；铁路运不出树，必须就地砍；有孩子的家庭应“尽可能”拿到一棵，无孩家庭与独居者至少给冷杉枝。五天后同一卷宗里，他又写：武装部队与平民必须“几乎完全从本土地带养活”。德国桌上的两枚鸡蛋，和东欧被饿死的人，写在同一本党办公厅文件里。</p>
+    </section>
+
+    <section class="ticket" id="findings">
+      <p class="k">ABSCHNITT 02 · EINHEIT</p>
+      <h2>核心发现</h2>
+      <div class="stamps">
+        <span class="chip r">帝国面包卡 · 红</span>
+        <span class="chip b">帝国肉卡 · 蓝</span>
+        <span class="chip y">帝国油脂卡 · 黄</span>
+        <span class="chip g">帝国奶卡 · 绿</span>
+        <span class="chip w">帝国蛋卡 · 白</span>
+      </div>
+      <ul>
+        <li><strong>特配不是货架上的礼物，是报纸上的召唤。</strong>德意志历史博物馆时间证人约翰内斯·米哈洛夫斯基：卡片四周是分量小票，有的段落先印着却无效，直到报纸公布“召唤”——复活节、圣诞节最常见。商人用剪刀剪下小票，贴在旧报纸上交回，才能领下一期进货权。孩子眼中这些卡几乎能当收藏，成人眼中它们是活命的许可证。</li>
+        <li><strong>1944 年圣诞特配薄得像嘲讽，却仍被写进地方记忆。</strong>《西德意志报》2024 年 12 月 23 日八十年回访肯彭：儿童与青少年各 125 克甜食，每个成人两枚鸡蛋，再加一小份糖与面粉。约一半肯彭居民不在家——前线、疏散到图林根。礼物买不到，孩子拿到的是手织手钩。希特勒 12 月 21 日还在广播里许诺“伟大胜利当作圣诞礼物”；天气放晴后，低空战斗机在肯彭上空扫射一切移动的东西。</li>
+        <li><strong>有蛋票不等于有蛋。</strong>卡尔斯霍斯特博物馆藏柏林营养局发给 F. Granze 的帝国蛋卡，自 1944 年 11 月 13 日起有效，部分小票已被剪掉。馆方说明：卡片证明的是官方权利，不是店里真有货。该条目 2026 年 5 月 7 日仍在更新。</li>
+        <li><strong>树是党办公厅的情绪工程。</strong>鲍曼通告编号 R 438/44，档案 BArch NS 6/349，图像 0067。交通崩溃，树不能走铁路。有孩优先，无孩给枝。同卷 12 月 14 日通告承认：占领区丢了，必须几乎完全吃自己的地。联邦档案馆同时写明：直到 1945 年投降，帝国本土没有出现一战式饥荒——因为此前的稳定建立在对东欧的掠夺与饥饿政策上。赫伯特·巴克的“十二条”要求执行“最硬、最无情”的措施。</li>
+        <li><strong>圣诞夜仍在炸，仍有人藏人。</strong>科隆官方统计：12 月 24 日 18:15–19:25 投下 490 枚爆破弹。波恩证人在摇晃的地窖过圣诞。肯彭圣胡贝特村，农民迪特里希·安拉尔收留犹太妻子范妮·弗林克一家；楼下正是伞兵军参谋部吃饭的起居室。没有人发觉。她活过了这个圣诞，也活过了第三帝国。</li>
+      </ul>
+    </section>
+
+    <section class="ticket fat" id="tree">
+      <p class="k">ABSCHNITT 03 · FETT</p>
+      <h2>树是通告，蛋是票</h2>
+      <blockquote>其缺失会带来情绪上令人担忧的后果。——马丁·鲍曼，1944 年 12 月 9 日，关于圣诞树</blockquote>
+      <p>政权知道节日空了会塌。它付不起糖，付得起一棵就地砍的冷杉。戈培尔称这是“第六个战时圣诞”，把阿登攻势说成基督徒的骄傲。肯彭教堂里中世纪祭坛已拆进方济各会地窖，彩窗换成蓝漆玻璃后又在 11 月 8 日炸碎；直到 12 月 24 日才重新装上玻璃，好让烛光照到几棵树。仪式被抢救，胃没有。</p>
+      <p>米哈洛夫斯基记得更早几年：1941、1942 年占领区被搜刮时，白面包突然多到吃不完。特配的丰年建立在别人的饥年上。1944 年丰年结束了。报纸仍在召唤小票。召唤本身变成了安慰。</p>
+    </section>
+
+    <section class="ticket meat" id="jude">
+      <p class="k">ABSCHNITT 04 · FLEISCH</p>
+      <h2>谁领不到这两枚鸡蛋</h2>
+      <p>法兰克福城市史研究所藏营养局 1942 年 10 月 23 日第 211 号公务指令，自第 42 配给期（10 月 15 日）起：犹太人不再领肉、蛋、小麦制品、全脂奶与脱脂鲜奶，也不再领“由营养局特别召唤、用卡片空白段发放”的食品。明文一句：<strong>犹太人被排除在食品特配之外。</strong>发给犹太人的卡斜向加盖重复的“Jude”。病患、孕妇、产妇规定不适用于犹太人。国外食品礼包要全额扣进配额，盖世太保可扣押包裹。</p>
+      <p>肯彭成人那两枚鸡蛋，正是被禁止给犹太人的那种特配。奥斯维辛的党卫队军官卡尔·赫克尔仍有余暇，在比克瑙的冷杉旁点蜡烛拍照。德国客厅里的树与集中营里的树，不是两种圣诞，是同一政权的两张脸。</p>
+    </section>
+
+    <section class="ticket milk" id="now">
+      <p class="k">ABSCHNITT 05 · MILCH</p>
+      <h2>2025–2026：档案上的圣诞</h2>
+      <p>德国档案门户 2026 年 4 月 24 日更新鲍曼圣诞树通告条目（R 438/44，NS 6/349）。联邦档案馆把该通告与 12 月 14 日供应通告做成“最后战争年”在线专题。卡尔斯霍斯特的蛋卡 2026 年 5 月仍在数字编目。肯彭的地方报在 2024 年 12 月用八十年回访把特配数字、空教堂与藏匿的犹太家庭写进同一篇。</p>
+      <p>读德国平民的最后一个战时圣诞，下一句必须写：特配名单上没有印着“Jude”的人；餐桌上的稳定曾经靠东欧的饥饿政策垫底。</p>
+    </section>
+
+    <section class="ticket sources" id="sources">
+      <p class="k">ABSCHNITT 06 · QUELLEN</p>
+      <h2>来源</h2>
+      <p class="note">下列网址均经本周期检索核验，不编造链接。</p>
+      <ol class="body">
+        <li>联邦档案馆：鲍曼 1944-12-09 圣诞树通告（象征意义、就地砍伐、有孩优先）。<br><a href="https://www.bundesarchiv.de/themen-entdecken/online-entdecken/dokumente-zur-zeitgeschichte/versorgung-der-bevoelkerung-mit-weihnachtsbaeumen-zu-kriegszeiten/" target="_blank" rel="noopener">https://www.bundesarchiv.de/themen-entdecken/online-entdecken/dokumente-zur-zeitgeschichte/versorgung-der-bevoelkerung-mit-weihnachtsbaeumen-zu-kriegszeiten/</a></li>
+        <li>联邦档案馆：鲍曼 1944-12-14 供应通告（几乎完全靠本土养活、巴克饥饿政策背景）。<br><a href="https://www.bundesarchiv.de/themen-entdecken/online-entdecken/dokumente-zur-zeitgeschichte/rundschreiben-zur-versorgungslage-im-herbst-winter-1944/" target="_blank" rel="noopener">https://www.bundesarchiv.de/themen-entdecken/online-entdecken/dokumente-zur-zeitgeschichte/rundschreiben-zur-versorgungslage-im-herbst-winter-1944/</a></li>
+        <li>德国档案门户 2026-04-24 更新：NS 6/349，R 438/44。<br><a href="https://www.archivportal-d.de/item/VVRNINV374DFKI7Y3DW5ULOKJTFZNXTV" target="_blank" rel="noopener">https://www.archivportal-d.de/item/VVRNINV374DFKI7Y3DW5ULOKJTFZNXTV</a></li>
+        <li>《西德意志报》2024-12-23：肯彭 1944 圣诞（125 克甜食、两枚鸡蛋、空城、安拉尔藏匿弗林克一家）。<br><a href="https://www.wz.de/nrw/1944-ein-weihnachten-in-der-kahlen-kirche_aid-122384967" target="_blank" rel="noopener">https://www.wz.de/nrw/1944-ein-weihnachten-in-der-kahlen-kirche_aid-122384967</a></li>
+        <li>卡尔斯霍斯特博物馆：1944 柏林帝国蛋卡（2026-05-07 更新）。<br><a href="https://nat.museum-digital.de/object/941270" target="_blank" rel="noopener">https://nat.museum-digital.de/object/941270</a></li>
+        <li>德意志历史博物馆 LeMO：米哈洛夫斯基谈配给卡、召唤与占领区搜刮后的白面包。<br><a href="https://www.dhm.de/lemo/zeitzeugen/zeitzeuge-johannes-michalowsky-unsere-versorgungslage-von-1939-1949" target="_blank" rel="noopener">https://www.dhm.de/lemo/zeitzeugen/zeitzeuge-johannes-michalowsky-unsere-versorgungslage-von-1939-1949</a></li>
+        <li>法兰克福 1933–1945：营养局 1942-10-23 指令，犹太人排除在特配之外。<br><a href="https://www.frankfurt1933-1945.de/beitraege/ausgrenzung-und-verfolgung/beitrag/dokument-einschraenkung-der-lebensmittelversorgung-fuer-juden-im-oktober-1942" target="_blank" rel="noopener">https://www.frankfurt1933-1945.de/beitraege/ausgrenzung-und-verfolgung/beitrag/dokument-einschraenkung-der-lebensmittelversorgung-fuer-juden-im-oktober-1942</a></li>
+      </ol>
+    </section>
+
+    <section class="ticket" id="lesson">
+      <p class="k">ABSCHNITT 07 · LEKTION</p>
+      <h2>对历史学习者的启示</h2>
+      <p>第一，节日是配给政治。两枚鸡蛋、125 克糖、一棵就地砍的树，都是政权在崩溃前购买的“正常”。鲍曼怕的不是空桌，是空桌上的情绪。</p>
+      <p>第二，特配的边界写在卡面上。印着“Jude”的卡领不到召唤出来的蛋。读德国主妇的圣诞夜，下一句写被除名的邻居。</p>
+      <p>第三，本土没有一战式饥荒，不是仁政。联邦档案馆自己把 12 月 14 日通告接在东欧掠夺与巴克政策后面。丰年的白面包来自别人的粮仓。</p>
+      <p>第四，2026 年档案门户仍在更新这张圣诞树通告。物证还在：蛋卡、通告、地方报的八十年回访。纪念若只剩下温情的冷杉，就把票根上的种族栏撕掉了。</p>
+    </section>
+  </div>
+
+  <footer>
+    二战德国平民史调研 · 系列第28期 · 战时配给票证风 · 20260830_2030
+  </footer>
+</article>
+</body>
+</html>
