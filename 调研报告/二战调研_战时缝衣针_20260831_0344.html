@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时缝衣针 —— 线轴上的国界：还能花 30 芬尼买线的人，以及每晚拆缝黄星的人</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Kraft thread-spool packet, rust cotton, steel needle */
+:root {
+  --kraft: #c4a574;
+  --linen: #efe6d2;
+  --rust: #8a3a28;
+  --steel: #2a2622;
+  --mute: #6e6458;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(90deg, #d8c9a8 0 2px, #cbb892 2px 14px),
+    #cbb892;
+  color: var(--steel);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.spool {
+  max-width: 820px;
+  margin: 28px auto 80px;
+  background: var(--linen);
+  border: 12px solid var(--kraft);
+  box-shadow: 0 18px 36px rgba(42,38,34,.28), inset 0 0 0 1px #e8dcc4;
+  padding: 22px 26px 34px;
+  position: relative;
+}
+.spool::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 38px;
+  width: 2px;
+  background: repeating-linear-gradient(#8a3a28 0 8px, transparent 8px 16px);
+  opacity: .35;
+}
+.kicker {
+  font-family: "Kelly Slab", serif;
+  letter-spacing: .2em;
+  font-size: 14px;
+  color: var(--rust);
+  text-align: center;
+}
+h1 {
+  font-family: "Kelly Slab", "Noto Serif SC", serif;
+  font-size: clamp(1.22rem, 3.4vw, 1.78rem);
+  font-weight: 400;
+  line-height: 1.26;
+  margin: 8px 0 10px;
+}
+.sub { font-size: 15.5px; }
+.when { font-size: 13.5px; color: var(--mute); margin: 8px 0 14px; }
+nav.toc {
+  background: var(--steel);
+  color: var(--linen);
+  padding: 12px 16px 10px;
+  margin: 8px 0 16px;
+}
+nav.toc h2 { font-family: "Kelly Slab", serif; font-size: 1.3rem; color: var(--kraft); }
+nav.toc ol { margin: 6px 0 4px 1.3em; }
+nav.toc a { color: var(--kraft); }
+.pkt {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #f7f0e0;
+  border-left: 5px solid var(--rust);
+}
+.pkt.dark {
+  background: var(--steel);
+  color: var(--linen);
+  border-left-color: var(--kraft);
+}
+.pkt.dark a { color: var(--kraft); }
+.st {
+  font-family: "Kelly Slab", serif;
+  letter-spacing: .12em;
+  font-size: 13px;
+  color: var(--rust);
+  margin-bottom: 4px;
+}
+.pkt.dark .st { color: var(--kraft); }
+h2 {
+  font-family: "Kelly Slab", serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  margin: 4px 0 8px;
+}
+.pkt ul { margin: 6px 0 4px 1.2em; }
+.pkt li { margin: 8px 0; }
+a { color: #6b3224; }
+footer {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: var(--mute);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<article class="spool">
+  <p class="kicker">30 RPF · NÄHMITTEL A–C · 10 PF STERN</p>
+  <h1>战时缝衣针 —— 线轴上的国界：还能花 30 芬尼买线的人，以及每晚拆缝黄星的人</h1>
+  <p class="sub">德国主妇把针线写成还能补袜子。缝纫段必须再撕一格服装卡。犹太人 1940 年 2 月就被踢出服装卡。黄星要缝上、拆下、再缝上。罗兹的针在给帝国做衣服。</p>
+  <p class="when">调研时间：2026-08-31 03:44 CST · 平民史系列第59期 · 服装卡黄星 / 冬装征集的子角度</p>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#topic">本期主题</a></li>
+      <li><a href="#find">核心发现</a></li>
+      <li><a href="#thread">线轴</a></li>
+      <li><a href="#star">黄星</a></li>
+      <li><a href="#now">2026：针还在展柜里，时装展刚落下</a></li>
+      <li><a href="#src">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="pkt" id="topic">
+    <p class="st">STICH 01</p>
+    <h2>本期主题</h2>
+    <p>本报告写线轴上的国界。帝国服装卡背面印着缝纫用品。1943 年 1 月 5 日《德意志帝国公报》规定：凭已到期的缝纫段，每次最多买零售价 30 帝国芬尼的缝纫用品；婴儿卡 25 芬尼。丝绸缝纫线只按一半价值扣段。1944 年 4 月 13 日令把同一额度延到第三、四套帝国卡、保护国卡和第二套波兰纺织卡。汉诺威发给伊尔姆加德·哈通的第四套卡上，缝纫段 A–C 已被撕走；背面写明：每用一段缝纫券，还要再撕一格普通段。德国主妇把这一针写成还能把袜子补到明天。</p>
+    <p>同一根针，对犹太人写成羞辱和工厂。维也纳城市史百科：犹太人自 1940 年 2 月 6 日起被排除出服装卡。没有卡，就没有缝纫段。柏林犹太博物馆里的莱曼家黄星：盖世太保强迫犹太社团按 10 芬尼一块卖星，每人先买三块；劣质纤维要衬一层才能反复拆缝。罗兹隔都到 1942 年 8 月约有一百家工厂，针为德军制服走，也为德国平民的裙与大衣走。针已经不是中性的。</p>
+  </section>
+
+  <section class="pkt dark" id="find">
+    <p class="st">STICH 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>缝纫用品被钉在服装卡上，额度用芬尼计。</strong> 1943 年 1 月令与 1944 年 4 月令把“还能补”写成 30 芬尼。没有货，段也只是许可。西里西亚之家：五套帝国服装卡，第一套 1939 年 11 月 29 日起，第五套 1944 年 9 月 18 日只发给儿童。战争末期缺的是货，不是点子。</li>
+      <li><strong>买线还要再撕一格。</strong> 巴特迪尔凯姆市博物馆所藏哈通第四套卡（有效至 1944 年 6 月 30 日）：缝纫段 A–C 与普通点同时被撕。目录写明缝纫用品必须同时扣缝纫段和另一段。德国女人补衣服的下一句：许可叠在许可上。</li>
+      <li><strong>犹太人先被踢出卡，再被命令缝星。</strong> 1940 年 2 月 6 日起不得领服装卡，缝纫段随之消失。1941 年 9 月 19 日起，帝国内约二十万六岁以上犹太人必须在左胸缝黄星。盖特尔旗厂几天内交出近一百万枚。每人三枚星、30 芬尼，和第二年再凭卡买一枚——卡他们已经没有。针用来把耻辱固定在外套上，每晚拆，明早再钉。</li>
+      <li><strong>隔都的针在给帝国做衣服。</strong> 美国大屠杀纪念馆：罗兹鞋匠用的胜家缝纫机；1940 年 5 月起建厂，1942 年 8 月近百家，主要做纺织品，尤其德军制服。罗兹中央纺织博物馆 2025 年 4 月 3 日至 2026 年 2 月 1 日的展览写明：也为德国公民做裙、大衣、帽与皮革小件。德国主妇柜里的那件，可能缝自饥馑里的人。</li>
+      <li><strong>补丁不是共享的手艺。</strong> 德国厨房把糖袋拆成婴儿夹克。同一年，隔都把被没收的衣物拆成帝国订货。针穿过的下一句不是“大家都在缝”，是谁被允许补自己的袜子，谁被强迫给别人缝制服。</li>
+    </ul>
+  </section>
+
+  <section class="pkt" id="thread">
+    <p class="st">STICH 03</p>
+    <h2>线轴</h2>
+    <p>德国女人把 30 芬尼写成还能补。补的是被承认有权出门见人的衣服。卡被撕走之后，线还在。线已经不是中性的。</p>
+  </section>
+
+  <section class="pkt dark" id="star">
+    <p class="st">STICH 04</p>
+    <h2>黄星</h2>
+    <p>黄星不是装饰。黄星是把人钉在街上。三枚星要缝遍所有外套。纤维会碎，所以要衬，衬是为了拆得快、钉得快。德国邻居明天还检查胸前那一针。针已经不是中性的。</p>
+  </section>
+
+  <section class="pkt" id="now">
+    <p class="st">STICH 05</p>
+    <h2>2026：针还在展柜里，时装展刚落下</h2>
+    <p>巴特迪尔凯姆那张撕过缝纫段的第四套卡，条目 2025 年 2 月 5 日更新。罗兹中央纺织博物馆《时装系统》办到 2026 年 2 月 1 日，由德国“记忆、责任与未来”基金会资助。柏林犹太博物馆的莱曼家黄星仍在常设展。走进展厅之前，先问：当年谁还能花 30 芬尼买线，谁的针只能用来钉星。</p>
+  </section>
+
+  <section class="pkt dark" id="src">
+    <p class="st">STICH 06</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>曼海姆大学图书馆：帝国公报 1943-01-05，缝纫段每次最多 30 芬尼，婴儿卡 25 芬尼。<br><a href="https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/044-8485/0016.hocr" target="_blank" rel="noopener">https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/044-8485/0016.hocr</a></li>
+      <li>曼海姆大学图书馆：帝国公报 1944-04-13，同一额度延至第四套卡。<br><a href="https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/046-8487/0184.hocr" target="_blank" rel="noopener">https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/046-8487/0184.hocr</a></li>
+      <li>巴特迪尔凯姆市博物馆：哈通第四套卡，缝纫段 A–C，须同时扣另一段；元数据 2025-02-05。<br><a href="https://rlp.museum-digital.de/object/93547" target="_blank" rel="noopener">https://rlp.museum-digital.de/object/93547</a></li>
+      <li>维也纳城市史百科：犹太人自 1940-02-06 起被排除出服装卡。<br><a href="https://www.geschichtewiki.wien.gv.at/Reichskleiderkarte" target="_blank" rel="noopener">https://www.geschichtewiki.wien.gv.at/Reichskleiderkarte</a></li>
+      <li>柏林犹太博物馆：莱曼家黄星；克罗伊茨穆勒谈每晚拆缝。<br><a href="https://www.jmberlin.de/dauerausstellung-13-dinge-judenstern" target="_blank" rel="noopener">https://www.jmberlin.de/dauerausstellung-13-dinge-judenstern</a></li>
+      <li>德国历史博物馆：1941-09-19 警察条例；盖特尔厂近一百万枚星，每枚 10 芬尼。<br><a href="https://www.dhm.de/lemo/kapitel/der-zweite-weltkrieg/voelkermord/gelber-stern" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/der-zweite-weltkrieg/voelkermord/gelber-stern</a></li>
+      <li>美国大屠杀纪念馆：罗兹隔都胜家缝纫机与近百家工厂。<br><a href="https://encyclopedia.ushmm.org/content/en/artifact/singer-sewing-machine-from-the-lodz-ghetto" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/en/artifact/singer-sewing-machine-from-the-lodz-ghetto</a></li>
+      <li>罗兹中央纺织博物馆：《时装系统》2025-04-03 至 2026-02-01。<br><a href="https://cmwl.pl/public/informacje/system-mody-ubrania-w-strategiach-przemocy-i-taktykach-przetrwania-w-getcie-lodzkim,433" target="_blank" rel="noopener">https://cmwl.pl/public/informacje/system-mody-ubrania-w-strategiach-przemocy-i-taktykach-przetrwania-w-getcie-lodzkim,433</a></li>
+    </ol>
+  </section>
+
+  <section class="pkt" id="lesson">
+    <p class="st">STICH 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，配给不只管新衣，也管谁还能买一根线。谁能花 30 芬尼补袜子，谁只能拿针去钉星，写在同一张卡的背面。</p>
+    <p>第二，写德国平民缝补，下一句写 1940 年 2 月犹太人被踢出服装卡。再下一句写黄星要每晚拆缝。再下一句写罗兹的针在给帝国做裙。线轴不是中性的。</p>
+    <p>第三，不要把“大家都在补衣服”写成所有人共用一根针。补的下一句是：有人补自己的袜，有人给别人缝制服。</p>
+    <p>第四，2026 年时装展刚落下，黄星还在常设柜里。走进展厅之前，先问：当年谁的针只被允许钉在左胸。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第59期 · 线轴牛皮纸风 · 20260831_0344</footer>
+</article>
+</body>
+</html>
