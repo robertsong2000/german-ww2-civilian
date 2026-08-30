@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时自行车 —— 车铃后的国界：橡胶胎、上交令，以及不会再来取走的童车</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Chrome bicycle bell and inner-tube patch: enamel black, rust, rubber */
+:root {
+  --enamel: #1a1c1b;
+  --chrome: #c5c8c6;
+  --patch: #f3ead8;
+  --rust: #8a3a22;
+  --ink: #141614;
+  --mute: #5c5850;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(circle at 85% 8%, rgba(197,200,198,.25), transparent 32%),
+    repeating-linear-gradient(90deg, #2a2c2a 0 2px, #1f211f 2px 18px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.bike {
+  max-width: 830px;
+  margin: 28px auto 72px;
+  background: var(--patch);
+  border: 12px solid var(--chrome);
+  box-shadow:
+    inset 0 0 0 3px #e8dfcc,
+    0 18px 40px rgba(0,0,0,.45);
+  padding: 26px 28px 38px;
+}
+.kicker {
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  letter-spacing: .18em;
+  font-size: 12px;
+  color: var(--rust);
+  margin-bottom: 8px;
+}
+h1 {
+  font-family: "Russo One", "Noto Serif SC", sans-serif;
+  font-size: clamp(1.05rem, 2.8vw, 1.42rem);
+  line-height: 1.38;
+  font-weight: 400;
+}
+.sub { margin: 12px 0 6px; font-size: 15.5px; }
+.when { font-size: 13.5px; color: var(--mute); margin-bottom: 12px; }
+nav.toc {
+  background: var(--enamel);
+  color: var(--patch);
+  padding: 14px 16px 10px;
+  margin: 8px 0 16px;
+  border-top: 4px solid var(--chrome);
+}
+nav.toc h2 { font-family: "Russo One", sans-serif; font-size: 1.05rem; font-weight: 400; }
+nav.toc ol { margin: 6px 0 8px 1.25em; }
+nav.toc a { color: var(--chrome); }
+.tube {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #fffaf0;
+  border-left: 8px solid var(--chrome);
+  box-shadow: 0 1px 0 #e0d6c2;
+}
+.tube.dark {
+  background: var(--enamel);
+  color: var(--patch);
+  border-left-color: var(--rust);
+}
+.tube.dark a { color: var(--chrome); }
+.tube.dark .st { color: var(--chrome); }
+.st {
+  font-family: "Russo One", sans-serif;
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--rust);
+}
+h2 {
+  font-family: "Russo One", "Noto Serif SC", sans-serif;
+  font-size: 1.12rem;
+  margin: 4px 0 8px;
+  font-weight: 400;
+}
+a { color: var(--rust); }
+ul { margin: 6px 0 10px 1.2em; }
+li { margin: 7px 0; }
+p + p { margin-top: 10px; }
+footer {
+  text-align: center;
+  margin-top: 22px;
+  font-family: "Russo One", sans-serif;
+  font-size: 12px;
+  color: var(--mute);
+  letter-spacing: .06em;
+}
+</style>
+</head>
+<body>
+<article class="bike">
+  <p class="kicker">FAHRRAD · KAUTSCHUK · ABLIEFERUNG</p>
+  <h1>战时自行车 —— 车铃后的国界：橡胶胎、上交令，以及不会再来取走的童车</h1>
+  <p class="sub">德国工人把补一条内胎写成还能骑去工厂。橡胶先给军车。街对面的犹太人先被登记打字机和自行车，再只准骑去上班、不许周日出门。同一条车架号的另一端：科隆馆里一辆用 1936 年报纸包着的童车，主人没有回来。</p>
+  <p class="when">调研时间：2026-08-31 01:23 CST · 平民史系列第48期 · 灯火管制 / 配给种族的子角度</p>
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#tire">胎上的资格</a></li>
+      <li><a href="#handin">上交</a></li>
+      <li><a href="#now">2025：童车还在找主人</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="tube" id="theme">
+    <p class="st">RING 01</p>
+    <h2>本期主题</h2>
+    <p>本报告写车铃后的国界。1934 年 6 月 2 日《德意志帝国公报》：橡胶监督处规定自行车外胎和内胎的生胶最高份额，禁止把新配方胎标成“节约胎”来促销，并要求工厂在 6 月 11 日前申报旧存货。战争打响后，行业报《车市》1940 年 6 月 1 日号把话说死：配额轮胎先给靠车吃饭的人，消遣骑行往后排；经销商有责任分清谁是真需要、谁在囤车。德国平民把这写成“将就骑”。</p>
+    <p>同一套短缺，对犹太人写成没收。纽伦堡后续审判文献汇编记：帝国保安总局 IV B 4 快件，1941 年 11 月 13 日登记犹太财产中的打字机、自行车、照相机、望远镜；1942 年 6 月 12 日下令上交。维克多·克莱姆佩勒 1942 年 6 月 2 日在德累斯顿把禁令列成清单：自行车须交，只准骑去上班，周日郊游和骑车串门禁止。徐贲写克莱姆佩勒日记：极权把日常交通也改成隔离术。德国工人明天还按铃上班。铃已经不是中性的。</p>
+  </section>
+
+  <section class="tube" id="findings">
+    <p class="st">RING 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>橡胶先决定谁还能骑。</strong> 1934 年的份额令说明：和平年代已经开始抠生胶。1940 年行业报要求把车胎留给“劳动的人”，并警告有人趁机囤新车。韦拉钾盐矿博物馆 2025 年 2 月仍在线展示一张车胎购货申请：须写清外胎还是内胎、尺寸、家里还有没有别的车和备胎、旧胎是否真的不能修、旧料必须上交；虚报可罚。馆方注明这张是战后短缺的延续。问题单的逻辑，战时已经练过。</li>
+      <li><strong>艾希曼处把自行车写成隔离工具。</strong> 德语维基《犹太人事务处》：1941 年 9 月至 1942 年 6 月的一批条例，要求犹太人上交打字机、自行车、相机或滑雪装备，并禁止使用公共交通；违者可被“保护性拘留”。《司法与纳粹罪行》卷册把 11 月 13 日登记令和 6 月 12 日上交令写进同一串快件。车不是交通工具，是把人钉在步行距离里的行政。</li>
+      <li><strong>克莱姆佩勒把“还能骑去上班”写成羞辱的剩余。</strong> 1942 年 6 月 2 日：上交自行车，只准通勤。同日清单还有打字机、毛皮、躺椅、猫狗鸟。他走去朋友家要绕开被禁的大花园，几乎三小时。德国邻居仍可周日骑车出城。同一条路上，铃声分成两种。</li>
+      <li><strong>车厂把强制劳工编进车架。</strong> 克姆尼茨钻石牌官网自称德国最老自行车厂，并把二战写成“最丑陋的阶段”：工厂为军工使用强制劳工。德语维基：Elite Diamant AG 使用包括苏联“东方劳工”在内的强制劳工，至 1945 年累计约 130 万辆。阿罗尔森档案保存 Siegmar-Schönau 厂 1939–1945 人事卡 1,163 份。德国平民骑的萨克森车，有人是被强迫焊的。</li>
+      <li><strong>体育行会比纽伦堡法更早赶人。</strong> 迪特尔·福佩尔《国家社会主义时期的自行车运动》：1933 年 4 月，德国自行车协会已把犹太运动员除名，比纽伦堡法早两年多。科隆世界冠军阿尔贝特·里希特拒绝希特勒礼、留着犹太教练恩斯特·贝尔林纳，1939 年底在勒拉赫盖世太保监狱死亡，官方称自杀。</li>
+    </ul>
+  </section>
+
+  <section class="tube dark" id="tire">
+    <p class="st">RING 03</p>
+    <h2>胎上的资格</h2>
+    <p>德国工人把补胎写成没有崩溃。外胎磨穿，先填申请，再等配额。消遣骑行被写成不爱国。车铃还响。响着的铃证明：这辆车是留给被承认的通勤者的。囤车的人被点名。被点名的，首先是还被允许拥有车的人。</p>
+  </section>
+
+  <section class="tube" id="handin">
+    <p class="st">RING 04</p>
+    <h2>上交</h2>
+    <p>登记令比上交令早七个月。先造册，再收走。克莱姆佩勒的例外——“可以骑去上班”——把生存劳动写成唯一合法的移动。周日的铃是给别人的。荷兰 1942 年 6 月对犹太人收车是占领区的平行行政；帝国本土用的是同一套 IV B 4 快件逻辑。不要把海牙的笑话“还我们自行车”当成德国客厅的故事。德国客厅里，先被收走的是邻居的车。</p>
+  </section>
+
+  <section class="tube dark" id="now">
+    <p class="st">RING 05</p>
+    <h2>2025：童车还在找主人</h2>
+    <p>科隆莱茵犹太博物馆（MiQua）收藏一辆约 84 厘米高的童车，用 1936 年 8 月 17 日《斯图加特新日报》包着。捐赠者说：犹太小朋友托他保管，再没回来。车头标是克莱因-奥海姆的 Starkenburg / Ludwig Bauer。2020 年馆方把线索重新接到 Lost Art。钻石牌官网今天仍把强制劳工写进厂史。韦拉博物馆 2025 年 2 月更新车胎申请单说明，馆舍因改建关闭。车铃还在橱窗里。主人的名字还在找。</p>
+  </section>
+
+  <section class="tube" id="sources">
+    <p class="st">RING 06</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>帝国公报 1934-06-02：橡胶监督处限制自行车胎生胶份额。<br><a href="https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/006-8447/0578.hocr" target="_blank" rel="noopener">https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/006-8447/0578.hocr</a></li>
+      <li>《车市》1940-06-01：配额轮胎先给劳动者，警告囤车。<br><a href="https://www.schmalenstroer.net/wiki/Fahrrad/Historische_Fahrradkataloge/1940-radmarkt-nr-2558.pdf" target="_blank" rel="noopener">https://www.schmalenstroer.net/wiki/Fahrrad/Historische_Fahrradkataloge/1940-radmarkt-nr-2558.pdf</a></li>
+      <li>《司法与纳粹罪行》：1941-11-13 登记、1942-06-12 上交犹太自行车等。<br><a href="https://junsv.nl/seiten?cHash=967b3fd937db77a798b8d53ff31500e2&amp;tx_junsv_pi2%5Baction%5D=listPagesByNumber&amp;tx_junsv_pi2%5Bcontroller%5D=Book&amp;tx_junsv_pi2%5Bpagenumber%5D=265&amp;tx_junsv_pi2%5Bsection%5D=4540&amp;tx_junsv_pi2%5Bvolume%5D=50" target="_blank" rel="noopener">https://junsv.nl/seiten?tx_junsv_pi2%5Bvolume%5D=50&amp;tx_junsv_pi2%5Bsection%5D=4540&amp;tx_junsv_pi2%5Bpagenumber%5D=265</a></li>
+      <li>德语维基：犹太人事务处，上交自行车、禁止公交、保护性拘留。<br><a href="https://de.wikipedia.org/wiki/Judenreferat" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Judenreferat</a></li>
+      <li>克莱姆佩勒 1942-06-02：自行车须交，只准骑去上班。<br><a href="https://victor-klemperers-dresden.net/7-burgerwiese/" target="_blank" rel="noopener">https://victor-klemperers-dresden.net/7-burgerwiese/</a></li>
+      <li>徐贲：克莱姆佩勒日记与极权下的日常生活。<br><a href="https://www.chinesepen.org/blog/archives/122587" target="_blank" rel="noopener">https://www.chinesepen.org/blog/archives/122587</a></li>
+      <li>钻石牌厂史：二战为军工使用强制劳工。<br><a href="https://www.diamantrad.com/de-DE/history/" target="_blank" rel="noopener">https://www.diamantrad.com/de-DE/history/</a></li>
+      <li>阿罗尔森：Elite-Diamantwerke AG Siegmar-Schönau 人事档案 1,163 件。<br><a href="https://collections.arolsen-archives.org/en/document/76028868" target="_blank" rel="noopener">https://collections.arolsen-archives.org/en/document/76028868</a></li>
+      <li>MiQua 博客：用 1936 年报纸包着的童车，Lost Art 寻主。<br><a href="https://miqua.blog/2021/04/14/besitzer-gesucht-ein-kinderfahrrad-ein-alterer-herr-und-das-stuttgarter-tagblatt-von-1936-erste-schritte-in-der-provenienzforschung-des-miqua/" target="_blank" rel="noopener">https://miqua.blog/2021/04/14/besitzer-gesucht-ein-kinderfahrrad-ein-alterer-herr-und-das-stuttgarter-tagblatt-von-1936-erste-schritte-in-der-provenienzforschung-des-miqua/</a></li>
+      <li>科隆《圆桌报》：福佩尔自行车运动与纳粹研究；里希特之死。<br><a href="https://www.rundschau-online.de/koeln/koeln-innenstadt/koeln-studie-zeigt-auswirkungen-der-ns-zeit-auf-den-radsport-690244" target="_blank" rel="noopener">https://www.rundschau-online.de/koeln/koeln-innenstadt/koeln-studie-zeigt-auswirkungen-der-ns-zeit-auf-den-radsport-690244</a></li>
+      <li>museum-digital：韦拉博物馆车胎购货申请（说明更新 2025-02-04）。<br><a href="https://nat.museum-digital.de/object/1193391?navlang=de" target="_blank" rel="noopener">https://nat.museum-digital.de/object/1193391?navlang=de</a></li>
+    </ol>
+  </section>
+
+  <section class="tube" id="lesson">
+    <p class="st">RING 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，配给不只管胃，也管轮子。谁能申请外胎，谁只准走路，写在同一张路上。</p>
+    <p>第二，写德国工人补胎去工厂，下一句写 1933 年自行车协会先赶犹太选手。再下一句写 1942 年犹太人只准骑去上班。再下一句写钻石牌承认强制劳工焊过车架。铃声不是中性的。</p>
+    <p>第三，荷兰人战后还在笑话“还我们自行车”。帝国本土的故事更早、更近：邻居的车先被登记，再被收走。不要用占领区的梗，代替德国客厅。</p>
+    <p>第四，科隆馆里那辆用 1936 年报纸包着的童车，仍在 Lost Art 上找人。看车铃之前，先看谁被禁止按铃。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第48期 · 车铃铬圈风 · 20260831_0123</footer>
+</article>
+</body>
+</html>
