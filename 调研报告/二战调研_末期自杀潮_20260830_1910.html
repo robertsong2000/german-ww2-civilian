@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战争末期自杀潮与集体崩溃心理 —— 进货簿改成死亡登记：德明三条河与 2025 年被改道的“哀悼”</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Cemetery goods-receipt ledger: iron-gall ink, warehouse green, mourning rule */
+:root {
+  --paper: #e4d6b8;
+  --rule: rgba(45, 74, 62, .22);
+  --ink: #1a1612;
+  --gall: #5a241c;
+  --stock: #1e332c;
+  --river: #3d5c5e;
+  --mute: #5c5648;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(61,92,94,.35), transparent 50%),
+    repeating-linear-gradient(90deg, #0e1412 0 18px, #121a17 18px 19px),
+    var(--stock);
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Newsreader", serif;
+  line-height: 1.82;
+}
+.ledger {
+  max-width: 920px;
+  margin: 28px auto 80px;
+  background:
+    repeating-linear-gradient(transparent, transparent 31px, var(--rule) 31px, var(--rule) 32px),
+    var(--paper);
+  border: 16px solid #111;
+  outline: 3px solid #3a2a1a;
+  box-shadow: 0 30px 70px rgba(0,0,0,.5);
+  padding: 28px 36px 48px;
+  position: relative;
+}
+.ledger::before {
+  content: "WARENEINGANG  ·  DURCHSTRICHEN  ·  TOTENBUCH";
+  display: block;
+  font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+  letter-spacing: .28em;
+  font-size: 11px;
+  color: var(--gall);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.stamp {
+  float: right;
+  margin: 0 0 12px 16px;
+  width: 118px;
+  height: 118px;
+  border: 4px solid var(--gall);
+  border-radius: 50%;
+  color: var(--gall);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+  letter-spacing: .12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotate(-12deg);
+  opacity: .78;
+}
+h1 {
+  font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+  font-size: clamp(1.55rem, 3.4vw, 2.25rem);
+  line-height: 1.28;
+  font-weight: 700;
+  clear: both;
+}
+.sub { margin: 8px 0 6px; color: var(--mute); font-size: 15.5px; }
+.when { font-size: 13px; color: #6a6356; margin-bottom: 14px; }
+nav.toc {
+  clear: both;
+  margin: 14px 0 18px;
+  padding: 12px 16px 8px;
+  background: var(--stock);
+  color: #e8dcc0;
+  border-top: 6px solid var(--gall);
+}
+nav.toc h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  color: #d4c49a;
+}
+nav.toc ol { margin: 6px 0 8px 1.25em; }
+nav.toc a { color: #e8c9a0; }
+.card {
+  margin: 18px 0;
+  padding: 16px 18px 10px;
+  background: rgba(255,255,255,.28);
+  border-left: 10px solid var(--stock);
+}
+.card.gall { border-left-color: var(--gall); background: rgba(90,36,28,.08); }
+.card.river { border-left-color: var(--river); background: rgba(61,92,94,.12); }
+.card h2 {
+  font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+  font-size: 1.38rem;
+  margin-bottom: 8px;
+}
+.folio {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: .16em;
+  font-size: 12px;
+  color: var(--gall);
+  margin-bottom: 4px;
+}
+p { margin: 0 0 11px; }
+ul, ol.body { margin: 0 0 12px 1.2em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 10px 0 14px;
+  padding: 8px 14px;
+  border-left: 5px solid var(--stock);
+  font-style: italic;
+  background: rgba(30,51,44,.08);
+}
+.note { font-size: 13.5px; color: var(--mute); }
+.sources a { color: var(--gall); word-break: break-all; }
+footer {
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 4px solid #111;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 13px;
+  color: var(--mute);
+}
+@media (max-width: 640px) {
+  .ledger { margin: 8px; padding: 16px 14px 28px; }
+  .stamp { float: none; margin: 0 auto 12px; }
+}
+</style>
+</head>
+<body>
+<!-- Cemetery goods-receipt ledger: warehouse green, iron-gall, Peene stain -->
+<article class="ledger">
+  <div class="stamp">EINTRAG<br>1945<br>MAI</div>
+  <header>
+    <h1>战争末期自杀潮与集体崩溃心理 —— 进货簿改成死亡登记：德明三条河与 2025 年被改道的“哀悼”</h1>
+    <p class="sub">官方统计大约是平时的五倍；德明的数字从五百到一千仍在争执。崩溃是真的，纳粹先把毁灭送出去，再把它收回来</p>
+    <p class="when">调研时间：2026-08-30 19:10 CST · 平民史系列第20期 · 主题轮换池第20项</p>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#demmin">德明：三条河、炸桥与进货簿</a></li>
+      <li><a href="#layers">分层：党卫、平民、被宣传推销的死</a></li>
+      <li><a href="#now">2025–2026：纪念被谁征用</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="folio">FOLIO 01</p>
+    <h2>本期主题</h2>
+    <p>1945 年春，第三帝国在一场史无前例的自杀潮中结束。希特勒与戈培尔只是冰山尖。曼彻斯特大学历史学家克里斯蒂安·格舍尔 2025 年 5 月 3 日回访自己 2009 年的专著：官方统计显示，当年德国自杀人数约为此前年份的五倍——仍是低估，因为行政机器本身已经垮了。这是近代德国有记录以来最高的自杀水平。</p>
+    <p>本报告写平民的崩溃，不写元首传记。德明（Demmin）约一万五千居民，4 月 30 日至 5 月初，历史学家估计约一千人自杀，其中大量是先杀死孩子的妇女。柏林 1945 年登记超过七千起。数字后面是宣传部的公开怂恿、东部战线先由德军发动的灭绝战争、红军入城后的抢劫、强奸与放火，以及基督教禁忌在几天内被冲开。崩溃心理不是“德国人天生绝望”，而是十二年紧急状态突然没有明天。</p>
+  </section>
+
+  <section class="card gall" id="findings">
+    <p class="folio">FOLIO 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>全国是潮，德明是峰值。</strong>格舍尔：1945 年官方数字约五倍于往年。维基与城市史常用的柏林数字：当年登记 7,057 起，其中 4 月柏林战役期间 3,881 起。德明地区博物馆 2013 年据死亡登记与公墓记录谨慎估计约 500 起可确认自杀，并强调大量暗数；11 月县长报告写 700；牧师诺贝特·布斯克与弗洛里安·胡贝尔多取约 1,000。数字不一致本身就是行政崩溃的证据：墓地园丁的女儿玛尔加·贝恩克从 5 月 6 日起用本该记苗木进货的本子抄死者。</li>
+      <li><strong>动机不能收成一句“怕俄国人”。</strong>胡贝尔：东线难民带来的见闻、对德军在东欧所犯罪行的知情、荣誉与投降羞耻的宣传、公开讨论自杀使禁忌失效、入城后的暴力与三日内城大火，叠成“集体绝望”。格舍尔提醒：并非每一起都直接等于希特勒崇拜。纳粹高官把自杀写成男性的最后站立、对 1918 年投降的拒绝；平民遗书里，柏林刑侦档案最常见的词是神经质与抑郁；妇女遗书中，对红军性暴力的恐惧是显著动机。</li>
+      <li><strong>政权给自己的人民做自杀广告。</strong>德国广播文化台 2025 年 5 月 3 日综述：宣传部发言人说，最好让推进中的敌人只遇见死去的德国人。报纸、广播与公共声明把自杀写成体面出路。这不是民间自发的“时代气氛”，是国家把自我毁灭编进最后的动员。</li>
+      <li><strong>地理把人关进河里。</strong>国防军西撤时炸掉佩讷河、特雷贝尔河、托伦泽河上的桥。德明三面环水。白俄罗斯方面军滞留数日等便桥。几乎没有战斗，但有居民开枪。随后是抢劫、谋杀、强奸，木构内城烧了三天。许多人走进河里。这是物理陷阱叠在心理陷阱上。</li>
+      <li><strong>记忆真空会被占领。</strong>东德年代里，玷污红军解放叙事的事不许讲。沉默留下的空位，自 2007 年起被“家园党”（原 NPD）每年 5 月 8 日的“哀悼游行”填进去。阿马德乌-安东尼奥基金会指出：他们哀悼的不是那些人，而是希特勒政权的垮台。2025 年 5 月 8 日，行动联盟统计至少四千人反制（警方约两千），极右约 290 人；路线被坐堵与横停的巴士改到托伦泽河桥。日期本身就拆穿了：历史学家把集体自杀定在 4 月 30 日至 5 月 3 日，不是投降日。</li>
+    </ul>
+  </section>
+
+  <section class="card river" id="demmin">
+    <p class="folio">FOLIO 03</p>
+    <h2>德明：三条河、炸桥与进货簿</h2>
+    <blockquote>人已经在心里打破了自杀禁忌。大家公开谈论这件事。——弗洛里安·胡贝尔，转述于德国广播文化台</blockquote>
+    <p>4 月 30 日红军入城之前，户籍簿已记下 21 起自杀，包括警长妻子与两名成年女儿、71 岁医保基金主任一家含两名孙子女。入城后数字爆炸。5 月 3 日火势减弱，河面开始打捞尸体。进货簿 28 页上，《世界报》引述胡贝尔：园丁之女记下 612 例；德语维基据同一本子写“四百余起自杀”。两套读法都指向同一物件：战争把商业账本改成死亡清单。</p>
+    <p>NDR 在 2025 年报道里写：4 月 30 日至 5 月 4 日超过 900 人，主要是妇女。教堂圣巴尔多禄茂的常设说明写“远超一千”。学习者不必选定一个整数。需要记住的是：这是德国史上最大规模的集体自杀现场之一，而且发生在几乎没有正面战斗的小城里。人不是死在防线上，是死在自己熟悉的河湾。</p>
+  </section>
+
+  <section class="card" id="layers">
+    <p class="folio">FOLIO 04</p>
+    <h2>分层：党卫、平民、被宣传推销的死</h2>
+    <p>莱比锡市政厅里，美军见到的是纳粹市司库夫妇与女儿。那是政权中层。格舍尔把高官自杀写成：帝国不可想象没有希特勒；广播把元首之死报成英勇自我牺牲；怕同盟国清算；要控制自己的身体。投降会唤起 1918。</p>
+    <p>平民层不一样。许多人撑过空袭与配给，却在政权消失的那几天认为世界没有形状。胡贝尔对德国之声说：负罪与牵连、无法想象十二年紧急状态之后的日子，遍及全国，不只在苏占区。西部也有全家自杀。潮分三波：1945 年初东普鲁士与西里西亚溃退；4–5 月官员与柏林战役峰值；占领之后，尤其在苏占区，对性暴力与抢劫的反应。</p>
+    <p>还要留一条更早的线：格舍尔专著覆盖 1918–1945，包括大屠杀期间德国犹太人的自杀。1945 年春的潮，不能用来覆盖此前被迫害者的死。平民痛苦与纳粹罪行必须写在同一句：毁灭先从德国人的国家机器向外推，最后折回街道与河岸。</p>
+  </section>
+
+  <section class="card gall" id="now">
+    <p class="folio">FOLIO 05</p>
+    <h2>2025–2026：纪念被谁征用</h2>
+    <p>2025 年是战争结束八十年。格舍尔 5 月 3 日发文，把自杀潮重新放进“不要忘记战争是什么”的句子里，并先写六百万犹太人被谋杀。同日德国广播文化台问：没有受害者叙事的纪念如何可能？德明上次联邦议院选举中逾 47% 选民投了选择党。许多游行者——左右两边——都不是本地人。</p>
+    <p>2025 年 5 月 8 日，警方约 2,000 人对约 290 名极右（组织者称反制至少 4,000，2024 年警方反制约 600）。800 余名警察在场。极右原计划穿过内城到佩讷河港献花圈，被改道。行动联盟说：他们选 8 日，说明哀悼的是国防军的失败。</p>
+    <p>2026 年 4 月 8 日，德国广播文化台播出半小时专题《德明的创伤》。同月 23 日《北信使报》报道汉萨图书馆摄影展《城市景观 1935–1945–2025》：卡尔·特雷廷战后偷偷拍废墟，大卫·克吕格尔叠上 1935 与 2025 同一机位，展至 5 月 21 日，作为纪念周“德明不止于此”的提前序曲。圣灵教堂 1945 年被火烧掉，没有重建，只剩街名。照片能叠三个年份，叠不上进货簿上的名字——那些名字每年在圣巴尔多禄茂教堂被朗读，字幕写：长久被沉默的名字，在教堂的安静里响起。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="folio">FOLIO 06</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。</p>
+    <ol class="body">
+      <li>Christian Goeschel，2025-05-03：战争结束八十年，回访《纳粹德国的自杀》（1945 年官方数字约五倍、莱比锡市政厅）。<br><a href="https://christiangoeschel.substack.com/p/80-years-after-the-end-of-the-war" target="_blank" rel="noopener">https://christiangoeschel.substack.com/p/80-years-after-the-end-of-the-war</a></li>
+      <li>Oxford University Press 博客：格舍尔论 1945（遗书、柏林刑侦档案、并非每起都等于元首崇拜）。<br><a href="https://blog.oup.com/2015/11/suicide-nazi-germany-1945/" target="_blank" rel="noopener">https://blog.oup.com/2015/11/suicide-nazi-germany-1945/</a></li>
+      <li>德国广播文化台，2025-05-03：德明集体自杀的艰难纪念（约 1000 人、炸桥、宣传部、极右工具化）。<br><a href="https://www.deutschlandfunkkultur.de/demmin-massensuizid-zweiter-weltkrieg-1945-rote-armee-100.html" target="_blank" rel="noopener">https://www.deutschlandfunkkultur.de/demmin-massensuizid-zweiter-weltkrieg-1945-rote-armee-100.html</a></li>
+      <li>NDR，2025-05-09 节目：八十年战争结束，德明反制极右游行（警方约 2000 / 组织者至少 4000，极右约 300，改道托伦泽桥）。<br><a href="https://www.ndr.de/nachrichten/mecklenburg-vorpommern/80-Jahre-Kriegsende-Grosser-Protest-gegen-rechten-Aufmarsch-in-Demmin,demmin276.html" target="_blank" rel="noopener">https://www.ndr.de/nachrichten/mecklenburg-vorpommern/80-Jahre-Kriegsende-Grosser-Protest-gegen-rechten-Aufmarsch-in-Demmin,demmin276.html</a></li>
+      <li>《北信使报》，2026-04-23：汉萨图书馆《1935–1945–2025》城市景观对照展，至 5 月 21 日。<br><a href="https://www.nordkurier.de/regional/demmin/das-historische-das-zerstoerte-und-das-lebendige-demmin-im-foto-vergleich-4522423" target="_blank" rel="noopener">https://www.nordkurier.de/regional/demmin/das-historische-das-zerstoerte-und-das-lebendige-demmin-im-foto-vergleich-4522423</a></li>
+      <li>德国之声：胡贝尔《孩子，答应我你要开枪打死自己》英译访谈（约 1000/15000，东德禁忌，全国性的末日感）。<br><a href="https://www.dw.com/en/promise-me-youll-shoot-yourself-nazi-germanys-suicide-wave/a-49454051" target="_blank" rel="noopener">https://www.dw.com/en/promise-me-youll-shoot-yourself-nazi-germanys-suicide-wave/a-49454051</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="folio">FOLIO 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，把自杀潮读成社会史，而不是命运。五倍于往年的官方曲线、柏林四千与七千、德明五百到一千的争执，都在说行政与伦理同时崩盘。选一个整数当“真相”会把进货簿上的涂改抹掉。</p>
+    <p>第二，崩溃心理有配方：宣传把敌人写成食人者、把投降写成耻辱、把自杀写成体面；东线先由德军完成的灭绝战争让人知道“报复”意味着什么；炸桥把人关在三面环水的城里；入城后的性暴力与大火把恐惧坐实。配方是国家做的。河是地理。人不是抽象的“群众歇斯底里”。</p>
+    <p>第三，纪念可以被征用。5 月 8 日的火把游行把 4 月 30 日的河岸偷换成国防军的失败日。2025 年的坐堵说明：数字、日期、花圈放在哪一段河岸，都是政治。读进货簿之前，先问谁在发话筒。</p>
+    <p>第四，平民的死不抵消种族屠杀。格舍尔 2025 年的短文把六百万犹太人写在自杀潮前面。学习者也应如此：同一国家机器先毁灭别人，再把自己的街道烧成没有明天的地方。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第20期 · 墓地进货簿风 · 20260830_1910<br>
+    本文记录 1945 年的历史事实。若你正处在危机中，请向当地专业机构求助。
+  </footer>
+</article>
+</body>
+</html>
