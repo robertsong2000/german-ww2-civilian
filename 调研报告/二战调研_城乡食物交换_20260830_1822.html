@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>农村与城市：食物交换、疏散儿童与城乡心理 —— 帝国铁路时刻表上的仓鼠采购与 2026 年里特贝格画展</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Courier+Prime:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Reichsbahn timetable: cream card, red rule, station columns, ticket stub */
+:root {
+  --cream: #f3ead4;
+  --cream2: #e6d8b8;
+  --red: #9b1d2a;
+  --ink: #1c1914;
+  --fade: #5c5346;
+  --line: #c4b48a;
+  --green: #2c4a38;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(90deg, #3a3428 0 12px, #2e2920 12px 24px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Libre Baskerville", serif;
+  line-height: 1.82;
+  min-height: 100vh;
+}
+.timetable {
+  max-width: 920px;
+  margin: 22px auto 70px;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 27px, rgba(155,29,42,.05) 27px 28px),
+    linear-gradient(180deg, #f7f0dc, var(--cream));
+  border: 10px solid var(--red);
+  box-shadow: 0 22px 60px rgba(0,0,0,.4);
+  position: relative;
+  padding: 0 38px 46px;
+}
+.timetable::before {
+  content: "DEUTSCHE REICHSBAHN · KURSBUCH";
+  display: block;
+  background: var(--red);
+  color: #f3ead4;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: .28em;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 -38px;
+  padding: 8px 0;
+}
+h1 {
+  font-family: "Libre Baskerville", "Noto Serif SC", serif;
+  font-size: clamp(1.42rem, 3vw, 1.95rem);
+  line-height: 1.38;
+  margin: 18px 0 10px;
+}
+.sub { color: var(--fade); font-size: 15px; }
+.when {
+  margin-top: 10px;
+  font-family: "Courier Prime", monospace;
+  font-size: 12px;
+  color: #6a5c48;
+}
+.stub {
+  position: absolute;
+  right: 16px; top: 48px;
+  width: 86px; height: 86px;
+  border: 2px dashed var(--red);
+  color: var(--red);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  letter-spacing: .06em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  transform: rotate(8deg);
+  line-height: 1.2;
+}
+nav.toc {
+  margin: 18px 0 8px;
+  padding: 12px 16px 8px;
+  border: 1px solid var(--line);
+  background: var(--cream2);
+}
+nav.toc h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: .14em;
+  font-size: 1.15rem;
+  color: var(--red);
+  font-weight: 600;
+}
+nav.toc ol { margin: 6px 0 8px 1.2em; }
+nav.toc a { color: var(--green); }
+.card {
+  margin: 18px 0;
+  padding: 18px 20px 14px;
+  background: #fbf6e8;
+  border: 1px solid var(--line);
+  border-left: 8px solid var(--red);
+}
+.card.alt { border-left-color: var(--green); background: #eef2ea; }
+.card.tan { border-left-color: #8a6a32; background: #f4ead0; }
+.card h2 {
+  font-family: "Libre Baskerville", "Noto Serif SC", serif;
+  font-size: 1.32rem;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+.tag {
+  font-family: "Courier Prime", monospace;
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+p { margin: 0 0 11px; }
+ul, ol.body { margin: 0 0 11px 1.2em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 10px 0 14px;
+  padding: 8px 12px;
+  border-left: 4px solid var(--red);
+  background: rgba(155,29,42,.06);
+  font-style: italic;
+}
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 10px; }
+.sources a { color: #6e241c; word-break: break-all; }
+footer {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 3px double var(--red);
+  text-align: center;
+  font-family: "Courier Prime", monospace;
+  font-size: 12px;
+  color: var(--fade);
+}
+@media (max-width: 640px) {
+  .timetable { padding: 0 16px 32px; margin: 8px; }
+  .stub { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Reichsbahn timetable booklet: red rule, cream stock, ticket stub -->
+<article class="timetable">
+  <header>
+    <h1>农村与城市：食物交换、疏散儿童与城乡心理 —— 帝国铁路时刻表上的仓鼠采购与 2026 年里特贝格画展</h1>
+    <p class="sub">土豆、寄宿与怨恨：战时德国如何把城乡写成两条补给线，又如何在同一节车厢里互相看不顺眼</p>
+    <p class="when">调研时间：2026-08-30 18:22 CST · 平民史系列第9期 · 主题轮换池第9项</p>
+    <div class="stub">ZUG<br>KLV<br>18.22</div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录 · FAHRPLAN</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#food">食物：仓鼠采购不是战后才开始</a></li>
+      <li><a href="#klv">儿童：农村是营地，也是寄宿家庭</a></li>
+      <li><a href="#psyche">心理：被炸的城市怨没有被炸的村子</a></li>
+      <li><a href="#now">2026：里特贝格把仓鼠采购画进展厅</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">GL. 01 · THEMA</p>
+    <h2>本期主题</h2>
+    <p>城市缺土豆，农村缺人手。帝国铁路把这两边连成一条线：一边是周末背包去农庄换黄油的“仓鼠采购”（Hamsterfahrten），一边是把学龄儿童送进约九千座营地或农家的儿童疏送（KLV）。本报告不把农村写成田园避难所，而把它写成<strong>另一套配给与接待制度</strong>——劳动力与马匹被征走，强制劳工补上缺口；接待家庭领取孩子的食品卡与护理费；城里来的母亲被指责懒惰、买得起乡下人买不起的东西。</p>
+    <p>2026 年 2 月 27 日至 3 月 29 日，北威州里特贝格市立美术馆展出威廉·科赫（Wilfried Koch）的《仓鼠采购》组画：艺术家本人曾与姐姐坐火车去农庄求食，并在车厢里画下数百张面孔。展览把集体记忆停在 1945–1948；史学任务是把这条铁路线往战前回拨——仓鼠采购在 1942 年以后已是城里人的日常分支，而不是“零时”才发明的求生术。</p>
+  </section>
+
+  <section class="card alt" id="findings">
+    <p class="tag">GL. 02 · BEFUNDE</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>农村的压抑与城市不同，但不是世外桃源。</strong>DHM 写：开战时农村同样没有战争狂热，劳动力与马匹被抽走。所谓“德意志帝国战时没有严重营养危机”，前提是占领区被榨取、东欧被推向饿死；农村的相对宽裕，建立在这套掠夺之上，也建立在农户把产品藏过征购机关的能力之上。</li>
+      <li><strong>仓鼠采购在战争中后期已成气候。</strong>戈培尔把“囤积”骂成几乎犯罪的“仓鼠心态”。亲历者回忆：1939 年已有仓鼠式抢购，1942 年后进城下乡“扫农庄”成为公开的亚种；1944 年下半年，有人靠醋与香料换到农户屠宰所需的调味，比空手求情有效。</li>
+      <li><strong>KLV 把儿童编进农村，也把城乡摩擦编进农家厨房。</strong>DHM 估计至终战约 250 万儿童被送往农村；10–14 岁多在约 9000 座营地。巴伐利亚历史词典：1940–1945 超过 220 万儿童与青少年进入寄宿家庭或营地；6–10 岁多由民社福利会（NSV）安排，接待家庭领取孩子的食品卡与定额护理费。接待区常有抵触：城里母亲被骂懒、傲、不肯适应简陋。</li>
+      <li><strong>疏散压低城乡两边的士气。</strong>美国战略轰炸调查（USSBS）估计疏散约 488.5 万人；疏散“影响士气的每一个面向”。被疏散者士气差，没被疏散的地区更差；接待方的士气会因疏散者到来而下降。空袭还制造城市对未挨炸农村的怨恨，削弱“命运共同体”。</li>
+      <li><strong>战后仓鼠采购是战时城乡交换的放大，不是另一次战争。</strong>联邦德国历史之家（HdG）LeMO：国家供应在 1945 年崩溃后，城里人坐满员火车、步行、骑车去农村，用家具衣物换黄油、培根与土豆。里特贝格 2026 年展把这段画成乞食之路；它接在战时铁路的同一条时刻表后面。</li>
+    </ul>
+  </section>
+
+  <section class="card" id="food">
+    <p class="tag">GL. 03 · HAMSTERFAHRT</p>
+    <h2>食物：仓鼠采购不是战后才开始</h2>
+    <p>配给卡给购买权，不保证货架有货。城市越空，农村的粮仓越像另一套货币。农户面对征购机关，有动机把产品留下来；城里人面对空铺，有动机把衣物、香料、醋带下乡。交换在法律上是“经济犯罪”的近亲，在厨房里是晚饭。</p>
+    <p>DHM 提醒：德国本部战时“没有出现严重营养危机”，因为占领区被无情剥削。这句话必须连着读：城里“雅利安”消费者的最低生存线，是从别处抽来的。农村相对好过，并不等于农民过着宣传画上的丰收。马被征走，男劳力上前线，缺口由强制劳工、战俘、被编去拾甲虫与收割的学童填补。每年班级被派去田间，这是城乡之间另一条强制的食物线：不是交换，是征用儿童的时间。</p>
+    <p>1943 年仅柏林就有超过 70 万人离开。人走了，胃口还在铁路线上往返。战后仓鼠采购之所以能迅速成为大众现象，是因为车次、农庄地址与“用什么换什么”的知识，在战争后几年已经练过。</p>
+  </section>
+
+  <section class="card tan" id="klv">
+    <p class="tag">GL. 04 · KLV</p>
+    <h2>儿童：农村是营地，也是寄宿家庭</h2>
+    <p>1940 年 9 月 27 日传阅的“元首命令”启动扩大儿童疏送，莱茵史门户写明：当时战略空袭的毁灭规模尚无人能预见，政权首先要安抚被警报吓到的城市平民。宣传把它写成健康度假。DHM 写得直白：希特勒青年团自 1940 年起负组织责任；孩子可以躲炸弹，同时被送进意识形态与准军事操练，并脱离父母与教会。</p>
+    <p>巴伐利亚长期作为“安全接待区”。1940 年 11 月，柏林与汉堡约 10 万名被疏送儿童青少年中，只有约 1.3 万到巴伐利亚。运输主要靠帝国铁路专列。寄宿家庭不是无偿好心：他们拿到孩子的食品卡和护理费。母子疏送一度很受欢迎，1942 年要限时，1943 年起向母亲收费。</p>
+    <blockquote>在日益吃紧的接待区，KLV 并不罕见地遭到拒绝。……城里来的母亲常被指责懒惰、傲慢、不肯适应农村更简朴的生活；农民则因战争承受特别高的劳动负荷。——《巴伐利亚历史词典》</blockquote>
+    <p>USSBS 补充父母一侧：疏散常被怨恨，因为营地里的反宗教灌输与纳粹教化。农村不是中性的“安全地点”，而是另一套权力进入儿童身体的地方。</p>
+  </section>
+
+  <section class="card alt" id="psyche">
+    <p class="tag">GL. 05 · STIMMUNG</p>
+    <h2>心理：被炸的城市怨没有被炸的村子</h2>
+    <p>USSBS：疏散波及约 500 万人，牵动被疏散者、接待家庭、留城亲属与更广大社区；交通、住房、食品分配与医疗都被拉紧。接待方士气因客人到来而下降。空袭在群体层面制造城市对未受轰炸农村的怨恨，社会团结被削弱。宣传仍在讲共同命运；数字显示，有人觉得自己从胜利中能得到的比别人多。</p>
+    <p>这不是“乡下人冷血、城里人娇气”的性格剧。它是配给地理：谁靠近田、谁靠近高炮，谁必须把孩子交给火车，谁必须把房间让给陌生口音。人民共同体的海报在车站墙上，怨恨在厨房里。</p>
+  </section>
+
+  <section class="card" id="now">
+    <p class="tag">GL. 06 · 2026</p>
+    <h2>2026：里特贝格把仓鼠采购画进展厅</h2>
+    <p>里特贝格市政府 2026 年 2 月 20 日通报：市立美术馆于 2 月 27 日同时开幕《情侣》与《仓鼠采购》。后者画的是 1945 至 1948 年 6 月货币改革前后，饥饿者去农庄求食的苦路。科赫与姐姐当时也在火车上；他画下长途车厢与农户门前的人。展览至 3 月 29 日。</p>
+    <p>HdG 的战后日常条目把城乡写成崩溃后的结构：票证不够，只有交换能活命；满员列车、步行、自行车把城市送到村子里。1946 年 5 月吕讷堡车站曾因“土豆仓鼠者”挤到无法安全运营而关闭——这是战时铁路逻辑的余波。看 2026 年的画，需要把 1944 年的醋瓶与 1940 年的 KLV 专列叠进同一张时刻表：农村不是战争的外面，而是战争把人重新分类的地方。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">GL. 07 · QUELLEN</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。</p>
+    <ol class="body">
+      <li>德意志历史博物馆 LeMO：儿童疏送（约 250 万儿童、约 9000 座营地、HJ 自 1940 年负责）。<br><a href="https://www.dhm.de/lemo/kapitel/der-zweite-weltkrieg/alltagsleben/kinderlandverschickung" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/der-zweite-weltkrieg/alltagsleben/kinderlandverschickung</a></li>
+      <li>DHM LeMO：战时日常生活（农村劳动力与马匹、占领区供养、1943 年柏林超 70 万人离开、黑市）。<br><a href="https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben</a></li>
+      <li>《巴伐利亚历史词典》：Kinderlandverschickung（超过 220 万、寄宿家庭食品卡与护理费、接待区冲突、专列）。<br><a href="https://www.historisches-lexikon-bayerns.de/Lexikon/Kinderlandverschickung" target="_blank" rel="noopener">https://www.historisches-lexikon-bayerns.de/Lexikon/Kinderlandverschickung</a></li>
+      <li>莱茵史门户：扩大儿童疏送作为“预防性改宿”（1940-09-27 命令的心理安抚功能）。<br><a href="https://rheinische-geschichte.lvr.de/Epochen-und-Themen/Themen/vorsorgliche-umquartierung.-die-erweiterte-kinderlandverschickung-im-zweiten-weltkrieg/DE-2086/lido/57d1383ad7bdd8.16458782" target="_blank" rel="noopener">https://rheinische-geschichte.lvr.de/Epochen-und-Themen/Themen/vorsorgliche-umquartierung.-die-erweiterte-kinderlandverschickung-im-zweiten-weltkrieg/DE-2086/lido/57d1383ad7bdd8.16458782</a></li>
+      <li>联邦德国历史之家 LeMO：战后日常《生存食物》（城乡交换、仓鼠采购、1948 年货币改革）。<br><a href="https://hdg.de/lemo/kapitel/nachkriegsjahre/alltag/ueberlebensmittel.html" target="_blank" rel="noopener">https://hdg.de/lemo/kapitel/nachkriegsjahre/alltag/ueberlebensmittel.html</a></li>
+      <li>Action on Armed Violence：USSBS 士气调查摘要（疏散约 488.5 万、接待方士气下降、城乡怨恨）。<br><a href="https://aoav.org.uk/2020/the-effects-of-strategic-bombing-in-wwii-on-german-morale/" target="_blank" rel="noopener">https://aoav.org.uk/2020/the-effects-of-strategic-bombing-in-wwii-on-german-morale/</a></li>
+      <li>里特贝格市政府：2026-02-20《情侣》与《仓鼠采购》画展通报（展期至 2026-03-29）。<br><a href="https://www.rietberg.de/rathaus/aktuelles/detail/wo-liebespaare-auf-hamsterfahrten-treffen.html" target="_blank" rel="noopener">https://www.rietberg.de/rathaus/aktuelles/detail/wo-liebespaare-auf-hamsterfahrten-treffen.html</a></li>
+      <li>联邦政治教育中心：《德意志战争社会》。<br><a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/" target="_blank" rel="noopener">https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">GL. 08 · LEHRE</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，把农村放回战争地图。田野不是空袭的反面，而是配给、征购、强制劳动与儿童营地的另一面。问“德国人吃得怎样”，必须问：这袋土豆是征购来的、换来的，还是从占领区抽来的。</p>
+    <p>第二，火车上的孩子与背包里的培根，是同一条制度的两个车厢。KLV 专列把城市儿童送进农村权力；仓鼠采购把城市胃口送回农庄厨房。两者都制造怨恨，也都依赖帝国铁路。</p>
+    <p>第三，接待不是自动的好心。护理费、食品卡、被征用的房间，把“收留”写成可计算的义务。城里母亲与农户主妇的互相指责，是士气调查里“接待方因疏散者到来而下降”的日常版本。</p>
+    <p>第四，2026 年的仓鼠采购画展容易把记忆停在战后乞食。看画之前，先看 1940 年的时刻表：那列车当时已经满了。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第9期 · 帝国铁路时刻表风 · 20260830_1822
+  </footer>
+</article>
+</body>
+</html>
