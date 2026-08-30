@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时报纸 —— 栏缝里的国界：纸张支票、四开变两开，以及只准犹太人看的那一张</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Newsprint columns and ink: gray rag paper, column rules, red masthead bar */
+:root {
+  --news: #ece6d4;
+  --ink: #161410;
+  --rule: #8a1c1c;
+  --col: #c9c0a8;
+  --mute: #5a5346;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #2a261e;
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.86;
+}
+.paper {
+  max-width: 840px;
+  margin: 24px auto 72px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 31.8%, var(--col) 31.8% 32.1%, transparent 32.1%),
+    var(--news);
+  box-shadow: 0 18px 36px rgba(0,0,0,.45);
+  padding: 22px 26px 36px;
+  border-top: 10px solid var(--rule);
+}
+.kicker {
+  font-family: "Anton", sans-serif;
+  letter-spacing: .14em;
+  font-size: 13px;
+  color: var(--rule);
+  text-align: center;
+}
+h1 {
+  font-family: "Anton", "Noto Serif SC", sans-serif;
+  font-size: clamp(1.25rem, 3.2vw, 1.7rem);
+  line-height: 1.28;
+  font-weight: 400;
+  margin: 6px 0 10px;
+}
+.sub { font-size: 15.5px; }
+.when { font-size: 13.5px; color: var(--mute); margin: 8px 0 12px; }
+nav.toc {
+  background: var(--ink);
+  color: var(--news);
+  padding: 12px 16px 8px;
+  margin-bottom: 14px;
+}
+nav.toc h2 { font-family: "Anton", sans-serif; font-size: 1.2rem; font-weight: 400; }
+nav.toc ol { margin: 6px 0 8px 1.25em; }
+nav.toc a { color: #f0e6d0; }
+.col {
+  margin: 14px 0;
+  padding: 12px 14px 10px;
+  background: rgba(255,255,255,.35);
+  border-left: 6px solid var(--ink);
+}
+.col.dark {
+  background: var(--ink);
+  color: var(--news);
+  border-left-color: var(--rule);
+}
+.col.dark a { color: #f0c9c9; }
+.col.dark .st { color: #e8b4b4; }
+.st {
+  font-family: "Anton", sans-serif;
+  letter-spacing: .1em;
+  font-size: 13px;
+  color: var(--rule);
+}
+h2 {
+  font-family: "Anton", "Noto Serif SC", sans-serif;
+  font-size: 1.22rem;
+  font-weight: 400;
+  margin: 2px 0 8px;
+}
+a { color: var(--rule); }
+ul { margin: 6px 0 10px 1.2em; }
+li { margin: 7px 0; }
+p + p { margin-top: 10px; }
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Anton", sans-serif;
+  letter-spacing: .06em;
+  color: var(--mute);
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<article class="paper">
+  <p class="kicker">PAPIERSCHECK · TAGESPAROLE · NACHRICHTENBLATT</p>
+  <h1>战时报纸 —— 栏缝里的国界：纸张支票、四开变两开，以及只准犹太人看的那一张</h1>
+  <p class="sub">德国邻居把四页纸写成还能知道前线。纸先给党报。街对面的犹太人从 1938 年 11 月起只准订一张被宣传部盖章的《犹太新闻报》。1943 年 6 月，连这张也停了。</p>
+  <p class="when">调研时间：2026-08-31 02:08 CST · 平民史系列第51期 · 灯火管制 / 信息饥渴的子角度</p>
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#paper">纸张支票</a></li>
+      <li><a href="#ban">禁刊</a></li>
+      <li><a href="#now">2025–2026：点开之前先确认</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="col" id="theme">
+    <p class="st">SPALTE 01</p>
+    <h2>本期主题</h2>
+    <p>本报告写栏缝里的国界。1932 年德国约有 4700 种报纸，1937 年剩 2500，1944 年剩 977。短缺不是中性的：符腾堡 1937 年还有 119 种日报，到 1943 年春只剩 56。斯大林格勒之后，1943 年 2 月 28 日停六家，3 月 31 日再停七家，4 月 15 日连发行量 56,782 的《斯图加特新日报》也停了。1944 年 8 月，纸荒把法定篇幅压到最多四页；1945 年 3 月再减半。德国平民把两页纸写成还能看报。</p>
+    <p>同一套纸，对犹太人写成禁刊。1935 年起犹太报纸不准公开零售。1938 年 11 月 9 日至 10 日之后，一百三十年的犹太报刊史被一刀切断。《中央协会报》末年约 4 万份，《犹太评论》约 2.5 万份，都不得再出。宣传部下令改出《犹太新闻报》：柏林 1938 年 11 月 23 日创刊，每期须经欣克尔签字“无异议”，只准在犹太居民中散发。1943 年 6 月 4 日柏林版停刊。德国邻居明天还买《人民观察家报》。1944 年它印到 170 万份。</p>
+  </section>
+
+  <section class="col" id="findings">
+    <p class="st">SPALTE 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>纸张支票先决定谁还能印。</strong> 1942 年德国书业经济处第 1 号指令：出版社出纸、动库存、把印刷挪到国外，都要批准。纸张支票写明书名、印量、公斤数。党、国防军、托特组织都是配额户。有人拿支票做黑市。德国职员把这写成节约。节约的下一句是：非党报先被停。</li>
+      <li><strong>篇幅变薄，不等于消息变真。</strong> 帝国新闻主管奥托·迪特里希每天发“当日口号”。兵力、空袭、损失不许写或须审查。戈培尔的《帝国》周报 1940 年秋 50 万份，1944 年春超过 140 万；原 32 页，1945 年最后几期只剩 8 页。纸越少，栏越满是口号。</li>
+      <li><strong>犹太报纸先被赶出报摊，再被换成一张告示。</strong> 利奥·贝克研究所 1938 计划：1938 年 12 月 12 日宣传部第二处批件，允许《犹太新闻报》第 6 期在帝国犹太居民中发行。它由犹太人编辑，由宣传部完全控制。先写移民办法，门随后关上。美国大屠杀纪念馆中文条目：水晶之夜后余下的犹太社群报纸被查禁，新闻只能从这张政府控制的报来。</li>
+      <li><strong>地方停刊是吞并，不只是缺纸。</strong> 符腾堡史研究：党报利用战争把私人发行人挤走。纸荒是真的，停谁的报是政治。德国小镇早上少了一种报，不等于少了一种意见——意见早被统一。少的是还能假装地方还有自己的栏。</li>
+      <li><strong>街角的《冲锋队员》箱。</strong> 不是人人订党报。许多人每天路过钉在墙上的玻璃箱。德国平民把不看写成没有参与。箱子在路上。</li>
+    </ul>
+  </section>
+
+  <section class="col dark" id="paper">
+    <p class="st">SPALTE 03</p>
+    <h2>纸张支票</h2>
+    <p>德国邻居把四页纸写成没有崩溃。报摊还开。油墨还黑。黑着的栏证明：这张纸是留给被承认的读者的。被点名缺纸的，首先是还被允许拥有报纸的人。</p>
+  </section>
+
+  <section class="col" id="ban">
+    <p class="st">SPALTE 04</p>
+    <h2>禁刊</h2>
+    <p>禁刊比上交自行车更早。1935 年不准公开卖，1938 年不准出，1943 年连告示报也停。德国客厅里的早报，和犹太人手里的《新闻报》，从来不是同一张纸。不要把纸荒写成全体德国人一起少看几栏。少看的下一句是禁看。</p>
+  </section>
+
+  <section class="col dark" id="now">
+    <p class="st">SPALTE 05</p>
+    <h2>2025–2026：点开之前先确认</h2>
+    <p>德国数字图书馆的报纸门户把 1933–1945 的报刊全文检索上线；点开纳粹时期报纸前，必须确认弹窗：这是宣传，不是公共讨论。配套虚拟展《国家社会主义时期的报刊》仍在线。德国国家图书馆虚拟展页面 2026 年 6 月 16 日更新。门户项目本身办到 2025 年 7 月 31 日。流亡档案里 26 种犹太期刊、24,778 页已数字化。看栏缝之前，先看谁被禁止出现在栏里。</p>
+  </section>
+
+  <section class="col" id="sources">
+    <p class="st">SPALTE 06</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>德国数字图书馆虚拟展：纳粹时期报刊；《人民观察家报》1944 年 170 万份；《帝国》缩到 8 页。<br><a href="https://ausstellungen.deutsche-digitale-bibliothek.de/ns-presse" target="_blank" rel="noopener">https://ausstellungen.deutsche-digitale-bibliothek.de/ns-presse</a></li>
+      <li>报纸门户问答：1933–1945 报刊须确认弹窗后才能打开。<br><a href="https://www.deutsche-digitale-bibliothek.de/content/newspaper/fragen-antworten" target="_blank" rel="noopener">https://www.deutsche-digitale-bibliothek.de/content/newspaper/fragen-antworten</a></li>
+      <li>德国国家图书馆：虚拟展页最近更改 2026-06-16；DDB 报纸门户项目至 2025-07-31。<br><a href="https://www.dnb.de/DE/Kulturell/VirtuelleAusstellungen/vas.html" target="_blank" rel="noopener">https://www.dnb.de/DE/Kulturell/VirtuelleAusstellungen/vas.html</a><br><a href="https://www.dnb.de/DE/Professionell/ProjekteKooperationen/Projektarchiv/2025/DDB-Zeitungsportal/DDB-Zeitungsportal_node.html" target="_blank" rel="noopener">https://www.dnb.de/DE/Professionell/ProjekteKooperationen/Projektarchiv/2025/DDB-Zeitungsportal/DDB-Zeitungsportal_node.html</a></li>
+      <li>符腾堡地方史研究：1937 年 119 种到 1943 年春 56 种；1944 年 8 月最多四页，1945 年 3 月再减半。<br><a href="https://doi.org/10.53458/zwlg.v78i.695" target="_blank" rel="noopener">https://doi.org/10.53458/zwlg.v78i.695</a></li>
+      <li>利奥·贝克研究所 1938 计划：宣传部批准《犹太新闻报》只在犹太居民中发行。<br><a href="https://www.lbi.org/1938projekt/de/detail/mit-dem-segen-der-nazis/" target="_blank" rel="noopener">https://www.lbi.org/1938projekt/de/detail/mit-dem-segen-der-nazis/</a></li>
+      <li>《犹太总汇报》：1938-11-10 起犹太报刊禁刊；《中央协会报》约 4 万份。<br><a href="https://www.juedische-allgemeine.de/kultur/laut-und-deutlich/" target="_blank" rel="noopener">https://www.juedische-allgemeine.de/kultur/laut-und-deutlich/</a></li>
+      <li>美国大屠杀纪念馆中文：新闻的撰写；1944 年《人民观察家报》170 万份；水晶之夜后只剩《犹太新闻报》。<br><a href="https://encyclopedia.ushmm.org/content/zh/article/writing-the-news" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/zh/article/writing-the-news</a></li>
+      <li>德语维基：纸张支票，1942 年起印刷须经经济处与宣传部认为必要。<br><a href="https://de.wikipedia.org/wiki/Papierscheck" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Papierscheck</a></li>
+    </ol>
+  </section>
+
+  <section class="col" id="lesson">
+    <p class="st">SPALTE 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，配给不只管胃，也管栏。谁能印四页，谁只准看一张盖章的告示，写在同一条街上。</p>
+    <p>第二，写德国邻居把报纸叠小带进防空洞，下一句写 1938 年犹太报刊被禁。再下一句写 1943 年连《新闻报》也停。再下一句写《人民观察家报》在纸荒里印到 170 万。油墨不是中性的。</p>
+    <p>第三，纸荒是真的，停谁的报是政治。不要把“大家都缺纸”写成所有人一起少看新闻。少看的下一句是禁看。</p>
+    <p>第四，今天点开纳粹报纸要先点确认。看栏缝之前，先看谁被从栏里删掉。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第51期 · 四开油墨栏风 · 20260831_0208</footer>
+</article>
+</body>
+</html>
