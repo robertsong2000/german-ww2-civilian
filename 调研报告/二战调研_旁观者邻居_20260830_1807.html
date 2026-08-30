@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旁观者与邻居：驱逐发生时德国人看见了什么 —— 2025–2026年 Stolpersteine、地方记忆与“普通人”争论的平民视角</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Window-curtain peep: heavy folds, lace mesh, a slit of cold street, warm room lamp */
+:root {
+  --room: #1c1612;
+  --sill: #2a221c;
+  --fold-a: #4a322c;
+  --fold-b: #3a241e;
+  --fold-c: #5c3c34;
+  --lace: #cbb8a4;
+  --slit: #8a9aa8;
+  --street: #2c343c;
+  --lamp: #e8c4a0;
+  --lamp-dim: #c9a078;
+  --brass: #b8924a;
+  --brass-dk: #7a5e28;
+  --paper: #efe4d2;
+  --paper2: #e6d6be;
+  --ink: #221c16;
+  --muted: #6a5a4a;
+  --rose: #8a4a42;
+  --soot: #14100e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--room);
+  color: var(--paper);
+  font-family: "Literata", "Noto Serif SC", "Songti SC", serif;
+  line-height: 1.86;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+/* Dust in the lamplight */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  z-index: 8;
+  opacity: .18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+/* Heavy curtain folds, left and right, with a viewing slit */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  z-index: 7;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 38%,
+      rgba(20,12,10,.55) 38% 39%,
+      transparent 39% 61%,
+      rgba(20,12,10,.55) 61% 62%,
+      transparent 62% 100%
+    ),
+    linear-gradient(
+      90deg,
+      var(--fold-b) 0%,
+      var(--fold-a) 6%,
+      var(--fold-c) 10%,
+      var(--fold-b) 14%,
+      var(--fold-a) 18%,
+      transparent 28%,
+      transparent 72%,
+      var(--fold-a) 82%,
+      var(--fold-c) 86%,
+      var(--fold-b) 90%,
+      var(--fold-a) 94%,
+      var(--fold-b) 100%
+    );
+  opacity: .92;
+}
+.lace {
+  pointer-events: none;
+  position: fixed; inset: 0;
+  z-index: 6;
+  background-image:
+    radial-gradient(circle at 20% 12%, transparent 18%, rgba(203,184,164,.07) 19% 20%, transparent 21%),
+    repeating-linear-gradient(0deg, transparent 0 11px, rgba(203,184,164,.08) 11px 12px),
+    repeating-linear-gradient(90deg, transparent 0 13px, rgba(203,184,164,.05) 13px 14px);
+  mask-image: linear-gradient(90deg, #000 0 22%, transparent 32% 68%, #000 78% 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0 22%, transparent 32% 68%, #000 78% 100%);
+}
+.sash {
+  max-width: 880px;
+  margin: 36px auto 88px;
+  position: relative;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(232,196,160,.08), transparent 12%),
+    linear-gradient(180deg, #2e2620 0%, #241e1a 40%, #1e1814 100%);
+  border: 14px solid #3a2e26;
+  box-shadow:
+    0 0 0 1px #6a5648,
+    0 0 0 8px #2a221c,
+    0 40px 90px rgba(0,0,0,.65),
+    inset 0 0 80px rgba(138,154,168,.08);
+  padding: 0 40px 44px;
+}
+.sash::before {
+  /* Window sash bar */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 46%;
+  height: 10px;
+  background: linear-gradient(180deg, #4a3c32, #2a221c);
+  box-shadow: 0 2px 0 rgba(232,196,160,.12);
+  z-index: 0;
+  opacity: .35;
+  pointer-events: none;
+}
+.mast {
+  position: relative;
+  z-index: 1;
+  padding: 38px 6px 16px;
+  border-bottom: 1px solid rgba(184,146,74,.35);
+}
+.peep {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: .38em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+h1 {
+  font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+  font-weight: 600;
+  font-size: clamp(1.55rem, 3.4vw, 2.22rem);
+  line-height: 1.36;
+  margin: 12px 0 10px;
+  color: #f6ead8;
+  text-shadow: 0 0 40px rgba(232,196,160,.18);
+}
+.sub { color: #c8b49a; font-size: 15.5px; }
+.when {
+  margin-top: 12px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12px;
+  color: #9a8a74;
+  letter-spacing: .04em;
+}
+.tassel {
+  position: absolute;
+  right: 0; top: 42px;
+  width: 72px; height: 72px;
+  border: 1px solid var(--brass);
+  background:
+    linear-gradient(135deg, #c4a056, #7a5e28);
+  color: var(--soot);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 8px 0 var(--brass-dk);
+  transform: rotate(3deg);
+}
+nav.toc {
+  position: relative;
+  z-index: 1;
+  margin: 22px 0 6px;
+  padding: 16px 18px 12px;
+  background: rgba(12,10,8,.45);
+  border: 1px solid rgba(184,146,74,.28);
+  border-left: 4px solid var(--brass);
+}
+nav.toc h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  color: var(--lamp);
+  letter-spacing: .12em;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+nav.toc ol { margin: 0 0 4px 1.25em; font-size: 15px; }
+nav.toc a {
+  color: #efe4d2;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(184,146,74,.5);
+}
+nav.toc a:hover { color: var(--lamp); border-bottom-style: solid; }
+.card {
+  position: relative;
+  z-index: 1;
+  margin: 24px 0;
+  padding: 22px 24px 18px;
+  background:
+    linear-gradient(180deg, var(--paper) 0%, var(--paper2) 100%);
+  color: var(--ink);
+  border: 1px solid #c4b090;
+  box-shadow:
+    6px 10px 0 rgba(0,0,0,.28),
+    inset 0 1px 0 #fff6e8;
+}
+.card::after {
+  /* Curtain-cord knot as paper clip */
+  content: "";
+  position: absolute;
+  top: -6px; right: 28px;
+  width: 18px; height: 18px;
+  border: 2px solid var(--brass-dk);
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #e8d080, var(--brass));
+  box-shadow: 0 2px 0 #5a4418;
+}
+.card.dusk {
+  background: linear-gradient(180deg, #e8dcc8, #d8c8b0);
+}
+.card.street {
+  background: linear-gradient(180deg, #dce2e6, #c8d0d6);
+}
+.card.brass {
+  background: linear-gradient(180deg, #efe0b8, #e0cc94);
+}
+.card h2 {
+  font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+  font-size: 1.42rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c4ae8a;
+  color: #1a1410;
+}
+.tag {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 10.5px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 6px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 16px;
+  border-left: 3px solid var(--brass);
+  background: rgba(138,74,66,.07);
+  font-style: italic;
+  color: #3a2c24;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 10px 0 16px;
+  background: #f7efe0;
+}
+th, td {
+  border: 1px solid #c9b496;
+  padding: 7px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #e4d4b4; font-weight: 600; }
+.note { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+.sources a { color: #6e2c24; word-break: break-all; }
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(184,146,74,.4);
+  font-size: 13px;
+  color: #b8a888;
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  letter-spacing: .06em;
+}
+@media (max-width: 720px) {
+  .sash { padding: 0 18px 32px; margin: 8px 6px 48px; border-width: 8px; }
+  .tassel { display: none; }
+  body::after { opacity: .35; }
+  .lace { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="lace" aria-hidden="true"></div>
+<!-- Looking through heavy drapes: a slit of street, papers on the sill -->
+<article class="sash">
+  <header class="mast">
+    <div class="peep">Durchblick · Hausflur · 窗缝</div>
+    <h1>旁观者与邻居：驱逐发生时德国人看见了什么 —— 2025–2026年 Stolpersteine、地方记忆与“普通人”争论的平民视角</h1>
+    <p class="sub">黄星、犹太人之家、告密与“看不见”，以及人行道上的黄铜嵌石如何把邻居的缺席重新钉回门口</p>
+    <p class="when">调研时间：2026-08-30 18:07 CST · 平民史系列第2期 · 主题轮换池第6项</p>
+    <div class="tassel">HIER<br>WOHNTE<br>08.30</div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录 · FENSTERLEISTE</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#star">黄星：街上被看见的身体</a></li>
+      <li><a href="#house">犹太人之家：同屋顶下的驱逐</a></li>
+      <li><a href="#denun">告密与“看不见”</a></li>
+      <li><a href="#debate">Goldhagen / Browning：勿把邻居写成行刑队</a></li>
+      <li><a href="#klemperer">克伦佩勒看见的邻居</a></li>
+      <li><a href="#now">2025–2026：Stolpersteine 与被偷走的门口</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">01 · Thema</p>
+    <h2>本期主题</h2>
+    <p>本期把观察点放在<strong>窗后与门口</strong>：1933–1945 年，德国城市里的非犹太邻居究竟看见了什么？他们看见黄星、看见被标了星的公寓门、看见有人提着箱子被押向车站；他们也“看不见”——把窗帘拉严，把邻居的消失说成“迁往东方”。美国大屠杀纪念馆（USHMM）指出，战后许多人自称“只是旁观者”（Bystander），这个词把责任推成缺席；但财政官员处理“犹太人财产税”、教师执行种族课程、邻居告密、低价买下家具，都已经越过“路过”的边界。联邦政治教育中心（bpb）说得更硬：在把一部分人从道德共同体里开除出去的过程中，<strong>没有真正的观众，只有共同制造这种社会现实的人</strong>——有人更热心，有人更冷淡，位置不同，不是置身事外。</p>
+    <p>2026 年 5 月，贡特尔·德姆尼希（Gunter Demnig）再次在柏林人行道嵌入黄铜嵌石（Stolpersteine）。2026 年 8 月，勃兰登堡的斯普伦贝格（Spremberg）与福斯特（Forst）有嵌石被撬走。地方记忆把“曾经住在这里”钉回门口；盗窃则把另一种看不见重新上演。本期把档案里的窗缝，与人行道上的铜片放在同一条视线里。</p>
+  </section>
+
+  <section class="card dusk" id="findings">
+    <p class="tag">02 · Befunde</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>驱逐是公共事件，不是地下作业。</strong>bpb 写明：1941 年秋起，帝国境内尚存的犹太德国人（混合婚姻或军工岗位等例外另计）被押往火车站，用卡车或成队步行，经帝国铁路运走。人群围观、鼓掌、起哄并不罕见，学童尤其起劲。汉堡一位非犹太妇女 1941 年 10 月 24 日写信给女儿，问邻居将被送去俄国还是波兰，“总之是毁灭，是必死”。另一些人相信宣传中的“劳动派遣”；还有人嫌驱逐“太人道”，觉得不如就地枪杀，省下运煤。</li>
+      <li><strong>黄星把匿名城市拆开。</strong>1941 年 9 月 1 日警察条例，19 日起约 20 万仍在帝国的犹太人须把约手掌大的布星缝在左胸。柏林 Wallstraße 16 号被“雅利安化”的工房里，Geitel &amp; Co. 几天内印了约一百万枚，以十芬尼“成本价”卖给受害者，公司获利逾三万马克。1942 年 3 月 13 日起，仍有犹太人居住的公寓也要挂星。克伦佩勒记下伊娃缝星时自己的暴怒；英格·多伊奇克龙（Inge Deutschkron）记下地铁里有人请她立刻坐下。bpb 的判断是：多数反应是无视，少数有团结，暴力袭击往往被多数人装作没看见。</li>
+      <li><strong>“看不见”依赖告密的可能性，而不必人人告密。</strong>以色列大屠杀纪念馆（Yad Vashem）论德国义人时指出：救助发生在家中与工作场所，当局要靠告发才能听见；盖世太保的“无处不在”，相当程度上是普通人的自我监视。同馆评述埃里克·约翰逊（Eric Johnson）时又给出另一组数字：告密者大约只占人口的百分之一二，动机常是邻里纠纷而非意识形态。两句话必须并列：告密不必普遍，才足以让窗后的人把窗帘拉上。</li>
+      <li><strong>Goldhagen / Browning 争论不能直接套在窗后的平民身上。</strong>两人争的是 Reserve-Polizeibataillon 101 在波兰如何变成枪杀者。布朗宁强调服从、从众与战时角色；戈德哈根强调德国文化中的“消灭性反犹”。学术主流拒绝把后者写成单因论。把这场关于行刑队的争论，平移成“每个德国邻居都想犹太人死”，会抹掉克伦佩勒日记里那些互相矛盾的声音；反过来用“普通人在任何地方都会服从”来洗掉德国城市里的获利、起哄与法律化排斥，同样不诚实。</li>
+      <li><strong>2026 年的嵌石仍在争门口的可见性。</strong>美联社 2026 年 5 月报道：德姆尼希已在德国及另外 31 国铺下约 12.6 万块嵌石，柏林超过 1.1 万块；6–7 日他在柏林多区继续铺设，地方倡议故意不公布地址与时刻，好让家属保有私密。同年 8 月 24 日《犹太总汇报》报道斯普伦贝格与福斯特的盗窃，国家安全部门介入。嵌石要求行人低头读名字；盗窃则把名字从门口撬走。</li>
+    </ul>
+  </section>
+
+  <section class="card" id="star">
+    <p class="tag">03 · Judenstern</p>
+    <h2>黄星：街上被看见的身体</h2>
+    <p>黄星不是中世纪羞辱的简单复刻，而是一套现代行政程序。bpb（Verena Buser / Leo Baeck Institute Shared History）写明：1941 年 9 月 1 日警察条例，19 日起，按纽伦堡法被定义为犹太人、年满六岁者，须把星“公开、可见地缝在左胸”。当时帝国境内大约还剩 20 万人。织物上的“Jude”模仿希伯来字母，设计线索指向海德里希。印星的房子本身就是掠夺物：Wallstraße 16 原属犹太纺织商 Jakob Berglas 与 Jakob Intrator；1938 年强制拍卖后，Geitel 在此承接纳粹订货，同时生产卐字旗。乔安妮·因特拉托（Joanne Intrator）后来发现：祖父母仍困在柏林、被迫佩星时，那枚星正是在被夺走的祖产里印出来的。战后她家还得向“雅利安化”受益人支付和解金，才换来墙上的一块纪念牌。</p>
+    <p>bpb 的另一篇教材补了一刀：星要自己买，十芬尼一枚，第二枚二十芬尼，还要签字保证“爱护、缝时把布边折进去”。1942 年 3 月 13 日起，犹太人尚在居住的公寓门外也挂星。门口从此不必打开，走廊里的人已经知道该对哪一扇门采取另一套礼貌。</p>
+    <p>德意志历史博物馆（DHM）LeMO 收录瓦尔特·路德维希（Walther Ludwig, *1929）的回忆：斯图加特电车上，他按当时儿童让座的习惯，把座位让给一位佩星的年长女士。她不敢坐。座位空着，直到下一站上来一个不知情的人，高兴地坐下。路德维希没亲眼看见驱逐队列，但听说了，也听说人被送进“Kazet”。他记得公园椅上钉着禁坐牌，记得电车上犹太人不得入座。看见与不敢接住，可以发生在同一节车厢。</p>
+    <blockquote>已经在黄星之前，一切能关的都关上了……我们多数戴过星的人觉得，自己早该戴上它。——露特·克吕格（Ruth Klüger），bpb 转述</blockquote>
+    <p>USHMM 德语百科补充了反向的、可被惩罚的姿态：德国城市里有非犹太人向佩星者打招呼。巴黎有人把黄星当作抗议来戴。这些姿态改变不了铁路时刻表，但说明“街上的看见”从来不是单一表情。bpb 同时写：多数情况是暴力，而多数社会以无视来配合暴力。</p>
+  </section>
+
+  <section class="card street" id="house">
+    <p class="tag">04 · Judenhaus</p>
+    <h2>犹太人之家：同屋顶下的驱逐</h2>
+    <p>1939 年 4 月 30 日《与犹太人的租赁关系法》要在中期内让犹太人和“雅利安人”不再同住一栋楼。犹太房主被强行塞进犹太房客；“雅利安”房东可对犹太租客短期解约。比勒费尔德市档案的 Mosberg 家族展写道：全市形成大约二十处所谓“犹太人之家”（Judenhäuser），人挤在毯子隔开的角落，一次次被住房局赶着搬家。尤利乌斯与约翰妮·莫斯贝格 1942 年 3 月 26 日迁入 Wertherstraße 6，四个月后出现在递解名单上。</p>
+    <p>威斯巴登 Herrngartenstraße 11 的个案更接近“邻居看见了什么”。地方研究写明：这栋楼从未是纯粹的犹太人之家。至少两户非犹太租客在 1939 年以前就住在这里，在房屋作为犹太人之家运转的那几个月里，<strong>直接感知同住者的苦难与被运走</strong>。1942 年 6 月 10 日十四人被送往卢布林 / 索比堡，9 月 1 日二十二人送往特莱西恩施塔特。雷吉娜·贝克（Regina Beck）本应随九月大运输走；8 月 28 日清晨六点，人们在她的寓所发现她已服毒身亡——集会点定在弗里德里希大街 33 号正统会堂，许多名单上的人在那几天选择同样的出口。没有人从这栋楼里把自己的命救出去。</p>
+    <p>Yad Vashem 论德国义人时提醒：战前德国犹太人与非犹太人在邻里、雇佣、诊所、课堂、一战战友关系上缠在一起，大城市尤其如此；估计 1932 年犹太人婚姻中约三成是混合婚姻。正因如此，隔离必须靠法律与住房政策来完成。把人赶进犹太人之家，既是为递解做行政准备，也是让窗外的人逐渐失去“还认得的那一张脸”。同一篇文章写：公众对犹太人问题的“抽象化”，正是因为身体接触变少、人被关进这些房子。</p>
+    <p class="note">下表只标本期核过的可见性节点，不是递解全年表。</p>
+    <table>
+      <thead>
+        <tr><th>日期</th><th>邻居可能看见什么</th><th>来源</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1939-04-30</td><td>租赁法启动隔离居住，“犹太人之家”成形</td><td>比勒费尔德市档案</td></tr>
+        <tr><td>1941-09-19</td><td>街头佩星；约 20 万人成为可被指认的身体</td><td>bpb</td></tr>
+        <tr><td>1941-10-18</td><td>柏林格鲁内瓦尔德首列“专列”，1251 人；此后队列有时穿城步行</td><td>DHM</td></tr>
+        <tr><td>1941-10-24</td><td>汉堡非犹太邻居已能写信说“必死”</td><td>bpb</td></tr>
+        <tr><td>1941-10-24</td><td>帝国保安总局：对公开对犹太人表示友好的德意志血统者，可以“教育”为由关入集中营至三个月</td><td>Yad Vashem</td></tr>
+        <tr><td>1942-03-13</td><td>犹太人尚住的公寓门外挂星</td><td>bpb</td></tr>
+        <tr><td>1942–43</td><td>格鲁内瓦尔德约 35 列、约 1.7 万人送往奥斯维辛；该站累计逾 5 万人被递解</td><td>DHM</td></tr>
+      </tbody>
+    </table>
+    <p>DHM 与洪堡大学合作的格鲁内瓦尔德教材写：货站选在别墅区，起初便于避开市中心的众目；随着车次增加，保密失效。1941 年 11 月 27 日离开的 1035 人在里加被直接枪杀。帝国铁路按人按公里收费：每人四芬尼，超过四百人给团体票。纪念来得很晚：1987 年铜牌，1991 年州府墙体，1998 年德国铁路公司在 17 股道铺上每一趟车的日期与人数。教材作者抱怨这个地点在居民意识里仍太安静——驱逐曾经需要被看见，纪念却仍可能被绕开。</p>
+  </section>
+
+  <section class="card dusk" id="denun">
+    <p class="tag">05 · Denunziation</p>
+    <h2>告密与“看不见”</h2>
+    <p>路德维希记下斯瓦本谚语：“别说太多，不然你就去达豪。”与“德意志问候”配套的是“德意志目光”（Deutscher Blick）：说话时回头看肩后有没有人。职业监视者与出于信念的私人告密者“到处都是”。这不是说每栋楼都有眼线，而是说人们必须按这个前提来呼吸。</p>
+    <p>Yad Vashem 写德国义人：救助发生在非政治的日常里，因而特别容易被好奇的邻居告发；向邻居与同事告密“成了希特勒治下德国社会的真正标志”。盖世太保的恐怖名声，与其说靠自身效率，不如靠普通人的自愿配合——“自我警察、自我监视”。同馆另一篇书评转述约翰逊：告密者大约百分之一二，多在邻里争执之后，少见意识形态动机；结论与罗伯特·盖拉特利（Robert Gellately）等人相近。约翰逊还认为，多数德国人觉得私下发牢骚、听 BBC、讲纳粹笑话，未必会遭严惩；因此沉默并不等于被恐惧冻住。</p>
+    <p>两套说法并不互相取消。百分之一二的告密者，足以让其余人把窗帘拉上。USHMM 把“被动”拆开：可能是无力、怕自己的安全、群体压力，也可能是对加害的容忍或赞成。“冷漠”常被归因于经济危机与战时活命，再加上传统宗教反犹与宣传把犹太人写成“异类”。该馆同时强调：许多人并非停留在旁观——告发同事或邻居、羞辱犹太同学、低价接手店铺与住房，都带着利益。战后自称“没参与”，把这些层理抹平。</p>
+    <p>bpb 用物质把“知道”钉死：约十万家企业在“雅利安化”中易主；汉堡 1941 年拍卖了 2699 节货车与 45 艘船的“犹太人货物”，约十万汉堡人买下约三万犹太家庭的家具、衣物、收音机与灯。有人在原主人尚未被运走时就去按铃，要先看看即将开拍的东西。看见箱子被抬下楼的人，不必等到奥斯维辛的图纸，才能知道邻居的生活正在被拆走。</p>
+    <blockquote>居民知道他们想知道的那么多，也知道那么少。他们不知道的，是他们出于可以理解的理由不再想知道的。然而，不想知道某事，预设一个人已经知道得够多，才知道自己不再想知道什么。——J. P. Stern，Yad Vashem 转述</blockquote>
+  </section>
+
+  <section class="card" id="debate">
+    <p class="tag">06 · Ordinary Men?</p>
+    <h2>Goldhagen / Browning：勿把邻居写成行刑队</h2>
+    <p>1992 年克里斯托弗·布朗宁（Christopher R. Browning）出版《普通人》（<em>Ordinary Men</em>），写后备警察营 101：中年预备役、党员比例低、指挥官公开允许不愿开枪者退出，多数人仍参加了在波兰对犹太人的枪杀与押送。1996 年丹尼尔·戈德哈根（Daniel Jonah Goldhagen）《希特勒的自愿刽子手》（<em>Hitler’s Willing Executioners</em>）用同一批档案给出相反引擎：不是米尔格拉姆式服从，而是德国政治文化里根深蒂固的“消灭性反犹”，使“普通德国人”一旦有机会就情愿、残忍地去杀。</p>
+    <p>布朗宁 2013 年在《纽约书评》回顾这场争论：两本书都证明，凶手不只是精选的党卫军意识形态分子；分歧在于解释。布朗宁谈从众、对权威的顺从、占领区战时角色；戈德哈根谈德国文化特殊性。汉堡社会研究所“国防军的灭绝战争”巡展（1995–1999）把“普通人”问题推入德国公众。Yad Vashem 的伊斯拉埃尔·古特曼（Yisrael Gutman）承认布朗宁的勤勉，同时批评他几乎只写加害者一侧，忽略犹太社群与幸存者证词。剑桥《历史杂志》上的书评则概括戈德哈根的单因论：中世纪反犹在德国文化中“如此内在”，现代只是换了种族外衣，“通往奥斯维辛的路并不曲折”——多数学院史家拒绝这条直线。</p>
+    <p>对<strong>窗后的平民史</strong>，这场争论必须缩小口径。警察营 101 是被派去枪杀的人；德累斯顿或柏林的邻居是被要求不要问候黄星、可以去买拍卖家具的人。把后者全部写成“自愿刽子手”，会把克伦佩勒记下的杂货商多给菜、陌生人握手、电车司机把星当成可以交心的标记，全部删掉。把前者全部写成“任何国家的人都会这样”，又会把德国特有的法律化排斥——租赁法、星、公寓门上的星、铁路按公里收费——写成普遍人性的雾。USHMM 近年来有学者主张废弃 Bystander 这个总称，正因为它把灰度收成一种人。本期采取更笨的办法：分开写看见、告密、获利、问候、沉默，不把任何一种写成全体德国人的本质。</p>
+  </section>
+
+  <section class="card dusk" id="klemperer">
+    <p class="tag">07 · Klemperer</p>
+    <h2>克伦佩勒看见的邻居</h2>
+    <p>维克多·克伦佩勒（Victor Klemperer）的日记不是民意调查。阿尔维·塞普（Arvi Sepp）在 <em>Hybrid</em> 的研究把它读成一份关于“人民之声”（vox populi）的民族志笔记：同一条走廊里可以同时响起“犹大！”和“愿他所愿临到他自己”。1944 年 2 月 7 日，克伦佩勒在社会保险办事处是唯一佩星、在满座长凳前徘徊的人；他听见一名工人说“该把他们扎死，他们就会消失”；几分钟后那人被叫走，一位年长妇女低声说那人恶毒，上帝会审判。塞普的要点是：克伦佩勒交替记下统一的敌意与 plural 的声音，既不愿把德国人写成天生仇恨，也不缩小反犹。</p>
+    <p>黄星之后，侮辱变密，儿童与少年尤其跟在学校门口喊“犹太人”。克伦佩勒观察：大孩子常不理他，小孩子被灌输得更成功。与此同时，被禁止的团结也出现。1941 年 11 月 24 日，赖兴巴赫太太转述：店门口一位先生向她打招呼——“我不认识你，但我们是一群‘向犹太星问候的人’。”1941 年 9 月 25 日，五路电车司机看着他的星说：这徽章是好事，“我们知道在跟谁说话，可以交心”——一位新乘客上车，司机立刻闭嘴。塞普冷冷指出：羞辱性的标记，在司机那里变成了安全阀；佩星者被当成倾倒反战牢骚的屏幕，他的危境本身被跳过。</p>
+    <p>克伦佩勒自己在 1941 年 10 月 4 日写下：“毫无疑问，人民把对犹太人的迫害视为罪。”1941 年 2 月 20 日他又写：“人人都怕被怀疑同情犹太人。”两句话必须一起读。他会把党员身份解释成被迫，会为管理员里希特开脱：里希特听完遭遇骂“猪猡、狗东西”，要送剃须皂，随即说“可我必须跟你保持距离”——克伦佩勒答：“当然，里希特先生，你有妻子和孩子，你完全无辜。”塞普认为，这种把加害结构道德化、把邻居写成受惑者的倾向，是日记作为史料必须被对照阅读的原因：它既不是集体无罪的证明，也不是集体有罪的判决，而是一张把罪与无辜绞在一起的街巷录音。</p>
+    <p>更刺目的是选择性失明。艾尔莎·克赖德尔借书、给土豆与咖啡券，同时称赞房客——一名盖世太保专员——“人很好，只是现在必须办犹太人的事”。克伦佩勒问：她真不知道要坐上这个位子必须先证明过自己？真不知道自己在与杀害丈夫的人亲善？友好可以覆盖在暴行上面，而不必取消暴行。1945 年 2 月 13 日，他在德累斯顿给最后的犹太人送递解通知；次日空袭混乱中扯下黄星逃生。邻居的光谱，从问候小组到盖世太保房客，从让座到起哄，并不在火里被烧成一种颜色。</p>
+  </section>
+
+  <section class="card brass" id="now">
+    <p class="tag">08 · 2025–2026</p>
+    <h2>2025–2026：Stolpersteine 与被偷走的门口</h2>
+    <p>德姆尼希的句子把嵌石放回驱逐的地理：凡国防军、党卫军、盖世太保及其地方合作者杀人或递解之处，都应有象征性的石头。美联社 2026 年 5 月 6 日在柏林拍到他擦去沙土：约翰娜·贝格尔，1893 年生，曾住于此；1941 年 11 月 17 日被递解，11 月 25 日遇害。亲属放下白玫瑰，诵卡迪什，车流在雨里轰过去。柏林已有逾 1.1 万块；全欧约 12.6 万块，分布于德国及另外 31 国；第一块 1992 年铺在科隆。Stierstraße 上克赖因一家三口的新石使该街达到 62 块。十六岁的西比拉·埃尔利希说：“这一切对他人的仇恨太可怕。我总在想：如果是我家。”1933 年柏林约 16.05 万犹太人；1945 年 5 月 8 日只剩约七千——移民与灭绝两条出路。</p>
+    <p>柏林 Stolpersteine 倡议网宣布：2026 年 5 月 6–7 日德姆尼希在 Mitte、Tempelhof-Schöneberg、Pankow、Friedrichshain-Kreuzberg、Charlottenburg-Wilmersdorf 铺石，<strong>故意不公布地址与时刻</strong>，因为对家属而言那是私密时刻。官方项目页写：嵌石铺在最后自愿选择的住址，不铺在监狱、集中营或强制“犹太人之家”。一个人一块石头一个命运；铭文由地方倡议与德姆尼希团队拟定。stolpersteine.eu 2026 年消息称：他与团队每月大约制作并铺设 600 块，字母仍由雕塑师手工砸进黄铜；他有意把节奏放慢，以对抗纳粹的工厂式灭绝。与德姆尼希本人预约曾长期排队，2026 年起再次放出档期；社区在他缺席时也可铺设，仍需六至八个月。</p>
+    <p>门口并不自动安全。2026 年 8 月 24 日《犹太总汇报》据 epd：斯普伦贝格周六夜间两块纪念犹太人的嵌石被取走；福斯特周四早晨一块被从人行道暴力撬走，旁侧一块受损。国家安全部门立案。Nordkurier 引警察说，被盗之石纪念的是纳粹时期遭反犹迫害的犹太人士；县长马丁·霍伊斯勒（Martin Heusler）称石头要求人们以启蒙、公民勇气与反反犹承担责任。嵌石把“曾住在这里”变成行人必须低头才能读的句子；撬走它，是另一种拉上窗帘。</p>
+    <p>USHMM 的巡展《有些人是邻居》（Einige waren Nachbarn）把问题交给参观者：大屠杀何以可能？普通人扮演了什么角色？教育方案用邻居参与公开羞辱的影像，而不是用抽象的“人民”。DHM 的线上课以“撕开冷漠的外衣”为题，读十四岁谢因迪·埃伦瓦尔德的日记——那是匈牙利 1944 年，不是柏林 1941 年，但博物馆把冷漠写成可以命名的织物。地方记忆的工作，正是让织物上的织纹重新可被手指摸到。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">09 · Quellen</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。义人统计、告密比例等数字以各文写作时为准，不外推为 2026 年全球总数。</p>
+    <ol class="body">
+      <li>联邦政治教育中心：Verena Buser，《Der "Judenstern"》（1941 年条例、约 20 万人、Wallstraße 16、Geitel 约一百万枚、十芬尼、克伦佩勒与多伊奇克龙）。<br><a href="https://www.bpb.de/themen/zeit-kulturgeschichte/geteilte-geschichte/342565/der-judenstern/" target="_blank" rel="noopener">https://www.bpb.de/themen/zeit-kulturgeschichte/geteilte-geschichte/342565/der-judenstern/</a></li>
+      <li>bpb / izpb：《Juden》（星的购买与签字、儿童自六岁、1942-03-13 公寓挂星）。<br><a href="https://www.bpb.de/shop/zeitschriften/izpb/info-aktuell/239455/juden/" target="_blank" rel="noopener">https://www.bpb.de/shop/zeitschriften/izpb/info-aktuell/239455/juden/</a></li>
+      <li>bpb：Harald Welzer，《Die Deutschen und ihr "Drittes Reich"》（公开递解、围观与起哄、汉堡 1941-10-24 家书、“没有观众”、雅利安化与拍卖数字）。<br><a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/dossier-nationalsozialismus/39631/die-deutschen-und-ihr-drittes-reich/" target="_blank" rel="noopener">https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/dossier-nationalsozialismus/39631/die-deutschen-und-ihr-drittes-reich/</a></li>
+      <li>bpb / APuZ：Ursula Büttner，《Reaktionen auf die Verfolgung der Juden…》（多数人以递解为“犹太人问题已解决”、队列被说成迁往东方）。<br><a href="https://www.bpb.de/shop/zeitschriften/apuz/archiv/535897/reaktionen-auf-die-verfolgung-der-juden-und-den-holocaust-in-deutschland-vor-und-nach-1945/" target="_blank" rel="noopener">https://www.bpb.de/shop/zeitschriften/apuz/archiv/535897/reaktionen-auf-die-verfolgung-der-juden-und-den-holocaust-in-deutschland-vor-und-nach-1945/</a></li>
+      <li>美国大屠杀纪念馆百科（德文）：《Bystander》（术语的两义、被动/冷漠的拆解、告密与获利、学界对废弃该词的讨论）。<br><a href="https://encyclopedia.ushmm.org/content/de/article/bystanders" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/de/article/bystanders</a></li>
+      <li>USHMM：《Einige waren Nachbarn》教育方案（普通人扮演了什么角色）。<br><a href="https://www.ushmm.org/de/einige-waren-nachbarn-taeterschaft-mitlaeufertum-und-widerstand/bildungsansatz-und-paedagogische-aktivitaeten" target="_blank" rel="noopener">https://www.ushmm.org/de/einige-waren-nachbarn-taeterschaft-mitlaeufertum-und-widerstand/bildungsansatz-und-paedagogische-aktivitaeten</a></li>
+      <li>USHMM 问答：普通人如何参与迫害犹太邻居（德国城市里问候黄星亦受罚）。<br><a href="https://encyclopedia.ushmm.org/content/de/question/how-and-why-did-ordinary-people-across-europe-contribute-to-the-persecution-of-their-jewish-neighbors" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/de/question/how-and-why-did-ordinary-people-across-europe-contribute-to-the-persecution-of-their-jewish-neighbors</a></li>
+      <li>德意志历史博物馆 LeMO：Walther Ludwig 证言（让座被拒、达豪谚语、德意志目光）。<br><a href="https://www.dhm.de/lemo/zeitzeugen/dr-walther-ludwig-kindheit-waehrend-der-ns-zeit" target="_blank" rel="noopener">https://www.dhm.de/lemo/zeitzeugen/dr-walther-ludwig-kindheit-waehrend-der-ns-zeit</a></li>
+      <li>DHM / 洪堡大学教材：柏林格鲁内瓦尔德车站递解（1941-10-18、逾五万人、里加枪杀、铁路四芬尼、纪念碑年表）。<br><a href="https://www.dhm.de/archiv/ausstellungen/holocaust/univeranstaltung/pg/orte/grunewald.htm" target="_blank" rel="noopener">https://www.dhm.de/archiv/ausstellungen/holocaust/univeranstaltung/pg/orte/grunewald.htm</a></li>
+      <li>DHM：《撕开冷漠的外衣》线上课（Sheindi Ehrenwald 日记与冷漠主题）。<br><a href="https://www.dhm.de/angebot/online-praesentation-zerreisst-den-mantel-der-gleichgueltigkeit-entrechtung-verfolgung-und-voelkermord-im-nationalsozialismus/" target="_blank" rel="noopener">https://www.dhm.de/angebot/online-praesentation-zerreisst-den-mantel-der-gleichgueltigkeit-entrechtung-verfolgung-und-voelkermord-im-nationalsozialismus/</a></li>
+      <li>Yad Vashem：Mordecai Paldiel，《The German Righteous Among the Nations》（告密与自我监视、1941-10-24 政令、J. P. Stern 引语、犹太人之家与黄星）。<br><a href="https://www.yadvashem.org/righteous/resources/the-german-righteous-among-the-nations.html" target="_blank" rel="noopener">https://www.yadvashem.org/righteous/resources/the-german-righteous-among-the-nations.html</a></li>
+      <li>Yad Vashem：义人概述（多数态度从冷漠到敌意；救援者常从旁观者跨出一步）。<br><a href="https://www.yadvashem.org/righteous/about-the-righteous/who-are-the-righteous-among-the-nations.html" target="_blank" rel="noopener">https://www.yadvashem.org/righteous/about-the-righteous/who-are-the-righteous-among-the-nations.html</a></li>
+      <li>Yad Vashem 资源中心 PDF：Yisrael Gutman 评戈德哈根（与布朗宁共用 101 营档案、批评两侧盲区）。<br><a href="https://www.yadvashem.org/odot_pdf/Microsoft%20Word%20-%202306.pdf" target="_blank" rel="noopener">https://www.yadvashem.org/odot_pdf/Microsoft%20Word%20-%202306.pdf</a></li>
+      <li>Yad Vashem 资源中心 PDF：评 Johnson《纳粹与德国民众》（告密者约 1–2%、邻里纠纷动机）。<br><a href="https://www.yadvashem.org/odot_pdf/Microsoft%20Word%20-%205427.pdf" target="_blank" rel="noopener">https://www.yadvashem.org/odot_pdf/Microsoft%20Word%20-%205427.pdf</a></li>
+      <li>Arvi Sepp，《Vox populi and antisemitism: Victor Klemperer…》，Hybrid（问候小组、电车司机、里希特、克赖德尔、儿童辱骂）。<br><a href="https://doi.org/10.4000/hybrid.3244" target="_blank" rel="noopener">https://doi.org/10.4000/hybrid.3244</a></li>
+      <li>Christopher R. Browning，《How Ordinary Germans Did It》，New York Review of Books，2013-06-20。<br><a href="https://www.nybooks.com/articles/2013/06/20/how-ordinary-germans-did-it/" target="_blank" rel="noopener">https://www.nybooks.com/articles/2013/06/20/how-ordinary-germans-did-it/</a></li>
+      <li>比勒费尔德市档案：Mosberg 展《Judenhäuser》（1939 年租赁法、约二十处、搬家与递解）。<br><a href="https://www.stadtarchiv-bielefeld.de/Portals/0/PDFs/Online-Ausstellungen/Mosberg/11_Judenhaeuser.pdf" target="_blank" rel="noopener">https://www.stadtarchiv-bielefeld.de/Portals/0/PDFs/Online-Ausstellungen/Mosberg/11_Judenhaeuser.pdf</a></li>
+      <li>威斯巴登地方研究：Herrngartenstr. 11（非犹太邻居目击、贝克自杀、卢布林与特莱西恩施塔特运输）。<br><a href="https://moebus-flick.de/die-judenhaeuser-wiesbadens/herrngartenstr-11/" target="_blank" rel="noopener">https://moebus-flick.de/die-judenhaeuser-wiesbadens/herrngartenstr-11/</a></li>
+      <li>Associated Press / HAMEC：Kirsten Grieshaber &amp; Markus Schreiber，2026-05-06/07 柏林铺石（12.6 万、柏林逾 1.1 万、贝格尔一家、Stierstraße 62 块）。<br><a href="https://hamec.org/a-quiet-memorial-berlin-sidewalks-german-artist-lays-stolpersteine-to-honor-holocaust-victims/" target="_blank" rel="noopener">https://hamec.org/a-quiet-memorial-berlin-sidewalks-german-artist-lays-stolpersteine-to-honor-holocaust-victims/</a></li>
+      <li>Stolpersteine Berlin：2026-05-06/07 铺设公告（不公布地址与时刻）。<br><a href="https://www.stolpersteine-berlin.de/de/aktuelles/6-7-mai-2026-stolpersteinverlegungen-berlin" target="_blank" rel="noopener">https://www.stolpersteine-berlin.de/de/aktuelles/6-7-mai-2026-stolpersteinverlegungen-berlin</a></li>
+      <li>stolpersteine.eu：2026 年起德姆尼希档期；每月约 600 块、手工砸字、放慢节奏。<br><a href="https://www.stolpersteine.eu/en/news/ab-2026-gibt-es-wieder-freie-termine-f%C3%BCr-verlegungen-mit-gunter-demnig" target="_blank" rel="noopener">https://www.stolpersteine.eu/en/news/ab-2026-gibt-es-wieder-freie-termine-f%C3%BCr-verlegungen-mit-gunter-demnig</a></li>
+      <li>stolpersteine.eu：铺设步骤（最后自愿住址、一人一石、勿向家属索费）。<br><a href="https://www.stolpersteine.eu/en/the-art-memorial/schritte-zur-stolperstein-verlegung" target="_blank" rel="noopener">https://www.stolpersteine.eu/en/the-art-memorial/schritte-zur-stolperstein-verlegung</a></li>
+      <li>《犹太总汇报》：2026-08-24《Stolpersteine gestohlen》（斯普伦贝格与福斯特被盗，国家安全部门侦查）。<br><a href="https://www.juedische-allgemeine.de/politik/stolpersteine-gestohlen/" target="_blank" rel="noopener">https://www.juedische-allgemeine.de/politik/stolpersteine-gestohlen/</a></li>
+      <li>Nordkurier：2026-08-24 斯普伦贝格盗窃细节与县长表态。<br><a href="https://www.nordkurier.de/regional/brandenburg/mehrere-stolpersteine-in-spremberg-gestohlen-4805850" target="_blank" rel="noopener">https://www.nordkurier.de/regional/brandenburg/mehrere-stolpersteine-in-spremberg-gestohlen-4805850</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">10 · Lehre</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，先问视线，再谈“人民”。驱逐在德国城市里经过街道、货站、铁路票据与拍卖场。有人鼓掌，有人写信说“必死”，有人把窗帘拉严。bpb 的句子值得当作方法：不是“知道多少”，而是“参与了哪一种日常”。黄星与门上的星，把参与变成不必开口的看见。</p>
+    <p>第二，告密社会靠的是可能性，不是人人举报表。百分之一二的告密者，加上“德意志目光”，足以让问候黄星变成需要勇气的事。把全体写成告密者，是漫画；把沉默写成无辜，是另一种窗帘。</p>
+    <p>第三，读 Goldhagen 与 Browning，要看他们争的是哪一种“普通人”。警察营的扳机，与公寓窗后的手，不是同一块肌肉。既不要用文化本质论给邻居判死刑，也不要用情境服从论给获利和起哄发赦免。</p>
+    <p>第四，克伦佩勒是证人，不是法庭。他记下杂货商、儿童、盖世太保房客和“问候星的小组”。把其中任何一种声音写成全体，都辜负了他逐字记录的那种笨功夫。</p>
+    <p>第五，2026 年的嵌石把“曾住在这里”铺回最后自愿的门口，又故意不把铺设变成围观秀。盗窃嵌石，是在重复一种历史姿势：让名字从邻居的视线里消失。学习平民史，不是为了把窗后的人写成怪物或写成人质，而是练习一种更难的注视——看见他们看见了什么，也看见他们怎样学会假装没看见。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第2期 · 窗帷窥视风 · 20260830_1807
+  </footer>
+</article>
+</body>
+</html>
