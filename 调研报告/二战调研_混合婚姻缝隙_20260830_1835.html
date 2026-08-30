@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>混合婚姻与“特权犹太人”家庭的生存缝隙 —— 黄铜嵌石上的罗森街：1943 年的缝与 2026 年的白玫瑰</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Brass Stolperstein on wet asphalt: gold square, punched letters, street grid */
+:root {
+  --asphalt: #1c1b19;
+  --wet: #2a2824;
+  --brass: #c9a227;
+  --brass-dark: #8a6e14;
+  --letter: #2a220c;
+  --paper: #f4ead4;
+  --ink: #1e1b16;
+  --fade: #6a6254;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(90deg, #161513 0 18px, #1c1b19 18px 36px),
+    repeating-linear-gradient(0deg, #161513 0 18px, #1c1b19 18px 36px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Figtree", serif;
+  line-height: 1.84;
+  min-height: 100vh;
+}
+.street {
+  max-width: 900px;
+  margin: 28px auto 72px;
+  background: var(--paper);
+  border: 12px solid var(--brass);
+  box-shadow:
+    0 0 0 4px #2a220c,
+    0 28px 70px rgba(0,0,0,.55);
+  padding: 0 36px 44px;
+  position: relative;
+}
+.stein {
+  margin: 0 -36px;
+  background: linear-gradient(160deg, #d4b03a, #a8841c 55%, #7a6412);
+  color: var(--letter);
+  font-family: "DM Serif Display", "Noto Serif SC", serif;
+  padding: 18px 28px 14px;
+  letter-spacing: .04em;
+}
+.stein small {
+  display: block;
+  font-family: "Figtree", sans-serif;
+  font-size: 11px;
+  letter-spacing: .22em;
+  margin-bottom: 6px;
+}
+h1 {
+  font-family: "DM Serif Display", "Noto Serif SC", serif;
+  font-size: clamp(1.45rem, 3.2vw, 2.05rem);
+  line-height: 1.32;
+  margin: 18px 0 8px;
+}
+.sub { color: var(--fade); font-size: 15px; }
+.when {
+  margin-top: 8px;
+  font-family: "Figtree", sans-serif;
+  font-size: 12.5px;
+  color: #7a7264;
+  letter-spacing: .04em;
+}
+nav.toc {
+  margin: 18px 0 6px;
+  padding: 12px 16px 8px;
+  background: #ebe1c8;
+  border-top: 3px solid var(--brass);
+}
+nav.toc h2 {
+  font-family: "DM Serif Display", "Noto Serif SC", serif;
+  font-size: 1.2rem;
+  color: var(--brass-dark);
+}
+nav.toc ol { margin: 6px 0 8px 1.2em; }
+nav.toc a { color: #6e5410; }
+.card {
+  margin: 18px 0;
+  padding: 16px 18px 12px;
+  background: #faf4e4;
+  border: 1px solid #d8c89a;
+  border-left: 7px solid var(--brass);
+}
+.card.dark {
+  background: #2a2824;
+  color: #efe6d0;
+  border-left-color: #e0c04a;
+}
+.card.dark a { color: #e8c96a; }
+.card h2 {
+  font-family: "DM Serif Display", "Noto Serif SC", serif;
+  font-size: 1.28rem;
+  margin-bottom: 8px;
+}
+.tag {
+  font-family: "Figtree", sans-serif;
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--brass-dark);
+  margin-bottom: 4px;
+}
+.card.dark .tag { color: #e0c04a; }
+p { margin: 0 0 11px; }
+ul, ol.body { margin: 0 0 11px 1.2em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 10px 0 14px;
+  padding: 8px 12px;
+  border-left: 4px solid var(--brass);
+  background: rgba(201,162,39,.12);
+  font-style: italic;
+}
+.note { font-size: 13.5px; color: var(--fade); }
+.card.dark .note { color: #b8ae98; }
+.sources a { word-break: break-all; color: #6e5410; }
+footer {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 4px solid var(--brass);
+  text-align: center;
+  font-family: "Figtree", sans-serif;
+  font-size: 12px;
+  color: var(--fade);
+}
+@media (max-width: 640px) {
+  .street { margin: 8px; padding: 0 16px 28px; }
+  .stein { margin: 0 -16px; }
+}
+</style>
+</head>
+<body>
+<!-- Brass Stolperstein plaque set into a wet Berlin sidewalk -->
+<article class="street">
+  <header>
+    <div class="stein">
+      <small>HIER WOHNTE · MISCHEHE</small>
+      混合婚姻不是豁免证书。<br>它是一块被政权随时可以抽走的黄铜。
+    </div>
+    <h1>混合婚姻与“特权犹太人”家庭的生存缝隙 —— 黄铜嵌石上的罗森街：1943 年的缝与 2026 年的白玫瑰</h1>
+    <p class="sub">所谓特权，是纳粹公文里的分类；所谓缝隙，是离婚、告发与地方当局随时能把人从缝里挤出去</p>
+    <p class="when">调研时间：2026-08-30 18:35 CST · 平民史系列第17期 · 主题轮换池第17项</p>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#label">“特权”是谁发明的词</a></li>
+      <li><a href="#rosen">罗森街：勇气与史学争论同在</a></li>
+      <li><a href="#now">2026：白玫瑰、第三代与慕尼黑展</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">STEIN 01</p>
+    <h2>本期主题</h2>
+    <p>1935 年纽伦堡法之后，德国境内仍有数万“混合婚姻”（Mischehe）：一方被划为犹太人，一方被划为“雅利安”。1938 年 12 月，希特勒把这类家庭再劈成“特权”与“非特权”。非犹太丈夫、犹太妻子、孩子不按犹太教养大——妻子可以不戴黄星、可以暂时不住“犹太人房屋”。犹太丈夫则必须戴星。维克多·克莱姆佩勒后来说，这个标签是纳粹的“恶魔发明”：它看起来像保护，实际是把一部分犹太人暂时留在人民共同体门口，当人质，也当麻烦。</p>
+    <p>本报告不把混合婚姻写成爱情战胜种族法的童话。缝隙里的人每天算：配偶会不会离婚，邻居会不会告发，地方当局会不会比柏林更急。2026 年 2 月 26 日，约 250 人在柏林大汉堡街默哀，再沉默游行到罗森街，在因格博格·洪青格的《妇女群雕》前放下白玫瑰——纪念的是 1943 年 2 月那些站在雪地里要丈夫的女人；史学仍在争论：释放究竟是抗议争来的，还是盖世太保本来就不打算把她们的丈夫送进奥斯维辛。</p>
+  </section>
+
+  <section class="card" id="findings">
+    <p class="tag">STEIN 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>“特权”是加害者的词，不是幸存者的勋章。</strong>马克斯·施特纳德（Maximilian Strnad）2021 年《特权混合婚姻？》写：逾 11,000 名德国犹太人因与非犹太配偶结婚而活过大屠杀；纳粹因他们与“人民共同体”的家庭纽带，把他们从部分核心迫害、驱逐与灭绝中暂时抽出。德累斯顿 2024 年讲座给出另一组数字：约 35,000 名来自混合婚姻的德国犹太人中，约 13,000 人活下来。两套数字都说明同一件事：缝隙救了一些人，也漏掉了另一些人。</li>
+      <li><strong>性别决定黄星。</strong>《南德意志报》转述施特纳德：非犹太丈夫 + 犹太妻子 = 公文上的“特权”，妻子常可免戴星。犹太丈夫则必须戴星——种族妄想里，犹太男性会“污染”雅利安女性的血。非特权混合婚姻在公众观感里仍常被叫成“特权”，因为犹太配偶一度暂免集体遣送。这套分类本身就是日常羞辱。</li>
+      <li><strong>地方当局比中央口号更致命。</strong>施特纳德强调：混合婚姻不是生存担保。慕尼黑等地的市政与纳粹党尤其严厉。1943 年后，德国犹太人大多已被遣送，剩下的大量是混合婚姻中的犹太配偶；最后三年仍有数千人死亡。离婚几乎等于把犹太配偶交给遣送名单。</li>
+      <li><strong>罗森街同时是勇气现场和史学战场。</strong>美国大屠杀纪念馆：1943 年 2 月 27 日至 3 月 6 日，最多约 200 名非犹太德国人在罗森街 2–4 号犹太社团大楼外示威；楼内关着约 2,000 名犹太人，多为与非犹太伴侣结婚的男性及其子。工厂行动同期把约 11,000 名犹太人在三月头几周送往奥斯维辛。馆方采纳沃尔夫·格鲁纳一线：盖世太保从一开始就打算把“豁免犹太人”留在帝国强制劳动营，不送奥斯维辛；约 2,000 人中有 25 人仍被作为“保护拘留”送走。内森·施托尔茨富斯则坚持：若无妻子抗议，多数人会被遣送。2026 年官方纪念词采用“妇女争来释放”的公共叙事；学术条目把人数从传说中的 6,000 改回约 150–200。</li>
+      <li><strong>缝隙在战后继续咬人。</strong>施特纳德写：幸存者无法甩掉“被特权化”的污名，几乎得不到承认与援助。慕尼黑犹太博物馆《第三代：家庭记忆中的大屠杀》展至 2026 年 3 月 1 日——混合婚姻家庭的沉默、神话与裂缝，正是第三代要填的档案缺口。</li>
+    </ul>
+  </section>
+
+  <section class="card" id="label">
+    <p class="tag">STEIN 03</p>
+    <h2>“特权”是谁发明的词</h2>
+    <p>万湖会议把混合婚姻与“混血儿”的处置推迟到“胜利之后”，因为担心非犹太亲属骚动。推迟不是仁慈，是算计。美国国家二战博物馆对施托尔茨富斯的访谈写明：1938 年 12 月的划分，是把一部分犹太人继续按“全犹太人”迫害，把另一部分暂时挂起。挂起的人仍在强制劳动、仍可能被赶出公寓、仍可能因一次告发进集中营。</p>
+    <p>维也纳案例研究（PMC）补充：即使“特权”家庭理论上拿与雅利安人相同的食品卡、可留在原公寓，地方纳粹仍可在 1938 年底就把他们赶进日后的犹太人房屋。保护取决于那个非犹太家庭成员还在不在——人一走，缝就合上。</p>
+    <blockquote>克莱姆佩勒称之为恶魔发明：词被咽下去时像没有味道，过一段时间毒才发作。——施特纳德研究的公共转述</blockquote>
+  </section>
+
+  <section class="card dark" id="rosen">
+    <p class="tag">STEIN 04</p>
+    <h2>罗森街：勇气与史学争论同在</h2>
+    <p>1943 年 2 月 27 日黎明，工厂行动开始。柏林街头、工厂、家里的犹太人被塞上卡车。与非犹太妻子结婚的男子被单独送到罗森街。妻子们在冰里喊“把丈夫还给我们”。这是战时纳粹德国唯一一次为犹太人而起的公开街头聚集。美国大屠杀纪念馆写：她们无法确知警察会不会开枪，也无法确知楼里的人会不会像同期另外约 7,000 名柏林犹太人一样一去不回。</p>
+    <p>释放之后，盖世太保按原计划把有劳动能力的人再送进帝国境内的强制劳动营。缝隙没有变成安全区。柏林夏洛滕堡耶拿大街 24 号的 Stolperstein 记下瓦尔特·弗里德兰德：1943 年 2 月 28 日关进罗森街，3 月 10 日因妻子参加抗议获释，3 月 25 日因帮表妹提箱子被门房告发，经大贝伦营送往奥斯维辛。黄铜嵌石钉在人行道上，把“获释”写成中间句，不是句号。</p>
+  </section>
+
+  <section class="card" id="now">
+    <p class="tag">STEIN 05</p>
+    <h2>2026：白玫瑰、第三代与慕尼黑展</h2>
+    <p>欧洲被害犹太人纪念碑基金会 2026 年 2 月 27 日发文：2 月 26 日，罗森街倡议小组与柏林纳粹纪念地常设会议举行年度纪念。约 250 人先在大汉堡街默哀，再沉默走到罗森街。萨克森豪森纪念馆馆长阿斯特丽德·莱伊致辞，称妇女的勇气是公民勇气的例子。前一晚在 ACUDA 影院放映达妮埃拉·施密特-朗格尔斯的纪录片《罗森街——女人们抵抗之处，柏林 1943》，导演、作家尤利娅·弗兰克与纪念碑基金会主任乌韦·诺伊梅克讨论洪青格其人；影厅满座，约 50 人参加讨论。</p>
+    <p>公共纪念必须把妇女写成抵抗者，这没有错。学习者同时要读美国大屠杀纪念馆的校正：抗议人数不是 6,000；释放计划可能在街上的喊声之前已经写在公文里。两种叙述叠在同一块黄铜上：一块记勇气，一块记政权如何把“暂缓”伪装成恩惠。</p>
+    <p>慕尼黑犹太博物馆《第三代》展期 2025 年 4 月 9 日至 2026 年 3 月 1 日。施特纳德曾在慕尼黑城市档案馆工作，慕尼黑正是他对混合婚姻地方激进的关键案例。家庭记忆里的“我们有特权所以没事”，往往是第三代要拆开的第一句假话。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">STEIN 06</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。</p>
+    <ol class="body">
+      <li>美国大屠杀纪念馆：《1943 年罗森街示威》（约 200 人、约 2,000 名被关者、格鲁纳解释、25 人仍被送往奥斯维辛）。<br><a href="https://encyclopedia.ushmm.org/content/en/article/the-rosenstrasse-demonstration-1943" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/en/article/the-rosenstrasse-demonstration-1943</a></li>
+      <li>Wallstein 出版社：Maximilian Strnad《Privileg Mischehe?》（逾 11,000 人因混合婚姻存活、地方激进、战后污名）。<br><a href="https://www.wallstein-verlag.de/9783835339002-privileg-mischehe.html" target="_blank" rel="noopener">https://www.wallstein-verlag.de/9783835339002-privileg-mischehe.html</a></li>
+      <li>美国国家二战博物馆：对 Nathan Stoltzfus 的访谈（1938 年特权划分、抗议叙事、离婚即遣送）。<br><a href="https://www.nationalww2museum.org/war/articles/intermarriage-1943-rosenstrasse-protests-and-social-constraints-hitlers-power" target="_blank" rel="noopener">https://www.nationalww2museum.org/war/articles/intermarriage-1943-rosenstrasse-protests-and-social-constraints-hitlers-power</a></li>
+      <li>欧洲被害犹太人纪念碑基金会：2026-02-26 罗森街年度纪念报道（约 250 人、白玫瑰、纪录片放映）。<br><a href="https://www.stiftung-denkmal.de/aktuelles/gedenken-an-die-fabrik-aktion-und-den-protest-in-der-rosenstrasse-11/" target="_blank" rel="noopener">https://www.stiftung-denkmal.de/aktuelles/gedenken-an-die-fabrik-aktion-und-den-protest-in-der-rosenstrasse-11/</a></li>
+      <li>慕尼黑犹太博物馆：《第三代。家庭记忆中的大屠杀》（2025-04-09 至 2026-03-01）。<br><a href="https://www.juedisches-museum-muenchen.de/ausstellungen/die-dritte-generation" target="_blank" rel="noopener">https://www.juedisches-museum-muenchen.de/ausstellungen/die-dritte-generation</a></li>
+      <li>德累斯顿慕尼黑广场纪念馆 / 基督教—犹太合作协会：2024-09-18 施特纳德讲座通告（约 13,000 / 35,000、克莱姆佩勒）。<br><a href="https://www.cj-dresden.de/events/vortrag-und-gespraech-privileg-mischehe/" target="_blank" rel="noopener">https://www.cj-dresden.de/events/vortrag-und-gespraech-privileg-mischehe/</a></li>
+      <li>Michaela Raggam-Blesch：《“Privileged” under Nazi-Rule: The Fate of Three Intermarried Families in Vienna》，PMC。<br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6817312/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC6817312/</a></li>
+      <li>柏林夏洛滕堡—威尔默斯多夫区：耶拿大街 24 号 Stolperstein（弗里德兰德：罗森街获释后再被告发致死）。<br><a href="https://www.berlin.de/ba-charlottenburg-wilmersdorf/bezirk/lexikon/jenaer_24.html" target="_blank" rel="noopener">https://www.berlin.de/ba-charlottenburg-wilmersdorf/bezirk/lexikon/jenaer_24.html</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">STEIN 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，先问分类是谁写的。“特权犹太人”是纳粹行政语言。用它描述家庭时，必须加引号，并立刻补上：黄星、强制劳动、可被撤销的暂缓。</p>
+    <p>第二，缝隙是关系，不是身份。非犹太配偶在，缝还在；离婚、死亡、告发，缝就消失。罗森街上的女人保护的是具体的丈夫，不是抽象的人权宣言——这并不降低勇气，只说明独裁如何把爱变成政治。</p>
+    <p>第三，纪念词与档案可以并列，不必互相取消。2026 年放下白玫瑰的人，纪念的是站出来的妇女。美国大屠杀纪念馆提醒：人数被传说放大，释放计划可能早于喊声。两者都要读：否则勇气会变成神话，公文会变成开脱。</p>
+    <p>第四，战后的“你们当时不是真受害者”是第二道缝。混合婚姻幸存者被其他受害者群体怀疑，也被赔偿制度冷落。黄铜嵌石钉在门口，正是因为有人从缝里活下来，也有人在获释之后仍死在奥斯维辛。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第17期 · 黄铜嵌石风 · 20260830_1835
+  </footer>
+</article>
+</body>
+</html>
