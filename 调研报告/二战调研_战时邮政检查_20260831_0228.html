@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时邮政检查 —— 封条上的国界：Geprüft、Israel/Sara，以及不许投进信箱的那一封</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Opened envelope, brown Geöffnet strip, red censor pencil */
+:root {
+  --kraft: #8b5a2b;
+  --strip: #c4a574;
+  --pencil: #b42318;
+  --ink: #1a1612;
+  --paper: #f3ead6;
+  --mute: #6b5c4a;
+  --stamp: #4a2c6a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(-12deg, #d9c9a8 0 28px, #d4c29e 28px 56px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.86;
+}
+.cover {
+  max-width: 840px;
+  margin: 32px auto 80px;
+  background: var(--paper);
+  border: 1px solid #c9b48a;
+  box-shadow: 12px 16px 0 rgba(26,22,18,.12);
+  position: relative;
+}
+.cover::before {
+  content: "GEÖFFNET · GEPRÜFT";
+  position: absolute;
+  top: 18px; right: -46px;
+  transform: rotate(28deg);
+  font-family: "Bowlby One", sans-serif;
+  font-size: 13px;
+  letter-spacing: .16em;
+  color: var(--stamp);
+  border: 3px solid var(--stamp);
+  border-radius: 50%;
+  width: 118px; height: 118px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  opacity: .55;
+  pointer-events: none;
+}
+.tape {
+  height: 22px;
+  background:
+    repeating-linear-gradient(90deg, var(--strip) 0 18px, #b8955e 18px 20px);
+  border-bottom: 3px solid var(--kraft);
+}
+.inner { padding: 22px 26px 36px; }
+.kicker {
+  font-family: "Bowlby One", sans-serif;
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--pencil);
+}
+h1 {
+  font-family: "Bowlby One", "Noto Serif SC", sans-serif;
+  font-size: clamp(1.15rem, 3.1vw, 1.55rem);
+  line-height: 1.28;
+  font-weight: 400;
+  margin: 8px 0 10px;
+}
+.sub { font-size: 15.5px; }
+.when { font-size: 13.5px; color: var(--mute); margin: 8px 0 14px; }
+nav.toc {
+  background: #efe4c8;
+  border-left: 8px solid var(--pencil);
+  padding: 12px 16px 8px;
+  margin-bottom: 16px;
+}
+nav.toc h2 { font-family: "Bowlby One", sans-serif; font-size: 1.05rem; font-weight: 400; }
+nav.toc ol { margin: 6px 0 8px 1.25em; }
+nav.toc a { color: var(--kraft); }
+.card {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #fffaf0;
+  border: 1px dashed var(--kraft);
+}
+.card.struck {
+  background:
+    repeating-linear-gradient(180deg, transparent 0 1.7em, rgba(180,35,24,.09) 1.7em 1.78em);
+  border-style: solid;
+  border-color: var(--pencil);
+}
+.code {
+  font-family: "Bowlby One", sans-serif;
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--pencil);
+}
+h2 {
+  font-family: "Bowlby One", "Noto Serif SC", sans-serif;
+  font-size: 1.12rem;
+  font-weight: 400;
+  margin: 2px 0 8px;
+}
+a { color: #6b3a12; }
+ul { margin: 6px 0 10px 1.2em; }
+li { margin: 7px 0; }
+p + p { margin-top: 10px; }
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Bowlby One", sans-serif;
+  letter-spacing: .06em;
+  color: var(--mute);
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<article class="cover">
+  <div class="tape" aria-hidden="true"></div>
+  <div class="inner">
+    <p class="kicker">ABP · BRIEFPRÜFSTELLE · POSTKONTROLLKARTE</p>
+    <h1>战时邮政检查 —— 封条上的国界：Geprüft、Israel/Sara，以及不许投进信箱的那一封</h1>
+    <p class="sub">德国平民把出国信写成还可能被撕开、贴上“已检查”。犹太人须在信封上写 Israel 或 Sara。隔都里不许投信箱，邮票只能当面买。营里有的人每八周才准写一封。</p>
+    <p class="when">调研时间：2026-08-31 02:28 CST · 平民史系列第53期 · 战争信件日记 / 灯火管制信息饥渴的子角度</p>
+    <nav class="toc">
+      <h2>目录</h2>
+      <ol>
+        <li><a href="#theme">本期主题</a></li>
+        <li><a href="#findings">核心发现</a></li>
+        <li><a href="#tape">封条</a></li>
+        <li><a href="#name">名字</a></li>
+        <li><a href="#now">2026：未送达的信被拿回来展览</a></li>
+        <li><a href="#sources">来源</a></li>
+        <li><a href="#lesson">对历史学习者的启示</a></li>
+      </ol>
+    </nav>
+
+    <section class="card" id="theme">
+      <p class="code">KENNBUCHSTABE B</p>
+      <h2>本期主题</h2>
+      <p>本报告写封条上的国界。1933 年 2 月 28 日《国会纵火法令》取消隐私权：警察无需搜查令即可阅读私人邮件。真正的战时民用邮政检查从 1939 年 9 月开战起算。动员计划原只设柏林一处“外国信件与电报检查站”，东普鲁士另在柯尼斯堡。业务立刻不够，检查站扩到全国及占领区，起初隶属国防军最高统帅部（OKW）的反间谍部门；1944 年权力斗争后转归党卫队国家安全部。封条上印 Geöffnet / Geprüft，各站用字母代号：a 柯尼斯堡，b 柏林，c 科隆，d 慕尼黑，e 法兰克福，g 维也纳。</p>
+      <p>德国主妇把出国信写成还可能被撕开。撕开的下一句：从 1939 年 1 月 1 日起，犹太男人须加名 Israel，女人须加名 Sara，官方文件——包括信封回址——都要写出来，好让检查员一眼认出。罗兹隔都 1940 年 6 月 17 日第 63 号通告：不许把信投进信箱；邮票当面付，不许自己贴；须用德语；不得超过四页。德国邻居的信仍可投进街上的铁皮口。口已经不是中性的。</p>
+    </section>
+
+    <section class="card" id="findings">
+      <p class="code">KENNBUCHSTABE A</p>
+      <h2>核心发现</h2>
+      <ul>
+        <li><strong>外汇检查先于战争，文字检查随战争开始。</strong> 1932–1933 年外汇条例已允许海关拆包查禁运品，原则上不读内容。1939 年 9 月才对进出与过境民用邮件做内容审查。柯尼斯堡站 9 月 4 日开工，盖“国防军准许通过”。柏林起初沿用海关封条，年底才有印着“已检查”和 OKW 的专用封条。</li>
+        <li><strong>德国平民被拆的是国境线；犹太人被拆的是姓名。</strong> 1938 年 8 月 17 日第二实施令：非“许可名单”上的犹太名字，须从 1939 年 1 月 1 日起加 Israel / Sara，并呈报户籍与警察。大屠杀博物馆藏宾根 1939 年 2 月 24 日护照：母女都写着萨拉。信封回址同样要写。检查员不必猜。</li>
+        <li><strong>隔都把信箱写成特权。</strong> 罗兹第 63 号通告禁止投信箱、禁止希伯来字母、禁止隐写、禁止填字游戏。第 121 号：寄国外须本人持证件到窗口；国内信才准投箱。写得不合德语的信会被退回或销毁。代写处一张明信片收 10 芬尼。</li>
+        <li><strong>营里的“准许通信”常常是空卡。</strong> 阿罗尔森档案：邮政检查卡（P.K.K.）在登记处填好，交给各区队长。达豪起初每月一封，1934 年起两封。布痕瓦尔德 1944 年 12 月外勤队规定：一般囚犯每月一来一往；犹太囚犯每八周才一来一往；禁止与总督府通信，禁止写信给红十字会。许多卡片上根本没有通信记录——不是忘了填，是已经不知道该写给谁。</li>
+        <li><strong>苏联战俘等群体被直接排除在通信配额之外。</strong> 阿罗尔森说明：部分囚犯类别——包括苏军战俘——被禁止收发信件。耶和华见证人与犹太囚犯常另有更严的规则。德国平民的“被检查过的家书”与营里的空白检查卡，不是同一件事。</li>
+      </ul>
+    </section>
+
+    <section class="card struck" id="tape">
+      <p class="code">GEÖFFNET</p>
+      <h2>封条</h2>
+      <p>德国女人把出国信写成还可能贴回。贴回证明：这封信被承认有权过境。被红铅笔涂掉的句子，首先属于还被允许拥有信封的人。</p>
+    </section>
+
+    <section class="card" id="name">
+      <p class="code">ISRAEL / SARA</p>
+      <h2>名字</h2>
+      <p>回址不是礼仪。回址是分类。写上 Sara 的信封先被拆。隔都里的人连铁皮口也不准用。营里的人用印好的表格，地址统一印成某座主营某区，免得家属知道人在分营。德国邻居明天还去邮局。邮局已经不是中性的。</p>
+    </section>
+
+    <section class="card struck" id="now">
+      <p class="code">2026</p>
+      <h2>2026：未送达的信被拿回来展览</h2>
+      <p>柏林卡尔斯霍斯特博物馆 2026 年 6 月 19 日至 2027 年 1 月 10 日重开《1941 年六月信件》：卡缅涅茨-波多利斯基邮局最后一次开箱的信，因开战未送达，被德占当局当战利品运到维也纳邮政博物馆，后归还乌克兰。同期乌克兰本馆展至 2026 年 8 月 25 日。法兰克福通信博物馆 2026 年 8 月 20 日至 2027 年 1 月 24 日《萨米兹达特》把 1939–1945 纳粹占领下的检查写成后来地下出版的前史。伊万·克利马作为儿童活过特莱西恩施塔特，他的书后来又被另一种检查追上。看到 Geprüft 之前，先看谁的名字必须写在封条能看见的地方。</p>
+    </section>
+
+    <section class="card" id="sources">
+      <p class="code">QUELLEN</p>
+      <h2>来源</h2>
+      <p>下列网址均经本周期检索核验，不编造链接。</p>
+      <ol>
+        <li>美国大屠杀纪念馆中文：国会纵火法令后，警察无需搜查令即可阅读私人邮件。<br><a href="https://encyclopedia.ushmm.org/content/zh/article/gestapo" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/zh/article/gestapo</a></li>
+        <li>美国大屠杀纪念馆中文：1938-08-17 法令，犹太妇女官方文件须加中间名萨拉，男子须加以色列。<br><a href="https://encyclopedia.ushmm.org/content/zh/document/german-passport-issued-to-alice-sara-mayer-inside" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/zh/document/german-passport-issued-to-alice-sara-mayer-inside</a></li>
+        <li>美国大屠杀纪念馆：1938 年姓名法令提要。<br><a href="https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1933-1938/law-on-alteration-of-family-and-personal-names" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1933-1938/law-on-alteration-of-family-and-personal-names</a></li>
+        <li>邮政检查研究站：1939 年开战起内容审查；OKW 后于 1944 年转 RSHA；各站字母代号。<br><a href="https://www.postalcensorship.com/examples/ww2germany/c_ww2ger.html" target="_blank" rel="noopener">https://www.postalcensorship.com/examples/ww2germany/c_ww2ger.html</a></li>
+        <li>阿罗尔森档案电子指南：集中营邮政检查卡；布痕瓦尔德 1944-12 犹太囚犯每八周一封。<br><a href="https://eguide.arolsen-archives.org/en/archive/details/post-control-card" target="_blank" rel="noopener">https://eguide.arolsen-archives.org/en/archive/details/post-control-card</a></li>
+        <li>罗兹隔都邮局史：1940-06-17 第 63 号通告（禁信箱、禁贴票、须德语）。<br><a href="https://pocztawgetcie.pl/en/panel_3.html" target="_blank" rel="noopener">https://pocztawgetcie.pl/en/panel_3.html</a></li>
+        <li>柏林卡尔斯霍斯特博物馆：2026-06-19 至 2027-01-10《六月信件》。<br><a href="https://www.museum-karlshorst.de/ausstellungen/1941-juni-briefe-ungelesene-feldpost-aus-kamjanez-podilskyj/" target="_blank" rel="noopener">https://www.museum-karlshorst.de/ausstellungen/1941-juni-briefe-ungelesene-feldpost-aus-kamjanez-podilskyj/</a></li>
+        <li>法兰克福通信博物馆：2026-08-20 至 2027-01-24《萨米兹达特》，含 1939–1945 占领期检查前史。<br><a href="https://www.mfk-frankfurt.de/ausstellung-samizdat-worte-der-freiheit-in-der-tschechoslowakei/" target="_blank" rel="noopener">https://www.mfk-frankfurt.de/ausstellung-samizdat-worte-der-freiheit-in-der-tschechoslowakei/</a></li>
+      </ol>
+    </section>
+
+    <section class="card" id="lesson">
+      <p class="code">LEKTION</p>
+      <h2>对历史学习者的启示</h2>
+      <p>第一，配给不只管胃，也管谁的句子能过境。谁的信封被贴回，谁的信根本不许投进铁皮口，写在同一套邮局里。</p>
+      <p>第二，写德国平民抱怨出国信被拆，下一句写 1933 年警察已可合法读信。再下一句写信封上必须出现的 Israel / Sara。再下一句写隔都禁信箱、营里每八周一封。封条不是中性的。</p>
+      <p>第三，检查卡上的空白不是遗忘。许多卡片从来没有通信记录，因为收信人已被列车带走。不要把“大家都写信”写成所有人共用一个邮箱。</p>
+      <p>第四，2026 年柏林展出从未送达的信，法兰克福把占领期检查写成地下出版的前史。走进展厅之前，先问：当年谁连把信投进箱子的资格都没有。</p>
+    </section>
+    <footer>二战德国平民史调研 · 系列第53期 · 检查封条红铅笔风 · 20260831_0228</footer>
+  </div>
+</article>
+</body>
+</html>
