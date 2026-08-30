@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时打字机 —— 色带后的国界：购货证、上交令，以及被改造成营的打字机厂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Carbon ribbon and copy-paper: keycap black, onion-skin yellow, shift-key red */
+:root {
+  --ribbon: #1a1612;
+  --paper: #f4ead0;
+  --copy: #e8dcc0;
+  --shift: #9c2b2b;
+  --ink: #1c1814;
+  --fade: #6a5e4e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(156,43,43,.08) 31px 32px),
+    linear-gradient(180deg, #2a241c 0, #1a1612 40%, #12100c 100%);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.sheet {
+  max-width: 820px;
+  margin: 28px auto 72px;
+  background:
+    linear-gradient(90deg, rgba(156,43,43,.12) 0 8px, transparent 8px),
+    var(--paper);
+  border: 1px solid #c9b896;
+  box-shadow: 12px 16px 0 rgba(0,0,0,.35);
+  padding: 28px 30px 40px;
+}
+.kicker {
+  font-family: "Staatliches", sans-serif;
+  letter-spacing: .22em;
+  font-size: 13px;
+  color: var(--shift);
+  text-align: center;
+}
+h1 {
+  font-family: "Staatliches", "Noto Serif SC", sans-serif;
+  font-size: clamp(1.35rem, 3.4vw, 1.85rem);
+  line-height: 1.28;
+  font-weight: 400;
+  margin: 8px 0 10px;
+}
+.sub { font-size: 15.5px; margin-bottom: 6px; }
+.when { font-size: 13.5px; color: var(--fade); margin-bottom: 14px; }
+nav.toc {
+  background: var(--ribbon);
+  color: var(--paper);
+  padding: 14px 16px 10px;
+  margin: 6px 0 16px;
+  border-bottom: 6px solid var(--shift);
+}
+nav.toc h2 { font-family: "Staatliches", sans-serif; font-size: 1.2rem; font-weight: 400; }
+nav.toc ol { margin: 6px 0 8px 1.25em; }
+nav.toc a { color: #f0e2c4; }
+.key {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: var(--copy);
+  border: 1px dashed #b9a682;
+  box-shadow: inset 0 1px 0 #fff8e8;
+}
+.key.red {
+  background: var(--ribbon);
+  color: var(--paper);
+  border-style: solid;
+  border-color: var(--shift);
+}
+.key.red a { color: #f0c9c9; }
+.key.red .st { color: #e8b4b4; }
+.st {
+  font-family: "Staatliches", sans-serif;
+  letter-spacing: .14em;
+  font-size: 13px;
+  color: var(--shift);
+}
+h2 {
+  font-family: "Staatliches", "Noto Serif SC", sans-serif;
+  font-size: 1.28rem;
+  font-weight: 400;
+  margin: 2px 0 8px;
+}
+a { color: var(--shift); }
+ul { margin: 6px 0 10px 1.2em; }
+li { margin: 7px 0; }
+p + p { margin-top: 10px; }
+footer {
+  text-align: center;
+  margin-top: 22px;
+  font-family: "Staatliches", sans-serif;
+  letter-spacing: .08em;
+  color: var(--fade);
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<article class="sheet">
+  <p class="kicker">SCHREIBMASCHINE · BEZUGSCHEIN · ABLIEFERUNG</p>
+  <h1>战时打字机 —— 色带后的国界：购货证、上交令，以及被改造成营的打字机厂</h1>
+  <p class="sub">德国办公室把换一条色带写成还能打公文。1940 年 5 月，新机器必须凭购货证。街对面的犹太人先被登记打字机，再被收走。同一座法兰克福厂：战前打字机，战时把营设进三楼。</p>
+  <p class="when">调研时间：2026-08-31 01:32 CST · 平民史系列第49期 · 战争信件日记 / 配给种族的子角度</p>
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#permit">购货证</a></li>
+      <li><a href="#handin">上交</a></li>
+      <li><a href="#now">2026：厂变成营之后</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="key" id="theme">
+    <p class="st">SHIFT 01</p>
+    <h2>本期主题</h2>
+    <p>本报告写色带后的国界。1940 年 5 月 10 日，技术产品帝国局第 7 号令：新打字机——含宽行、小型机、十进位制表机和单独的滑动架——只准凭购货证出售或出租。11 日登在《德意志帝国公报》。德国职员把这写成“将就打”。1942 年 11 月 28 日，帝国经济部长再下一道：各机关互相“梳理”存量，多的交给少的。科隆财政局长 1943 年 1 月 14 日回信：本区空袭已打掉 43 台；税检官已把来自犹太财产的打字机拨给帝国财政机关。</p>
+    <p>同一套短缺，对犹太人写成没收。帝国保安总局 IV B 4 快件，1941 年 11 月 13 日登记犹太财产中的打字机、自行车、照相机、望远镜；1942 年 6 月 12 日下令上交。维克多·克莱姆佩勒 1942 年 6 月 2 日把“强制上交打字机”写成清单第 13 条。他改用手写。徐贲记下他 5 月 27 日那句：继续写下去，这就是我的英雄主义。德国办公室明天还在换色带。色带已经不是中性的。</p>
+  </section>
+
+  <section class="key" id="findings">
+    <p class="st">SHIFT 02</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>购货证先决定谁还能打字。</strong> 第 7 号令把新机器钉在凭证上。1940 年 2 月 23 日已有限制生产令；1941 年 2 月 20 日第五号令把限制延到 1942 年 2 月 28 日。自由职业者和未列名的消费者，申请要送到区经济局。商会可以自行驳回。德国平民把驳回写成没有崩溃。</li>
+      <li><strong>空袭后的机关去“梳理”邻居的机器。</strong> 科隆财政局长承认：犹太财产里的打字机已被拨给财政机关，符合财政部长指示。同信又写：空袭毁了 43 台，受灾机关应与受灾公司、私人同等对待。短缺被写成公平。公平的前提，是先拿走被驱逐者的键盘。</li>
+      <li><strong>克莱姆佩勒把上交写成不能打印的见证。</strong> 1942 年 6 月 2 日清单把打字机排在毛皮和自行车之前。日记改用手写，散页藏进词典。盖世太保抄家若抖出稿纸，他写：人为更小的过失被杀。继续写，是他的英雄主义。德国邻居的办公室仍在盖章。</li>
+      <li><strong>小城把收来的机器写成“疏散执行报告”。</strong> 美国大屠杀纪念馆馆藏：巴特诺伊施塔特市长 1942 年 4 月 2 日，事由是“犹太人疏散：此处为已交来打字机、照相机等的执行报告”，名单五人。机器不是办公用品。机器是押送的附件。</li>
+      <li><strong>打字机厂把营设进三楼。</strong> 法兰克福阿德勒厂 1900 年起就造打字机。1938 年吞并厂区中间四家犹太业主的地块。1944 年 8 月 22 日，第一批 200 名集中营囚犯从布痕瓦尔德运来，关在 Weilburger 街厂房三、四层；至少 1,616 人进过卡茨巴赫营，约三分之一死在法兰克福。埃尔福特奥林匹亚厂同时给海军造 Enigma M4，铭牌不写厂名，只写代码 aye。德国职员按的键，有人是在营里的隔壁焊的。</li>
+    </ul>
+  </section>
+
+  <section class="key red" id="permit">
+    <p class="st">SHIFT 03</p>
+    <h2>购货证</h2>
+    <p>德国办公室把换色带写成还能办公。新机器要申请。商会可以驳回。空袭后再被“梳理”。色带还黑。黑着的色带证明：这台机器是留给被承认的公文的。被点名缺机器的人，首先是还被允许拥有机器的人。</p>
+  </section>
+
+  <section class="key" id="handin">
+    <p class="st">SHIFT 04</p>
+    <h2>上交</h2>
+    <p>登记令比上交令早七个月。先造册，再收走。与自行车同一份快件。克莱姆佩勒的例外不是通勤，是手写：把见证从键盘改到钢笔。维也纳抵抗文献中心把 1941 年的上交写成同一串：打字机、计算器、复印机、自行车、相机、望远镜。不要把这写成“战时节约金属”。节约的下一句是驱逐。</p>
+  </section>
+
+  <section class="key red" id="now">
+    <p class="st">SHIFT 05</p>
+    <h2>2026：厂变成营之后</h2>
+    <p>阿德勒厂历史场所自 2022 年 3 月底起，把加卢斯街区写成：大屠杀和强制劳动发生在法兰克福人门口。卡茨巴赫.de 仍挂着厂史：打字机从 1896 年就和自行车一起出厂。魏玛国家社会主义强制劳动博物馆 2026 年夏天仍在排公开展览导览。柏林技术博物馆的来源研究者说：打字机很少贴名前主人的名字，只能拿序列号去对没收清单。键还在橱窗里。名字还在找。</p>
+  </section>
+
+  <section class="key" id="sources">
+    <p class="st">SHIFT 06</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>帝国公报 1940-05-11：技术产品帝国局第 7 号令，新打字机凭购货证。<br><a href="https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/033-8474/0404.hocr" target="_blank" rel="noopener">https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/033-8474/0404.hocr</a></li>
+      <li>帝国公报 1941-02-24：第五号令，限制打字机生产延至 1942-02-28。<br><a href="https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/037-8478/0126.hocr" target="_blank" rel="noopener">https://digi.bib.uni-mannheim.de/reichsanzeiger/ocr/film/tesseract-4.0.0-20181201/037-8478/0126.hocr</a></li>
+      <li>《司法与纳粹罪行》：1941-11-13 登记、1942-06-12 上交犹太打字机等。<br><a href="https://junsv.nl/seiten?tx_junsv_pi2%5Bvolume%5D=50&amp;tx_junsv_pi2%5Bsection%5D=4540&amp;tx_junsv_pi2%5Bpagenumber%5D=265" target="_blank" rel="noopener">https://junsv.nl/seiten?tx_junsv_pi2%5Bvolume%5D=50&amp;tx_junsv_pi2%5Bsection%5D=4540&amp;tx_junsv_pi2%5Bpagenumber%5D=265</a></li>
+      <li>克莱姆佩勒 1942-06-02：强制上交打字机。<br><a href="https://victor-klemperers-dresden.net/7-burgerwiese/" target="_blank" rel="noopener">https://victor-klemperers-dresden.net/7-burgerwiese/</a></li>
+      <li>徐贲：克莱姆佩勒日记与“继续写下去”的英雄主义。<br><a href="https://www.chinesepen.org/blog/archives/122587" target="_blank" rel="noopener">https://www.chinesepen.org/blog/archives/122587</a></li>
+      <li>USHMM：巴特诺伊施塔特市长 1942-04-02，已交来打字机的疏散执行报告。<br><a href="https://www.ushmm.org/online/hsv/source_view.php?SourceId=25535" target="_blank" rel="noopener">https://www.ushmm.org/online/hsv/source_view.php?SourceId=25535</a></li>
+      <li>科隆财政局长 1943-01-14：犹太财产打字机拨给财政机关；空袭损失 43 台；梳理委员会。<br><a href="http://www.jugend1918-1945.de/ND/default.aspx?id=33882&amp;root=18383" target="_blank" rel="noopener">http://www.jugend1918-1945.de/ND/default.aspx?id=33882&amp;root=18383</a></li>
+      <li>阿德勒厂历史场所：1938 年雅利安化地块；卡茨巴赫营至少 1,616 人。<br><a href="https://geschichtsort-adlerwerke.de/wissen/" target="_blank" rel="noopener">https://geschichtsort-adlerwerke.de/wissen/</a></li>
+      <li>德语维基：奥林匹亚厂战时造 Enigma，铭牌代码 aye。<br><a href="https://de.wikipedia.org/wiki/Olympia-Werke" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Olympia-Werke</a></li>
+      <li>MDR：魏玛邦档案里海军向埃尔福特奥林匹亚订购 Enigma M4。<br><a href="https://www.mdr.de/geschichte/mitteldeutschland/orte/erfurt/enigma-code-wehrmacht-schreibmaschinen-olympia-optima-100.html" target="_blank" rel="noopener">https://www.mdr.de/geschichte/mitteldeutschland/orte/erfurt/enigma-code-wehrmacht-schreibmaschinen-olympia-optima-100.html</a></li>
+      <li>魏玛强制劳动博物馆 2026 年公开展览导览。<br><a href="https://www.museum-zwangsarbeit.de/en/" target="_blank" rel="noopener">https://www.museum-zwangsarbeit.de/en/</a></li>
+    </ol>
+  </section>
+
+  <section class="key" id="lesson">
+    <p class="st">SHIFT 07</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，配给不只管胃，也管键盘。谁能申请新机器，谁必须上交旧机器，写在同一张公文纸上。</p>
+    <p>第二，写德国职员换色带打通知，下一句写 1940 年购货证。再下一句写 1941 年犹太人的打字机先被登记。再下一句写阿德勒厂把营设进自己的楼。色带不是中性的。</p>
+    <p>第三，空袭毁掉 43 台，机关就去“梳理”存量，并把犹太财产里的键盘写成合法调拨。不要把短缺写成全体德国人一起勒紧。勒紧的下一句是没收。</p>
+    <p>第四，博物馆里的打字机很少写着前主人的名字。看色带之前，先看谁被禁止按键。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第49期 · 色带复写纸风 · 20260831_0132</footer>
+</article>
+</body>
+</html>
