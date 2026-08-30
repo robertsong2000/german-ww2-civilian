@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>灯火管制、谣言与信息饥渴 —— 遮光窗帘后的收听罪与 2025 广播档案回看</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inconsolata:wght@400;600&family=Noto+Serif+SC:wght@400;600;700&family=Teko:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Blackout-night Berlin: kraft paper over windows, one sodium slit, radio-dial phosphor */
+:root {
+  --night: #07090e;
+  --street: #12161f;
+  --paper: #d8c7a4;
+  --slit: #e6b84a;
+  --phosphor: #7dffb0;
+  --ink: #1a1712;
+  --fade: #5a5348;
+  --warn: #c45a32;
+  --glass: #9aa8b8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    linear-gradient(90deg, rgba(230,184,74,.07) 0 7px, transparent 7px 100%),
+    radial-gradient(ellipse at 8% 12%, rgba(230,184,74,.16), transparent 28%),
+    repeating-linear-gradient(180deg, #0b0e14 0 3px, #090c11 3px 6px);
+  color: var(--paper);
+  font-family: "Noto Serif SC", "Crimson Pro", serif;
+  line-height: 1.84;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+  opacity: .22;
+  mix-blend-mode: overlay;
+  z-index: 8;
+}
+.room {
+  max-width: 900px;
+  margin: 24px auto 72px;
+  background:
+    linear-gradient(180deg, rgba(18,22,31,.92), rgba(10,12,18,.96));
+  border: 1px solid #2a3140;
+  box-shadow: 0 0 0 12px #0a0c10, 0 28px 80px rgba(0,0,0,.65);
+  position: relative;
+  padding: 0 40px 48px;
+}
+.room::before {
+  /* Blackout paper strip across the top of the window */
+  content: "VERDUNKELN";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 18px;
+  background: repeating-linear-gradient(90deg, #1a140c 0 28px, #2a2216 28px 56px);
+  color: #c9a227;
+  font-family: "Teko", sans-serif;
+  font-size: 13px;
+  letter-spacing: .42em;
+  text-align: center;
+  line-height: 18px;
+}
+.mast { padding: 38px 6px 16px; border-bottom: 1px solid rgba(230,184,74,.25); position: relative; }
+.serial {
+  font-family: "Inconsolata", monospace;
+  letter-spacing: .28em;
+  font-size: 12px;
+  color: var(--phosphor);
+}
+h1 {
+  font-family: "Crimson Pro", "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.2vw, 2.08rem);
+  line-height: 1.36;
+  margin: 12px 0 10px;
+  color: #f2e6c8;
+}
+.sub { color: #b7a888; font-size: 15px; }
+.when {
+  margin-top: 12px;
+  font-family: "Inconsolata", monospace;
+  font-size: 12px;
+  color: #8a9a8a;
+}
+.dial {
+  position: absolute;
+  right: 0; top: 36px;
+  width: 88px; height: 88px;
+  border: 2px solid var(--phosphor);
+  border-radius: 50%;
+  color: var(--phosphor);
+  font-family: "Teko", sans-serif;
+  font-size: 15px;
+  letter-spacing: .08em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(125,255,176,.25);
+  background: radial-gradient(circle at 40% 35%, rgba(125,255,176,.18), transparent 60%);
+  line-height: 1.15;
+}
+nav.toc {
+  margin: 20px 0 8px;
+  padding: 14px 16px 8px;
+  background: #0e1218;
+  border-left: 4px solid var(--slit);
+}
+nav.toc h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .16em;
+  color: var(--slit);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+nav.toc ol { margin: 0 0 8px 1.2em; font-size: 15px; }
+nav.toc a { color: #e8dcc0; text-decoration: none; border-bottom: 1px dotted rgba(230,184,74,.4); }
+nav.toc a:hover { color: var(--slit); }
+.card {
+  margin: 20px 0;
+  padding: 20px 20px 16px;
+  background: #efe3c8;
+  color: var(--ink);
+  border: 1px solid #cbb892;
+  box-shadow: inset 0 0 0 1px rgba(255,255,240,.25);
+}
+.card.night { background: #e4d6b4; }
+.card.green { background: #dce6d4; }
+.card.ash { background: #ddd6c8; }
+.card h2 {
+  font-family: "Crimson Pro", "Noto Serif SC", serif;
+  font-size: 1.36rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c4ae82;
+}
+.tag {
+  font-family: "Inconsolata", monospace;
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--warn);
+  margin-bottom: 6px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border-left: 4px solid #2a3a2a;
+  background: rgba(20,30,20,.06);
+  font-style: italic;
+  color: #2c2820;
+}
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 12px; }
+.sources a { color: #5c2a1c; word-break: break-all; }
+footer {
+  margin-top: 26px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(230,184,74,.25);
+  font-size: 13px;
+  color: #8a9a8a;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+}
+@media (max-width: 640px) {
+  .room { padding: 0 20px 36px; margin: 8px; }
+  .dial { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Blackout-night layout: kraft paper, radio phosphor, slit of sodium light -->
+<article class="room">
+  <header class="mast">
+    <div class="serial">kHz 1500 · SCHWARZHÖREN · FORSCHUNGSBLATT</div>
+    <h1>灯火管制、谣言与信息饥渴 —— 遮光窗帘后的收听罪与 2025 广播档案回看</h1>
+    <p class="sub">1939 年的窗户与旋钮：平民如何在黑暗里打听战争，又如何因一句话被邻居送进法庭</p>
+    <p class="when">调研时间：2026-08-30 18:12 CST · 平民史系列第8期 · 主题轮换池第8项</p>
+    <div class="dial">BBC<br>V · · · —</div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录 · LUFTLAGE</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#blackout">遮光：把城市变成一张黑纸</a></li>
+      <li><a href="#radio">旋钮：收听罪与告密</a></li>
+      <li><a href="#rumor">谣言：官方语言的缝隙</a></li>
+      <li><a href="#now">2025–2026：广播档案如何被重新打开</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">ABSCLN. 01 · THEMA</p>
+    <h2>本期主题</h2>
+    <p>灯火管制把德国城市的窗户变成战场纪律；收音机旋钮则把客厅变成潜在的法庭。本报告从平民的两种感官写起：<strong>看不见的光</strong>与<strong>不能听的声音</strong>。前者针对飞机，后者针对“心理战”。两者都依赖邻里监视，也都在制造一种特殊的饥渴——人们越不准知道，就越要用谣言、敌台与国防军公报的措辞缝隙去拼出一张战争地图。</p>
+    <p>2025 年，德国广播档案馆（DRA）在年报中记录数字使用再创新高，并继续公开其“NS-Rundfunk 1933–1945”馆藏入口；希特勒演说 1933–1945 的编辑项目也发布中期报告。把这些档案回看与 1939 年 9 月 1 日的《非常广播措施条例》并置，不是为了把当年的偷听写成英雄传奇，而是为了看清：信息管制如何进入家庭，又如何把家庭变成互相告发的场所。</p>
+  </section>
+
+  <section class="card night" id="findings">
+    <p class="tag">ABSCLN. 02 · BEFUNDE</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>遮光先于面积轰炸，且很快被居民当成刁难。</strong>1939 年 5 月 23 日《防空法第八实施令》（遮光条例）要求全国预做遮光，开战即成每晚惯例。流亡社民党（SOPADE）1939 年秋报告写：人们觉得报纸曾保证飞机会被提早听见，如今却要夜夜贴黑纸；警察公报里常有遮光不严的检举。</li>
+      <li><strong>收听外国电台在开战当天被写成犯罪。</strong>戈林签署的条例 §1 禁止故意收听外国广播，处惩役，轻则监禁并没收收音机；§2 传播足以危害“抵抗力”的消息可处死刑。盖世太保承办，依赖告密。GHDI 转述：生效后头十个月逮捕约 2200 人。</li>
+      <li><strong>死刑不多，惩役是日常；告密打开私怨的门。</strong>DHM 写：按纳粹标准，死刑并不常判、更少执行；1943 年法院以广播犯罪判处 11 人死刑。常见的是 9 至 25 个月惩役。被判者往往先被家人或邻居告发。</li>
+      <li><strong>技术封锁失败，警告标签也失败。</strong>人民收音机（VE 301、DKE 38）被设计成短波能力差；1941/42 年要给约 1600 万台收音机贴警告条，因侵犯私域引发反感而中止。干扰台与有线广播改造同样未能切断 BBC 德语部——以贝多芬第五交响曲前四个音（摩斯电码 V）开场的“这里是英格兰”。</li>
+      <li><strong>谣言填补官方空白，也被官方反过来使用。</strong>SOPADE 记下 1939 年 9 月弗里德里希港空袭后的“最狂谣言”，次日报纸辟谣并威胁关押“愚蠢的饶舌者”。党卫队保安处（SD）《帝国报告》则专为宣传部门捕捉这类风向，不是民调。</li>
+    </ul>
+  </section>
+
+  <section class="card" id="blackout">
+    <p class="tag">ABSCLN. 03 · VERDUNKELN</p>
+    <h2>遮光：把城市变成一张黑纸</h2>
+    <p>德意志历史博物馆指出：国家防空 1933 年即启动，1935 年 3 月柏林首次模拟警报与灯火管制；同年立法规定掩体与清瓦。帝国防空同盟到 1939 年超过 1350 万成员。1940 年海报写着“敌人看得见你的灯光！遮光！”——直到面积轰炸开始，遮光几乎失效。失效并不等于停止：窗户上的黑纸、车灯的狭缝、邻里对一条缝光的举报，构成了平民每天的身体记忆。</p>
+    <p>遮光条例把责任派给房主或实际占有人，费用自理，扰乱遮光被禁止。警察宣布起止时间；防空状态一经宣布，每晚天黑到天亮都是持续遮光。对平民而言，这不是抽象的“后方贡献”，而是客厅里少掉的阅读灯、楼梯上磕碰的小腿，以及第二天警察公报里可能出现的姓名。</p>
+    <blockquote>不断下令的遮光非常惹人讨厌，因为它被看作刁难。……每个警察报告里都能读到一桩或几桩因遮光不充分而被检举的事。——SOPADE 报告，1939 年 9/10 月，西南德</blockquote>
+    <p>同一份报告写 9 月 24 日第一次空袭警报时的混乱：许多人拒绝下地窖，辅助警察满城乱跑；有人干脆上床睡觉，直到街区管理员以报警相胁。两天后，关于弗里德里希港被炸的谣言满天飞，有人坚称听见了炮声与弹着。战争的第一个月，平民的信息环境已经是：官方说你会及时听到飞机；身体却被要求夜夜活在黑暗里；邻里的耳朵比警报更灵敏。</p>
+  </section>
+
+  <section class="card green" id="radio">
+    <p class="tag">ABSCLN. 04 · RUNDFUNKVERBRECHEN</p>
+    <h2>旋钮：收听罪与告密</h2>
+    <p>条例前言把外国广播定义为“瓦解民心的武器”：“敌人送来的每一个字当然都是谎言。”接着把“责任感”写成收听禁令的道德外衣，再给“缺乏责任感的民族同志”配上惩役与死刑。GHDI 说明：1939 年德国已有超过 1200 万台收音机，三年后约 1600 万户、约七成人口能听广播——而且并不都是人民收音机。外国报纸可以禁，电波禁不住，所以戈培尔在开战日就起草了这部法。</p>
+    <p>DHM 把 BBC 德语部称为德国境内“最常被收听的敌台”：它不隐瞒英方失利，托马斯·曼 1940–1945 年对“德国听众”的 55 次讲话、关于安乐死与屠杀欧洲犹太人的报道，构成另一种可信度。莫斯科广播电台、梵蒂冈电台、瑞士贝罗明斯特、英国黑宣传台“古斯塔夫·齐格弗里德 1 号”与“加来士兵台”加入同一频谱。苏联“自由德国”电台从 1943 年 7 月起播战俘名单——这是官方讣告不肯给的消息，也是家属最饥渴的那种。</p>
+    <p>执法结构比条文更冷。§5 规定：须由国家警察提出申请才能追诉。盖世太保过滤告密：内部方针曾把“只听音乐”倾向警告，把传播消息一律送交。这意味着：安静地听，风险在邻里；把伦敦的话带到面包店，风险在法庭。联邦政治教育中心提醒：对照敌方新闻是危险的，因为收听敌台本身就是“广播犯罪”。DHM 的判断很克制：联盟的广播宣传并未实质缩短战争，也未把德国的撑持能力连根撼动；但刑罚的广度本身，说明政权把电波看成危险。</p>
+  </section>
+
+  <section class="card ash" id="rumor">
+    <p class="tag">ABSCLN. 05 · GERÜCHT</p>
+    <h2>谣言：官方语言的缝隙</h2>
+    <p>bpb 摘录 1944 年 7 月 22 日 SD 各区报告：民众从国防军公报只提“高炮击落”、不提空战，自行推断战斗机已近枯竭。这是信息饥渴的典型动作——不是另有一份地下报纸，而是精读被允许的句子。谣言在这里不是愚昧的附属品，而是一种被迫的注释学。</p>
+    <p>SOPADE 在 1939 年已看见反向操作：党卫队与冲锋队系统散布“法国人不想打”的故事，甚至编造莱茵河中线的士兵对话。谣言可以由政权投放，也可以从遮光的街道上自己长出来。两种谣言都在争夺同一件稀缺品：对明天的可预期性。谁能提供它，谁就暂时占有客厅。</p>
+    <p>把偷听写成“小人物的抵抗”是战后常见的自我开脱。更准确的说法是：多数人既听官方《点播音乐会》，也偶尔把音量拧低对准伦敦；既抱怨遮光，也把缝光的邻居记在心里。信息饥渴没有自动变成政治拒绝。它首先变成耳语、笑话、对公报的冷读，以及一份可能被送进盖世太保的检举。</p>
+  </section>
+
+  <section class="card night" id="now">
+    <p class="tag">ABSCLN. 06 · 2025–2026</p>
+    <h2>2025–2026：广播档案如何被重新打开</h2>
+    <p>德国广播档案馆在柏林—波茨坦与法兰克福保存“NS-Rundfunk 1933–1945”声像与文字。其 2025 年报强调数字使用超过一万次量级、数字服务创新高；馆方同时发布希特勒演说 1933–1945 编辑项目的中期报告。美国大屠杀纪念馆《一体化》（Gleichschaltung）条目于 2025 年 4 月 21 日更新，仍把帝国文化院对广播、电影与新闻的接管写成纳粹控制日常感官的制度前提。</p>
+    <p>这些回看提醒学习者两件事。第一，电波史不是只有戈培尔的话筒，还有被禁的旋钮、被贴上的警告条、被邻居听见的音量。第二，数字化把“人民收音机旁的人”重新变成可检索对象时，必须连同告密档案一起打开——否则又会只剩下政权的声音。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">ABSCLN. 07 · QUELLEN</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。</p>
+    <ol class="body">
+      <li>German History in Documents and Images：1939 年 9 月《非常广播措施条例》全文与解说（12 万/16 万台收音机、头十个月约 2200 人被捕）。<br><a href="https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/verordnung-des-ministerrates-fuer-die-reichsverteidigung-ueber-ausserordentliche-rundfunkmassnahmen-datiert-auf-den-1-september-1939-und-veroeffentlicht-am-7-september-1939" target="_blank" rel="noopener">https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/verordnung-des-ministerrates-fuer-die-reichsverteidigung-ueber-ausserordentliche-rundfunkmassnahmen-datiert-auf-den-1-september-1939-und-veroeffentlicht-am-7-september-1939</a></li>
+      <li>GHDI：SOPADE 报告《没有战争热情》（1939 年 9/10 月）——遮光被当作刁难、第一次警报混乱、弗里德里希港谣言。<br><a href="https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/sopade-bericht-keine-kriegsbegeisterung-september-oktober-1939" target="_blank" rel="noopener">https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/sopade-bericht-keine-kriegsbegeisterung-september-oktober-1939</a></li>
+      <li>德意志历史博物馆 LeMO：第二次世界大战中的对外广播宣传（BBC 德语部、托马斯·曼、死刑 11 例、警告条行动、干扰台失败）。<br><a href="https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/kriegsverlauf/rundfunkpropaganda-fuer-das-ausland-im-zweiten-weltkrieg" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/kriegsverlauf/rundfunkpropaganda-fuer-das-ausland-im-zweiten-weltkrieg</a></li>
+      <li>DHM 藏品：《敌人看得见你的灯光！遮光！》海报，柏林，1940。<br><a href="https://www.dhm.de/lemo/bestand/objekt/verdunkeln-1940" target="_blank" rel="noopener">https://www.dhm.de/lemo/bestand/objekt/verdunkeln-1940</a></li>
+      <li>DHM LeMO：防空（1935 年演习与立法、RLB 1350 万成员）。<br><a href="https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/kriegsverlauf/luftschutz" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/kriegsverlauf/luftschutz</a></li>
+      <li>联邦政治教育中心：《德意志战争社会》（含收听敌台为广播犯罪、1944-07-22 SD 报告对公报缝隙的阅读）。<br><a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/" target="_blank" rel="noopener">https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/</a></li>
+      <li>德国广播档案馆：NS-Rundfunk 1933–1945 馆藏入口；2025 年报与希特勒演说编辑项目中期报告。<br><a href="https://www.dra.de/" target="_blank" rel="noopener">https://www.dra.de/</a></li>
+      <li>美国大屠杀纪念馆：《一体化》（Gleichschaltung），2025-04-21 更新。<br><a href="https://encyclopedia.ushmm.org/content/zh/article/gleichschaltung-coordinating-the-nazi-state" target="_blank" rel="noopener">https://encyclopedia.ushmm.org/content/zh/article/gleichschaltung-coordinating-the-nazi-state</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">ABSCLN. 08 · LEHRE</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，先看窗户，再看话筒。灯火管制史不是防空技术附录，而是一套把私人灯光写成公共罪行的邻里制度。问“德国人知不知道真相”，必须同时问：他们被允许看见哪一束光、被允许拧到哪一个频率。</p>
+    <p>第二，收听不等于抵抗。把音量拧低对准伦敦，可以是恐惧、好奇、对亲人消息的饥渴，也可以是事后回忆里的自我开脱。传播才是条例真正要切断的行为——也就是把私人听到的句子重新变成公共语言。</p>
+    <p>第三，谣言是信息管制的影子，不是民众的原罪。政权投放谣言，报纸惩罚谣言，SD 收集谣言。研究耳语，是为了看见官方语言留下的缝，而不是为了嘲笑“当时的人太轻信”。</p>
+    <p>第四，2025 年把纳粹广播重新做成可检索馆藏时，学习者的任务是把旋钮旁的告密条一起读进去。否则数字化只会让戈培尔的声音更清晰，让遮光窗帘后的人再次消失。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第8期 · 灯火管制夜色风 · 20260830_1812
+  </footer>
+</article>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>配给卡、黑市与“正常生活”的种族边界 —— 秤盘两端：1942年犹太人配额与2026年德累斯顿战争神话展</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=Share+Tech+Mono&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<style>
+/* Black-market scale pans: tarnished brass, kraft coupons, back-room oil lamp — not bunker yellow */
+:root {
+  --shop: #120e0a;
+  --beam: #2c2116;
+  --brass: #c9a45c;
+  --brass-dim: #8a6830;
+  --verdigris: #5a7a62;
+  --kraft: #e8d7b4;
+  --kraft2: #d4c094;
+  --ink: #1a120c;
+  --chalk: #efe6d2;
+  --carmine: #8a2c22;
+  --iron: #3e3a34;
+  --lamp: #d8c08a;
+  --soot: rgba(8, 6, 4, .72);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh;
+  color: var(--chalk);
+  font-family: "Noto Sans SC", "Songti SC", sans-serif;
+  line-height: 1.82;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(201,164,92,.14), transparent 42%),
+    linear-gradient(180deg, #1a1410 0%, var(--shop) 28%, #0c0907 100%);
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)' opacity='.5'/%3E%3C/svg%3E");
+  opacity: .18;
+  mix-blend-mode: overlay;
+  z-index: 8;
+}
+.shop {
+  max-width: 960px;
+  margin: 24px auto 72px;
+  position: relative;
+  background:
+    repeating-linear-gradient(90deg, #241a12 0 11px, #1e1610 11px 12px),
+    linear-gradient(180deg, #2a2016, #1a140f);
+  border: 14px solid #0e0b08;
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.62),
+    inset 0 0 0 1px rgba(201,164,92,.22);
+  padding: 0 36px 44px;
+}
+.shop::after {
+  /* Counter edge: worn wood rail */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0; height: 10px;
+  background: linear-gradient(90deg, #3a2c1c, var(--brass-dim), #3a2c1c);
+  opacity: .55;
+}
+.beam {
+  position: relative;
+  z-index: 1;
+  padding: 28px 8px 8px;
+  text-align: center;
+}
+.ticket {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .28em;
+  color: var(--brass);
+  text-transform: uppercase;
+}
+.scale {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  margin: 10px 8px 6px;
+  padding: 0 18px;
+}
+.pan {
+  flex: 1;
+  border: 2px solid var(--brass-dim);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201,164,92,.18), transparent 70%),
+    #1c1610;
+  min-height: 58px;
+  clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cinzel", serif;
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--brass);
+  text-transform: uppercase;
+}
+.pan.heavy { transform: translateY(10px); border-color: var(--carmine); color: #d9a39a; }
+.pan.light { transform: translateY(-6px); }
+.pivot {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--brass);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Cinzel", serif;
+  color: var(--brass);
+  font-size: 13px;
+  box-shadow: 0 0 18px rgba(201,164,92,.28);
+  background: #1a140e;
+  flex-shrink: 0;
+}
+h1 {
+  font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif;
+  font-weight: 400;
+  font-size: clamp(1.55rem, 3.4vw, 2.18rem);
+  line-height: 1.36;
+  color: var(--kraft);
+  margin: 12px 8px 8px;
+  text-align: center;
+}
+.sub {
+  text-align: center;
+  color: #cbb892;
+  font-size: 15px;
+  margin: 0 12px 8px;
+}
+.when {
+  text-align: center;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 12px;
+  color: #9a8a68;
+  margin-bottom: 8px;
+}
+nav.toc {
+  position: relative;
+  z-index: 1;
+  margin: 18px 0 10px;
+  padding: 16px 20px 12px;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(239,230,210,.06) 27px 28px),
+    linear-gradient(180deg, #1e281e, #162016);
+  border: 1px dashed var(--verdigris);
+  box-shadow: inset 0 0 40px rgba(0,0,0,.35);
+}
+nav.toc h2 {
+  font-family: "ZCOOL XiaoWei", serif;
+  font-size: 1.2rem;
+  color: #c5d4c4;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+nav.toc ol { margin: 0 0 4px 1.2em; font-size: 15px; }
+nav.toc a {
+  color: #e8f0e4;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(90,122,98,.7);
+}
+nav.toc a:hover { color: var(--brass); border-bottom-style: solid; }
+.card {
+  position: relative;
+  z-index: 1;
+  margin: 22px 0;
+  padding: 24px 24px 18px;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, var(--kraft) 0%, var(--kraft2) 100%);
+  border: 1px solid #b89a6a;
+  box-shadow: 6px 10px 0 rgba(0,0,0,.28);
+}
+.card::before {
+  /* Perforated coupon edge */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -7px;
+  height: 14px;
+  background:
+    radial-gradient(circle at 10px 7px, var(--shop) 5px, transparent 5.5px),
+    linear-gradient(180deg, #cbb48a, #b89a6a);
+  background-size: 20px 14px, 100% 100%;
+}
+.card.left-pan { background: linear-gradient(180deg, #efe3c4, #d8c49a); }
+.card.right-pan {
+  background: linear-gradient(180deg, #e8d0c4, #d4b4a4);
+  border-color: #a87868;
+}
+.card.ledger { background: linear-gradient(180deg, #dfe6d4, #c8d0bc); }
+.card.iron {
+  background: linear-gradient(180deg, #d8d2c6, #c4bcae);
+}
+.card h2 {
+  font-family: "ZCOOL XiaoWei", "Noto Sans SC", serif;
+  font-size: 1.42rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--brass-dim);
+  color: #1a120c;
+  font-weight: 400;
+}
+.tag {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--carmine);
+  margin-bottom: 6px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--brass-dim);
+  background: rgba(138, 44, 34, .07);
+  font-style: italic;
+  color: #3a2a1c;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin: 10px 0 16px;
+  background: #f3ead4;
+}
+th, td {
+  border: 1px solid #c4ae82;
+  padding: 7px 8px;
+  text-align: left;
+}
+th { background: #e0c888; font-weight: 600; }
+.note { font-size: 13.5px; color: #5c4e3a; margin-bottom: 12px; }
+.sources a { color: #6e2418; word-break: break-all; }
+.stamp {
+  float: right;
+  margin: 0 0 8px 12px;
+  width: 88px; height: 88px;
+  border: 3px double var(--carmine);
+  border-radius: 50%;
+  color: var(--carmine);
+  font-family: "Cinzel", serif;
+  font-size: 11px;
+  letter-spacing: .08em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  transform: rotate(12deg);
+  opacity: .78;
+  line-height: 1.2;
+}
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 26px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(201,164,92,.35);
+  font-size: 12px;
+  color: #a89870;
+  text-align: center;
+  font-family: "Share Tech Mono", monospace;
+}
+@media (max-width: 640px) {
+  .shop { padding: 0 16px 32px; margin: 8px 6px 40px; border-width: 8px; }
+  .scale { display: none; }
+  .stamp { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Back-room grocer: hanging brass pans, kraft coupons, carmine overprint -->
+<article class="shop">
+  <header class="beam">
+    <div class="ticket">SCHWARZWAAGE · ABSCHNITT 42 · 1939–1945</div>
+    <div class="scale" aria-hidden="true">
+      <div class="pan light">Volksgenosse</div>
+      <div class="pivot">⚖</div>
+      <div class="pan heavy">Ausgeschlossen</div>
+    </div>
+    <h1>配给卡、黑市与“正常生活”的种族边界 —— 秤盘两端：1942年犹太人配额与2026年德累斯顿战争神话展</h1>
+    <p class="sub">配给不是“大家都饿了”。它是一套按种族、国籍与劳动价值称重的日常制度；黑市是它的影子市场，也是死刑与互助同时发生的地方。</p>
+    <p class="when">调研时间：2026-08-30 18:08 CST · 平民史系列第2期 · 主题轮换池第2项</p>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录 · 秤盘目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#left">左盘：如何把“正常生活”称给民族同胞</a></li>
+      <li><a href="#right">右盘：红色“J”、1942年禁令与饥饿计划</a></li>
+      <li><a href="#market">黑市：柜台底下的秤，与42例死刑</a></li>
+      <li><a href="#debate">争论：格茨·阿利、图泽与“被买通的人民”</a></li>
+      <li><a href="#now">2025–2026：德累斯顿如何重看战争神话</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">TICKET 01 · THEMA</p>
+    <h2>本期主题</h2>
+    <p>1939年8月27日，距进攻波兰还有四天，帝国已颁布《保障德意志民族生活必需品暂行条例》。配给卡随后成为城市厨房里最常见的纸片：面包、肉、脂肪、糖、果酱、纺织品点数。德意志历史博物馆（DHM / LeMO）写得很清楚：政权从第一次世界大战的饥馑里学到的第一课，不是“全民同苦”，而是<strong>尽量少向“雅利安”消费者索取过大牺牲</strong>，同时把占领区“无情榨取”，并在东欧有计划地制造“饿死”。</p>
+    <p>本期把观察点放在<strong>秤盘</strong>上。左盘是所谓正常生活：排队、替代咖啡、仓鼠式下乡换土豆、官员仍能在柏林餐馆一顿吃掉普通人一周配额。右盘是被划出共同体的人：印着红色“J”的卡片、指定商店、限定购物时段、1942年10月起对犹太人停发肉蛋奶与小麦制品，以及占领区波兰人与犹太人更低的卡。两边的重量不是自然短缺，而是政策。平民在空袭后的瓦砾里挨饿，与纳粹用配额把邻居饿向死亡，必须写在同一句话里。</p>
+  </section>
+
+  <section class="card left-pan" id="findings">
+    <p class="tag">TICKET 02 · BEFUNDE</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>配给从一开始就按“谁算人”分级。</strong>年龄、劳动强度、孕妇与病人可以加码——前提是被算进民族共同体。犹太人、强制劳工、战俘、集中营囚徒走另一套秤。法兰克福档案写：到1943/44年，“雅利安”市民仍相对过得去；另一些人更早就被饥饿盯上。</li>
+      <li><strong>1942年10月是国内犹太人配额的制度性断裂。</strong>纽伦堡文件 PS-1347（1942年9月18日，粮食农业部长巴克）规定：第42配给期起停发肉类、蛋、小麦制品、全脂与脱脂鲜奶及地方额外配给；卡片斜向套印“Jew”；病患、孕妇、乳母规定不适用于犹太人；海外食品包裹全额抵扣配额，盖世太保可扣押包裹。</li>
+      <li><strong>卡片只是购买权，不是到货保证。</strong>维基百科《Lebensmittelkarte》条指出：商人无义务备货，用不掉的券作废、不结转。实际摄入常低于公布配额。黑市、仓鼠式下乡换粮、柜台底下的暗中交易因此成为“正常”的补丁。</li>
+      <li><strong>USSBS 说战时德国平民饮食热量大致够、与英国相近——这句话的主语是被纳入配给体系的人。</strong>同一套战争里，饥饿计划在1941–1943年为帝国运回大量油脂、土豆与谷物；1941–42年冬仅苏军战俘就有超过一百万人被故意饿死。平均数掩盖了秤盘。</li>
+      <li><strong>“人民被战利品买通”是争论，不是定论。</strong>格茨·阿利主张德国民众只承担约一成战争费用、七成来自掠夺。亚当·图泽反算为约七成由德国内部承担，并强调这是动员型独裁，不能只用物质收买解释。配给史两边都用得上：左盘的可忍日常，确实部分靠右盘的剥夺与占领区饥饿来维持；但把普通人写成纯粹的贪心顾客，会漏掉强制、意识形态与战争本身的压力。</li>
+    </ul>
+  </section>
+
+  <section class="card" id="left">
+    <p class="tag">TICKET 03 · LINKE SCHALE</p>
+    <h2>左盘：如何把“正常生活”称给民族同胞</h2>
+    <div class="stamp">J<br>OVER<br>PRINT</div>
+    <p>DHM 记载：脂肪、肉、黄油、奶、奶酪、糖与果酱自1939年9月1日起凭卡；面包与蛋自9月25日。10月中旬非军人人口领到有效一年的帝国服装卡，100点——袜子4点，毛衣25点，女套装45点。头两年，一名“普通消费者”（Normalverbraucher）每周大约可购 2,250 克面包、500 克肉、约 270 克脂肪。重体力、孕妇与儿童有加码；全脂奶几乎只给他们，其余人喝脱脂奶。主食转向土豆、豆类、面粉与糖；橡子或大麦做的穆克福克咖啡替代咖啡豆；胡萝卜或土豆蛋糕、芜菁果酱成为厨房话术。</p>
+    <p>法兰克福城市史研究所转述尤塔·海贝尔的研究：1939年秋普通消费者每周配额约为面包 2,400 克（或 1,900 克加 375 克面粉）、肉 500 克，以及黄油、奶酪、人造黄油、猪油的组合。圣诞可有糖、巧克力、水果与咖啡豆的“特别配给”——这是写给“有价值的人口”的抚慰。直到1943年下半年该市遭遇猛烈空袭前，战争与配给显得“可忍受”。此后肉与脂肪大约腰斩，面包与粮食制品数量尚能维持，土豆用芜菁、谷物与豆类顶替。空袭夺走四千余人生命，16 万套住房到1944年秋只剩约 7 万套可住。</p>
+    <p class="note">下表据德语维基《Lebensmittelkarte》所引普通消费者每周配额整理。单位为克。卡片是购买权，不是到货保证。</p>
+    <table>
+      <thead>
+        <tr><th>时点</th><th>面包</th><th>肉</th><th>脂肪</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1939年9月</td><td>2400</td><td>500</td><td>270</td></tr>
+        <tr><td>1942年4月</td><td>2000</td><td>300</td><td>206</td></tr>
+        <tr><td>1943年6月</td><td>2325</td><td>250</td><td>218</td></tr>
+        <tr><td>1944年10月</td><td>2225</td><td>250</td><td>218</td></tr>
+        <tr><td>1945年3月</td><td>1778</td><td>222</td><td>109</td></tr>
+      </tbody>
+    </table>
+    <p>1942年4月的削减在党卫队保安处秘密报告里被写成：对大部分人口的打击，“几乎不亚于战争中任何其他事件”——因为 1916/17 芜菁之冬还活在记忆里。政权的对策不是承认失败，而是把短缺道德化。丽莎·派恩在《BBC History / HistoryExtra》中引用赫斯1936年演说：好主妇不为偶尔少买的那四分之一磅猪肉哀悼，购物要符合“德意志大家庭”的利益。戈林一顿饭可以吃掉普通人一周配额；弗里克可拿到火腿、鹿肉、黄油、巧克力、茶与可可等卡外物资。阶级在共同体内部继续称重：有钱人尽量买时令外与奢侈品，穷人吃当季与土豆菜谱。</p>
+    <p>美国战略轰炸调查（USSBS）欧洲战争总结报告后来说：食物虽严格配给，战时营养供应总体充足，德国平民热量大致与英国相当。这句话常被用来证明“德国人也挨饿所以大家都是受害者”。它更准确的读法是：在种族国家的左盘上，直到崩溃前夜，政权成功避免了1918式的国内饥荒——代价记在右盘与占领区。</p>
+  </section>
+
+  <section class="card right-pan" id="right">
+    <p class="tag">TICKET 04 · RECHTE SCHALE</p>
+    <h2>右盘：红色“J”、1942年禁令与饥饿计划</h2>
+    <p>DHM 写：犹太人在食品与纺织配给中遭受“强烈歧视与公开羞辱”，在指定商店凭卡得到的热量明显低于非犹太人口。战争开始后剥夺加速；1941年9月19日起六岁以上犹太人须佩戴黄星。德语维基补充制度细节：按纽伦堡种族法被定为犹太人者，卡片标红色“J”，基本食物分量更低，并被排除在一切特别配给之外；1942年10月起不再发给肉卡与服装卡。没有卡的人——包括为躲避逮捕与递解而潜入地下者——几乎买不到合法食物；潜在帮助者自己的配额也紧，很难匀出一份。</p>
+    <p>哈佛法学院纽伦堡文件库所藏 PS-1347，是把地方实践写成全国指令的那一页。帝国粮食农业部长（巴克）1942年9月18日致各邦与普鲁士各省粮食局：自第42配给期（文本作1942年10月19日）起，犹太人不再领取肉及肉制品、蛋、小麦制品（蛋糕、白面包、小麦小面包、小麦粉等）、全脂奶与新鲜脱脂奶，以及非全国统一卡、而由地方凭证或粮食局特别公告发放的食物。十岁以上犹太青少年领普通消费者面包配额；六岁以上领普通消费者脂肪配额，无代用蜂蜜、无可可粉、无6–14岁果酱加码；六岁以下每日半升脱脂鲜奶。犹太人不得成为“自给者”（Selbstversorger）。病人、体弱者、孕妇、乳母与产妇规定不适用于犹太人，医院中的犹太病患同样适用。卡片须以对比色斜向套印“Jew”。为避免“妨碍对雅利安人口的供应”，建议为犹太人规定特别购物时间。海外礼物包裹全额从配额中扣除；非常规配给的咖啡、可可、茶等则转给医院一类大户。财政部长1941年4月29日已令海关每周上报疑似犹太人收件的包裹。</p>
+    <p>法兰克福粮食局1942年10月23日第211号工作指令几乎逐条落地，把第42期起始日写为10月15日——档案传递中的日期差，说明这是一套被反复抄写的帝国文件，不是某市官员的即兴刻薄。指令还规定：犹太人换旅行与餐馆券仅限紧急例外；一战受伤的犹太退伍军人可申请按“德意志血统人口”供应，但须盖世太保同意，且优惠不及家属与遗孀。大遣送之后城中所余犹太人（混合婚姻一方、所谓“视同犹太人”、外籍犹太人、以及处理善后的犹太会堂职员）仍被从肉、蛋、鲜奶等“较高价值”食物中剔除。</p>
+    <blockquote>波兰总督府里，非犹太人的配额已经完全不够，许多人被迫走黑市；犹太人的配额还要低得多——有针对性的供应不足，是国家社会主义灭绝政策的一部分。——DHM 藏 1944 年 8 月“非德意志人”食品卡说明</blockquote>
+    <p>法兰克福把国籍等级做成表格。1942年春，西方战俘与苏联战俘的每周配额被并置：后者肉、脂肪、土豆更少，几乎没有果酱与咖啡代用品，却被摊上大量饲用芜菁。集中营囚徒最差。阿德勒工厂一名囚徒战后说：白天六人分一块 1,500 克面包，一升只有土豆皮的稀汤；夜里同样的汤，再六人分一块面包；夜班零点要么一汤，要么五人一块面包加一片香肠。</p>
+    <p>占领区是另一架更大的秤。派恩转述：戈林要求把饥饿“出口”到帝国之外；巴克的饥饿计划要从苏联占领区抽走尽可能多的食物。1941–1943 年该计划为纳粹德国提供约 32.5 万吨食用脂肪、270 万吨土豆、700 万吨谷物。供养这一端的人口，意味着另一端的大规模谋杀与饥馑：仅 1941–42 年冬，超过一百万苏联战俘被故意饿死在营中，更多平民被剥夺食物，数以万计的犹太人死于饥饿。奥斯维辛的汤与泥里舔食，不是“战争大家没吃的”的极端版本，而是配额逻辑的尽头。</p>
+  </section>
+
+  <section class="card iron" id="market">
+    <p class="tag">TICKET 05 · SCHWARZMARKT</p>
+    <h2>黑市：柜台底下的秤，与42例死刑</h2>
+    <p>DHM 说：许多商品只能在黑市买到；它被当作“战时经济罪”严惩，却依然兴盛。对党棍特权的怨气上升，希特勒本人也不再免于私下咒骂。走进有组织抵抗的人很少。黑市不是浪漫的地下英雄故事，而是一套与官方秤平行的第二套秤：谁有香烟、肥皂、玩具、现金与关系，谁就能把配额外的重量拨回自己一边。</p>
+    <p>派恩写：1940年代初一磅烘焙咖啡在黑市可卖到 40 帝国马克，十年前约 1.80。农民少报牲畜、屠户少称胴体，差额进黑市。店主做“弯腰交易”。囤积、以物易物、投机被规定为可罚，黑市仍成为战时消费的组成部分——对付得起通胀价格的人，包括官员。穷人买不起。检控困难，既因人手，也因没人想把官员自己也在买的事实公开。</p>
+    <p>城市妇女把肥皂或孩子玩具带到乡下换奶与菜，这种“仓鼠旅行”是合法边缘的灰色带。乡村直到 1944–45 仍相对有食物；科隆一名主妇则怒骂店主把红卷心菜从她手里扯走、还要抢土豆。同一套短缺，按城乡、钱包与熟客名单再称一次。</p>
+    <p>法兰克福把规避配给的尝试交给特别法庭。该市有 42 例因此被判死刑；较轻者罚金、监禁或苦役。向犹太人或外籍劳工提供食物同样受罚。战争在 1945 年 3 月结束前后，食品仓库与运输遭哄抢——崩溃时刻，每个人都想把最后一点重量拨到自己的盘上。帮助藏匿者的人面对的是双重算术：自己的卡已经不够匀出第二张嘴，而匀出去本身可能致死。</p>
+  </section>
+
+  <section class="card ledger" id="debate">
+    <p class="tag">TICKET 06 · STREIT</p>
+    <h2>争论：格茨·阿利、图泽与“被买通的人民”</h2>
+    <p>2005 年格茨·阿利《希特勒的人民国家》（英译《希特勒的受益者》）把问题推到桌面上：普通人是不是用从犹太人与占领区抢来的福利，换取了对政权的容忍？阿利的宏观账是：德国民众约承担战争费用的 10%，高收入者约 20%，其余约 70% 来自掠夺。图泽 2005 年在《日报》写书评《纯粹算错了》，后在个人网站汇编这场争论：按更常规的债务与财政算法，负担更接近德国内部七成、外部三成；因此不能把政权的黏合剂简化为物质收买。这是动员型、索取型的独裁，靠强制、意识形态热情与战争本身的压力运转。</p>
+    <p>配给卡是这场争论的微型现场。左盘上的可忍热量、圣诞加码、孕妇牛奶、重体力补贴，确实让许多“民族同胞”觉得国家还在管饭——而管饭的库存有一部分来自被剥夺者的卡与占领区的谷仓。承认这一点，不必接受阿利把几乎所有罪责写成“人民被买通”的结论。图泽提醒：纳粹技术官僚自己都比阿利更懂凯恩斯式的战争财政。学习者需要同时看见三件事：物质转移是真的；意识形态与强制是真的；把“正常生活”过下去的人，并不因此自动变成卡通贪官或卡通无辜者。</p>
+  </section>
+
+  <section class="card" id="now">
+    <p class="tag">TICKET 07 · 2025–2026</p>
+    <h2>2025–2026：德累斯顿如何重看战争神话</h2>
+    <p>配给宣传的核心句式是：这次不会再有 1918。奇迹武器宣传的核心句式是：还会有转机。两者都在向国内战线出售一种被称过的希望。2026 年 3 月 13 日至 2027 年 3 月 9 日，联邦国防军军事历史博物馆在德累斯顿举办特展《奇迹武器——国家社会主义中的宣传与战争技术》。中德广播（MDR）报道：约 600 平方米展场陈列“帝国飞碟”一类幻想武器，也陈列“老鼠”超重坦克模型、虎式坦克与一枚原装 V1；每件器物旁是当时的宣传如何把它说成扭转战局的神器。策展人延斯·韦纳对 MDR 说，主旨是让观众在当今战争报道中，更 крити地看待武器话语——因为那通常是血、汗、悲惨与谎言的混合物。</p>
+    <p>把这一展览接到本期主题，不是为了把食品卡写成另一件“奇迹武器”，而是指出同一种秤：对内维持“我们仍过着正常日子”的幻觉，对外把饥饿与强制劳动做成政策。V2 在中建—多拉集中营的奴隶劳动中生产；食品卡在粮食局的油印指令里把邻居降为半份配额。2026 年的展览邀请参观者拆开神话。拆开配给神话，同样需要看见：空袭后的德国平民确实挨过饿、排过队、死于燃烧弹；与此同时，同一套国家把犹太人的肉卡停掉，把苏联战俘的汤变成土豆皮，并把占领区的谷物装上回帝国的火车。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">TICKET 08 · QUELLEN</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索与抓取核验，不编造链接。配额数字均标明机构或文本；PS-1347 与法兰克福指令的配给期起始日（10月19日 / 10月15日）并存于档案，不强行抹平。</p>
+    <ol class="body">
+      <li>德意志历史博物馆 LeMO：战时日常生活（配给启动、普通消费者配额、占领区榨取与国内“正常性”、犹太人歧视、黑市）。<br><a href="https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben</a></li>
+      <li>DHM 藏品：1944 年 8 月总督府“非德意志人”食品卡（波兰人配额不足、犹太人更低、黑市、作为灭绝政策的饥饿）。<br><a href="https://www.dhm.de/lemo/bestand/objekt/lebensmittelkarte-fuer-nichtdeutsche-im-besetzten-polen-1944" target="_blank" rel="noopener">https://www.dhm.de/lemo/bestand/objekt/lebensmittelkarte-fuer-nichtdeutsche-im-besetzten-polen-1944</a></li>
+      <li>法兰克福 1933–1945：尤塔·海贝尔，《第二次世界大战期间法兰克福的营养状况》（普通消费者表、犹太人分阶段剥夺、战俘对照表、阿德勒工厂囚徒证词、42 例死刑）。<br><a href="https://www.frankfurt1933-1945.de/beitraege/die-stadt-als-heimatfront/beitrag/die-ernaehrungssituation-in-frankfurt-waehrend-des-zweiten-weltkrieges" target="_blank" rel="noopener">https://www.frankfurt1933-1945.de/beitraege/die-stadt-als-heimatfront/beitrag/die-ernaehrungssituation-in-frankfurt-waehrend-des-zweiten-weltkrieges</a></li>
+      <li>法兰克福 1933–1945：粮食局 1942-10-23 第 211 号指令（第 42 配给期犹太人停发肉蛋奶麦等；医院、孕妇规定不适用；包裹抵扣）。<br><a href="https://www.frankfurt1933-1945.de/beitraege/ausgrenzung-und-verfolgung/beitrag/dokument-einschraenkung-der-lebensmittelversorgung-fuer-juden-im-oktober-1942" target="_blank" rel="noopener">https://www.frankfurt1933-1945.de/beitraege/ausgrenzung-und-verfolgung/beitrag/dokument-einschraenkung-der-lebensmittelversorgung-fuer-juden-im-oktober-1942</a></li>
+      <li>哈佛法学院纽伦堡文件库：PS-1347，巴克 1942-09-18 关于削减犹太人食品配额、购物时段与包裹抵扣的指令。<br><a href="https://nuremberg.law.harvard.edu/documents/658-instructions-to-state-governments?mode=text" target="_blank" rel="noopener">https://nuremberg.law.harvard.edu/documents/658-instructions-to-state-governments?mode=text</a></li>
+      <li>美国战略轰炸调查《欧洲战争总结报告》：平民食物严格配给但营养总体充足、热量大致与英国相当。<br><a href="https://www.ibiblio.org/hyperwar/AAF/USSBS/ETO-Summary.html" target="_blank" rel="noopener">https://www.ibiblio.org/hyperwar/AAF/USSBS/ETO-Summary.html</a></li>
+      <li>亚当·图泽：重访阿利—图泽争论（10%/70% 掠夺账 vs 约 70/30 内部负担；动员型独裁）。<br><a href="https://adamtooze.com/2017/01/25/what-held-nazi-germany-together-the-aly-tooze-debate-revisited/" target="_blank" rel="noopener">https://adamtooze.com/2017/01/25/what-held-nazi-germany-together-the-aly-tooze-debate-revisited/</a></li>
+      <li>丽莎·派恩 / HistoryExtra：纳粹食品政策、替代食品、黑市咖啡价格、饥饿计划 tonnage、1941–42 年苏军战俘饥饿（BBC History 2022 年 10 月号）。<br><a href="https://www.historyextra.com/period/second-world-war/nazi-germany-food-policies-second-world-war-shortages-propaganda-black-market-ersatz-hunger-plan/" target="_blank" rel="noopener">https://www.historyextra.com/period/second-world-war/nazi-germany-food-policies-second-world-war-shortages-propaganda-black-market-ersatz-hunger-plan/</a></li>
+      <li>德语维基百科《Lebensmittelkarte》：1939-08-27 条例、红色“J”、1942 年 10 月停发肉卡与服装卡、普通消费者每周配额表、券不等于到货。<br><a href="https://de.wikipedia.org/wiki/Lebensmittelkarte" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Lebensmittelkarte</a></li>
+      <li>MDR：德累斯顿军事历史博物馆特展《奇迹武器》（2026-03-13 至 2027-03-09）——拆解战争宣传神话。<br><a href="https://www.mdr.de/nachrichten/sachsen/dresden/dresden-radebeul/wunderwaffen-ausstellung-militaer-museum-nazis-kultur-news-100.html" target="_blank" rel="noopener">https://www.mdr.de/nachrichten/sachsen/dresden/dresden-radebeul/wunderwaffen-ausstellung-militaer-museum-nazis-kultur-news-100.html</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">TICKET 09 · LEHRE</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，先问卡片上印了什么字，再谈“战时大家都苦”。配给是种族化等级：普通消费者、重体力、孕妇是共同体内部的刻度；红色“J”、指定商店、停发肉奶、占领区“非德意志人”卡，是另一套刻度。把这两套刻度平均成一句“德国人也饿”，是用左盘的数字盖住右盘的政策。</p>
+    <p>第二，黑市暴露的是准入，不是民俗风情。它让有肥皂、香烟与熟客关系的人补上缺口，让没有卡的藏匿者更加无路可走；它在法兰克福可以通向特别法庭的死刑，也可以通向邻居偷偷递出的一块面包——后一种帮助本身被规定为犯罪。研究“生存策略”，必须写明谁被允许活、谁因活而被罚。</p>
+    <p>第三，平民苦难与纳粹罪行放在同一句话里，不是修辞平衡，而是同一条供应链。空袭烧毁厨房时，配额仍按种族发放；国内避免 1918 式饥荒时，饥饿计划正在把谷物与脂肪抽回帝国。USSBS 的“热量大致够”与 DHM 的“东欧被有计划地饿死”，必须并读。</p>
+    <p>第四，2026 年德累斯顿的奇迹武器展提醒：战争在战场上也在厨房里制造神话。学习配给史，是练习看穿“正常生活”的边界——看见祖父一辈如何排队买到那 500 克肉，也看见同一周谁的肉卡被停掉。秤盘从不中立，它只称政策允许称的重量。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第2期 · 黑市秤盘风 · 20260830_1808
+  </footer>
+</article>
+</body>
+</html>

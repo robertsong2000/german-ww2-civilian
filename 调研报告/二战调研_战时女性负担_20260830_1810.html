@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战争中的女性：工厂、家庭、寡妇与义务年 —— 2025–2026 年性别史回访与冬装征集的日常政治</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Noto+Serif+SC:wght@400;600;700&family=Red+Hat+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Winter-clothing collection blanket: herringbone wool, olive binding, darned patches, inventory tags */
+:root {
+  --wool: #e6d7bf;
+  --wool2: #d4c2a4;
+  --oat: #f4ead8;
+  --camel: #b8925c;
+  --rust: #7a3d28;
+  --wine: #6e2f32;
+  --olive: #4a4a32;
+  --bind: #3d3f2c;
+  --char: #241f1a;
+  --ink: #2a2218;
+  --fade: #6a5a48;
+  --stitch: #5c4030;
+  --tag: #efe4c8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #3a2e22 0 7px,
+      #2e241a 7px 14px
+    );
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Newsreader", "Songti SC", serif;
+  line-height: 1.86;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
+  opacity: .22;
+  mix-blend-mode: multiply;
+  z-index: 8;
+}
+.blanket {
+  max-width: 940px;
+  margin: 32px auto 72px;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--wool) 0 10px,
+      #ddceb4 10px 11px,
+      var(--wool2) 11px 21px,
+      #cbb898 21px 22px
+    );
+  border: 18px solid var(--bind);
+  box-shadow:
+    0 28px 70px rgba(20, 14, 8, .55),
+    inset 0 0 0 4px #c9b48a,
+    inset 0 0 80px rgba(90, 60, 30, .12);
+  position: relative;
+  padding: 8px 40px 44px;
+  color: var(--ink);
+}
+.blanket::before {
+  /* Olive army-blanket binding stripe */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0; height: 22px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--olive) 0 28px,
+    #6a6a44 28px 36px,
+    #c8b48a 36px 40px
+  );
+}
+.blanket::after {
+  content: "";
+  pointer-events: none;
+  position: absolute; inset: 22px 0 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 18px,
+      rgba(70, 50, 30, .035) 18px 19px
+    );
+}
+.mast {
+  position: relative;
+  z-index: 1;
+  padding: 48px 6px 16px;
+  border-bottom: 3px double var(--rust);
+}
+.mast .serial {
+  font-family: "Red Hat Mono", "Bitter", monospace;
+  letter-spacing: .22em;
+  font-size: 11px;
+  color: var(--olive);
+  text-transform: uppercase;
+}
+h1 {
+  font-family: "Bitter", "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: clamp(1.42rem, 3.1vw, 2rem);
+  line-height: 1.4;
+  margin: 14px 0 10px;
+  color: var(--char);
+}
+.sub { color: var(--fade); font-size: 15px; }
+.when {
+  margin-top: 12px;
+  font-family: "Red Hat Mono", monospace;
+  font-size: 12px;
+  color: var(--olive);
+}
+.ticket {
+  position: absolute;
+  right: 0; top: 38px;
+  width: 108px;
+  padding: 10px 8px 12px;
+  background: var(--tag);
+  color: var(--rust);
+  border: 1px dashed var(--stitch);
+  box-shadow: 3px 5px 0 rgba(36, 31, 26, .18);
+  font-family: "Red Hat Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-align: center;
+  line-height: 1.35;
+  transform: rotate(7deg);
+}
+.ticket::before {
+  content: "";
+  display: block;
+  width: 14px; height: 14px;
+  margin: 0 auto 6px;
+  border: 2px solid var(--rust);
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #fff8e8, #c8b48a);
+}
+nav.toc {
+  position: relative;
+  z-index: 1;
+  margin: 22px 0 8px;
+  padding: 16px 18px 12px;
+  background: linear-gradient(180deg, #efe3c8, #e2d2b0);
+  border: 1px solid #b89a6e;
+  box-shadow: inset 0 0 0 4px rgba(74, 74, 50, .08);
+}
+nav.toc h2 {
+  font-family: "Bitter", serif;
+  font-size: 1.08rem;
+  letter-spacing: .08em;
+  color: var(--wine);
+  margin-bottom: 8px;
+}
+nav.toc ol { margin: 0 0 4px 1.2em; font-size: 15px; }
+nav.toc a {
+  color: var(--rust);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(122, 61, 40, .4);
+}
+nav.toc a:hover { border-bottom-style: solid; color: var(--wine); }
+.card {
+  position: relative;
+  z-index: 1;
+  margin: 22px 0;
+  padding: 22px 22px 18px;
+  background:
+    linear-gradient(180deg, var(--oat) 0%, #ead9b8 100%);
+  color: var(--ink);
+  border: 1px solid #c4a87a;
+  box-shadow: 5px 7px 0 rgba(61, 63, 44, .16);
+}
+.card::before {
+  /* Blanket-stitch corners */
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 2px dashed rgba(92, 64, 48, .28);
+  pointer-events: none;
+}
+.card.darn { background: linear-gradient(180deg, #efe0c4, #dcc6a0); }
+.card.olive { background: linear-gradient(180deg, #e4e0c8, #cfcab0); }
+.card.wine { background: linear-gradient(180deg, #f0ddd0, #e4c8b8); }
+.card h2 {
+  font-family: "Bitter", "Noto Serif SC", serif;
+  font-size: 1.36rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #c4a070;
+  color: var(--char);
+}
+.tag {
+  font-family: "Red Hat Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--wine);
+  margin-bottom: 6px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border-left: 5px solid var(--camel);
+  background: rgba(122, 61, 40, .07);
+  font-style: italic;
+  color: #3a2c20;
+  font-family: "Newsreader", "Noto Serif SC", serif;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 10px 0 16px;
+  background: #f7efe0;
+}
+th, td {
+  border: 1px solid #c9b087;
+  padding: 7px 8px;
+  text-align: left;
+}
+th { background: #d8c08a; font-weight: 600; }
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 12px; }
+.sources a { color: #6e2c1c; word-break: break-all; }
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 3px double var(--olive);
+  font-size: 13px;
+  color: var(--fade);
+  text-align: center;
+  font-family: "Red Hat Mono", monospace;
+}
+@media (max-width: 640px) {
+  .blanket { padding: 8px 18px 32px; margin: 10px 8px 40px; border-width: 10px; }
+  .ticket { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Wool-blanket layout: herringbone field, olive binding, sewn-on inventory patches -->
+<article class="blanket">
+  <header class="mast">
+    <div class="serial">WINTERSACHEN · SAMMLUNG 1941/42 · FORSCHUNGSBLATT</div>
+    <h1>战争中的女性：工厂、家庭、寡妇与义务年 —— 2025–2026 年性别史回访与冬装征集的日常政治</h1>
+    <p class="sub">纳粹德国“雅利安”女性的有酬劳动几乎不涨，缺口由强制劳工填补；义务年、帝国劳动役与冬装征集，把家庭纺织成国内战线</p>
+    <p class="when">调研时间：2026-08-30 18:10 CST · 平民史系列第2期 · 主题轮换池第5项</p>
+    <div class="ticket">KWHW<br>DECKE / MANTEL<br>ABGABE<br>08.30</div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录 · KLEIDERLISTE</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#numbers">数字：就业几乎不动</a></li>
+      <li><a href="#factory">工厂与家庭的裂缝</a></li>
+      <li><a href="#dienst">义务年、RAD 与战争辅助役</a></li>
+      <li><a href="#widow">寡妇、等待与战后负担</a></li>
+      <li><a href="#wool">冬装征集：毛毯与“自愿”</a></li>
+      <li><a href="#now">2025–2026：展览与研究回访</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">FLECK 01 · THEMA</p>
+    <h2>本期主题</h2>
+    <p>本系列写 1933–1945 年德国平民如何活下来。第二期把观察点放在<strong>战争中的女性</strong>——工厂、厨房、寡妇抚恤与义务年（Pflichtjahr）。宣传画上，她们是“德意志母亲”；配给卡与冬装征集清单上，她们是国内战线的劳动力与物资管理员。两条形象同时运转。</p>
+    <p>德意志历史博物馆（DHM / LeMO）在“日常生活”章用一张 1941 年照片开篇：<em>Wintersachen-Sammlung für die Front</em>（为前线征集冬装）。东线士兵冻伤之后，帝国从 1941/42 年冬起向民间征收冬衣与毛毯。大衣、滑雪板、毛皮被写成“牺牲”；同一套动员却刻意不去全面征召已婚妇女进厂。缺口由战俘与强制劳工填补。2026 年黑森州马堡国家档案馆的性别史展览、勃兰登堡州议会的女性抵抗展，以及 2024–2025 年战争寡妇生命周期研究，把这条毛毯重新摊开：谁织、谁交、谁被排除在“人民”之外。</p>
+  </section>
+
+  <section class="card darn" id="findings">
+    <p class="tag">FLECK 02 · BEFUNDE</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>有酬女性就业的增量很小。</strong>DHM 写明：1944 年 9 月约 1490 万名就业女性，仅比 1939 年夏多约 30 万。也就是说，战前基数约 1460 万。缺口主要不是靠“把德国妇女赶进工厂”填上的。</li>
+      <li><strong>强制劳工是结构选择，不是权宜。</strong>1944 年底，超过 750 万外籍与强制劳工进入几乎所有经济部门，约占就业人口两成。美国国家二战博物馆指出：1939–1940 年约 440 万男性被征入伍后，把妇女挡在劳动力市场外，是政权转向剥削波兰劳动力的关键因素之一。</li>
+      <li><strong>义务年与帝国劳动役针对年轻未婚女性，而不是全体主妇。</strong>1938 年戈林以四年计划名义推行 Pflichtjahr；1939 年起年满 18 岁的女性须服六个月帝国劳动役（RAD），1941 年再加半年战争辅助役（Kriegshilfsdienst）。已婚未就业妇女在 1939 年 9 月仍被明文排除出强制劳动征召。</li>
+      <li><strong>无偿与半强制的“女性工作”远大于就业统计。</strong>联邦政治教育中心（bpb）与伊丽莎白·哈维（Elizabeth Harvey）的性别史讨论强调：若只看工厂工资名册，会低估织补、防空值班、疏散、车站补给与冬装征集。妮科尔·克拉默（Nicole Kramer）把这类荣誉职与志愿动员写成国内战线的真正劳动力。</li>
+      <li><strong>寡妇的负担跨过 1945 年。</strong>布劳恩与施图勒 2024 年《公共经济学杂志》估计，战后西德约有 100–120 万战争寡妇：1950 年就业显著高于同龄人，1971 年却更可能依赖救济。战时等待与战后抚恤设计，把“双肩挑”写成生命周期。</li>
+      <li><strong>2025–2026 的展览拒绝单色块。</strong>马堡展出 22 名女性传记：被迫害者、抵抗者，也有加害者。勃兰登堡州议会同期展出女性抵抗。两者都提醒：工厂女工的劳累，不能写成全体德国妇女的无辜。</li>
+    </ul>
+  </section>
+
+  <section class="card olive" id="numbers">
+    <p class="tag">FLECK 03 · ZAHLEN</p>
+    <h2>数字：就业几乎不动</h2>
+    <p>DHM“日常生活”与“工业与经济”两章使用同一组对照：1944 年 9 月 1490 万就业女性，只比 1939 年夏高出 30 万。政权害怕重演第一次世界大战的饥馑与后方崩溃，因此尽量维持“雅利安”消费者可忍的日常，推迟全面女性劳动义务。劳动力需求靠强制劳工、战俘，以及把女工从停工或“非战争必要”企业调到农业与军工、把年轻入职者送进行政部门来满足。</p>
+    <p class="note">下表据 DHM 叙述与 Statista 对 1939–1944 年德国劳动力构成的整理。单位：百万人。Statista 以五月底为主，1944 年另给九月底。四舍五入到小数点后一位。</p>
+    <table>
+      <thead>
+        <tr><th>时点</th><th>德国男性平民就业</th><th>德国女性平民就业</th><th>外籍 / 强制 / 战俘劳动</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1939 年夏 / 五月底</td><td>24.5</td><td>14.6</td><td>0.3</td></tr>
+        <tr><td>1942</td><td>16.9</td><td>14.4</td><td>4.2</td></tr>
+        <tr><td>1944 年五月</td><td>14.2</td><td>14.8</td><td>7.1</td></tr>
+        <tr><td>1944 年九月底</td><td>13.5</td><td>14.9</td><td>7.5</td></tr>
+      </tbody>
+    </table>
+    <p>男性平民就业大约腰斩，女性曲线几乎走平，外籍劳动力从可以忽略涨到七百多万。美国国家二战博物馆补充 1944 年 8 月登记：超过 760 万“外籍工人”，其中约 190 万战俘、570 万平民强制劳工，约占“大德意志国”劳动力的五分之一。东方被占领区的人被运进德国农田与兵工厂，正是为了让“德意志母亲”不必大规模进厂——这不是家庭温情，而是种族化的劳动政治。</p>
+  </section>
+
+  <section class="card" id="factory">
+    <p class="tag">FLECK 04 · FABRIK / HAUS</p>
+    <h2>工厂与家庭的裂缝</h2>
+    <p>纳粹的性别纲领把生育写成“自然主业”。DHM“妇女政策”指出：1939 年约 1200 万女性至少加入一个纳粹团体；组织她们，是为了用福利抬高党的声望、用劳动提高国家经济力，并在“妇女议题”课程里扩散意识形态。母亲十字勋章、税收优惠与母亲学校，把子宫与厨房职业化。格特鲁德·朔尔茨-克林克（Gertrud Scholtz-Klink）从 1934 年到战争结束担任“全国妇女领袖”。bpb 写她的核心任务是让后方安静：动员“德裔/雅利安”妇女承担家务、慈善与战争准备，同时对犹太妇女、罗姆与辛蒂妇女、被判定“不健康”与政治异议妇女的排除负有责任。</p>
+    <p>战争一开，这套“自然”就裂开。bpb 把新的二元词对写成：男人在“前线”，女人在“国内战线”。农妇、女工、售票员、国防军助手要养家、维持城乡秩序、填满弹药库。朔尔茨-克林克必须把这种“违反本性”说成更高义务。与此同时，希特勒拒绝全面强制已婚妇女进军工。德国历史文献与图像（GHDI）收录 1939 年 9 月 7 日帝国劳工部密件：国务秘书叙鲁普（Syrup）决定，此前未就业的已婚妇女继续不受劳动征召，除非本人自愿；优先抽调非重点企业的女工、地区间调剂与志愿者。文件收束句几乎是一份种族劳动政策的说明书：先穷尽“其他可能性”。</p>
+    <blockquote>必须先用尽一切其他途径（抽调非优先企业的劳动力，尤其是因关厂而空出来的女工与女职员，地区间对调，志愿者等等）。——帝国劳工部，1939 年 9 月 7 日</blockquote>
+    <p>哈维在大屠杀研究会议上强调：纳粹要把妇女“送回灶台”的目标从未完全落地；战争经济反而给部分妇女打开职业与大学缝隙。但缝隙有边界。bpb《德意志战争社会》估计，约 50 万妇女作为国防军助手服役——有人在巴黎过一段紧张兴奋的日子，有人在东欧实践种族优越感。工厂女工的午休、防毒面具车间的女工照片，与东方强制劳动运输是同一套经济的两面。平民妇女的劳累是真的；把劳累写成全体德国人的免责声明，则是假的。</p>
+  </section>
+
+  <section class="card darn" id="dienst">
+    <p class="tag">FLECK 05 · PFLICHTJAHR</p>
+    <h2>义务年、RAD 与战争辅助役</h2>
+    <p>义务年针对的是年轻未婚女性，不是统计表上那 1460 万就业者的全体。DHM 军械库 1993 年“人生驿站”展说明：1938 年《关于加强女性劳动力投入农家与家务以实施四年计划的命令》，为 25 岁以下女性设立 Pflichtjahr。已婚有子女者、以及本已在农家或家务从业者除外。完成证明必须写入劳动手册（Arbeitsbuch）。官方说法是为未来的主妇与母亲做准备；实际功能是填补因战争而缺人的家庭与农场。</p>
+    <p>德国广播文化台转述安吉拉·福格尔（Angela Vogel）的研究：义务年是国家社会主义最大规模的女性劳动投入措施，每年约 30 万人，月薪往往只有 3 到 15 帝国马克。多数人必须住在雇主家里，远离本乡。它与帝国劳动役不同：RAD 把少女编进营地共同体做意识形态教育；义务年人数太多，做不到营地化，只能靠少女联盟（BDM）组织的“义务年聚会”维持“为德国服务”的意识。</p>
+    <p>DHM 藏摄影师莉泽洛特·奥格尔-克内（Liselotte Orgel-Köhne）1943 年在什未林拍摄的电车女售票员，被归入战争辅助役。说明文字写：1939 年起年满 18 岁的女性须服六个月 RAD，“劳动少女”帮农活、进收容所或私人家庭；1941 年起再延长半年战争辅助役，常在军工或交通企业完成。官方套话是：“在一切缺少男人的生活领域，妇女必须代表男人。”公务部门女职员从 1939 年 10 月起与男同事同薪，军工计件女工从 1940 年起亦然。周工时从 48 小时阶梯提到 50 小时以上。提高工资、改善女工与母亲保护、加码福利——都是为了在恶化的生活里稳住国内战线，而不是承认妇女与男子平等。</p>
+  </section>
+
+  <section class="card wine" id="widow">
+    <p class="tag">FLECK 06 · WITWEN</p>
+    <h2>寡妇、等待与战后负担</h2>
+    <p>DHM 写道：几乎每个德国家庭在战争中都有儿子、兄弟、父亲、丈夫或未婚夫在前线。日常忧虑先指向那个人的性命，从 1942 年起大城市居民自己也开始日日与死亡相处。bpb 摘录 1944 年 7 月 22 日党卫队保安处（SD）分区报告：东线崩溃使情绪“降到零点”；把孩子疏送到东部省份的妇女到机关吵着要求接回；有前线亲属的妇女普遍惊恐。等待本身就是一种劳动：读国防军公报的缝隙、写战地家书、把配给卡撑过一周，同时不能把失败主义说出口。</p>
+    <p>阵亡通知把等待变成寡妇身份。塞巴斯蒂安·布劳恩（Sebastian Braun）与扬·施图勒（Jan Stuhler）利用西德生命历程数据，在 2024 年 10 月《公共经济学杂志》发表战争寡妇研究：战后西德约 100–120 万战争寡妇。1906–1914 年出生的寡妇在 1950 年进入市场劳动的概率比条件相近的非寡妇高 13.8 个百分点（约 67%）；到 1971 年，她们就业反而低 1.9 个百分点，依赖救济的可能性高出 2.5 倍，再婚概率低 73%。孩子更早离校就业，男孩平均少受一年教育。作者认为，抚恤起初不足、后来随经济奇迹变得优厚且附带家计调查，造成“年轻时双肩挑、子女成年后退出劳动力市场”的轨迹。战时工厂动员没有自动变成长期的性别平等；寡妇的工作经历常被指责为疏于育儿，污名与托幼短缺使她们并不更相信“家庭与工作可以兼顾”。</p>
+    <p>这组数字越过 1945 年，却必须从战时写起：男人被抽走之后，农庄、店铺与带小孩的住房已经靠女性维持。战后抚恤只是把战时的双肩写成制度。学习寡妇史，不是把德国妇女写成唯一受害者，而是看见：同一场战争里，东方被奴役的女工没有抚恤可等，被灭绝的犹太家庭没有“战争寡妇”这一法律身份。</p>
+  </section>
+
+  <section class="card olive" id="wool">
+    <p class="tag">FLECK 07 · WINTERSACHEN</p>
+    <h2>冬装征集：毛毯与“自愿”</h2>
+    <p>冬装征集是本期视觉隐喻，也是史料本身。DHM 说：东线冻伤促使当局从 1941/42 年冬起征集冬衣与毛毯；“并非每个德国人都乐意交出大衣或昂贵毛皮。”北威州景观协会（LWL）教学包收录 1942 年 1 月 2 日《阿尔特纳县报》广告：国防军未为东欧长冬准备防寒装备，于是号召民间交出厚衣与滑雪板。宣传镜头里，妇女笑容愉快地放弃“奢侈”；在配给日益收紧的家乡，这是对日常的再一次切割。</p>
+    <p>德意志历史博物馆对冬季救济事业（Winterhilfswerk, WHW）的说明把它放回更长的日常史。1933 年 9 月成立后，入户与街头募捐、约 8000 种徽章、一锅炖星期日（Eintopfsonntag）成为政权最广为人知的景象之一。1933 年 10 月 1 日第一次一锅炖星期日：十月到三月的某个周日，餐馆与家庭按规定只吃不超过半帝国马克的一锅炖，差价交给 WHW。国家社会主义人民福利（NSV）上门收款，“几乎没人敢拒绝”。1935/36 年冬仅入户募捐就超过 3100 万帝国马克。1936/37 年起，款项成为 NSV 的财政基础。战争期间它更名为战争冬季救济事业（Kriegswinterhilfswerk），征集并不减弱；到后期，捐献者自己也变成穷人，动员话语渐渐空转。</p>
+    <p>纺织配给把“交出冬衣”写进更冷的算术。DHM：1939 年 10 月中旬，对不穿军装的人口发放一年有效的帝国服装卡，100 点；一双袜子 4 点，一件毛衣 25 点，一套女装 45 点。犹太人在食品与纺织配给上遭受额外克扣与公开羞辱。WHW 的“团结”从一开始就按种族划线。毛毯可以从雅利安客厅里收走，去暖前线；它不会盖到被排除者身上。把本期做成“毛毯风”，是为了让读者看见织物的两面：一面是国内战线的针线与征集清单，另一面是占领区的掠夺与强制劳动。</p>
+  </section>
+
+  <section class="card wine" id="now">
+    <p class="tag">FLECK 08 · 2025–2026</p>
+    <h2>2025–2026：展览与研究回访</h2>
+    <p>2026 年 5 月 7 日至 7 月 24 日，黑森州马堡国家档案馆举办“马堡女性与国家社会主义”。展览出自马堡性别研究与女性主义未来研究中心社会学家兰迪·贝克尔（Randi Becker）的研讨课：学生重建 22 名马堡女性的传记，包括被迫害者、抵抗者，也有加害者。30 块展板 2024 年已在马堡大学图书馆巡展；2026 年首次在国家档案馆配七个展柜，展出与当局打交道的原始文件——既能看见纳粹时期国家与市政机构如何运作，也能看见 1945 年后赔偿、清算与承认不义的决定。展品来自马堡市档、阿罗尔森档案、马堡大学档、威斯巴登州主档与马堡国家档案馆。伴随讲座包括：1945 年后马堡如何处理纳粹暴力犯罪、以集中营女监工海伦妮·克洛菲克（Helene Klofik）为例谈女性加害、以弗兰齐斯卡·W. 为例谈营妓院中的性强制劳动。</p>
+    <p>勃兰登堡州议会 2026 年 1 月 14 日至 3 月 1 日展出德国抵抗纪念馆的“反抗国家社会主义的女性”。联邦议院 2019 年曾明确承认这些女性的勇气与贡献。展出托尼·森德尔、希尔达·蒙特、埃里卡·冯·特雷斯科、特蕾泽·吉泽、玛琳·黛德丽、索菲·朔尔等人的生平，并首次集中纪念因抵抗而遭纳粹司法迫害的大批女性。两条展览并置，才接近战时女性史的宽度：有人在工厂与征集站维持政权，有人缝制、藏匿、传递、拒绝。</p>
+    <p>布劳恩与施图勒的战争寡妇论文把计量带进这个展览季节：它不取代传记，但阻止把“战后德国妇女走出家庭”写成解放神话。生命周期曲线向下弯折，说明抚恤与污名可以吞掉战时动员的表面进步。2025–2026 年的性别史回访，适宜从一张毛毯、一份义务年劳动手册和一份寡妇抚恤档案同时开始。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">FLECK 09 · QUELLEN</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。就业数字以 DHM 叙述为锚，Statista 作分年对照。</p>
+    <ol class="body">
+      <li>德意志历史博物馆 LeMO：战时日常生活（女性就业 1939 年夏至 1944 年 9 月仅增约 30 万、RAD / 战争辅助役、1941/42 冬装与毛毯征集、帝国服装卡）。<br><a href="https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben</a></li>
+      <li>德意志历史博物馆 LeMO：工业与经济（1944 年 9 月 1490 万就业女性；1944 年底逾 750 万强制与外籍劳工，约占两成）。<br><a href="https://www.dhm.de/lemo/kapitel/der-zweite-weltkrieg/industrie-und-wirtschaft" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/der-zweite-weltkrieg/industrie-und-wirtschaft</a></li>
+      <li>德意志历史博物馆 LeMO：冬季救济事业 WHW / 战争冬季救济事业（一锅炖星期日、入户募捐、NSV 财政）。<br><a href="https://www.dhm.de/lemo/kapitel/ns-regime/ns-organisationen/winterhilf" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/ns-regime/ns-organisationen/winterhilf</a></li>
+      <li>德意志历史博物馆：义务年（1938 年四年计划命令、25 岁以下、劳动手册）。<br><a href="https://www.dhm.de/archiv/ausstellungen/lebensstationen/ns_6.htm" target="_blank" rel="noopener">https://www.dhm.de/archiv/ausstellungen/lebensstationen/ns_6.htm</a></li>
+      <li>德意志历史博物馆藏品：战争辅助役中的电车女售票员（Liselotte Orgel-Köhne，什未林，1943）。<br><a href="https://www.dhm.de/lemo/bestand/objekt/strassenbahnschaffnerin-beim-kriegshilfsdienst-194142" target="_blank" rel="noopener">https://www.dhm.de/lemo/bestand/objekt/strassenbahnschaffnerin-beim-kriegshilfsdienst-194142</a></li>
+      <li>德意志历史博物馆 LeMO：国家社会主义妇女政策（1939 年约 1200 万女性加入纳粹团体）。<br><a href="https://www.dhm.de/lemo/kapitel/ns-regime/innenpolitik/frauen" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/ns-regime/innenpolitik/frauen</a></li>
+      <li>联邦政治教育中心：迪特马尔·聚斯等语境下的《德意志战争社会》（国内战线、约 50 万国防军助手、1944-07-22 SD 报告中妇女的惊恐）。<br><a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/" target="_blank" rel="noopener">https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/</a></li>
+      <li>联邦政治教育中心：格特鲁德·朔尔茨-克林克（后方安静、排斥犹太与罗姆妇女、战争中的“国内战线”修辞）。<br><a href="https://www.bpb.de/themen/gender-diversitaet/frauenbewegung/35323/gertrud-scholtz-klink/" target="_blank" rel="noopener">https://www.bpb.de/themen/gender-diversitaet/frauenbewegung/35323/gertrud-scholtz-klink/</a></li>
+      <li>联邦政治教育中心 / 伊丽莎白·哈维：《“主妇能量”与民族共同体》（无偿动员、克拉默的荣誉职研究、妇女并非只被送回灶台）。<br><a href="https://www.bpb.de/veranstaltungen/reihen/konferenz-holocaustforschung/154067/hausfrauenenergien-fuer-die-volksgemeinschaft/" target="_blank" rel="noopener">https://www.bpb.de/veranstaltungen/reihen/konferenz-holocaustforschung/154067/hausfrauenenergien-fuer-die-volksgemeinschaft/</a></li>
+      <li>哈维会议讲稿 PDF（引用 Nicole Kramer《Volksgenossinnen an der Heimatfront》）。<br><a href="https://www.bpb.de/system/files/dokument_pdf/20130306_Dokumentation_Vortrag%20Harvey_HolocaustKonferenz_aor.pdf" target="_blank" rel="noopener">https://www.bpb.de/system/files/dokument_pdf/20130306_Dokumentation_Vortrag%20Harvey_HolocaustKonferenz_aor.pdf</a></li>
+      <li>德国历史文献与图像：1939 年 9 月 7 日帝国劳工部拒绝征召已婚未就业妇女。<br><a href="https://germanhistorydocs.org/en/nazi-germany-1933-1945/reich-ministry-of-labor-policy-on-the-rejection-of-labor-conscription-for-married-women-september-7-1939" target="_blank" rel="noopener">https://germanhistorydocs.org/en/nazi-germany-1933-1945/reich-ministry-of-labor-policy-on-the-rejection-of-labor-conscription-for-married-women-september-7-1939</a></li>
+      <li>美国国家二战博物馆：纳粹在东欧的强制劳动政策（1944 年 8 月逾 760 万外籍工人；征召男性与把妇女挡在劳动力市场外的关联）。<br><a href="https://www.nationalww2museum.org/war/articles/nazi-forced-labor-policy-eastern-europe" target="_blank" rel="noopener">https://www.nationalww2museum.org/war/articles/nazi-forced-labor-policy-eastern-europe</a></li>
+      <li>Statista：1939–1944 年德国男女平民就业与外籍强制劳动力（1939 年女性 14.6，1944 年 9 月底 14.9）。<br><a href="https://www.statista.com/statistics/1290338/german-workforce-wwii-background/" target="_blank" rel="noopener">https://www.statista.com/statistics/1290338/german-workforce-wwii-background/</a></li>
+      <li>LWL EDU_Westfalen：1942-01-02《阿尔特纳县报》冬季救济征集广告（东线无防寒、民间交出厚衣与滑雪板）。<br><a href="https://eduwestfalen.lwl.org/lernressource/annonce-mit-sammlungsaufruf-fuer-das-winterhilfswerk/" target="_blank" rel="noopener">https://eduwestfalen.lwl.org/lernressource/annonce-mit-sammlungsaufruf-fuer-das-winterhilfswerk/</a></li>
+      <li>德国数字图书馆 / DHM：WHW 冬装主题明信片（1938/39）。<br><a href="https://www.deutsche-digitale-bibliothek.de/item/EL4BOTR2MK6Y74ZI4UASPBLPRICUMWXB" target="_blank" rel="noopener">https://www.deutsche-digitale-bibliothek.de/item/EL4BOTR2MK6Y74ZI4UASPBLPRICUMWXB</a></li>
+      <li>德国广播文化台：义务年作为最大劳动投入措施（约 30 万人/年，3–15 帝国马克）。<br><a href="https://www.deutschlandfunkkultur.de/hauswirtschaft-auf-verordnung-102.html" target="_blank" rel="noopener">https://www.deutschlandfunkkultur.de/hauswirtschaft-auf-verordnung-102.html</a></li>
+      <li>黑森州档案馆：展览《马堡女性与国家社会主义》（2026-05-07 至 2026-07-24）。<br><a href="https://landesarchiv.hessen.de/geschichte-erleben/ausstellung_marburger-frauen-nationalsozialismus_mr_2026" target="_blank" rel="noopener">https://landesarchiv.hessen.de/geschichte-erleben/ausstellung_marburger-frauen-nationalsozialismus_mr_2026</a></li>
+      <li>马堡大学：同展讯息与伴随讲座（加害者、性强制劳动）。<br><a href="https://www.uni-marburg.de/de/universitaet/administration/verwaltung/stabsstellen/frauen/aktuelles/nachrichten/ausstellung-marburger-frauen-im-ns-im-hstam-mai-juli-2026" target="_blank" rel="noopener">https://www.uni-marburg.de/de/universitaet/administration/verwaltung/stabsstellen/frauen/aktuelles/nachrichten/ausstellung-marburger-frauen-im-ns-im-hstam-mai-juli-2026</a></li>
+      <li>勃兰登堡州议会：展览《反抗国家社会主义的女性》（2026-01-14 至 2026-03-01）。<br><a href="https://www.landtag.brandenburg.de/de/frauen_im_widerstand_gegen_den_nationalsozialismus/46734" target="_blank" rel="noopener">https://www.landtag.brandenburg.de/de/frauen_im_widerstand_gegen_den_nationalsozialismus/46734</a></li>
+      <li>Sebastian Braun / Jan Stuhler，《战争致寡的经济后果：生命周期视角》，Journal of Public Economics（2024-10-08；西德 100–120 万寡妇，1950 / 1971 就业轨迹）。<br><a href="https://doi.org/10.1016/j.jpubeco.2024.105241" target="_blank" rel="noopener">https://doi.org/10.1016/j.jpubeco.2024.105241</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">FLECK 10 · LEHRE</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，先读就业表，再读宣传画。1939 年夏约 1460 万、1944 年 9 月约 1490 万——这 30 万增量说明，“德国妇女撑起了战争经济”只说对了一半。撑起缺口的，是被运进农田与厂房的强制劳工。平民妇女的家务、义务年与冬装征集是真实负担；把负担写成与奴役等价，是在偷换加害结构。</p>
+    <p>第二，统计看不见的针线，往往比工厂名册更能说明国内战线。义务年、RAD、战争辅助役、防空值班、一锅炖星期日与毛毯征集，把年轻未婚女性、主妇与女学生编进一套半强制的织物。克拉默与哈维提醒我们：自愿与荣誉职不是“非政治的善心”，它们区分了谁被算作民族共同体成员，谁只配被征收或被消灭。</p>
+    <p>第三，寡妇史把 1945 年写成逗号而不是句号。抚恤不足时必须进厂，抚恤变厚后又被请出劳动力市场——这不是解放叙事，是制度设计。学习时同时问：谁没有寡妇抚恤可领？谁的死亡根本不被登记为“阵亡军人”？</p>
+    <p>第四，2026 年的马堡展柜与勃兰登堡州议会展厅，适合当作阅读入口：22 份地方传记里有加害也有抵抗，联邦展承认被司法迫害的女性。看见毛毯上的补丁，是为了练习一种更难的注视——看见德国妇女怎样把日子缝下去，也看见这套缝法把谁缝在外面。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第2期 · 冬装征集毛毯风 · 20260830_1810
+  </footer>
+</article>
+</body>
+</html>

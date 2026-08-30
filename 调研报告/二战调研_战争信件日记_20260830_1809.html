@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战争信件与日记：平民如何叙述日常与死亡 —— 2025–2026 书信数字化、档案检索与“不能写的话”</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;600;700&family=Cormorant:ital,wght@0,500;0,650;1,500&display=swap" rel="stylesheet">
+<style>
+/* Typed Feldpost on a walnut desk: onion-skin paper, carbon ribbon, censor tape */
+:root {
+  --desk: #2a1f16;
+  --desk2: #3a2c20;
+  --blotter: #4a5a42;
+  --blotter2: #3e4c38;
+  --paper: #efe4c8;
+  --paper2: #e4d5b0;
+  --onion: #f3ead4;
+  --ink: #1c1914;
+  --ribbon: #243040;
+  --stamp: #9a2e22;
+  --stamp2: #6e1f18;
+  --tape: #c45a3a;
+  --carbon: #2e4a62;
+  --fade: #6a5e4a;
+  --rule: #c8b48a;
+  --gold: #b08a4a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(176,138,74,.12), transparent 40%),
+    repeating-linear-gradient(90deg, #261a12 0 3px, #2e2118 3px 28px),
+    linear-gradient(180deg, var(--desk2), var(--desk));
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Songti SC", "Cormorant", serif;
+  line-height: 1.86;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.38'/%3E%3C/svg%3E");
+  opacity: .22;
+  mix-blend-mode: multiply;
+  z-index: 12;
+}
+.desk {
+  max-width: 880px;
+  margin: 36px auto 88px;
+  position: relative;
+}
+.blotter {
+  position: absolute;
+  inset: -18px -28px -40px;
+  background:
+    radial-gradient(circle at 12% 80%, rgba(28,20,14,.35), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(154,46,34,.12), transparent 22%),
+    linear-gradient(180deg, var(--blotter), var(--blotter2));
+  box-shadow: 0 28px 60px rgba(0,0,0,.45);
+  z-index: 0;
+  transform: rotate(-.4deg);
+}
+.blotter::after {
+  content: "FELDPOST  /  DURCHSCHLAG  /  GEÖFFNET";
+  position: absolute;
+  left: 18px; bottom: 14px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .42em;
+  color: rgba(239,228,200,.28);
+}
+.letter {
+  position: relative;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.18), transparent 12%),
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(176,138,74,.07) 27px 28px),
+    linear-gradient(180deg, var(--onion) 0%, var(--paper) 55%, var(--paper2) 100%);
+  border: 1px solid #cbb892;
+  box-shadow:
+    0 1px 0 #fff8e8 inset,
+    8px 14px 0 rgba(28,20,14,.28),
+    0 40px 70px rgba(0,0,0,.35);
+  padding: 0 38px 42px;
+}
+.letter::before,
+.letter::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+.letter::before {
+  /* Vertical fold */
+  top: 0; bottom: 0; left: 33%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(90,70,40,.18), transparent);
+}
+.letter::after {
+  /* Horizontal crease */
+  left: 0; right: 0; top: 42%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(90,70,40,.16), transparent);
+}
+.tape {
+  position: relative;
+  z-index: 2;
+  margin: 0 -38px;
+  background: repeating-linear-gradient(
+    90deg,
+    #c75a38 0 18px,
+    #b44c2e 18px 20px,
+    #c75a38 20px 38px
+  );
+  color: #f6e6c8;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-align: center;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 0 rgba(110,31,24,.35);
+}
+.mast {
+  position: relative;
+  z-index: 2;
+  padding: 28px 4px 8px;
+}
+.row-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.typed {
+  font-family: "Special Elite", "IBM Plex Mono", monospace;
+  letter-spacing: .04em;
+}
+.fpn {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  color: var(--stamp);
+  letter-spacing: .16em;
+}
+h1 {
+  font-family: "Noto Serif SC", "Cormorant", serif;
+  font-weight: 700;
+  font-size: clamp(1.42rem, 3.1vw, 1.92rem);
+  line-height: 1.42;
+  margin: 14px 0 10px;
+  color: var(--ink);
+}
+.sub {
+  font-size: 15px;
+  color: #4a4030;
+}
+.when {
+  margin-top: 10px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--fade);
+}
+.stamp-disk {
+  width: 108px; height: 108px;
+  border: 3px solid var(--stamp);
+  border-radius: 50%;
+  color: var(--stamp);
+  font-family: "Special Elite", monospace;
+  font-size: 11px;
+  letter-spacing: .08em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  transform: rotate(11deg);
+  opacity: .78;
+  line-height: 1.25;
+  background: radial-gradient(circle at 40% 35%, rgba(154,46,34,.08), transparent 62%);
+  flex-shrink: 0;
+}
+nav.toc {
+  position: relative;
+  z-index: 2;
+  margin: 18px 0 6px;
+  padding: 14px 16px 8px;
+  border: 1px dashed var(--rule);
+  background: rgba(243,234,212,.55);
+}
+nav.toc h2 {
+  font-family: "Special Elite", monospace;
+  font-size: 1rem;
+  color: var(--stamp2);
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+nav.toc ol { margin: 0 0 6px 1.2em; font-size: 15px; }
+nav.toc a {
+  color: var(--ribbon);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--carbon);
+}
+nav.toc a:hover { border-bottom-style: solid; color: var(--stamp); }
+.card {
+  position: relative;
+  z-index: 2;
+  margin: 22px 0;
+  padding: 20px 20px 16px;
+  background: linear-gradient(180deg, #f6edd6, #eadcb8);
+  border: 1px solid #c9b48a;
+  box-shadow: 3px 5px 0 rgba(36,28,18,.12);
+}
+.card.skew { transform: rotate(-.25deg); }
+.card.copy {
+  background:
+    linear-gradient(180deg, rgba(46,74,98,.04), transparent 18%),
+    linear-gradient(180deg, #e8deca, #dccdb0);
+  border-left: 3px solid var(--carbon);
+}
+.card.red {
+  background: linear-gradient(180deg, #f3e2cc, #e8d0b0);
+  border-top: 3px solid var(--stamp);
+}
+.card h2 {
+  font-family: "Cormorant", "Noto Serif SC", serif;
+  font-size: 1.36rem;
+  font-weight: 650;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dotted var(--rule);
+  color: #1a1610;
+}
+.tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--stamp);
+  margin-bottom: 6px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 14px 10px 16px;
+  border-left: 3px solid var(--stamp);
+  background: rgba(154, 46, 34, .06);
+  font-family: "Special Elite", "Noto Serif SC", serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2a2218;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 10px 0 16px;
+  background: #f7eed8;
+  font-family: "IBM Plex Mono", "Noto Serif SC", monospace;
+}
+th, td {
+  border: 1px solid #c9b48a;
+  padding: 7px 8px;
+  text-align: left;
+}
+th {
+  background: #dcc6a0;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 12px; }
+.sources a { color: #6e2418; word-break: break-all; }
+.xout {
+  text-decoration: line-through;
+  text-decoration-color: var(--stamp);
+  text-decoration-thickness: 2px;
+}
+footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule);
+  font-size: 12px;
+  color: var(--fade);
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: .04em;
+}
+@media (max-width: 640px) {
+  .letter { padding: 0 18px 28px; }
+  .tape { margin: 0 -18px; letter-spacing: .12em; }
+  .stamp-disk { display: none; }
+  .desk { margin: 12px 8px 48px; }
+}
+</style>
+</head>
+<body>
+<!-- Typed Feldpost layout: onion-skin sheet, censor tape, field-post disk -->
+<div class="desk">
+  <div class="blotter" aria-hidden="true"></div>
+  <article class="letter">
+    <div class="tape">Geöffnet — Feldpostprüfstelle · 抽样启封 · 非密件亦非全无读者</div>
+    <header class="mast">
+      <div class="row-meta">
+        <div>
+          <p class="fpn">FPNR.  /  MSG 2  /  MSPT  /  WLB-STERZ</p>
+          <p class="typed fpn" style="margin-top:4px;color:#4a4030;">ABSENDER: FORSCHUNGSBLATT · HEIMAT</p>
+        </div>
+        <div class="stamp-disk">FELDPOST<br>30.8.26<br>PRÜFSTELLE</div>
+      </div>
+      <h1>战争信件与日记：平民如何叙述日常与死亡 —— 2025–2026 书信数字化、档案检索与“不能写的话”</h1>
+      <p class="sub">Feldpost、克伦佩勒秘密日记、书信检查与自我审查：日常如何被写出，死亡如何被略过或记下</p>
+      <p class="when">调研时间：2026-08-30 18:09 CST · 平民史系列第2期 · 主题轮换池第3项</p>
+    </header>
+
+    <nav class="toc" id="toc">
+      <h2>目录 · INHALTSANGABE</h2>
+      <ol>
+        <li><a href="#theme">本期主题</a></li>
+        <li><a href="#findings">核心发现</a></li>
+        <li><a href="#feldpost">战地邮包：被允许的亲密</a></li>
+        <li><a href="#censor">检查与自我审查：不能写的话</a></li>
+        <li><a href="#klemperer">克伦佩勒日记：秘密书写与死亡邻近</a></li>
+        <li><a href="#now">2025–2026：书信数字化与公民科学</a></li>
+        <li><a href="#sources">来源</a></li>
+        <li><a href="#lesson">对历史学习者的启示</a></li>
+      </ol>
+    </nav>
+
+    <section class="card" id="theme">
+      <p class="tag">BLATT 01 · THEMA</p>
+      <h2>本期主题</h2>
+      <p>战争把家庭拆开，却把书写变成一种几乎全民的劳动。国防军士兵与后方亲属之间的 Feldpost（战地邮包），以及写给自己、往往不能寄出的日记，是德国平民叙述日常与死亡的两条主通道。它们不是同一类文本：一封家书要穿过检查处，才能回到厨房桌上；一本秘密日记则可能因被搜出而送命。读它们，不是为了把“人民的声音”从宣传里打捞出来当作真相，而是为了看清楚：在一个既检查信件、又鼓励写信的政权里，人怎样选择句子。</p>
+      <p>本报告把观察点放在书写行为本身。联邦档案馆军事部在替代性私人收藏（Bestand MSG 2）中保存士兵日记、Feldpost 与经历报告；邮政与电信博物馆基金会（Museumsstiftung Post und Telekommunikation, MSPT）拥有德国最完整的 Feldpost 书信收藏，并在线上公开约一千五百封二战家书；符腾堡州立图书馆的 Sterz 收藏则把约两万五千封原件变成研究入口。2025 年开姆尼茨欧洲文化之都配套的公民科学项目「Oberfrohna2025」，以及 2026 年初宣布阶段目标达成的「Alltag im Krieg」（战争中的日常），把阁楼里的夫妻通信变成可检索的数据库。档案优先，不美化“真情家书”，也不把写信的人写成只会说谎的机器。</p>
+    </section>
+
+    <section class="card copy" id="findings">
+      <p class="tag">BLATT 02 · BEFUNDE</p>
+      <h2>核心发现</h2>
+      <ul>
+        <li><strong>规模极大，存世极薄。</strong>MSPT 与 Feldpost-Archiv 均记载：二战期间仅德国一方即运送约 300 亿至 400 亿件 Feldpost。绝大多数仍在私人家庭，随时可能被清理。公共收藏只是这个洪流的边角——MSPT 在线馆藏页称全部 Feldpost 书信超过 12 万件；柏林通信博物馆 2023 年 9 月的卷宗目录则说明，一战与二战合计超过 15 万封尚无法逐件编目。</li>
+        <li><strong>检查是抽样，威慑是全面的。</strong>战地邮政检查处于 1940 年 3 月 12 日开始工作；Kilian 与 Schwender 指出，进入进一步审查的邮件不到总量的 1%。打开的信封用印有「Geöffnet — Feldpostprüfstelle」的封条重新封上——收信人看得见检查。可见的检查，比读完每一封信更有效：它训练人先删掉句子。</li>
+        <li><strong>“不能写的话”有三层。</strong>第一层是法令：部队位置、装备、谣言、敌方传单、对国防军与帝国政府的批评、任何可被读成间谍或“瓦解战力”（Wehrkraftzersetzung）的表述。第二层是宣传规定的范文：后方不要写困难与闲话，前线要写振作与坚持。第三层是对收信人的体贴与恐惧：为了不让父母妻子惊慌，许多作者把东部战场的残酷写成天气、食物与“一切都好”。马丁·洪堡（Martin Humburg）称之为“在外在与内在检查条件下对现实的建构”。</li>
+        <li><strong>日记与家书不互相替代。</strong>维克多·克伦佩勒（Victor Klemperer）在德累斯顿“犹太人之家”里秘密记下搜家、递解、自杀与黄星——这些句子不能出现在 Feldpost 里。他 1942 年 6 月 13 日在盖世太保搜家与殴打之后写下后来成为书名的决心：<em>Ich will Zeugnis ablegen bis zum letzten</em>（我要作证，直到最后）。家书维持被允许的亲密；日记承担不能寄出的证词。</li>
+        <li><strong>2025–2026 的数字化改变的是可读性，不是天真性。</strong>「Alltag im Krieg」用 Transkribus 把萨克森与汉堡三组通信（逾 6000 封）做成可检索库；Roland 与 Hilde Nordhoff（化名）的 2600 封信是其中最完整的一对。公民科学让苏特林字体重新可读，也把隐私、匿名化与“信里写了什么政治”一并摊到屏幕上。读得见，不等于写得全。</li>
+      </ul>
+    </section>
+
+    <section class="card skew" id="feldpost">
+      <p class="tag">BLATT 03 · FELDPOST</p>
+      <h2>战地邮包：被允许的亲密</h2>
+      <p>Feldpost 是前线与家乡之间最重要的通信手段。MSPT 写得直接：在所有战争中，它都受军事检查。信件、明信片与包裹由既是邮政人员、又是军队成员的 Feldpost 职员运送。对大多数德国人来说，它替代了无法共同度过的家庭日常——共同的话题、共同的节日、对孩子出牙与定量卡的商量。briefsammlung.de 强调：从 1980 年代起，历史学家、民族学家、心理学家、语言学家与媒体学者才系统地把它读成心态史与日常史的来源。</p>
+      <p>联邦档案馆军事部提醒研究者：陆军部队的官方文件残缺严重，许多团、营一级几乎没有完整战争日志。替代性私人收藏因此变得关键。Bestand MSG 2（德国军事史专题与传记收藏，1849–1945）中有私人日记、Feldpost 与退伍士兵的经历报告。检索在 invenio 中进行，关键词只搜档案著录，不搜数字化影像全文；使用前需个别核验权利状况。这不是“把人民的声音一键打开”，而是一条需要申请、签字与保护期缩短手续的研究路径。</p>
+      <p>符腾堡州立图书馆「世界大战时期收藏」的生活文献库，把记忆、私人日记与书信放在同一房间。该馆维基页面记载：目前超过 17 万封 Feldpost 以及战俘往来信件，其中约 6 万封属一战，约 11 万封属二战及紧随其后的年份。1990 年购入的 Reinhold Sterz 收藏约 2.5 万封书信与日记，构成二战 Feldpost 的基础，且大部分已作形式与内容著录。写信人覆盖几乎所有社会阶层与教育程度，地理上遍及德语区。有的卷宗只有几封，有的是同一通信关系下的数百封。</p>
+      <p class="note">下表只比较各机构自己公布的口径，不可加总——同一封信可能从未入藏，也可能以副本出现在不同收藏。</p>
+      <table>
+        <thead>
+          <tr><th>收藏 / 项目</th><th>公布规模</th><th>在线可读</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>德国 Feldpost 运送量（战时）</td><td>约 300–400 亿件（德方）</td><td>不可比</td></tr>
+          <tr><td>MSPT Feldpost 总藏</td><td>逾 12 万封（在线馆藏页）</td><td>二战约 1500 封</td></tr>
+          <tr><td>柏林通信博物馆卷宗目录（至 2023-09）</td><td>一战+二战逾 15 万封（按卷宗，非逐件）</td><td>见上</td></tr>
+          <tr><td>Feldpost-Archiv / 通信博物馆合作</td><td>约 10 万件文献</td><td>约 1200–1400 封</td></tr>
+          <tr><td>WLB 生活文献库</td><td>逾 17 万封（含战俘邮）</td><td>一战选件；二战以阅览室为主</td></tr>
+          <tr><td>Sammlung Sterz（1990 入藏）</td><td>约 2.5 万封书信与日记</td><td>著录为主</td></tr>
+          <tr><td>Alltag im Krieg（汉堡+萨克森）</td><td>三组通信，逾 6000 封</td><td>持续发布中</td></tr>
+          <tr><td>Nordhoff 通信（化名）</td><td>约 2600 封（1938-05 至 1946-02）</td><td>部分已上线</td></tr>
+        </tbody>
+      </table>
+      <p>Kilian 与 Schwender 写道：士兵原则上想写多少就写多少，信件免费，只在战争造成的例外情况下限额。一年大约只有两段各两周的探亲假，其余时间，家庭网络全靠纸。这解释了为何家书在战后被那么多家庭保存——它既是爱情与亲情的物证，也是“我们曾经正常过”的物证。保存本身已经是一种叙事选择：留下来的，多半是还能给孙辈看的那一部分。</p>
+    </section>
+
+    <section class="card red" id="censor">
+      <p class="tag">BLATT 04 · ZENSUR</p>
+      <h2>检查与自我审查：不能写的话</h2>
+      <p>检查不是德国独有。青少年与二十世纪史门户 Jugend 1918–1945 指出：意大利士兵相对可以尖锐批评战争；德国、日本与苏联军人若如此写，则可能面对重罚。在德国，信件中的批评可被归入 1939 年 8 月 26 日《战时特别刑法条例》（Kriegssonderstrafrechtsverordnung）第 5 条的“瓦解战力”——条文写的是公开煽动拒服兵役，或“瘫痪、瓦解德国或盟国人民武装自卫的意志”。规定写得足够含混，几乎任何泄气的句子都可能被读进去。1934 年 12 月 20 日的《阴险法》（Heimtückegesetz）则把“恶意、煽动性”地损害帝国政府或纳粹党声誉的言论定为监禁罪。两套法律一起，把写信变成一种法律风险。</p>
+      <p>禁止清单（据 Jugend 1918–1945 与 Kilian/Schwender 归纳）包括：须保密的勤务事项；一切谣言；须保密的照片与图像；敌方宣传品；对国防军与帝国政府措施的批评；任何引起间谍、破坏或瓦解嫌疑的表述。此外还有更具体的军事禁令：编制、装备、战斗力、驻地、作战意图、阵地细节、对部队情绪与给养的不利描述，甚至战友与上司的姓名。照片不得拍处决，也不得拍“敌人的暴行”；胶卷不得在国外或占领区冲洗。前线不是没有摄像机——禁令本身说明，有人拍过，也有人试图寄回家。</p>
+      <blockquote>检查处用剪刀打开信件，再用印着「已开启——战地邮政检查处」的封条封上，好让收件人清楚：这封信被读过。——Katrin Kilian / Clemens Schwender，《1939 至 1945 年的书信检查》</blockquote>
+      <p>检查处通常编制为一名主管、四名军官、十四名军士。军官只查军官的信，军士查士兵的信；军阶从寄件人栏读取。陆军将官、军事机关与帝国部长的邮件不查；纳粹党机构、公法团体等的电报也不查。等级制延伸到信封上。较轻的违规会被涂黑或剪掉；严重的“瓦解战力”则送国防军司法。Jugend 1918–1945 称受该罪名牵连者估计约 3 万至 4 万人；Kilian 与 Schwender 则转述另一口径：战争期间约 3 万至 4 万名士兵死于军事司法——两个数字不要混成一件事，它们提醒的是同一件事：句子可以致命。</p>
+      <p>抽样并不等于宽松。Feldpostnummer 30297 所属检查处 1942 年 6 月的报告：检查 25,514 件，认定 128 件违规；其中 35 件泄密（地点、部队、损失），2 件照片，19 件被归为“瓦解”——内容往往是抱怨休假不公、不满上司或给养。战争越拖，检查越从防间谍滑向意识形态：标准变成“态度与情绪”“纪律状况”“保密”“瓦解”“间谍与破坏”。检查处的月报送到国防军最高统帅部国外/反间谍部门，把私人通信当成部队与后方的情绪温度计。</p>
+      <p>宣传同时印发“标准家书”。后方不该写麻烦与闲话；前线应该写正面状况，夹带坚持的套话。信件被说成“武器”。于是出现 Kilian 所称的“内在检查”：为了确保信能到达，某些主题根本不写。Jugend 1918–1945 举出的自我限制包括性与自残；更常见的动机更近：把残酷的前线写成可忍受的日常，以免父母、妻子、孩子受惊。编码是另一种策略——事先约定的化名、地点暗号。Kilian 举过一封 1942 年 12 月 13 日的真信（MSPT 3.2002.1277）：十八岁一等兵 Walter 给家里的信里给字母加下划线，串起来是法国小镇 Issoudun。1944 年 5 月 24 日，同一人告诉母亲：你那封批评党卫队的信过了检查，“他们会好好看一看”——可见到战争后期，仍有人试探边界，也仍有人看见封条后为对方捏一把汗。</p>
+      <p>「Alltag im Krieg」库中一封后方来信把这种紧张写成几乎喜剧的警告。女方发现来信盖着「Geöffnet!」，而男方刚刚相当直白地写了国内外的道德与经济状况。她又骄傲又害怕：检查处“不是每天都吃得到这种菜”，也许会登记、也许会扣下，“所以：小心为妙”。这不是研究者事后发明的“自我审查理论”，而是当时通信者自己的教学法。</p>
+      <p>史学内部有分歧，应当并列，而不是用其中一边取消另一边。洪堡认为，经过内外检查之后，家书往往不再对应前线的真实日常，其效力只存在于一对通信伙伴之间。Buchbender 与 Sterz 对约 5 万封信的内容分析则显示：大部分士兵相当公开地写下看法——一个合理的计算是，面对天文数字的邮量，被抽中的概率很低。Kilian 与 Schwender 的收束更谨慎：检查未能全面左右通信；写负面的，多半真的在想负面；写正面的，也不必先假定是伪善。没有人被系统地强迫去说谎——但每个人都知道，有些句子一旦被抽中，惩罚可以到死刑。这个结构足够制造空白。空白里，包括对家人的保护，也包括对东部占领区屠杀的选择性沉默。平民的“日常”之所以能在信里写得像还过得去，常常是因为死亡被写成了别人的事，或写成了不能寄出的日记。</p>
+    </section>
+
+    <section class="card copy" id="klemperer">
+      <p class="tag">BLATT 05 · TAGEBUCH</p>
+      <h2>克伦佩勒日记：秘密书写与死亡邻近</h2>
+      <p>家书是给收信人的；克伦佩勒的日记是给一个尚不存在的读者的。他是德累斯顿工业大学的罗曼语文学教授，一战老兵，1912 年由犹太家庭改宗新教，妻子伊娃被种族法归为“雅利安人”。纳粹仍视他为犹太人。1935 年 4 月，他依《重建职业公务员法》被提前退休。萨克森州立图书馆（SLUB）后来成为其手稿的保管者：遗稿共 1,573 个编号，17 匣、3 函套、6 册、3 文件夹；其中有 1918 至 1959 年的日记。1933 年以后，日记从私人生活记账，转成对公共生活的编年。</p>
+      <p>1995 年 Aufbau 出版社刊出两卷本《Ich will Zeugnis ablegen bis zum letzten. Tagebücher 1933–1945》，立刻成为畅销书。戈登·克雷格（Gordon A. Craig）在《纽约书评》中记载：原版在德国售出约 14 万册，并进入广播、剧场与十二集电视。书名取自 1942 年 6 月 13 日——盖世太保抄了他居住的公寓楼、殴打并羞辱住户——他写下“我要作证，直到最后”。H-Net 书评指出，这是一种阴沉的决心，不是修辞练习。日记里有禁令的流水账：钱、交通、医疗、女佣、食物、收音机、报纸；有朋友被送往特莱西恩施塔特；有自杀；有搜家时被抢走的食物。他直到 1942 年仍写：“我是德国人，还在等德国人回来；他们躲到地底下去了。”这句话不是给 Feldpost 检查处看的。它只能写在随时可能被搜走的本子上。</p>
+      <p>SLUB 与 De Gruyter、Aufbau 合作的数据库「Klemperer Online」把 1918–1959 年日记做成几乎按文档转写的全文，并配手稿影印。慕尼黑大学图书馆介绍：该库比纸质节本大约多出三分之一以上的内容。SLUB 称已数字化逾 11,000 页。对学习者，这意味着：1995 年的畅销节本已经足够骇人；未删节稿把“日常”写得更碎、更重复、更接近真实的恐惧节奏——重复本身就是史料。</p>
+      <p>1945 年 2 月 13 日白天，克伦佩勒被派去给德累斯顿所余犹太人递送“劳动征召”。《明镜》刊出的日记补记写明：他跑了一天坏消息，晚上有人根据经验断言，星期四要被送走的人是去送死，留下来的一周内也会被同样处理。九点半全警报。有人骂：“但愿他们把一切砸烂。”第一次袭击后他们爬回堆满碎玻璃的房间，点蜡烛喝冷咖啡。一点过后电力中断，手摇警报再起。他冲向“我们的犹太人地窖”，门大开着。伊娃失踪。一块灼热破片打中他的右脸。毯子裹住头——也盖住了黄星。天亮后他在布吕尔露台上找到伊娃：关键时刻有人把她从 3 号门厅拉进“雅利安人地窖”，她从地窖窗爬到街上。她找他的时候，曾想用地上一个发光的东西点烟——那是一具还在燃烧的尸体。</p>
+      <blockquote>言语有如微小剂量的砷，一段时间以后就会发生作用。——维克多·克莱普勒（通译克伦佩勒），《第三帝国的语言》，商务印书馆 2013 年中译本简介所引</blockquote>
+      <p>1947 年的《LTI — Lingua Tertii Imperii》把日记里的语言观察收成一本语文学笔记：纳粹词句如何进入政治、法庭、经济、学校、体育、家庭与幼儿园。商务印书馆 2013 年中译本让汉语读者看到：日记不仅记录事件，也记录人怎样被自己每天重复的词改变。这与 Feldpost 的范文形成对称——一边是秘密记下“他们怎样说”，一边是公开练习“我们应该怎样说”。两种书写都发生在德国城市里；只有一种被允许贴上战地邮票。</p>
+      <p>把克伦佩勒放进“德国平民如何叙述死亡”，必须同时写清位置。他是平民，也是被种族法排除出“民族共同体”的人。他的日常是禁令、搜家与等待递解；多数 Feldpost 作者的日常是定量、工厂、警报与对前线亲人的牵挂。两种日常可以在同一座城市的同一夜重叠——1945 年 2 月 13 日就是这样——但它们不是同一份叙述权。家书里的死亡常常是“某某阵亡”的公式；克伦佩勒记下的是点名、是黄星、是即将发出的死亡通知。读家书而不读这种日记，会把“我们还在过日子”误认成全部德国。</p>
+    </section>
+
+    <section class="card" id="now">
+      <p class="tag">BLATT 06 · 2025–2026</p>
+      <h2>2025–2026：书信数字化与公民科学</h2>
+      <p>纸信正在从阁楼进入数据库。这不是伤感的“抢救文化遗产”广告，而是一次方法转折：手写的苏特林、库伦特与现代草书，对多数当代读者已经不可读；不转写，等于不存在。Bürger schaffen Wissen 平台上的项目「Historische Briefe: Digital in den Dialog」由汉堡 Bergedorf 的 Kultur- und Geschichtskontor 主持，周期为 2024 年 5 月至 2026 年 1 月。三组来自汉堡与萨克森的通信超过 6000 封。阶段目标叫 Oberfrohna2025：把开姆尼茨附近林巴赫-奥伯弗罗纳一对夫妻 1938 至 1946 年几乎每日一封的通信，赶在 2025 年欧洲文化之都年份尽可能多地发布上网。</p>
+      <p>2026 年初的项目更新写明：Oberfrohna2025 的阶段目标已经达成；「Alltag im Krieg」仍在继续转写二战书信。一部分已在网站数据库公开，一部分已校对尚未发布，一部分仍在转写中。网站提供按日期、通信关系、作者排序，以及关键词云与地图——发信地、收信地、信中被提到的地点。编辑标准公开，便于学术引用。这是把“日常”做成可查询对象：食物、信仰、工作、亲属，以及国家社会主义政治。</p>
+      <p>这对夫妻在项目中使用化名 Roland 与 Hilde Nordhoff。Transkribus 博客 2024 年 7 月 16 日的访谈记载：她是工厂女工，他是教师并指挥两人相遇的教堂唱诗班；1940 年结婚后不久他被征召，派往东欧，她留在萨克森乡下。继承人交出约 2600 封信，有的长达二十页。战争期间他们有时一天写数封。项目先做博客「Trug und Schein」，后与汉堡档案机构合并，以保证长期保存。志愿者包括仍能读旧字体的老年人、学生与德语学习者，后来扩展到奥地利、荷兰与美国。2018 年起用 Transkribus 训练分别针对两人笔迹的识别模型。到 2024 年访谈时，约一半信件已经发布，四分之一已转写，四分之一待处理。</p>
+      <p>数字化带来新的阅读伦理。项目从一开始就匿名化；志愿者在软件里校对机器预转写，并补充内容信息。公开的不是“偷读别人的情书”，而是经后代同意、去掉可识别姓氏的历史文献。即便如此，信里仍有工厂、教堂、党的用语、对战事的评论——也就是检查处曾经寻找的那些句子。2025 年文化之都把地方通信推到国际界面前，等于把“萨克森一对夫妻如何过日子”做成展览。学习者需要保持同一套警惕：这是被保存下来的一对通信，不是德国的平均数；男方在东部写信，并不自动等于他写下了东部的罪行；女方在家乡写信仰与邻里，并不自动等于她看不见驱逐。数据库让我们数得出哪些词出现得最勤——它数不出哪些词从未被允许写下。</p>
+      <p>与此同时，机构档案仍按自己的速度打开。联邦档案馆宣称目标是把国防军与武装党卫队全部卷宗数字化并在 invenio 上线，但团营一级目前只有零星数字化；MSG 2 的私人日记与 Feldpost 仍须个案审查。MSPT 的二战在线书信仍是约 1500 封的“有表述力的选件”，不是 15 万封的全库。WLB 的 Sterz 收藏以阅览室使用为主。2025–2026 的新闻点，是公民科学把一两组完整通信做成了可检索的日常；机构收藏的主体，仍是必须亲自去柏林、斯图加特或汉堡申请的纸。</p>
+    </section>
+
+    <section class="card sources" id="sources">
+      <p class="tag">BLATT 07 · QUELLEN</p>
+      <h2>来源</h2>
+      <p class="note">下列网址均经本周期检索打开或由检索结果全文核验，不编造链接。收藏规模以各机构自己的页面为准，彼此不可直接加总。</p>
+      <ol class="body">
+        <li>德国联邦档案馆：陆军部队投入相关档案导览——Bestand MSG 2 中的私人日记、Feldpost 与经历报告；invenio 只检索著录、不检索影像全文。<br><a href="https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/nach-themen/unterlagen-zum-einsatz-von-truppenteilen-des-heeres-im-zweiten-weltkrieg/" target="_blank" rel="noopener">https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/nach-themen/unterlagen-zum-einsatz-von-truppenteilen-des-heeres-im-zweiten-weltkrieg/</a></li>
+        <li>Museumsstiftung Post und Telekommunikation 在线馆藏：Feldpostbriefe（德方二战约 400 亿件；馆藏逾 12 万封，有数字目录）。<br><a href="https://onlinesammlung.museumsstiftung.de/sammlungsgebiete/feldpostbriefe" target="_blank" rel="noopener">https://onlinesammlung.museumsstiftung.de/sammlungsgebiete/feldpostbriefe</a></li>
+        <li>MSPT 书信库：二战 Feldpost 专页（约 300–400 亿件运送量；在线约 1500 封）。<br><a href="http://briefsammlung.de/feldpost-zweiter-weltkrieg" target="_blank" rel="noopener">http://briefsammlung.de/feldpost-zweiter-weltkrieg</a></li>
+        <li>柏林通信博物馆：二战 Feldpost 卷宗目录 PDF（至 2023-09，逾 15 万封按卷宗著录，无法逐件编目）。<br><a href="https://www.museumsstiftung.de/wp-content/uploads/Feldpostsammlung-Zweiter-Weltkrieg-Bestandsuebersicht-Museum-fuer-Kommunikation-Berlin.pdf" target="_blank" rel="noopener">https://www.museumsstiftung.de/wp-content/uploads/Feldpostsammlung-Zweiter-Weltkrieg-Bestandsuebersicht-Museum-fuer-Kommunikation-Berlin.pdf</a></li>
+        <li>Feldpost-Archiv：研究门户（300–400 亿件；与通信博物馆合作约 10 万件文献，在线约 1200–1400 封）。<br><a href="http://feldpost-archiv.de/feldpost-d.html" target="_blank" rel="noopener">http://feldpost-archiv.de/feldpost-d.html</a></li>
+        <li>Katrin Kilian / Clemens Schwender：1939–1945 书信检查（抽样不到 1%；KSSVO；阴险法；FPN 30297 的 1942 年 6 月数字；Issoudun 下划线编码信 MSPT 3.2002.1277）。<br><a href="http://www.feldpostsammlung.de/11-zensur.shtml" target="_blank" rel="noopener">http://www.feldpostsammlung.de/11-zensur.shtml</a></li>
+        <li>Jugend 1918–1945：二战 Feldpost 与检查（禁止清单、内外检查、洪堡“现实建构”、Buchbender/Sterz 约 5 万封信的公开程度）。<br><a href="https://jugend1918-1945.de/feldpost/Default.aspx?id=30495" target="_blank" rel="noopener">https://jugend1918-1945.de/feldpost/Default.aspx?id=30495</a></li>
+        <li>符腾堡州立图书馆维基：世界大战生活文献库（逾 17 万封；Sterz 约 2.5 万封书信与日记，1990 年入藏）。<br><a href="https://wiki.wlb-stuttgart.de/index.php/BfZ_ZdW_LeDo" target="_blank" rel="noopener">https://wiki.wlb-stuttgart.de/index.php/BfZ_ZdW_LeDo</a></li>
+        <li>mit:forschen! / Bürger schaffen Wissen：「Historische Briefe: Digital in den Dialog」（2024-05 至 2026-01；逾 6000 封；Oberfrohna2025；2026 年初阶段目标达成）。<br><a href="https://www.mitforschen.org/projekt/historische-briefe-digital-den-dialog" target="_blank" rel="noopener">https://www.mitforschen.org/projekt/historische-briefe-digital-den-dialog</a></li>
+        <li>Alltag im Krieg：战争书信数据库首页（按日期/作者/关键词云/地图检索）。<br><a href="https://alltag-im-krieg.de/startseite" target="_blank" rel="noopener">https://alltag-im-krieg.de/startseite</a></li>
+        <li>Alltag im Krieg 单封示例：后方来信讨论「Geöffnet!」与直言的风险。<br><a href="https://alltag-im-krieg.de/obf-411201-002-01" target="_blank" rel="noopener">https://alltag-im-krieg.de/obf-411201-002-01</a></li>
+        <li>Transkribus 博客：Trug und Schein / Nordhoff 通信（约 2600 封；工厂女工与教师；公民科学与识别模型；2024-07-16）。<br><a href="https://blog.transkribus.org/en/trug-und-schein-alltag-im-krieg" target="_blank" rel="noopener">https://blog.transkribus.org/en/trug-und-schein-alltag-im-krieg</a></li>
+        <li>《明镜》国际版：克伦佩勒德累斯顿日记（1945-02-22 至 24 日补记火风暴、犹太人地窖、燃烧的尸体）。<br><a href="https://www.spiegel.de/international/victor-klemperer-s-dresden-diaries-surviving-the-firestorm-a-341230.html" target="_blank" rel="noopener">https://www.spiegel.de/international/victor-klemperer-s-dresden-diaries-surviving-the-firestorm-a-341230.html</a></li>
+        <li>Gordon A. Craig，《纽约书评》：Destiny in Any Case（1995 年日记出版、约 14 万册、书名出处）。<br><a href="https://www.nybooks.com/articles/1998/12/03/destiny-in-any-case/" target="_blank" rel="noopener">https://www.nybooks.com/articles/1998/12/03/destiny-in-any-case/</a></li>
+        <li>Anthony Northey，H-Net / USF 转载书评：1942-06-13“我要作证，直到最后”。<br><a href="https://fcit.usf.edu/holocaust/resource/REVIEWS/Klempere.HTM" target="_blank" rel="noopener">https://fcit.usf.edu/holocaust/resource/REVIEWS/Klempere.HTM</a></li>
+        <li>SLUB Dresden 博客：克伦佩勒遗稿（1,573 号；11,000 余页数字化；De Gruyter 未删节库）。<br><a href="https://blog.slub-dresden.de/en/slublog/2020/02/10/ich-will-zeugnis-ablegen-bis-zum-letzten-victor-klemperers-erinnerungen-vollstaendig-und-ungekuerzt-in-einer-datenbank" target="_blank" rel="noopener">https://blog.slub-dresden.de/en/slublog/2020/02/10/ich-will-zeugnis-ablegen-bis-zum-letzten-victor-klemperers-erinnerungen-vollstaendig-und-ungekuerzt-in-einer-datenbank</a></li>
+        <li>慕尼黑大学图书馆：Klemperer Online（比纸质本约多三分之一以上）。<br><a href="https://www.ub.uni-muenchen.de/aktuelles/archiv/meldungen/klemperer-online/index.html" target="_blank" rel="noopener">https://www.ub.uni-muenchen.de/aktuelles/archiv/meldungen/klemperer-online/index.html</a></li>
+        <li>Buchmarkt.de：De Gruyter 与 Aufbau 未删节在线出版协议（2017-07-19；逾 11,000 页）。<br><a href="https://buchmarkt.de/2017/07/19/de-gruyter-und-aufbau-schliessen-lizenzvereinbarung-zur-vollstaendigen-online-publikation-der-klemperer-tagebuecher/" target="_blank" rel="noopener">https://buchmarkt.de/2017/07/19/de-gruyter-und-aufbau-schliessen-lizenzvereinbarung-zur-vollstaendigen-online-publikation-der-klemperer-tagebuecher/</a></li>
+        <li>商务印书馆：《第三帝国的语言：一个语文学者的笔记》（2013；砷的比喻；德累斯顿犹太居所中的观察）。<br><a href="https://www.cp.com.cn/book/2bec611a-0.html" target="_blank" rel="noopener">https://www.cp.com.cn/book/2bec611a-0.html</a></li>
+        <li>新民周刊：德累斯顿某个人（克伦佩勒日记作为第三帝国史料；与一战老兵、混合婚姻位置）。<br><a href="https://paper.xinmin.cn/html/xmzk/2022-08-01/77/28723.html" target="_blank" rel="noopener">https://paper.xinmin.cn/html/xmzk/2022-08-01/77/28723.html</a></li>
+      </ol>
+    </section>
+
+    <section class="card" id="lesson">
+      <p class="tag">BLATT 08 · LEHRE</p>
+      <h2>对历史学习者的启示</h2>
+      <p>第一，先问这封信要经过谁的眼睛。Feldpost 不是内心独白，是写给具体收信人、并可能被检查处抽读的文本。看见「Geöffnet」封条，是当时通信者的日常知识。读家书，要同时读禁止清单、范文、编码和下划线。把“一切都好”当成前线实况，是在替检查处完成工作。</p>
+      <p>第二，日记与家书要对照着读，不要互相替代。克伦佩勒能写下搜家、递解与“我要作证”，正因为这些句子不打算寄出。多数“雅利安”家庭的通信维持的是被允许的亲密：食物、孩子、假期、信仰。亲密是真的；亲密旁边就是不能写进同一封信的驱逐与屠杀。平民的痛苦与纳粹的罪行属于同一句话——不是为了用前者抵销后者，而是因为它们写在同一套邮政系统里。</p>
+      <p>第三，抽样检查制造的是空白，不是统一的谎言。不到 1% 的开启率，加上死刑级别的条文，足够让人删掉地点、删掉泄气、删掉让母亲害怕的场面。Buchbender/Sterz 看到的相对公开，与洪堡看到的“建构出来的现实”，可以同时成立：有人赌抽不中，有人先把自己检查一遍。研究通信，是在辨认赌注，而不是给“德国人”发一张诚实或虚伪的证书。</p>
+      <p>第四，2025–2026 年的屏幕让手稿重新可读，也让选择变得更显眼。Oberfrohna 的两千六百封信、MSPT 的一千五百封选件、MSG 2 里仍须申请才能看的日记，规模完全不同。文化之都与公民科学把一对萨克森夫妻的日常推到国际读者面前——这是好事，只要记得：能检索的词频，测不出从未写下的词。学习书写史，是学习看纸面上的墨水，也学习看被封条、被恐惧、被体贴和被种族法共同留下的空白。</p>
+    </section>
+
+    <footer>
+      二战德国平民史调研 · 系列第2期 · 战地家书打字机风 · 20260830_1809
+    </footer>
+  </article>
+</div>
+</body>
+</html>

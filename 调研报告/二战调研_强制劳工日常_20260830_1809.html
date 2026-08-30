@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>强制劳工在德国街道：日常接触、漠视与告发 —— 2025–2026 赔偿未完成、阿罗尔森工牌档案与展览</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Work-badge numbering: stamped Arbeitskarte, brass clip, punch holes, factory olive */
+:root {
+  --floor: #101412;
+  --olive: #3a4634;
+  --olive-d: #2a3426;
+  --brass: #c9a45a;
+  --brass-d: #8a6e32;
+  --card: #f1e6cc;
+  --card2: #e6d7b4;
+  --ink: #1b221e;
+  --navy: #1d3c48;
+  --rednum: #b42318;
+  --steel: #7a8480;
+  --fade: #5c645c;
+  --stamp: #1f4a42;
+  --rule: #c9b896;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+  line-height: 1.82;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(201,164,90,.08), transparent 34%),
+    repeating-linear-gradient(90deg, #121614 0 28px, #161a18 28px 56px),
+    var(--floor);
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
+  opacity: .18;
+  mix-blend-mode: overlay;
+  z-index: 8;
+}
+.badge {
+  max-width: 940px;
+  margin: 26px auto 72px;
+  position: relative;
+  background:
+    linear-gradient(90deg, #d8cba8 0 18px, transparent 18px),
+    linear-gradient(180deg, var(--card) 0%, var(--card2) 100%);
+  border: 2px solid #8a7a52;
+  box-shadow:
+    0 28px 64px rgba(0,0,0,.48),
+    inset 0 0 0 1px rgba(255,255,255,.28);
+  padding: 0 36px 42px 56px;
+  overflow: hidden;
+}
+.badge::before {
+  /* Punch holes along the left rail, like a factory ID */
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0; width: 38px;
+  background:
+    repeating-radial-gradient(circle at 19px 28px, #0e100e 0 7px, transparent 7.5px 56px),
+    linear-gradient(180deg, #2c3228, #1c201a);
+  box-shadow: inset -4px 0 8px rgba(0,0,0,.35);
+  z-index: 2;
+}
+.badge::after {
+  content: "NR · 13 000 000+";
+  position: absolute;
+  right: -12px; top: 42%;
+  font-family: "Teko", sans-serif;
+  font-size: 92px;
+  letter-spacing: .04em;
+  color: rgba(180, 35, 24, .07);
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+}
+.clip {
+  position: absolute;
+  right: 28px; top: -10px;
+  width: 72px; height: 28px;
+  background: linear-gradient(180deg, #d8be78, var(--brass) 40%, var(--brass-d));
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 6px 0 #6a5424, inset 0 1px 0 rgba(255,255,255,.4);
+  z-index: 4;
+}
+.clip::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 8px;
+  width: 10px; height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: #1a1c18;
+  box-shadow: inset 0 1px 2px #000;
+}
+.mast {
+  position: relative;
+  z-index: 1;
+  padding: 34px 8px 16px;
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  gap: 18px;
+  border-bottom: 2px dashed var(--rule);
+}
+.photo {
+  width: 118px; height: 148px;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 7px, rgba(29,60,72,.08) 7px 8px),
+    linear-gradient(180deg, #cfd6c8, #a8b0a4);
+  border: 2px solid var(--navy);
+  position: relative;
+  display: flex; align-items: flex-end; justify-content: center;
+  color: var(--navy);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
+.photo::before {
+  content: "FOTO";
+  position: absolute;
+  top: 46%; left: 0; right: 0;
+  text-align: center;
+  font-family: "Teko", sans-serif;
+  font-size: 42px;
+  letter-spacing: .08em;
+  color: rgba(29,60,72,.22);
+  transform: translateY(-50%);
+}
+.photo .fp {
+  position: absolute;
+  top: 8px; left: 8px; right: 8px;
+  height: 28px;
+  border: 1px dashed rgba(29,60,72,.45);
+  font-size: 9px;
+  display: flex; align-items: center; justify-content: center;
+  letter-spacing: .2em;
+}
+.mast-copy { min-width: 0; }
+.kicker {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .28em;
+  color: var(--rednum);
+  text-transform: uppercase;
+}
+h1 {
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.32rem, 3vw, 1.92rem);
+  line-height: 1.36;
+  margin: 8px 0 8px;
+  color: var(--ink);
+}
+.sub { color: var(--fade); font-size: 14.5px; }
+.meta-row {
+  margin-top: 12px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.chip {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .04em;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  padding: 3px 8px;
+  background: rgba(29,60,72,.06);
+}
+.fields {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  font-size: 13px;
+}
+.fields b {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: var(--olive);
+  font-size: 12px;
+  display: block;
+}
+.id-stamp {
+  position: absolute;
+  right: 10px; top: 22px;
+  width: 108px; height: 108px;
+  border: 3px solid var(--stamp);
+  border-radius: 50%;
+  color: var(--stamp);
+  font-family: "Teko", sans-serif;
+  font-size: 15px;
+  letter-spacing: .08em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  transform: rotate(12deg);
+  opacity: .72;
+  line-height: 1.15;
+  background: rgba(31,74,66,.06);
+}
+nav.toc {
+  position: relative;
+  z-index: 1;
+  margin: 22px 0 6px;
+  padding: 14px 16px 8px;
+  background: linear-gradient(180deg, #e8dcc0, #ddd0b0);
+  border: 1px solid #b8a67a;
+}
+nav.toc h2 {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: .16em;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+nav.toc ol { margin: 0 0 8px 1.2em; font-size: 15px; }
+nav.toc a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--brass-d);
+}
+nav.toc a:hover { color: var(--rednum); border-bottom-style: solid; }
+.card {
+  position: relative;
+  z-index: 1;
+  margin: 20px 0;
+  padding: 20px 20px 16px;
+  background: #f7edd6;
+  border: 1px solid #c4b48a;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+  box-shadow: 3px 5px 0 rgba(26, 34, 30, .12);
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 18px; height: 18px;
+  background: linear-gradient(135deg, transparent 50%, #c9b896 50%);
+}
+.card.olive { background: linear-gradient(180deg, #e4e8d4, #d4dcc4); }
+.card.steel { background: linear-gradient(180deg, #e4e2d8, #d4d0c4); }
+.card.brass { background: linear-gradient(180deg, #f0e2b8, #e4d29a); }
+.card h2 {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 1.28rem;
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--navy);
+  color: var(--ink);
+}
+.tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--rednum);
+  margin-bottom: 4px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border-left: 5px solid var(--brass);
+  background: rgba(29, 60, 72, .06);
+  font-style: italic;
+  color: #2a322c;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin: 10px 0 16px;
+  background: #faf3e0;
+}
+th, td {
+  border: 1px solid #c9b896;
+  padding: 7px 8px;
+  text-align: left;
+}
+th {
+  background: var(--navy);
+  color: #f3ead4;
+  font-family: "Archivo Narrow", sans-serif;
+  letter-spacing: .06em;
+  font-weight: 600;
+}
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 12px; }
+.sources a { color: #6a2418; word-break: break-all; }
+.numstrip {
+  font-family: "Teko", sans-serif;
+  font-size: 28px;
+  letter-spacing: .12em;
+  color: var(--rednum);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 2px dashed var(--rule);
+  font-size: 12.5px;
+  color: var(--fade);
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+}
+@media (max-width: 680px) {
+  .badge { padding: 0 18px 32px 46px; margin: 10px 8px 40px; }
+  .mast { grid-template-columns: 1fr; }
+  .photo { height: 96px; width: 96px; }
+  .id-stamp { display: none; }
+  .fields { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<!-- Factory ID / Arbeitskarte layout: punch rail, brass clip, numbered fields -->
+<article class="badge">
+  <div class="clip" aria-hidden="true"></div>
+  <header class="mast">
+    <div class="photo">
+      <span class="fp">FINGERPRINT</span>
+      AUSWEIS
+    </div>
+    <div class="mast-copy">
+      <p class="kicker">ARBEITSKARTE · FELD 07 · ZIVILBEWUSSTSEIN</p>
+      <h1>强制劳工在德国街道：日常接触、漠视与告发 —— 2025–2026 赔偿未完成、阿罗尔森工牌档案与展览</h1>
+      <p class="sub">纳粹德国城市里，工牌编号如何把人变成可见又不可接触的邻居：工厂、农场、防空、住房，以及告发之后仍未完成的赔偿。</p>
+      <div class="meta-row">
+        <span class="chip">调研时间 2026-08-30 18:09 CST</span>
+        <span class="chip">平民史系列第2期</span>
+        <span class="chip">主题轮换池第7项</span>
+      </div>
+      <div class="fields">
+        <div><b>EINSATZORT</b> 城市街道 / 营房 / 农户 / 防空洞</div>
+        <div><b>KENNZEICHEN</b> P（1940）· OST（1942）· 工牌</div>
+        <div><b>INSTITUTION</b> Arolsen · EVZ · NS-Dokuzentrum · DHM</div>
+        <div><b>STATUS 2026</b> 支付已结案 · 记忆未结案</div>
+      </div>
+    </div>
+    <div class="id-stamp">GESEHEN<br>08.30<br>2026</div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录 · KARTEIREGISTER</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#sight">进入视野：工厂、农场、街道与住房</a></li>
+      <li><a href="#rules">接触规则：工牌、P/OST 与“禁止往来”</a></li>
+      <li><a href="#denun">告发：平民如何把人送进盖世太保</a></li>
+      <li><a href="#bunker">防空与废墟：同一警报，不同身体</a></li>
+      <li><a href="#now">2025–2026：赔偿未完成、档案与展览</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">FELD 01 · THEMA</p>
+    <p class="numstrip">01 / THEMA</p>
+    <h2>本期主题</h2>
+    <p>本系列写 1933–1945 年德国平民怎样过日子。上一期写防空洞里的邻里规训；这一期把镜头对准同一条街上<strong>另一类被编号的身体</strong>：强制劳工、战俘、以及更底层的集中营外役。他们不是远方的抽象数字。柏林舍讷魏德纳粹强制劳动文献中心（Dokumentationszentrum NS-Zwangsarbeit）常设展开篇写得很硬：在纳粹德国，“没有人能不在每个拐角遇见他们”。</p>
+    <p>遇见不等于看见。工牌、劳动卡（Arbeitskarte）、胸前缝死的“P”与“OST”布标，把人变成可识别、可盘查、原则上不可往来的物体。德国平民在工厂、农场、防空、住房和电车上与他们共享空间；政权用种族等级规定接触上限；邻居、工头和路人用漠视或告发填满执行的缝隙。少数递面包的手，与把人从柏林城市快铁（S-Bahn）上揪下来的手，属于同一套日常。</p>
+    <p>2025 年 8 月 2 日至 2026 年 6 月 13 日，记忆、责任与未来基金会（Stiftung Erinnerung, Verantwortung und Zukunft，EVZ）度过成立二十五周年。支付在 2007 年“结案”，档案与展览仍在把编号还原成人。阿罗尔森档案馆（Arolsen Archives）的电子指南把劳动卡讲成随身身份证；慕尼黑纳粹文献中心（NS-Dokumentationszentrum München）正在把诺伊奥宾（Neuaubing）一处帝国铁路营房改成纪念地，预计 2027 年开馆。赔偿完成了吗？基金会自己的学习模块仍把标题写成问号：<em>Ausgezahlt?!</em></p>
+  </section>
+
+  <section class="card brass" id="findings">
+    <p class="tag">FELD 02 · BEFUNDE</p>
+    <p class="numstrip">02 / BEFUNDE</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>强制劳动是街景，不是秘密工厂。</strong>EVZ 专题页写：1939–1945 年德意志帝国境内估计超过 1300 万人被强制劳动，占领区再加约 1300 万，合计约 2600 万。文献中心常设展强调其中最大群体是约 840 万被驱赶到帝国境内的平民劳工，分布在约 3 万座营地。1944 年 8 月，仅苏联平民劳工约 210 万、波兰平民劳工约 160 万。战争经济约四分之一劳动力是强制劳动者。平民不必“知情”才能看见：他们已经在队列里、田里、厨房里。</li>
+      <li><strong>看见被工牌分级。</strong>西欧劳工相对少受骚扰；波兰人更低；所谓“东方劳工”（Ostarbeiter）被放在种族阶梯最底层。1940 年 3 月 8 日《波兰法令》强制缝上“P”标；1942 年苏联劳工加缝“OST”。劳动卡须随身携带，内贴工作许可，含照片与指纹。警察靠它判断此人此刻是否有权出现在这条街上。</li>
+      <li><strong>接触规则把同情写成犯罪。</strong>禁止往来（Umgang）不只是禁性关系，也包括递一片涂黄油的面包。波兰劳工原则上不得使用公共交通、进教堂、餐馆、电影院，不得拍照、骑自行车，不得离开指定居住地，夜间宵禁。部分城镇连某些街道也对他们封闭。他们不走普通司法，而直接面对盖世太保。</li>
+      <li><strong>告发是平民参与，不是盖世太保的特异功能。</strong>纪念地桑德博斯特尔（Gedenkstätte Lager Sandbostel）研究员露西·德布斯（Lucy Debus）对 taz 说：当局往往只能通过告发才知道“禁止关系”。西德战后几乎不追诉告发者。城市里的歧视常被接受甚至热心监督；乡下天主教区有时仍与波兰雇工同桌吃饭、同去教堂——违规与执行同时存在。</li>
+      <li><strong>赔偿在法律上结束，在历史上没有。</strong>1953 年联邦赔偿法把大多数外国强制劳工排除在外。EVZ 于 2000 年 8 月 2 日立法成立，2001–2007 年向近 100 个国家的 166 万余人支付共 44 亿欧元。许多人死在支付开始之前。EVZ 的 MEMO 调查显示，德国民众平均以为帝国境内强制劳工只有约 400 万。数字被缩小，责任就变轻。</li>
+    </ul>
+  </section>
+
+  <section class="card" id="sight">
+    <p class="tag">FELD 03 · SICHTBARKEIT</p>
+    <p class="numstrip">03 / SICHT</p>
+    <h2>进入视野：工厂、农场、街道与住房</h2>
+    <p>强制劳动不是单一场景。教育门户“NS-Zwangsarbeit”写：到 1944 年 9 月，德国境内约有 700 万平民强制劳工与战俘。相遇发生在工作场所、公共广场与街道、以及私人住宅。小作坊和家庭雇佣把接触推到最近：未来的“上司”常在城市广场上自行挑选劳工，看口腔、评身体，被当事人比作牲畜市集。文献中心指出：工业与农业之外，中小企业、手工业、市政、教会、私人家庭都使用这套廉价劳动力。战争经济离不开他们；全社会都从中获利。</p>
+    <p>城市把营地织进街区。乌尔里希·赫伯特（Ulrich Herbert）描述埃森：除了南城精致市民区，几乎整座城“拐角处就有一座外国人营地”。慕尼黑纳粹文献中心写得更具体：战时慕尼黑是强制劳动中心，至少 15 万人被驱赶到此；按全市人口计，战争最后一年大约每四人中就有一人在被强制雇佣；许多军工企业里强制劳工超过半数。诺伊奥宾帝国铁路修理厂（RAW）营地只是市内 400 余处集体住所之一，1942–1945 年最多容纳约 1000 人。1945 年 4 月底，奥宾、诺伊奥宾与朗维德一带外国强制劳工超过 7000 人，明显多于当地德国居民。一半以上的 RAW 职工是强制劳工，至少 1300 人，按国籍分营。</p>
+    <p>农场是另一种可见性。波兰强制劳工约四分之三投入农业，住在农户或附近。德布斯指出：乡村比城市军工厂更容易在劳动中相识、偷偷见面。城市则把人关进厂区营房、木板房与登记地址。阿罗尔森电子指南解释居民登记卡（Einwohnermeldekarte）：强制劳工须在户籍机关登记，卡片上最要紧的是准确住址——工厂营地或木板房的街道门牌。换房必须改卡。卡片格式与德国人相同，但父母、配偶、子女栏常常空着：登记机关要的是位置，不是人生。</p>
+    <p>大众汽车厂把数字钉进厂史。1944 年 4 月 30 日，17 365 名职工中有 11 334 人来自不同原籍国，已是多数。战争期间约 2 万人在当时的大众工厂强制劳动，其中包括约 5000 名集中营囚犯。1940 年 6 月，首批 300 名波兰妇女被分配来厂。苏联战俘自 1941 年 10 月进入；1943 年秋意大利军事被扣人员（Militärinternierte）也被等同于苏联战俘待遇。厂卫队监视厂区、营地和城郊，惩罚包括体罚、断粮、送入惩罚营或萨尔茨吉特附近的劳动教育营。这不是“看不见的奴隶”，而是城市新工厂里最大的职工群体。</p>
+    <p class="note">下表据文献中心、EVZ、慕尼黑文献中心与大众厂史整理。数字来自不同统计口径，用于对照可见性，不是精确户籍。</p>
+    <table>
+      <thead>
+        <tr><th>场景</th><th>平民如何看见</th><th>接触密度</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>军工厂 / 铁路修理厂</td><td>队列上下班、厂区营房、工牌检查</td><td>高可见、低合法往来</td></tr>
+        <tr><td>农场</td><td>同住、同桌、田间劳动</td><td>最密，也最易被告发</td></tr>
+        <tr><td>私人家庭 / 小作坊</td><td>广场挑选、看牙口、住阁楼或仓房</td><td>日常身体接触</td></tr>
+        <tr><td>街道 / 电车 / 影院门口</td><td>胸前 P/OST、宵禁盘查、禁止入内</td><td>路人即可执行羞辱</td></tr>
+        <tr><td>防空与废墟</td><td>厂区掩体、破片壕、清瓦劳动</td><td>同一警报，分级庇护</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card olive" id="rules">
+    <p class="tag">FELD 04 · VORSCHRIFT</p>
+    <p class="numstrip">04 / REGEL</p>
+    <h2>接触规则：工牌、P/OST 与“禁止往来”</h2>
+    <p>编号先于惩罚。阿罗尔森电子指南写：劳动卡是警察盘查时的身份证明，须随身携带；无内贴工作许可则无效。1940 年 3 月起，自 1939 年 9 月 1 日以来在帝国工作的波兰人均须补发。就业局把许可贴进卡片，再送到属地警察局；劳工抵达后立即报到、拍照、按指纹，同时生成外国人警察卡片与帝国保安总局（RSHA）档案。1944 年 2 月起，帝国境内 40 余座中转营设有区警察局分处，大批波兰与苏联人在下火车处即被制成卡片。换工作就覆盖一张新许可。死亡或被遣返，卡片退回就业局。</p>
+    <p>布标把卡片上的种族等级缝到街上。1940 年 3 月 8 日警察条例规定：波兰强制劳工须在每件上衣右胸缝死一块边长 5 厘米、紫色镶边、黄底紫“P”的菱形布。每人须购买五枚，每枚 10 芬尼；不戴罚 150 帝国马克或最多六周拘禁。当代史在线（Zeitgeschichte-online）强调：这是纳粹德国境内第一种全国可见的人身污名标记，时间早于 1941 年的犹太星与 1942 年的 OST。戈培尔宣传部 1941 年 8 月 17 日内部文字甚至写：波兰人既已被标记，给犹太人做标记就更说得通。希姆莱为法令辩护：近百万波兰人在帝国，“不仅要规定劳动投入，还要用全面措施规范其生活方式”，以免他们与德国居民发生“不受欢迎的关系”。财政部熟手另加 15%“社会平衡附加税”（Sozialausgleichsabgabe），后来扩及犹太人与苏联劳工——种族羞辱同时是财政收入。</p>
+    <p>柏林飞机厂的卡齐米日·B. 记得：匈牙利人、荷兰人、法国人可以自行去上工，波兰人被列队押送；厕所门上写着大“P”。Zdzisław Szubielski 记得：德国人不分性别年龄，对波兰人一律用“你”（du），有人直接骂“波兰猪”。Barbara Michalska 的博世子公司工牌（Dreilinden GmbH，1943）被文献中心收藏；她在弗里德里希大街车站差点被一名下车乘客揪住衣领——只因为她忘了把大衣翻领上的“P”藏起来。Józef Przedpełski 把布标用别针别上，以便偷偷进电影院或教堂时摘下。规则要求缝死；生存要求可拆。</p>
+    <blockquote>没有人能在纳粹德国生活而不在每个拐角遇见他们。——柏林舍讷魏德纳粹强制劳动文献中心常设展导言</blockquote>
+    <p>苏联劳工更苛刻。电子指南写：直到 1942 年 12 月，他们原则上只能出现在木板房公共住所或工作地点。美国国家二战博物馆综述：1943 年德国劳工阵线（DAF）才允许每周一天休息、无陪同离开营房——前提是遵守宵禁并佩戴国籍布标。所谓“放宽”不是承认人格，而是为了提高产量。西部欧洲劳工因“种族相近”少受骚扰，并常因语言与技术被放在德国领班之下的关键岗位。同一条街道上，编号决定谁可以买票上车。</p>
+  </section>
+
+  <section class="card steel" id="denun">
+    <p class="tag">FELD 05 · DENUNZIATION</p>
+    <p class="numstrip">05 / ANZEIGE</p>
+    <h2>告发：平民如何把人送进盖世太保</h2>
+    <p>法令写在纸上，执行写在邻里。德布斯 2024 年 5 月对 taz 说：1939 年 11 月，对波战争两个月后，政权先禁止与战俘往来，随即扩及强制劳工。往来不只是性爱，也包括友谊，以及给一个人一片黄油面包——凡超出“工作所必需”的，都可被定罪。性接触惩罚最重：不要与军事敌人、也不要与被判定“劣等”的波兰人或苏联人生孩子。德国女性可被判苦役乃至送入拉文斯布吕克；外国男性可被送入集中营或公开处决，并强迫其他强制劳工围观。波兰女性的亲密关系常以集中营结束，男性常以死刑结束。仅上普法尔茨与下巴伐利亚即可证实 22 例因“爱情罪”被处决的波兰强制劳工；全国数字至今未系统查清。</p>
+    <p>这些案子怎样曝光？“通过告发。”德布斯说，这再次说明居民在何种程度上参与了把人送上法庭。否则当局根本不会知道。告发者大多无法坐实——西德战后既不起诉也不追究；民主德国则有法庭档案显示对告发者的追诉。差别不能被写成“一边清算、一边遗忘”的简单对照，但有一条是清楚的：强制劳工及其子女作为受害群体进入研究与纪念文化很晚，告发者更不在焦点上。</p>
+    <p>下萨克森“搜寻”博客写：外国强制劳工生活在对身体与性命的持续危险中；告发来得又快又勤，尤其针对“异族”。乌克兰被掳者安东妮娅·杜曼斯卡（Antonia Dumanska）在格罗斯伦登为一名公务员做家务与副业农活。此人儿子在斯大林格勒失踪，命令她偷听俄语广播再汇报——这是可处死刑的“广播罪”。她照做；雇主自己是哥廷根刑事警察，却在屋外牵着狼犬转圈，把可能的告发者撵走。强制劳工被夹在雇主的违法命令与邻居的监视之间。生存不是选择站队，而是同时躲避两套权力。</p>
+    <p>教育门户坦率写道：尽管国家规定了接触规则，具体场合里德国人仍可选择如何对待对方。幸存者既谈到怜悯与连带——例如偷偷塞面包——也谈到虐待与告发。许多人抱怨强制劳工“涌入”，不满他们出现在游泳池或电影院。由于大部分居民已内化种族意识形态，冷漠、不团结与种族主义行为占上风。Zeitgeschichte-online 的判断更冷：城市里对这一斯拉夫“下层阶级”的系统歧视被广泛接受，常常被热心监督。没有值得一提的抗议。把“普通人”写成一律凶残是漫画；把他们写成一律被迫，则是开脱。更准确的画面是：多数人把工牌当成街上的自然秩序，少数人越界施援，另一部分人拿起电话。</p>
+    <p>孩子把告发的后果活到今天。德布斯的项目“Trotzdem da!”追踪德人与强制劳动者之间的子女：有些是禁忌中的感情，有些是性暴力。德国母亲的孩子或留在外祖父母家，或被抛弃后送养；强制劳工孕妇 1943 年前常被遣返，此后被指控“故意怀孕”，婴儿送入“外国人儿童养育所”，因母亲不得照料、看护忽视而大量死亡。大众厂史记录：吕恩（Rühen）外国人儿童养育院中，至战争结束有 365 名婴儿死于遗弃与营养不足。许多战后长大的孩子直到母亲临终或自己要结婚，才知道父亲是谁。沉默是家庭策略，也是告发社会留下的室内布置。</p>
+  </section>
+
+  <section class="card" id="bunker">
+    <p class="tag">FELD 06 · LUFTSCHUTZ</p>
+    <p class="numstrip">06 / BUNKER</p>
+    <h2>防空与废墟：同一警报，不同身体</h2>
+    <p>上一期写过：防空洞准入是种族文件。强制劳工把这套分级从住宅区延伸到厂区。大众集团厂史写：厂区按防空法预留掩体，德国职工与强制劳工都曾在空袭中躲进去——动机“较少是照护，更多是维持劳动能力”。1999 年 12 月 17 日揭幕的“大众工厂强制劳动纪念处”就设在一号大厅一座历史掩体里，墙上仍有美军轰炸机坠毁造成的损伤。诺伊奥宾 RAW 营地规划含两座破片防护掩体（Splitterschutzbunker）。庇护存在，但与“命运共同体”无关：人被保存，是因为机器还需要手。</p>
+    <p>空袭之后，强制劳工与集中营外役常被派去清瓦、填弹坑、卸车。大众厂：拉格贝格（Laagberg）的诺因加默囚犯与女囚在空袭后清运废墟；生产对他们反而是例外。埃森洪堡大街克虏伯营房在 1944 年 10 月空袭中被毁，先改食堂为宿舍，再睡在烧毁营房的地窖水泥地上。城市居民从防空洞爬出来看见的废墟劳动力，往往正是胸前有编号的人。平民的惊吓与强制劳工的清运，发生在同一夜，却不是同一故事。</p>
+    <p>住房把防空问题变成日常卫生与监视。营房 20×5 米的房间里十五张床、草垫、两床毯子——埃森的记载显示，有的矿井营地连草垫也没有，人睡在铁丝网上；1942 年 12 月有的营地还没装炉子。户籍卡上的门牌号，使警察可以按地址找到每一个不该出现在街上的人。劳动卡证明“你现在有权在这里”；布标证明“你永远不属于这里”。两张纸之间，是德国平民选择递面包、别过脸、或去告发的空隙。</p>
+  </section>
+
+  <section class="card brass" id="now">
+    <p class="tag">FELD 07 · 2025–2026</p>
+    <p class="numstrip">07 / JETZT</p>
+    <h2>2025–2026：赔偿未完成、档案与展览</h2>
+    <p>支付结束不是正义完成。战后联邦政府与受益企业长期拒绝赔偿。1953 年联邦赔偿法把权利限制在国内、且须证明政治、种族或宗教迫害的人身上；外国强制劳工大体被排除。对以色列与西欧国家的一揽子协定也不含个人补偿。诺贝特·沃尔海姆（Norbert Wollheim）起诉 IG Farben 才打开缺口。真正立法要等到 1990 年代末美国集体诉讼与国际压力：2000 年 7 月 17 日德美协定与国际协议签署，联邦与德国经济各出资 50 亿马克；8 月 2 日 EVZ 法生效。2001–2007 年支付 166 万余人、44 亿欧元。DHM 与自由大学合作的口述档案项目页写过“至 2007 年拨付 46 亿欧元”——与基金会现行表述的 44 亿略有出入，应以 EVZ 专题页为准，并记住：这是人道主义补偿，不是补发工资，更不是对告发者与企业责任的司法清算。</p>
+    <p>许多人领不到。死在 2000 年之前的人没有支票；类别边界（战俘、意大利军事被扣人员、集中营奴隶劳动、农业劳工）制造遗漏；子女与被剥夺的家庭史不在支付公式里。EVZ 在二十五周年页承认：强制劳动作为纳粹罪行被承认，从来不是战后自动发生的事。总统施泰因迈尔担任 2025/2026 周年监护人，称补偿是“迟到太久的补救行为”，并强调基金会的持续记忆工作。周年口号是“没有时间遗忘”（Keine Zeit zu vergessen）。互动课程《Ausgezahlt?!》仍问：纳粹强制劳动的补偿是否可能？苦难为何承认得这么晚？哪些利益与两难参与了这条路？问号比结算报表更诚实。</p>
+    <p>档案把工牌从抽屉里抽出来。阿罗尔森电子指南第三部分专讲平民强制劳工最常见文书：劳动卡、户籍卡、外国人警察索引卡。战时卡片档（馆藏 2.2.2.1）约 420 万件；企业分档 2.2.0.2 收有各公司相关文书。劳动卡理论上一人手一张、应有数百万，传世很少：有人带回家，有人毁掉以免回国被控“通敌”，有人在集中营入口连同财物被收走。指南提醒：今天常把企业工牌、工作许可与劳动卡混为一谈——编号系统本身就分层。卡片让警察当时能迅速判断此人是否违规出现；现在让家属把一个编号重新读成名字。</p>
+    <p>展览把营地还给城市地图。柏林舍讷魏德文献中心设在几乎完整保存的前强制劳动营 GBI 75/76，自 2006 年起让约 2600 万人的命运重新可见，常设展聚焦被驱入帝国的平民劳工。德意志历史博物馆（DHM）在军械库常设展中设有“强制劳动 1939–1945”多媒体站，并与 EVZ、柏林自由大学共同保管约 2000 份音视频访谈：乌克兰“东方劳工”、波兰强制劳工、苏联战俘、集中营奴隶劳动、意大利军事被扣人员，按来源地、投入地与“出身与家庭 / 劳动与恐怖 / 归返与移民”检索。慕尼黑纳粹文献中心 2025 年 5 月 8 日重新开放；干预展《记忆是……》持续至 2026 年 5 月 10 日。诺伊奥宾纪念地：八座营房是德国最后一批大体保存的营地建筑之一，2025 年修缮 2 号与 5 号营房，2027 年作为文献中心分馆开放，处理慕尼黑市内强制劳动史及其延续至今的关联。开放前已有导览、网络应用与荷兰少年扬·巴祖因（Jan Bazuin）日记改编的移动游戏。</p>
+    <p>企业档案没有退出 2025 年。大众集团康采恩档案馆（Konzernarchiv）在沃尔夫斯堡厂区继续预约开放强制劳动纪念处；2025 年 1 月 27 日奥斯维辛解放八十周年，厂内在强制劳工纪念碑献花圈，并在档案论坛展出亚德瓦谢姆策展的《记忆的闪光》（Flashes of Memory）至复活节，预约邮箱与纪念处相同：history@volkswagen.de。慕尼黑文献中心词条写西门子：拉文斯布吕克有厂内西门子营；1960 年代初犹太索赔大会争取到约 700 万马克；此后多年诉讼被挡回，直到 1990 年代末美国集体诉讼，西门子才设“人道主义援助基金”并成为德国经济基金会倡议的创始成员。企业纪念不是自动悔罪，是压力、诉讼与档案专业工作叠加的结果。支付可以截止；厂区掩体里的编号展览仍须有人预约才能进去——可见性本身仍分级。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">FELD 08 · QUELLEN</p>
+    <p class="numstrip">08 / QUELLEN</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。机构数字若有出入，文中已标明以何者为准。</p>
+    <ol class="body">
+      <li>Dokumentationszentrum NS-Zwangsarbeit（柏林舍讷魏德）：常设展导言《Forced labour in the daily round》——无处不在、约 2600 万、840 万平民劳工、约 3 万营地、种族阶梯、GBI 75/76。<br><a href="https://www.ns-zwangsarbeit.de/en/forced-labour-in-the-daily-round/topics/introduction-to-the-exhibition/" target="_blank" rel="noopener">https://www.ns-zwangsarbeit.de/en/forced-labour-in-the-daily-round/topics/introduction-to-the-exhibition/</a></li>
+      <li>教育门户 NS-Zwangsarbeit：德国平民与强制劳工的相遇、广场挑选、塞面包与告发、游泳池与电影院怨言。<br><a href="https://www.bildung-ns-zwangsarbeit.de/informieren/rassismus/zivilbevoelkerung/" target="_blank" rel="noopener">https://www.bildung-ns-zwangsarbeit.de/informieren/rassismus/zivilbevoelkerung/</a></li>
+      <li>Stiftung EVZ：专题《NS-Zwangsarbeit》——约 2600 万规模定义、1953 年联邦赔偿法排除、沃尔海姆诉讼、2000 年立法、2007 年支付结束（166 万人 / 44 亿欧元）、MEMO 约 400 万低估。<br><a href="https://www.stiftung-evz.de/themen/ns-zwangsarbeit/" target="_blank" rel="noopener">https://www.stiftung-evz.de/themen/ns-zwangsarbeit/</a></li>
+      <li>Stiftung EVZ：二十五周年（2025-08-02 至 2026-06-13）、施泰因迈尔监护、Ausgezahlt?! 学习模块、6000 余项目。<br><a href="https://www.stiftung-evz.de/themen/25-jahre-evz/" target="_blank" rel="noopener">https://www.stiftung-evz.de/themen/25-jahre-evz/</a></li>
+      <li>Arolsen Archives：电子指南新增平民强制劳工文书说明（户籍卡、外国人警察卡等）。<br><a href="https://arolsen-archives.org/en/news/civilian-forced-laborers-new-background-information-in-the-e-guide/" target="_blank" rel="noopener">https://arolsen-archives.org/en/news/civilian-forced-laborers-new-background-information-in-the-e-guide/</a></li>
+      <li>Arolsen e-Guide：劳动卡（Arbeitskarte）——随身身份证、照片指纹、1940 年 3 月法令、宵禁与交通禁令、馆藏 2.2.2.1 约 420 万件。<br><a href="https://eguide.arolsen-archives.org/en/archive/details/labor-card" target="_blank" rel="noopener">https://eguide.arolsen-archives.org/en/archive/details/labor-card</a></li>
+      <li>Arolsen e-Guide：居民登记卡——营地/木板房门牌、与德国人同表格、亲属栏常空。<br><a href="https://eguide.arolsen-archives.org/en/archive/details/residents-registration-card" target="_blank" rel="noopener">https://eguide.arolsen-archives.org/en/archive/details/residents-registration-card</a></li>
+      <li>Arolsen 在线目录：企业相关强制劳动文书（2.2.0.2）。<br><a href="https://collections.arolsen-archives.org/en/archive/2-2-0-2" target="_blank" rel="noopener">https://collections.arolsen-archives.org/en/archive/2-2-0-2</a></li>
+      <li>Arolsen 在线目录：战时卡片档 2.2.2.1。<br><a href="https://collections.arolsen-archives.org/en/archive/2-2-2-1" target="_blank" rel="noopener">https://collections.arolsen-archives.org/en/archive/2-2-2-1</a></li>
+      <li>口述档案《Forced Labor 1939–1945》：EVZ、柏林自由大学与 DHM 三方职责；DHM 保管约 2000 份音视频。<br><a href="https://www.zwangsarbeit-archiv.de/en/projekt/projekttraeger/index.html" target="_blank" rel="noopener">https://www.zwangsarbeit-archiv.de/en/projekt/projekttraeger/index.html</a></li>
+      <li>DHM 多媒体站“Forced Labor 1939–1945”：乌克兰东方劳工、波兰劳工、苏联战俘、集中营奴隶劳动、意大利军事被扣人员。<br><a href="https://www.zwangsarbeit-archiv.de/en/bildung/ausstellungen/dhm/index.html" target="_blank" rel="noopener">https://www.zwangsarbeit-archiv.de/en/bildung/ausstellungen/dhm/index.html</a></li>
+      <li>NS-Dokumentationszentrum München：诺伊奥宾营地史——至少 15 万、战争末年约四分之一、400 余处住所、RAW 最多约 1000 人、2027 年分馆。<br><a href="https://www.nsdoku.de/erinnerungsort-neuaubing/das-lager-in-neuaubing" target="_blank" rel="noopener">https://www.nsdoku.de/erinnerungsort-neuaubing/das-lager-in-neuaubing</a></li>
+      <li>NS-Dokumentationszentrum München：2025 年预告——5 月 8 日再开放；诺伊奥宾 2025 年修缮营房 2 与 5。<br><a href="https://www.nsdoku.de/presse/newsroom/jahresvorschau" target="_blank" rel="noopener">https://www.nsdoku.de/presse/newsroom/jahresvorschau</a></li>
+      <li>NS-Dokumentationszentrum München：干预展《Erinnerung ist …》（2025-05-08 至 2026-05-10）。<br><a href="https://www.nsdoku.de/presse/newsroom/erinnerung-ist" target="_blank" rel="noopener">https://www.nsdoku.de/presse/newsroom/erinnerung-ist</a></li>
+      <li>NS-Dokumentationszentrum München 词条：西门子与强制劳动、拉文斯布吕克西门子营、索赔与 1990 年代末基金。<br><a href="https://www.nsdoku.de/lexikon/artikel/siemens-780" target="_blank" rel="noopener">https://www.nsdoku.de/lexikon/artikel/siemens-780</a></li>
+      <li>Zeitgeschichte-online：克劳斯-彼得·弗里德里希，《波兰法令》75 年——P 标规格、禁令清单、厕所门上的 P、S-Bahn 揪衣领、别针取下布标、22 例处决。<br><a href="https://zeitgeschichte-online.de/geschichtskultur/vor-75-jahren-die-polen-erlasse" target="_blank" rel="noopener">https://zeitgeschichte-online.de/geschichtskultur/vor-75-jahren-die-polen-erlasse</a></li>
+      <li>taz：露西·德布斯访谈（2024-05-19）——禁止往来含黄油面包、告发、西德不追诉、外国人儿童养育所。<br><a href="https://taz.de/Historikerin-ueber-Zwangsarbeit-im-NS/!6005321/" target="_blank" rel="noopener">https://taz.de/Historikerin-ueber-Zwangsarbeit-im-NS/!6005321/</a></li>
+      <li>下萨克森强制劳动博客：告发危险与安东妮娅·杜曼斯卡被命偷听俄语广播。<br><a href="https://zwangsarbeit-in-niedersachsen.eu/de/blog/Gefaehrdung_Zwangsarbeiter_innen.html" target="_blank" rel="noopener">https://zwangsarbeit-in-niedersachsen.eu/de/blog/Gefaehrdung_Zwangsarbeiter_innen.html</a></li>
+      <li>Volkswagen Group：厂区强制劳动纪念处——掩体为维持劳动能力、1944-04-30 编制、约 2 万人 / 约 5000 名集中营囚犯、吕恩 365 名婴儿死亡。<br><a href="https://www.volkswagen-group.com/de/die-erinnerungsstaette-an-die-zwangsarbeit-auf-dem-gelaende-des-volkswagenwerks-15867" target="_blank" rel="noopener">https://www.volkswagen-group.com/de/die-erinnerungsstaette-an-die-zwangsarbeit-auf-dem-gelaende-des-volkswagenwerks-15867</a></li>
+      <li>Volkswagen Group 新闻稿（2025-01-27）：奥斯维辛解放八十周年、康采恩档案论坛《Flashes of Memory》至复活节、history@volkswagen.de 预约。<br><a href="https://www.volkswagen-group.com/de/pressemitteilungen/internationaler-holocaust-gedenktag-volkswagen-group-erinnert-an-die-befreiung-des-konzentrationslagers-auschwitz-vor-80-jahren-und-gedenkt-der-opfer-des-holocaust-18992" target="_blank" rel="noopener">https://www.volkswagen-group.com/de/pressemitteilungen/internationaler-holocaust-gedenktag-volkswagen-group-erinnert-an-die-befreiung-des-konzentrationslagers-auschwitz-vor-80-jahren-und-gedenkt-der-opfer-des-holocaust-18992</a></li>
+      <li>The National WWII Museum：东欧强制劳工在德国的中转营、配给、1943 年 DAF“放宽”。<br><a href="https://www.nationalww2museum.org/war/articles/eastern-european-forced-laborers-germany" target="_blank" rel="noopener">https://www.nationalww2museum.org/war/articles/eastern-european-forced-laborers-germany</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">FELD 09 · LEHRE</p>
+    <p class="numstrip">09 / LEHRE</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，先问谁被编号，再谈“德国人的日常”。工牌、劳动卡、P 与 OST 不是装饰，是把人从“邻居”改写成“可盘查物体”的基础设施。平民不必走进集中营才能成为强制劳动社会的一部分：他们在电车上执行布标，在广场上挑选劳动力，在防空洞里接受分级庇护。</p>
+    <p>第二，接触规则把善举刑事化，于是冷漠成为最安全的公共美德。递面包可以是人情，也可以是罪证。研究告发，不是为了把每个德国人都写成盖世太保，而是看清：没有邻里电话，许多“禁止关系”根本进不了档案。西德事后不追诉告发者，等于把这层平民参与从司法记忆里删除。</p>
+    <p>第三，空袭痛苦与强制劳动必须写在同一句话里。厂区掩体同时收容德国职工与强制劳工，为的是明天还有人上工；清瓦的手常常戴着编号。承认德国城市被炸，并不自动承认住在拐角营地里的人是人。</p>
+    <p>第四，2025–2026 年的周年、档案与尚未开馆的营房，适合当阅读入口。EVZ 的支付已经结案，基金会仍把补偿写成问号；阿罗尔森把劳动卡重新教给检索者；慕尼黑要把八座木板房留在新城旁边。学习平民史，是练习看见街景里的编号：看见德国人怎样过日子，也看见这日子把谁缝在胸前的布标上。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第2期 · 工牌编号风 · 20260830_1809
+  </footer>
+</article>
+</body>
+</html>

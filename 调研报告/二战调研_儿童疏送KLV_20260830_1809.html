@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>儿童疏送（KLV）：被编进国家的童年 —— 2025年WDR时间标志、柏林战争儿童展与记忆的分叉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Serif+SC:wght@400;600;700&family=Special+Elite&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Luggage-tag board: manila cards, grommets, twine, rubber stamps — not bunker lamp, not purple */
+:root {
+  --wood: #2e261c;
+  --plank: #4a3d2e;
+  --plank2: #3a3126;
+  --manila: #ead7b4;
+  --manila2: #dcc49a;
+  --kraft: #c9a36a;
+  --ink: #241c14;
+  --fade: #6a5a48;
+  --stamp: #9a2e22;
+  --stamp-ink: rgba(154, 46, 34, .14);
+  --olive: #3f5338;
+  --string: #8a6a42;
+  --grommet: #6e675c;
+  --ticket: #f4ead4;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Songti SC", serif;
+  line-height: 1.86;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--wood) 0 86px,
+      #352c22 86px 88px,
+      var(--plank) 88px 174px,
+      #2a2218 174px 176px
+    );
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  opacity: .18;
+  mix-blend-mode: multiply;
+  z-index: 8;
+}
+.rail {
+  height: 18px;
+  background:
+    linear-gradient(180deg, #6a5a44, #3e3428 40%, #2a221a);
+  box-shadow: 0 8px 0 rgba(0,0,0,.25);
+  position: relative;
+  z-index: 2;
+}
+.rail::after {
+  content: "";
+  position: absolute;
+  left: 8%; right: 8%;
+  top: 7px;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, #8a7458 0 10px, transparent 10px 28px);
+  opacity: .55;
+}
+.board {
+  max-width: 880px;
+  margin: 0 auto 72px;
+  padding: 0 28px 40px;
+  position: relative;
+}
+.string {
+  width: 3px;
+  height: 42px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #6a5238, var(--string), #c4a070);
+  box-shadow: 1px 0 0 rgba(0,0,0,.2);
+}
+.mast {
+  background:
+    radial-gradient(circle at 50% 18px, transparent 11px, var(--manila) 12px),
+    linear-gradient(180deg, #f3e4c4 0%, var(--manila) 42%, var(--manila2) 100%);
+  border: 2px solid #8a6e46;
+  border-radius: 14px 14px 6px 6px;
+  padding: 46px 32px 26px;
+  box-shadow:
+    0 18px 0 rgba(0,0,0,.18),
+    inset 0 0 0 1px rgba(255,255,240,.35);
+  position: relative;
+  transform: rotate(-0.6deg);
+}
+.mast::before {
+  /* metal grommet */
+  content: "";
+  position: absolute;
+  top: 12px; left: 50%;
+  width: 26px; height: 26px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 35%, #d8d2c8 0 28%, #7a7368 32% 58%, #2a241c 62% 100%);
+  box-shadow: 0 1px 0 #cfc6b4, inset 0 0 0 2px #5a544c;
+}
+.serial {
+  font-family: "Cutive Mono", "Special Elite", monospace;
+  font-size: 12px;
+  letter-spacing: .28em;
+  color: var(--stamp);
+  text-transform: uppercase;
+}
+h1 {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: clamp(1.42rem, 3.1vw, 1.95rem);
+  line-height: 1.4;
+  margin: 12px 0 10px;
+  color: var(--ink);
+}
+.stencil {
+  font-family: "Stardos Stencil", "Special Elite", serif;
+  letter-spacing: .08em;
+}
+.sub { color: var(--fade); font-size: 15px; }
+.when {
+  margin-top: 12px;
+  font-family: "Special Elite", "Cutive Mono", monospace;
+  font-size: 13px;
+  color: #5c4a36;
+}
+.stamp-badge {
+  position: absolute;
+  right: 18px; top: 52px;
+  width: 92px; height: 92px;
+  border: 3px solid var(--stamp);
+  border-radius: 50%;
+  color: var(--stamp);
+  font-family: "Stardos Stencil", serif;
+  font-size: 12px;
+  letter-spacing: .08em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  transform: rotate(12deg);
+  opacity: .72;
+  line-height: 1.2;
+  background: var(--stamp-ink);
+}
+nav.toc {
+  margin: 28px 0 6px;
+  padding: 18px 20px 12px 20px;
+  background: linear-gradient(180deg, #efe0c2, #e2cc9e);
+  border: 1.5px dashed #8a6e46;
+  position: relative;
+  box-shadow: 6px 8px 0 rgba(0,0,0,.12);
+}
+nav.toc h2 {
+  font-family: "Stardos Stencil", serif;
+  font-size: 1.05rem;
+  color: var(--stamp);
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+nav.toc ol { margin: 0 0 6px 1.2em; font-size: 15px; }
+nav.toc a {
+  color: #3a2c1c;
+  text-decoration: none;
+  border-bottom: 1px dotted #9a2e22;
+}
+nav.toc a:hover { border-bottom-style: solid; color: var(--stamp); }
+.card {
+  position: relative;
+  z-index: 1;
+  margin: 26px 0;
+  padding: 28px 24px 20px 24px;
+  background:
+    linear-gradient(180deg, #f6ead0 0%, var(--manila) 55%, var(--manila2) 100%);
+  color: var(--ink);
+  border: 1.5px solid #8c7048;
+  border-radius: 10px 10px 4px 4px;
+  box-shadow: 5px 10px 0 rgba(0,0,0,.16);
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 10px; left: 18px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 35%, #d0c8bc 0 30%, #6a645c 38% 62%, var(--wood) 68%);
+  box-shadow: inset 0 0 0 2px #5a544c;
+}
+.card.olive { background: linear-gradient(180deg, #e6ead6, #d2d8c0); }
+.card.ash { background: linear-gradient(180deg, #ece6d8, #d8d0c2); }
+.card h2 {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.32rem;
+  margin: 0 0 10px 28px;
+  padding-bottom: 8px;
+  border-bottom: 2px dotted #b08858;
+  color: #1e1810;
+}
+.tag {
+  font-family: "Cutive Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--stamp);
+  margin: 0 0 6px 28px;
+  text-transform: uppercase;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.35em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border-left: 5px solid var(--stamp);
+  background: var(--stamp-ink);
+  font-style: italic;
+  color: #3a2a20;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 10px 0 16px;
+  background: var(--ticket);
+}
+th, td {
+  border: 1px solid #c4a878;
+  padding: 7px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #d8bc88;
+  font-weight: 600;
+  font-family: "Stardos Stencil", "Noto Serif SC", serif;
+  font-size: 13px;
+}
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 12px; }
+.sources a { color: #6e2418; word-break: break-all; }
+.dest {
+  display: inline-block;
+  font-family: "Stardos Stencil", serif;
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--olive);
+  border: 2px solid var(--olive);
+  padding: 2px 8px;
+  transform: rotate(-3deg);
+  margin-right: 6px;
+  opacity: .8;
+}
+footer {
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 2px dashed #8a6e46;
+  font-size: 13px;
+  color: #cbb892;
+  text-align: center;
+  font-family: "Special Elite", monospace;
+}
+.watermark {
+  pointer-events: none;
+  position: absolute;
+  right: 8%;
+  bottom: 12%;
+  font-family: "Stardos Stencil", serif;
+  font-size: 3.2rem;
+  color: var(--stamp);
+  opacity: .07;
+  transform: rotate(-18deg);
+  letter-spacing: .12em;
+}
+@media (max-width: 640px) {
+  .board { padding: 0 12px 32px; }
+  .mast { padding: 44px 16px 20px; }
+  .stamp-badge { display: none; }
+  .card { padding: 24px 14px 16px; }
+  .card h2, .tag { margin-left: 26px; }
+}
+</style>
+</head>
+<body>
+<!-- Station luggage-tag rack: manila cards, grommets, destination stamps -->
+<div class="rail" aria-hidden="true"></div>
+<div class="board">
+  <div class="string" aria-hidden="true"></div>
+  <article>
+    <header class="mast">
+      <div class="serial">KLV · GEPÄCKANHÄNGER · FORSCHUNGSBLATT 02</div>
+      <h1>儿童疏送（KLV）：被编进国家的童年 —— 2025年WDR时间标志、柏林战争儿童展与记忆的分叉</h1>
+      <p class="sub">从行李牌、营地作息表到父母拒签：纳粹如何把空袭中的孩子改写成“国家的人”。对照 2025–2026 广播纪念、米特区博物馆与博尔库姆纪念地——战时 KLV 与战后“疗养疏送”必须分开读。</p>
+      <p class="when">调研时间：2026-08-30 18:09 CST · 平民史系列第2期 · 主题轮换池第4项</p>
+      <div class="stamp-badge">KLV<br>LAGER<br>10–14</div>
+    </header>
+
+    <nav class="toc" id="toc">
+      <h2>目录 · FAHRPLAN</h2>
+      <ol>
+        <li><a href="#theme">本期主题</a></li>
+        <li><a href="#findings">核心发现</a></li>
+        <li><a href="#camp">HJ / BdM 营地：把童年编成队列</a></li>
+        <li><a href="#church">反宗教灌输与父母的矛盾</a></li>
+        <li><a href="#scale">疏散规模：数字、宣传与1943年拐点</a></li>
+        <li><a href="#mind">儿童心理：思乡、审查、记忆分裂</a></li>
+        <li><a href="#exclude">谁拿不到行李牌：种族筛选与空出来的病房</a></li>
+        <li><a href="#now">2025–2026：纪念、混淆与研究回声</a></li>
+        <li><a href="#sources">来源</a></li>
+        <li><a href="#lesson">对历史学习者的启示</a></li>
+      </ol>
+    </nav>
+
+    <section class="card" id="theme">
+      <div class="tag">01 · THEMA · 本期主题</div>
+      <h2>行李牌上的国家：保护儿童，还是接管儿童</h2>
+      <p>1933 年以前，“Kinderlandverschickung”（儿童疏送乡下）本是城市贫弱儿童的短期疗养：几周乡间空气、体重增加、再回家。纳粹上台后，国民福利组织 NSV 接管了这套基础设施。1940 年秋，名称几乎没变，内容完全变了。9 月 24 日皇家空军轰炸柏林后，希特勒下令把一再遭受夜间空袭的城市儿童——首先是汉堡与柏林——送到“帝国其余地区”。马丁·鲍曼 9 月 27 日的机密通告把出发日定在 10 月 3 日（周四）。德国民间很快把这次行动简写成 <strong>KLV</strong>；官方回避“疏散”（Evakuierung）一词，改称“安置行动”或“扩大的儿童疏送”（Erweiterte Kinderlandverschickung）。安全部门（SD）的《帝国报告》记下了街头说法：这是“对受空袭威胁大城市的疏散”，是“伪装的强制疏散”。</p>
+      <p>本期不写统帅部，写行李牌。十到十四岁的孩子往往整班上车，脖子上或手提箱上挂着姓名、出发站、目的地；六到十岁进农户；更小的孩子有时随母亲一起走。希特勒青年团（HJ）管营地，德意志少女联盟（BdM）管女童营地，NSV 管幼童与母子疏送。德国历史博物馆（DHM / LeMO）把这件事说得很硬：空袭制造了真实危局，纳粹把它做成意识形态美德——孩子既被从炸弹下挪开，也被从父母与教会身边挪开。</p>
+      <p>2025–2026 年，德国公共记忆同时出现两条线，很容易缠在一起。一条是战时 KLV 本身：WDR 5《Zeitzeichen》在 2025 年 10 月 5 日播出 85 周年节目，标题直写“被疏送、被改造”；柏林米特区博物馆（Mitte Museum）同年 5 月至 10 月办《战争与我：1939–1945 的战争儿童》。另一条是战后联邦德国儿童疗养院暴力：2025 年 7 月 30 日博尔库姆岛竖起纪念碑，11 月 Bad Wildungen 召开全国大会。两条线共用“Verschickung”这个词，却不是同一段历史。本期把它们并置，是为了分清，不是为了合并。</p>
+    </section>
+
+    <section class="card olive" id="findings">
+      <div class="tag">02 · BEFUND · 核心发现</div>
+      <h2>六条不宜写成“好心疏散”的结论</h2>
+      <ol class="body">
+        <li><strong>规模巨大，精确数字已随档案烧毁。</strong>帝国 KLV 办事处的统计在战争结束时被销毁。较审慎的重建是：至战争结束，约 200–250 万儿童被纳入扩大疏送（DHM 写“约 250 万”，巴伐利亚历史辞典写“逾 220 万”）；其中约 85 万十至十四岁进入营地，约同等数量的六至十岁进寄养家庭，约 50 万幼儿随母亲转移。营地数量估计从约 5,000 到约 9,000 不等，取决于把临时驻地算不算“ Lager”。</li>
+        <li><strong>1943 年的拐点是城市在空，不是父母突然爱上营地。</strong>汉堡火风暴后约 90 万人逃离；柏林在戈培尔呼吁妇孺离城后，萨比内·卡尔夫（Sabine Kalff）据住房史研究写：1943 年 8 月约 36 万柏林人离开，至 1944 年 1 月超过 100 万。这是首都平民外流，不能直接当成“七十万儿童进了 KLV”。同一年 SD 却发现：汉堡仍在城内的约 7 万学龄儿童里，只有 1,400 人报名营地疏送。父母宁可把孩子送到亲戚家，也不交给 HJ。</li>
+        <li><strong>营地日常由教师挂名、青年组织掌舵。</strong>营地主任是教师，负责上课；每 30–45 名学生配一名 HJ 营地小队领袖或 BdM 女领袖，管升旗、点名、熄灯与“青年团勤务”。1943 年帝国青年领袖机关报写得很直白：KLV 营地提供“在较大范围内、较长时间里对青少年进行总体教育”的可能。</li>
+        <li><strong>反宗教不是传闻，是父母拒绝的理由之一。</strong>1941 年 2 月 SD 已记录“教会反宣传”：免费疏送的真意是让孩子疏远父母、在营地接受无宗教教育。明斯特主教加伦（Clemens August Graf von Galen）的牧函警告营地缺乏教会照料，报名随即下降。形式上允许主日礼拜，实践中可被一次“更好玩的周日活动”抵消。</li>
+        <li><strong>儿童心理不是单一创伤剧本。</strong>最深的共同记忆是思乡；信件常被审查，想回家的句子写不出去。有人记得伙食、同伴与冒险；有人记得欺凌、尿床惩罚、在升旗仪式上被当众宣读家人死讯。战后“KLV 是善举”的叙事，长期压过对灌输与排除的分析——而最早的大规模回忆录，恰由前 HJ 干部格哈德·达贝尔编纂。</li>
+        <li><strong>行李牌有种族门槛。</strong>犹太人、身心障碍者、“尿床者”、被标为“反社会”的孩子被排除。被腾空的疗养与护理机构改作营地，原住者则在“安乐死”谋杀中被杀害。被保护的童年，从第一天起就站在被删除的童年旁边。</li>
+      </ol>
+    </section>
+
+    <section class="card" id="camp">
+      <div class="tag">03 · LAGER · HJ / BdM</div>
+      <h2>HJ / BdM 营地：把童年编成队列</h2>
+      <p><span class="dest">VON BERLIN</span> <span class="dest">NACH BAYERN</span></p>
+      <p>扩大疏送在组织上是多头的：帝国青年领袖巴尔杜尔·冯·席拉赫任“元首委任的扩大儿童疏送专员”，下设驻柏林的帝国 KLV 办事处；日常由赫尔穆特·默克尔（Helmut Möckel）主持至 1943 年。NSV 管运输与十岁以下安置；HJ 管十至十四岁营地作息；纳粹教师联盟（NSLB）派教师，1943 年该联盟解散后，人事并入 KLV 办事处与帝国科教部。巴伐利亚历史辞典强调：营地按性别分开，规模从十几人到逾千人；驻地可以是青年旅舍、旅馆、修道院，也可以是刚腾空的医疗机构。</p>
+      <p>作息不是“乡下度假”的松散日程。英德维基与德文研究综述都指向同一本帝国办事处手册：夏季约 6:30 起床、洗漱、晾被、内务、健康点名；7:30 问候口号与早餐；上午约四小时课；午饭后强制午休；下午是 HJ 活动、行军、采集、收获劳动、新闻周报；约 21:00–21:30 熄灯。周日有升旗与“晨间仪式”。Planet Wissen 补充：孩子被要求写日记，离营时由 HJ 或 BdM 领导人给评语——是否合群、有无领导才能。日记因此既是思乡的出口，也是考核表。</p>
+      <p>教师名义上拥有最高指挥权，营地生活却常由十七八岁的小队领袖决定——“青年领导青年”。各营差异很大：有的教师能压住 HJ，有的营地几乎一切都是队列。文学史家约斯特·赫尔曼德（Jost Hermand）后来写自己在波兰的经历：折磨人的准军事操练、不停的灌输、“兽群里的粗野化”，弱者被等级秩序碾压。WDR 2025 年节目把目的说成一句话：表面防空，实际是“国防教育”（Wehrerziehung）。</p>
+      <p>1944 年汉堡 Harburg 一所男子文理中学整校关闭、师生一同上车的例子，说明席拉赫 1943 年 6 月 15 日“整校迁移”命令如何把“自愿”掏空。克劳斯·京特在《明镜》回忆：母亲与祖母在站台哭泣，孩子们还在笑；二十五小时后抵达“波希米亚–摩拉维亚保护国”的魏斯基兴（今捷克 Hranice）。营长写信给家长，感谢国家把孩子从“野蛮空中海盗”手中救下。早餐有旗，墙上有口号：“德国必须活下去，哪怕我们必须死去。”他后来在营地仓库里拿到一双不需票证的鞋，怀疑那是被纳粹杀害的孩子留下的——保护与掠夺，有时共用同一双鞋。</p>
+    </section>
+
+    <section class="card olive" id="church">
+      <div class="tag">04 · KIRCHE / ELTERN · 父母与教会</div>
+      <h2>反宗教灌输，以及父母为什么宁可把孩子交给亲戚</h2>
+      <p>纳粹宣传把 KLV 写成新鲜空气、充足食物、不受空袭打扰的睡眠与不中断的上课。对许多父母，真正刺耳的是另一件事：孩子将在数月甚至数年内脱离家庭与教区。德文维基记载，1941 年 2 月 SD 已听到“教会反宣传”：国家要的不是安全，而是疏远父母、在营地制造无宗教教育。加伦主教的牧函明确说，孩子在营地得不到教会—宗教照料，报名明显回落。</p>
+      <p>制度留了缝：主日可去礼拜，部分年级课表仍有宗教课。缝很容易被缝上——没有教师必须教宗教；周日早上小队领袖可以安排更诱人的郊游。Planet Wissen 与 MDR 都指出：国家的第二个目标是把青年从家庭与宗教共同体中解开，绑到政权上。希特勒 1935 年对 HJ 的演说被 MDR 拿来对照营地实践：德国少年应“瘦而挺、迅如猎犬、韧如皮革、硬如克虏伯钢”。有营长把这句话当真。一名同学不敢沿绳索过溪，被嘲弄、被“室风”惩罚——夜里裹进床单浇水——随后尿床，被父母接走。尿床既是恐惧的症状，也是被排除出“可疏送儿童”的医学借口。</p>
+      <p>父母的矛盾不是“愚忠 vs 反纳粹”的二分。许多人接受防空必要，却拒绝把孩子交给 HJ 队列。他们害怕几年分离、害怕孩子被改造成陌生人、害怕远方探望几乎不可能。官方起初禁止探视与提前接回；这本身就让许多人拒绝报名。1943 年起才设“父母探视日”并开专列——那是对抵制的让步，不是恩典。席拉赫同年命令整校迁移后，地方当局会谎称本地不再开课，或威胁从高级中学除名。自愿原则纸面上仍在，家庭已被逼到必须解释“为什么不送”。</p>
+      <p>于是出现第三条路，而且人数可能最大：把孩子送到乡下的姑姑、祖父母、熟人处。NSV 仍可能提供免票专列，但日程、地点、能否接回，不再由营地规章决定。卡尔斯滕·克雷塞尔（Carsten Kressel）把这种“拒绝国家疏散、家庭自己靠拢”读成民众的一种解放过程——在一个习惯服从官署、党机器权力极大的社会里，尤其刺眼。Planet Wissen 给出一个粗算：战争年间约五百万儿童被送走，其中约三百万并不进入官方 KLV，而是投亲靠友——为了躲炸弹，也为了躲 HJ 的规章与孤独。</p>
+    </section>
+
+    <section class="card" id="scale">
+      <div class="tag">05 · ZAHLEN · 规模</div>
+      <h2>疏散规模：宣传数字、烧毁的名册、1943 年城市在空</h2>
+      <p class="note">下表只列可核对出处的数量级。帝国 KLV 办事处档案已毁，任何“精确到个位”的总数都应视为重建。</p>
+      <table>
+        <thead>
+          <tr><th>节点</th><th>数量级（来源口径）</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1940-10-03</td>
+            <td>柏林、汉堡先发</td>
+            <td>鲍曼通告：监护人“自由决定”；NSV 管低年级，HJ 管五年级起。</td>
+          </tr>
+          <tr>
+            <td>1941 年初</td>
+            <td>约 30–38 万儿童青少年</td>
+            <td>德文维基约 30 万；英文综述：382,616，其中柏林+汉堡约 18 万；1,631 列专列、58 艘船。</td>
+          </tr>
+          <tr>
+            <td>1941-07</td>
+            <td>营地内 171,079 名学生</td>
+            <td>营地在营人数峰值；年底几乎减半。</td>
+          </tr>
+          <tr>
+            <td>1942</td>
+            <td>营地内常不足 5 万；至 4 月累计疏散或达约 85 万</td>
+            <td>热情下降。至 1942 年中：约 20.2 万母亲带着 34.7 万幼儿乘专列离开。</td>
+          </tr>
+          <tr>
+            <td>1943</td>
+            <td>整校迁移；汉堡城内约 7 万学龄儿童仅 1,400 人报名营地</td>
+            <td>SD 1943-10-25。火风暴后约 90 万汉堡人逃离。柏林：戈培尔呼吁妇孺离城；Kalff 2020：8 月约 36 万离开，至 1944-01 逾 100 万——平民外流，不是营地名册。</td>
+          </tr>
+          <tr>
+            <td>战争结束</td>
+            <td>约 200–250 万（官方扩大疏送）；营地儿童估计 85 万–280 万（研究分歧大，低值更可信）</td>
+            <td>HJ 高官 Otto Würschinger 1943 年自称约 300 万、营地 100 万，属战时自夸。克劳斯·拉拉斯书名写“500 万”，常把投亲靠友算进去。</td>
+          </tr>
+          <tr>
+            <td>1945 年夏</td>
+            <td>美军估计巴伐利亚仍有约 6 万儿童与教师、800 余营地</td>
+            <td>许多孩子在前线与占领线之间过夜，部分自行徒步回家。</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>格哈德·科克（Gerhard Kock）的研究结论与宣传相反：战争越久，父母越不愿意把孩子送进营地。接收区后来自己挨炸，交通中断使探望更难，近郊农村反而显得同样“安全”。1943 年的“超大规模离开”首先发生在汉堡与柏林的街道上：人走了，不等于人进了 HJ 营地。把“柏林超 70 万离开”直接写成 KLV 成绩单，是把戈培尔的城市疏散、私人投亲与营地名册叠成一张牌。</p>
+      <p>科克还判断：作为防空措施，KLV 并未达到目标，因为它没能说服全体父母。若扩大疏送更接近 1943 年才被承认的“亲戚疏送”——地点近、可接回、不强制队列——本来可以把更多孩子带出城市。保护儿童的能力，被接管儿童的欲望限制住了。</p>
+    </section>
+
+    <section class="card ash" id="mind">
+      <div class="tag">06 · HEIMWEH · 心理</div>
+      <h2>儿童心理：思乡是底层噪声，审查是日常技术</h2>
+      <p>DHM 写：大多数孩子极想家。Planet Wissen 把它说成许多幼童最深的记忆——巨大的被抛弃感，再叠加不知道家里是否还在。信件是唯一的安慰，也常是审查对象：想回家的句子不准写。探视长期被禁，分离被设计成“完整的教育情境”，而不是暂时避难。</p>
+      <p>死亡消息在营地里改写仪式。MDR 引用拉拉斯书中的口述：老师扣下一封信，带一个男孩离开教室，晚上孩子钻进被子；几天后才知道母亲、祖母和幼妹死于空袭。另一名证人说，HJ 领袖在升旗时叫出三个男孩，当众宣读谁的父亲死了、谁的兄弟死了、谁的双亲都死了。“他们必须立正。我至今不确定，那三个人在那幕布景前，有没有一瞬间为亲属之死感到骄傲。”骄傲是被训练出来的姿势；哭泣被推迟到夜里。</p>
+      <p>记忆在战后分裂成两套几乎无法对话的档案。多数营地回忆强调同伴情谊、自立、与老师的亲密，并断言“没有政治灌输”。“我们没见过别的世界。”伊娃·格肯（Eva Gehrken）指出：孩子在入营前已把体制内的价值内化，所以认不出灌输。少数报告则写下羞辱：不会运动的“弱者”、做礼拜的人、局外人。达贝尔 1981 年受 KLV 文献工作组委托编纂的大部头，把行动称为“有史以来最大的社会学实验”，长期塑造“无忧少年时代”的图像。赫尔曼德斥之为对 KLV 经验的美化乃至颂扬。达贝尔本人是前 HJ 上级旗队长，战后曾因纳粹信仰坐过纽恩加默——回忆录的作者，曾经就是营地的设计者。</p>
+      <p>心理后果研究在 2004 年仍被德文维基称为不足。这不是说孩子“没事”，而是说：空袭创伤、分离创伤、队列规训与“我们被救了”的感激缠在一起，很难被单一诊断消化。许多未参加 KLV、留在火风暴城市里的孩子，战后心理负担可能更重——这常被用来证明“KLV 是善举”。数字上，约 7.4 万儿童死于空袭的估计，确实说明离开城市降低了被炸死的概率。善举叙事漏掉的是：活下来的身体，仍在国家的作息表里度过一段被塑造的青春期。</p>
+    </section>
+
+    <section class="card" id="exclude">
+      <div class="tag">07 · AUSGESCHLOSSEN · 排除</div>
+      <h2>谁拿不到行李牌：种族筛选，以及空出来的病房</h2>
+      <p>免费、自愿、为了孩子好——这三句话都只对“可被纳入民族共同体”的孩子成立。巴伐利亚历史辞典写明：犹太人、身心障碍者、“尿床者”、被污名为“反社会”的行为异常儿童不得参加。纽伦堡法意义上的二级混血儿起初也被拒，直到 1943 年 11 月才放宽。传染病、癫痫同样被挡在站台外。行李牌是通行证，也是种族卫生的过滤器。</p>
+      <p>同一辞典写下更冷的一句：腾空的治疗与护理机构被改作 KLV 营地，原住者被转到他处，并在纳粹病患谋杀中被杀害。加贝尔泽（Gabersee）等机构的照片，因此不能只当“乡间校舍”看。孩子们睡进刚空出来的床位时，那张床的前一位主人可能已经被国家杀死。平民儿童的安全，与被定义为无价值的生命的清除，共用同一套房源政策。</p>
+      <p>被排除的还有另一种“德国儿童”：占领区被掳走、准备“再德意志化”的波兰等国儿童，以及国内被剥夺就学与防空资源的犹太儿童。bpb 的“战争中的儿童”专题把 Kindertransport、安乐死儿童、Lebensborn 与战争儿童并置——提醒读者：1939–1945 年的童年从不是一块匀质的“德国经历”。KLV 保护的是被选中的孩子；同一政权正在杀害、驱逐、日耳曼化另一些孩子。</p>
+    </section>
+
+    <section class="card olive" id="now">
+      <div class="tag">08 · 2025–2026 · 纪念与研究</div>
+      <h2>两条“疏送”记忆，不要缝成一条</h2>
+      <p>2025 年 10 月 5 日，WDR 5《Zeitzeichen》以 1940 年扩大疏送开始日为锚，重播并更新节目《战争中的童年：被疏送与被改造》。作者雅娜·马格丹茨（Jana Magdanz）访谈科隆纳粹文献中心前研究员马丁·吕特（Martin Rüther），并开列科克 1997 年专著《元首为我们的孩子操心》等书目。节目把参观禁令、六至九个月的停留、对父母“勿成为孩子死亡的罪人”的道德施压，以及父母宁可投亲以躲避政权等要点，重新交给广播听众。这是战时 KLV 在 2025 年最清晰的大众史学回声之一。</p>
+      <p>同年 5 月 7 日，柏林米特区博物馆在 Pankstraße 47 花园揭幕巡展《战争与我：1939–1945 的战争儿童》，展期至 10 月 31 日，嵌入柏林“战争结束八十年”主题周。四个可走进的集装箱，让八岁以上的观众摸家具、听德法苏儿童的声音。区长施特法妮·雷姆林格在新闻稿里说：战争、驱逐与不安全再次成为许多人的现实，这些故事“我们不可充耳不闻”。展览并不专写 KLV，但它把“童年被战争改写”放回首都——KLV 正是从这座首都的车站开出的。</p>
+      <p>必须分开的是 2025 年 7 月 30 日博尔库姆岛纪念地。NDR 报道：雕塑《恐惧的疏送儿童》立在已拆除的 Adolfinenheim 原址旁，纪念战后数十年儿童疗养院里的殴打、饥饿与羞辱。倡议组织 Initiative Verschickungskinder 主席乌韦·吕登克劳（Uwe Rüddenklau）到场。同年 11 月 27–30 日，该组织在 Bad Wildungen 召开第七届全国大会。德文维基《Verschickungskinder》写明：战后疗养疏送的系统与基础设施，很大程度上仍建立在魏玛与纳粹时期的 KLV 之上；但 1950–1980 年代那 800–1200 万短则数周的“疗养儿童”，不是 1940–1945 的营地疏送。bpb 曾出版安雅·勒尔（Anja Röhl）关于战后疗养暴力的读本——那是另一份必须读的档案，不能回填进战时行李牌。</p>
+      <p>战时 KLV 的民间文献工作，长期由弗莱堡（后迁波鸿）的“KLV 文献工作组与朋友圈”（Dokumentations-Arbeitsgemeinschaft und Freundeskreis KLV e.V.）承担。联邦档案馆收藏其征集的书信、日记与照片（DDB 条目可检索），达贝尔 1981 年的书由此成书。这批材料极珍贵，也极需批判：它保存了体验，也保存了美化。2026 年，奥地利 erinnern.at 列出面向学校的情景朗读《卐字下的童年与青年：迷醉与强制 / 疏送与死亡》，把“疏送”重新放进纳粹青年史的教学年历。记忆没有结束，只是换了教室。</p>
+    </section>
+
+    <section class="card sources" id="sources">
+      <div class="tag">09 · QUELLEN · 来源</div>
+      <h2>来源（均为已访问的真实 URL）</h2>
+      <p class="note">检索至少三轮（德/英/中），正文所引页面均经抓取。不编造链接。战后疗养疏送条目列入，是为了标明边界。</p>
+      <ol class="body">
+        <li>德国历史博物馆 LeMO：<a href="https://www.dhm.de/lemo/kapitel/der-zweite-weltkrieg/alltagsleben/kinderlandverschickung">Kinderlandverschickung (KLV)</a></li>
+        <li>DHM 口述：约瑟法·冯·科斯库尔记 1943 年夏戈培尔传单，呼吁妇孺离开柏林：<a href="https://www.dhm.de/lemo/zeitzeugen/josepha-von-koskull-bombenangriffe-auf-berlin">Bombenangriffe auf Berlin</a></li>
+        <li>巴伐利亚历史辞典：<a href="https://www.historisches-lexikon-bayerns.de/Lexikon/Kinderlandverschickung">Kinderlandverschickung</a></li>
+        <li>联邦政治教育中心：战时社会中的青年、KLV 与 HJ：<a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/">Die deutsche Kriegsgesellschaft</a></li>
+        <li>bpb：民族共同体、NSV“母亲与孩子”及战时儿童疏送：<a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/dossier-nationalsozialismus/328592/volksgemeinschaft/">„Volksgemeinschaft“</a></li>
+        <li>bpb 专题入口：<a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/kinder-im-krieg/">Kinder im Krieg</a></li>
+        <li>WDR 5 Zeitzeichen（2025-10-05）：<a href="https://www1.wdr.de/radio/wdr5/sendungen/zeitzeichen/zeitzeichen-kinderlandverschickung-zweiter-weltkrieg-100.html">05.10.1940: Die Kinderlandverschickung im Zweiten Weltkrieg beginnt</a></li>
+        <li>Planet Wissen / WDR：<a href="https://www.planet-wissen.de/geschichte/nationalsozialismus/kindheit_im_zweiten_weltkrieg/pwiekinderlandverschickung100.html">Kindheit im Zweiten Weltkrieg: Kinderlandverschickung</a></li>
+        <li>MDR 历史：<a href="https://www.mdr.de/geschichte/ns-zeit/zweiter-weltkrieg/bombardierung-kinderlandverschickung-100.html">Nationalsozialisten trennen Kinder von ihren Eltern</a></li>
+        <li>德文维基（数字、加伦、SD 1943、记忆分歧）：<a href="https://de.wikipedia.org/wiki/Kinderlandverschickung">Kinderlandverschickung</a></li>
+        <li>英文维基（1941 专列、SS 营地、汉堡 1,400/70,000）：<a href="https://en.wikipedia.org/wiki/Evacuations_of_children_in_Germany_during_World_War_II">Evacuations of children in Germany during World War II</a></li>
+        <li>德文维基：汉堡火风暴后约 90 万人逃离：<a href="https://de.wikipedia.org/wiki/Operation_Gomorrha">Operation Gomorrha</a></li>
+        <li>德文维基：1943 年夏柏林开始疏散妇孺：<a href="https://de.wikipedia.org/wiki/Luftangriffe_der_Alliierten_auf_Berlin">Luftangriffe der Alliierten auf Berlin</a></li>
+        <li>Sabine Kalff, 〈回到地窖：轰炸中的柏林出租楼〉，<em>Zeitschrift für Germanistik</em> XXX (2020)：1943-08 约 36 万柏林人离开，至 1944-01 逾百万：<a href="https://doi.org/10.3726/92165_91">doi:10.3726/92165_91</a></li>
+        <li>青年门户词典：<a href="https://jugend1918-1945.de/portal/jugend/lexikon.aspx?id=3632&amp;iframe=true&amp;typ=lexikonID">Kinderlandverschickung</a></li>
+        <li>《明镜》口述（营地至战争结束）：<a href="https://www.spiegel.de/geschichte/kinderlandverschickung-das-war-s-mein-fuehrer-im-klv-lager-zum-kriegsende-a-b57dbf41-d206-4703-ae49-5186f201fe31">„Das war's, mein Führer“</a></li>
+        <li>柏林米特区 2025-04-25 新闻稿：战争儿童展 2025-05-08 至 10-31：<a href="https://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2025/pressemitteilung.1554366.php">Pressemitteilung 082/2025</a></li>
+        <li>柏林家庭门户：同展日程：<a href="https://familienportal.berlin.de/veranstaltungen-3/termin/der-krieg-und-ich-kriegskinder-1939-1945-20250817">Der Krieg und ich – Kriegskinder 1939–1945</a></li>
+        <li>NDR（2025-07-30）：博尔库姆战后疗养疏送纪念地：<a href="https://www.ndr.de/nachrichten/niedersachsen/oldenburg_ostfriesland/gedenkort-auf-borkum-erinnert-an-leid-der-verschickungskinder,verschickungskinder-104.html">Gedenkort auf Borkum</a></li>
+        <li>Initiative Verschickungskinder：2025 年 Bad Wildungen 大会：<a href="https://verschickungsheime.de/pressemitteilung-zum-bundeskongress-aufarbeitung-kinderverschickung-tut-not-in-bad-wildungen-2025/">Bundeskongress 2025</a></li>
+        <li>德文维基：战后 Verschickungskinder（与战时 KLV 的制度连续性及区别）：<a href="https://de.wikipedia.org/wiki/Verschickungskinder">Verschickungskinder</a></li>
+        <li>erinnern.at 2026 教学活动年历（含“疏送与死亡”）：<a href="https://www.erinnern.at/termine">Termine</a></li>
+      </ol>
+      <p class="note">专著无法提供可点击的馆藏页时不伪造：Gerhard Kock, <em>„Der Führer sorgt für unsere Kinder“</em>（1997）；Jost Hermand, <em>A Hitler Youth in Poland</em>；Claus Larass, <em>Der Zug der Kinder</em>。达贝尔 1981 年文献集见联邦档案馆与 DDB 描述条目。</p>
+    </section>
+
+    <section class="card" id="lesson">
+      <div class="tag">10 · LEKTION · 启示</div>
+      <h2>对历史学习者的启示</h2>
+      <p>读 KLV，先把行李牌翻过来。正面是姓名与目的地，背面是国家想把孩子写成什么。空袭是真的，饥饿是真的，想家是真的；把危局翻译成“总体教育”的机会，也是真的。德国平民的痛苦不能取消同一政权的罪行：被排除的犹太儿童、被谋杀后腾出床位的病患、被掳走日耳曼化的外国儿童，都站在这趟专列看不见的月台上。</p>
+      <p>第二，警惕“自愿”这个词。法律可以写自愿，整班迁移、停课威胁、道德勒索（“勿成为孩子的死神”）会把自愿变成必须解释的抗命。父母把孩子交给亲戚，不是统计上的噪声，而是对营地国家的拒绝。第三，警惕回忆录的作者位置。美化与控诉都可能真实，因为营地本就不止一种；但“我没感到灌输”不能反驳“制度就是为灌输而建”——尤其当编纂者曾是 HJ 干部。</p>
+      <p>第四，2025–2026 的纪念热要求目录学上的冷静。博尔库姆的碑是给战后疗养院受害者的；WDR 的时间标志是给 1940 年扩大疏送的；米特区的集装箱是给欧洲战争儿童的。三者都该被看见，不该被缝成“德国人的童年苦难”一块布。学习这段历史，是练习把保护与接管、安全与筛选、思乡与升旗放在同一句里——然后仍然把句子写完整。</p>
+    </section>
+
+    <footer>
+      二战德国平民史调研 · 第2期 · 儿童疏送行李牌风 · 2026-08-30 18:09 CST<br>
+      仅供学习研究 · 不美化独裁 · 不漫画化普通人
+    </footer>
+  </article>
+</div>
+</body>
+</html>
