@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战争孤儿、失踪士兵家庭与等待 —— 2025–2026：红十字搜寻延期、WASt迁档与八十年未完的明信片</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+SC:wght@400;600;700&family=Pathway+Gothic+One&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+/* Kriegsgefangenenpost: thin onionskin, Geneva-cross stamps, ruled address grid, censor bars. */
+:root {
+  --canvas: #3a4338;
+  --canvas2: #2c332a;
+  --twine: #8a7048;
+  --paper: #efe2c4;
+  --paper2: #e6d4ae;
+  --onion: #f4ead3;
+  --veil: rgba(232, 214, 176, .42);
+  --ink: #1d241f;
+  --fade: #5c5344;
+  --rule: #c9b48a;
+  --cross: #b4242a;
+  --cross2: #7a161c;
+  --navy: #2a3d55;
+  --censor: #6a2a22;
+  --stamp-blue: #3a5570;
+  --fox: #c4a06a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(180, 36, 42, .08), transparent 36%),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.07) 0 2px, transparent 2px 11px),
+    linear-gradient(165deg, var(--canvas), var(--canvas2) 55%, #242b22);
+  color: var(--ink);
+  font-family: "Noto Serif SC", "EB Garamond", "Songti SC", serif;
+  line-height: 1.84;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  opacity: .18;
+  mix-blend-mode: multiply;
+  z-index: 20;
+}
+.mailbag {
+  max-width: 920px;
+  margin: 28px auto 80px;
+  position: relative;
+  padding: 0 16px;
+}
+.twine {
+  position: absolute;
+  left: 46px; top: -8px; bottom: -18px;
+  width: 3px;
+  background: linear-gradient(#6e5838, var(--twine), #5a462c);
+  box-shadow: 1px 0 0 rgba(255,255,255,.12);
+  z-index: 6;
+  pointer-events: none;
+}
+.postcard {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.28), transparent 14%),
+    repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(180, 150, 100, .09) 28px),
+    linear-gradient(118deg, var(--onion) 0%, var(--paper) 48%, var(--paper2) 100%);
+  border: 1px solid #cbb896;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.45) inset,
+    0 22px 50px rgba(10, 14, 10, .45),
+    8px 12px 0 rgba(20, 24, 18, .18);
+  padding: 28px 36px 48px 58px;
+  color: var(--ink);
+}
+.postcard::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(180, 120, 70, .16), transparent 18%),
+    radial-gradient(circle at 92% 78%, rgba(140, 90, 50, .12), transparent 22%),
+    linear-gradient(90deg, transparent 49.6%, rgba(90,70,40,.12) 50%, transparent 50.5%);
+  mix-blend-mode: multiply;
+}
+.thin {
+  position: absolute;
+  right: 18px; top: 90px;
+  width: 42%;
+  height: 70%;
+  background: repeating-linear-gradient(90deg, transparent 0 18px, rgba(90,70,40,.05) 19px);
+  opacity: .35;
+  pointer-events: none;
+  transform: rotate(1.2deg);
+}
+.headband {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start;
+  border-bottom: 2px solid var(--cross);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+}
+.gothic {
+  font-family: "UnifrakturMaguntia", "Noto Serif SC", serif;
+  font-size: clamp(1.7rem, 3.4vw, 2.55rem);
+  color: var(--cross2);
+  line-height: 1.15;
+  letter-spacing: .02em;
+}
+.subfr {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: .92rem;
+  color: var(--navy);
+  letter-spacing: .08em;
+  margin-top: 4px;
+}
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  font-family: "EB Garamond", serif;
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--fade);
+  margin: 8px 0 0;
+}
+.stamps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  min-width: 150px;
+}
+.stamp-rc {
+  width: 108px; height: 108px;
+  border: 4px solid var(--cross);
+  border-radius: 50%;
+  color: var(--cross);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  transform: rotate(11deg);
+  background: radial-gradient(circle, rgba(255,255,255,.2), transparent 70%);
+  box-shadow: 0 0 0 1px rgba(180,36,42,.25);
+}
+.stamp-rc .cross {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 2.4rem;
+  line-height: .7;
+  font-weight: 400;
+}
+.stamp-rc small {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: .62rem;
+  letter-spacing: .18em;
+  display: block;
+  margin-top: 2px;
+}
+.stamp-censor {
+  font-family: "Pathway Gothic One", sans-serif;
+  border: 3px solid var(--censor);
+  color: var(--censor);
+  padding: 3px 10px;
+  letter-spacing: .28em;
+  font-size: .78rem;
+  transform: rotate(-6deg);
+  opacity: .85;
+}
+.stamp-date {
+  font-family: "EB Garamond", serif;
+  width: 92px; height: 92px;
+  border: 2px dashed var(--stamp-blue);
+  border-radius: 50%;
+  color: var(--stamp-blue);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: .72rem;
+  line-height: 1.2;
+  transform: rotate(4deg);
+  letter-spacing: .04em;
+}
+h1 {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: clamp(1.28rem, 2.6vw, 1.72rem);
+  line-height: 1.45;
+  margin: 10px 0 8px;
+  position: relative;
+  z-index: 2;
+}
+.lede {
+  font-size: 1.02rem;
+  color: #2a322c;
+  max-width: 62ch;
+  position: relative;
+  z-index: 2;
+}
+.hand {
+  font-family: "Caveat", "Noto Serif SC", cursive;
+  color: var(--navy);
+}
+.grid-addr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1.5px solid var(--ink);
+  margin: 22px 0 8px;
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,.18);
+}
+.grid-addr a {
+  color: inherit;
+  text-decoration: none;
+}
+.cell {
+  border: 1px solid rgba(29,36,31,.35);
+  padding: 9px 12px 10px;
+  min-height: 58px;
+}
+.cell .k {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: .68rem;
+  letter-spacing: .22em;
+  color: var(--cross2);
+  text-transform: uppercase;
+}
+.cell .v {
+  display: block;
+  margin-top: 2px;
+  font-size: .95rem;
+}
+nav.toc {
+  margin: 8px 0 28px;
+  position: relative;
+  z-index: 2;
+}
+nav.toc h2 {
+  font-size: .78rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--fade);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: "EB Garamond", serif;
+}
+.card {
+  position: relative;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.08)),
+    var(--onion);
+  border: 1px solid #c4b089;
+  box-shadow: 3px 5px 0 rgba(40, 32, 18, .08);
+  padding: 18px 20px 20px;
+  margin: 16px 0;
+}
+.card::before {
+  content: attr(data-nr);
+  position: absolute;
+  top: -9px; left: 14px;
+  background: var(--paper);
+  border: 1px solid var(--cross);
+  color: var(--cross2);
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  padding: 1px 8px;
+}
+h2.sec {
+  font-size: 1.18rem;
+  margin: 28px 0 8px;
+  padding-left: 10px;
+  border-left: 5px solid var(--cross);
+  position: relative;
+  z-index: 2;
+}
+h3 {
+  font-size: 1.02rem;
+  margin: 4px 0 10px;
+}
+p { margin: 0 0 .85em; }
+ul, ol { margin: 0 0 1em 1.2em; }
+li { margin: 0 0 .4em; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 8px 14px;
+  border-left: 3px solid var(--navy);
+  font-style: italic;
+  color: #243028;
+  background: rgba(42, 61, 85, .05);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+  margin: 10px 0 16px;
+  background: rgba(255,255,255,.25);
+}
+th, td {
+  border: 1px solid #b9a57a;
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: rgba(180, 36, 42, .08);
+  font-weight: 600;
+  font-size: .82rem;
+  letter-spacing: .04em;
+}
+.note {
+  font-size: .88rem;
+  color: var(--fade);
+}
+.warn {
+  border: 1.5px dashed var(--censor);
+  padding: 12px 14px;
+  margin: 12px 0 4px;
+  background: rgba(180, 36, 42, .05);
+}
+.sources a {
+  color: var(--navy);
+  word-break: break-all;
+}
+footer.colophon {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px dashed #b9a57a;
+  font-size: .86rem;
+  color: var(--fade);
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 720px) {
+  .postcard { padding: 22px 16px 36px 22px; }
+  .headband, .grid-addr { grid-template-columns: 1fr; }
+  .twine { display: none; }
+  .stamps { flex-direction: row; flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+<div class="mailbag">
+  <div class="twine" aria-hidden="true"></div>
+  <article class="postcard">
+    <div class="thin" aria-hidden="true"></div>
+
+    <header class="headband">
+      <div>
+        <div class="gothic">Kriegsgefangenenpost</div>
+        <div class="subfr">Carte postale pour prisonniers de guerre · 战俘明信片式调研报告</div>
+        <div class="meta-row">
+          <span>Portofrei / 免邮</span>
+          <span>Dienststelle · Suchdienst</span>
+          <span>系列第14期</span>
+        </div>
+      </div>
+      <div class="stamps">
+        <div class="stamp-rc" aria-hidden="true">
+          <div>
+            <div class="cross">+</div>
+            <small>ROTES KREUZ</small>
+            <small>SUCHDIENST</small>
+          </div>
+        </div>
+        <div class="stamp-censor">GEPRÜFT</div>
+        <div class="stamp-date">
+          MÜNCHEN<br>DRK<br>2026<br>08·30
+        </div>
+      </div>
+    </header>
+
+    <p class="meta-row" id="zeit">撰稿时间戳 · 2026-08-30 18:28（本地） · 内联CSS独立页 · 不修改调研记录</p>
+
+    <h1>战争孤儿、失踪士兵家庭与等待<br>—— 2025–2026：红十字搜寻延期、WASt 迁档与八十年未完的明信片</h1>
+    <p class="lede">等待不是战后附录。它是战时平民生活的一种时长：失踪通知代替死亡证明，妇女成为户主，儿童在名单与孤儿院之间被改写姓名。德国士兵死亡数字有史学来源，必须点名；德国损失不能用来对冲德国罪行。本页写的是“还没有消息”的那些年。</p>
+
+    <div class="grid-addr" aria-label="目录田字格">
+      <a class="cell" href="#topic"><span class="k">Absender / 本期主题</span><span class="v">等待、失踪、孤儿与妇女户主</span></a>
+      <a class="cell" href="#findings"><span class="k">Empfänger / 核心发现</span><span class="v">通知、数字、机构、2025–2026</span></a>
+      <a class="cell" href="#sources"><span class="k">Dienststempel / 来源</span><span class="v">真实 URL，未编造</span></a>
+      <a class="cell" href="#lesson"><span class="k">Vermerk / 启示</span><span class="v">给历史学习者</span></a>
+    </div>
+    <nav class="toc">
+      <h2>Inhalt · 目录</h2>
+      <ol>
+        <li><a href="#topic">本期主题：明信片式的未完成</a></li>
+        <li><a href="#findings">核心发现</a>
+          <ol>
+            <li><a href="#f-wait">失踪通知、阵亡公告与法律上的死亡</a></li>
+            <li><a href="#f-women">妇女户主：把家撑过“也许还活着”</a></li>
+            <li><a href="#f-orphan">战争孤儿：梅前数字、家园与 NSV 的种族边界</a></li>
+            <li><a href="#f-agencies">谁在找人：DRK、WASt/联邦档案馆、人民盟</a></li>
+            <li><a href="#f-numbers">德国士兵死亡数字的史学来源</a></li>
+            <li><a href="#f-now">2025–2026：八十年后仍有七千件询问</a></li>
+          </ol>
+        </li>
+        <li><a href="#sources">来源（真实 URL）</a></li>
+        <li><a href="#lesson">对历史学习者的启示</a></li>
+      </ol>
+    </nav>
+
+    <section id="topic">
+      <h2 class="sec">本期主题</h2>
+      <div class="card" data-nr="KARTE 01">
+        <h3>一张不能把人寄回家的卡片</h3>
+        <p>1945 年春，德国战败。对许多家庭而言，战争并没有在投降日结束，而是改成另一种时间：<strong>等待</strong>。丈夫、父亲、儿子从东线、从俘虏营、从逃亡路上不再写信。战地邮便（Feldpost）停了；战俘明信片（Kriegsgefangenenpost）按日内瓦公约本应免邮、受红十字中转，但东线崩溃后，登记往往发生在押运途中或到达营之后——在那之前死去的人，常常永远留在“失踪”。</p>
+        <p>德国红十字搜寻处（DRK-Suchdienst）写过一句 1948 年的工作箴言，SWR 在报道失踪士兵家属时再次引用：<span class="hand">“对亲人下落的不确定，与肉体痛苦一样难以承受。”</span> 这句话不是美化士兵，而是描述平民家庭被抛进的状态：没有尸体，没有墓，没有可举行的葬礼，只有一张也许永远填不完的查询卡。</p>
+        <p>本期只写这一条平民线索：<strong>战争孤儿、失踪士兵家庭、妇女户主，以及仍在运转的搜寻—迁葬—档案机器</strong>。副标题落到 2025–2026：战争结束八十年之际，DRK 搜寻经费延至 2028；联邦档案馆对原德意志办事处（Deutsche Dienststelle / WASt）档案的管辖权于 2025 年 9 月调整，2026 年 3 月起将弗莱堡相关个人卷宗迁往柏林-Tegel。等待被机构化了，但没有被取消。</p>
+        <div class="warn">
+          <p class="note" style="margin:0;color:#3a2018;">立场声明：国防军是侵略战争与种族灭绝体制的武装力量。记录德国平民的等待、孤儿与寡妇，<strong>不构成对纳粹政权或德军的同情辩护</strong>。德国军事死亡数字必须交代史学出处；这些数字<strong>不得</strong>用来“平衡”犹太人大屠杀、强制劳工、占领区屠杀与对苏联战俘的罪行。平民痛苦与纳粹罪行必须写在同一页上，而不是两栏对冲。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="findings">
+      <h2 class="sec">核心发现</h2>
+
+      <div class="card" data-nr="KARTE 02" id="f-wait">
+        <h3>一、失踪通知、阵亡公告与法律上的死亡</h3>
+        <p>战时家庭最先收到的，常常不是死亡，而是<strong>失踪</strong>。部队按野战邮局番号发函：丈夫“被视为失踪”（gilt als vermisst）。德国历史博物馆藏有 1944 年 8 月 17 日野战邮局 44223 写给士兵之妻的此类信件（德意志数字图书馆条目可检索）。这与报纸上带铁十字装饰的阵亡公告（Todesanzeige）不是同一种文件：后者把私人哀伤编进“为领袖、民族与祖国”的套话；前者把家庭留在未完成态。</p>
+        <p>WASt（1939 年 8 月 26 日依 1929 年日内瓦公约第 77 条设立的“国防军阵亡与战俘问讯处”）负责识别牌发放记录、部队与野战医院的减员报告、坟墓军官报告，以及向户籍机关申报死亡。联邦档案馆现称：识别牌与人员变动报告约 <strong>1 亿份</strong>，1939–1945 年减员与失踪报告约 <strong>1500 万份</strong>；中央人名卡片迄今覆盖逾 <strong>1850 万</strong>名前国防军及准军事人员。减员报告在战争末期崩溃——这正是“失踪”在统计上膨胀的制度原因，而不只是前线混乱的形容词。</p>
+        <p>战后，死亡往往要走另一条路：户籍上的战争死亡申报、法院的死亡宣告（Todeserklärung）、或几十年后红十字根据苏方档案给出的死亡日期。SWR 记述的安德纳赫案例：奥古斯特·霍夫曼（August Hofmann）的妻子安娜战后即向 DRK 提交搜寻；她本人在 1961 年那封“搜寻尚无结果”的信寄达之前已经去世。2022 年 4 月，孙子收到新函：霍夫曼于 <strong>1946 年 1 月 14 日</strong>死于格鲁吉亚第比利斯萨布尔塔洛第 1563 特种医院，葬于相应墓地第 26 区第 16 号墓。等待跨过两代人，结束在一张 A4 纸上。</p>
+      </div>
+
+      <div class="card" data-nr="KARTE 03" id="f-women">
+        <h3>二、妇女户主：把家撑过“也许还活着”</h3>
+        <p>男性被征走或失踪之后，德国城市与乡村大量出现<strong>事实上的女户主</strong>：领配给、应付冬赈摊派、带着孩子挤进疏散列车、在户籍窗口排队。tagesschau 2025 年 5 月 8 日报道芭芭拉·罗斯塔姆（Barbara Rostam）一家：父亲未从苏联归来；母亲不得不从勃兰登堡迁到德国南部，才能在没有丈夫的情况下养活家庭；当时两岁的女儿留给祖母——那位祖母在一战已丧夫、二战又失去两个儿子。1970 年代中期 DRK 确认父亲死于苏军俘虏营。对女儿，这是“悲伤但可解脱”的确定；对母亲，确定本身是二次打击——<span class="hand">“她一直还在希望他会回来。”</span></p>
+        <p>寡妇与“失踪者之妻”在法律与福利上并不相同。阵亡可触发抚恤与户籍变更；失踪则把家庭钉在临时状态：财产、再婚、子女监护、养老金，都可能要等法院宣告。DRK 英文页写明：战争结束时德国约有 <strong>2000 万人</strong>处于“寻找者或被寻找者”位置；许多当时的孩子如今作为成人回来追问父亲的最后驻地——遗物里常是一叠失败的查询单。</p>
+        <p>必须同时写上另一类妇女户主：犹太家庭、被排斥为“无价值”的家庭、强制女工。她们不是在等国防军的明信片，而是在等驱逐名单、集中营回音，或根本不被允许等待。NSV（纳粹人民福利）从一开始就把救济限于“雅利安出身”且符合健康与政治标准者；犹太人、所谓“反社会者”、残障者、政敌被排除。写德国寡妇的等待，若不同时写谁被拒绝等待，就把“民族共同体”的内部福利当成了全部历史。</p>
+      </div>
+
+      <div class="card" data-nr="KARTE 04" id="f-orphan">
+        <h3>三、战争孤儿：梅前数字、家园与 NSV 的种族边界</h3>
+        <p>NDR 记述 1945 年东部逃亡与驱逐中的儿童：约 <strong>1200 万</strong>人从原德国东部地区逃离或被驱逐，其中多数是妇女与儿童； Mecklenburg-Vorpommern 作为通道，1945 年登记有 <strong>3 万</strong>名无父母的逃亡与被驱逐儿童。1947 年 5 月，波美拉尼亚的帕泽瓦尔克一天之内到达 <strong>3000</strong> 名来自东普鲁士的儿童。梅前迅速出现 <strong>121</strong> 所儿童之家，多设在庄园。条件：没有足够卫生设施、干净床铺与换洗衣物；疥疮与伤寒流行。胡贝特·马克格拉夫回忆贝尔林城堡之家：有一天早晨门厅里摆着 <strong>12 具</strong>童棺——“一夜间死了十二个孩子”。有的护工以体罚对待尿床。出院评语写十岁男孩“顽固、封闭、冷漠”。</p>
+        <p>兄弟姐妹常被拆开分给陌生家庭。有的父亲从拘禁归来后另组家庭，不再询问前妻子女。也有相反的地方史：萨尼茨牧师在村民帮助下办起四十余名孤儿的家，温室玻璃被拆来补窗——这不是“德意志奇迹”，是废墟里极少数尚能运转的邻里资源，且不能覆盖被种族政策排除的儿童。</p>
+        <p>NSV 在战争爆发时号称约 <strong>1500 万</strong>成员（慕尼黑 NS 文献中心词条；英语维基据埃文斯等研究记 1935 年已有 470 万会员、52 万志愿工作者），是仅次于德国劳工阵线的纳粹群众组织。它接管幼儿园、母子救济、部分儿童疏送，并以种族生物学标准筛选“值得救济者”。1945 年 10 月 10 日盟国管制委员会第 2 号法令将其解散。同一套“福利”机器的另一面：希姆莱 1943 年 7 月 27 日关于外国女工孕妇及其子女的命令之后，波兰与苏联女工的婴儿被送入“外族儿童之家”。波兰史料记载上奥地利 Etzelsdorf 城堡的 NSV 机构：1944 年 8 月开设，当年转入 39 名儿童，13 人死亡，平均存活约 <strong>7 周</strong>。德国战争孤儿的饥饿与这些被故意饿死的婴儿，不是可以互相抵消的两笔账，而是同一政权的内外两套人口政策。</p>
+        <p>DRK 儿童搜寻处（Kindersuchdienst）至今处理因逃亡、驱逐、疏送而与家庭失散的儿童档案，包括 1945–1960 年按体貌特征、发现地点登记的无名儿童特征卡片。tagesschau 2025 年报道的埃尔克·西蒙（Elke Simon）：1945 年生于基尔附近，九岁得知自己是被收养的；2021 年，战争结束七十余年后，经 DRK 找到同母异父的姐弟。她说：<span class="hand">“我们哭了，因为终于找到了彼此。”</span> 喜悦不能改写此前的国家罪行，只说明搜寻工作仍在填补档案缺口。</p>
+      </div>
+
+      <div class="card" data-nr="KARTE 05" id="f-agencies">
+        <h3>四、谁在找人：DRK、WASt／联邦档案馆、战争坟墓人民盟</h3>
+        <p>机构分工大致如下——家庭往往要同时跑三家：</p>
+        <table>
+          <thead>
+            <tr><th>机构</th><th>核心职能（与本期相关）</th><th>本期抓住的量级</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DRK-Suchdienst（慕尼黑等）</td>
+              <td>为亲属做命运澄清：国防军失踪者、平民失踪、战俘、失散儿童；苏方俘虏营档案；出具鉴定</td>
+              <td>1945–1950 约 1400 万件询问；至今约 130 万命运未明；1957–1991 向苏联红十字发出约 45 万件，约 8 万件得到死亡日期；1992 年以来又澄清约 25.5 万件；至 1991 年累计 112 万份鉴定（109 万士兵、3 万平民）</td>
+            </tr>
+            <tr>
+              <td>原 WASt → 德意志办事处 → 联邦档案馆 PA / 自 2025-09-01 起由 Abteilung Deutsches Reich（柏林-Tegel）受理至 1945 的军人个人问询</td>
+              <td>识别牌、减员与坟墓卡片、西盟俘虏个人文件、战争死亡申报；每年仍能澄清约千件并寻找在世亲属</td>
+              <td>中央人名卡 &gt;1850 万；替代坟墓卡约 450 万；西盟移交德俘文件约 700 万份量级；2026 年 3 月起弗莱堡相关个人卷宗迁 Tegel</td>
+            </tr>
+            <tr>
+              <td>Volksbund Deutsche Kriegsgräberfürsorge</td>
+              <td>战争坟墓查明、迁葬、网上坟墓检索；与联邦档案馆核对识别牌</td>
+              <td>中央坟墓卡约 250 万条阵亡报告；1992 年对俄协定后在东欧寻获逾 100 万具遗骸；网上检索近 550 万条；数字化个案逾 80 万</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>1950 年 3 月，联邦总统豪斯呼吁公民登记失踪者，市政府摆开卡片；联邦政府将案件交给 DRK。登记主要覆盖西德，故民主德国与东欧的寻找者长期缺席——这是今天仍有新申请的原因之一。DRK 明确：纳粹受害者、集中营与外国强制劳工档案应询阿罗尔森（Arolsen Archives）；军人履历与西盟战俘细节询联邦档案馆。三套系统并列，说明“找一个德国失踪士兵”和“找一个被德国杀害的人”走的不是同一扇门。</p>
+      </div>
+
+      <div class="card" data-nr="KARTE 06" id="f-numbers">
+        <h3>五、德国士兵死亡数字的史学来源（必须点名，禁止含混）</h3>
+        <p>家庭等待的规模，常被媒体用“百万失踪”一语带过。史学上至少有三套不可混用的数字：</p>
+        <ol>
+          <li><strong>战时 OKW 统计。</strong>施拉姆整理的国防军统帅部日记：1939-09-01 至 1945-01-31，战斗相关死亡约 181 万、失踪与战俘约 190 万，加疾病事故等后总损失约 390 万（含伤病另列）。西德统计年鉴所载至 1944-12-31 的国防军死亡约 196.5 万、失踪与战俘约 185.8 万。Overmans 指出：1944 年中期以后报告体系崩溃，许多失踪、被俘与未处理的个人报告没有进入 OKW 汇总。</li>
+          <li><strong>战后 WASt／官方卡片。</strong>1954 年底约 400 万死亡与失踪（273 万死亡、约 124 万失踪）。2005 年红十字转述 WASt：约 <strong>430 万</strong>（310 万死亡、120 万失踪），含奥地利与东欧被征德意志人。这是<strong>已登记状态</strong>，不是人口学完成数。</li>
+          <li><strong>Rüdiger Overmans《德意志军事损失》（2000，Oldenbourg / De Gruyter）。</strong>在 WASt 约 1700–1800 万张个人卡上做抽样：死亡卡约 307 万，总卡片中再识别死亡与失踪；结论为军事死亡与推定死亡合计约 <strong>5,318,000</strong>（英语维基转述其表作 5,318,531），其中约 90 万来自 1937 年德国疆界以外的征召。他估计 1945 年“最后战役”死亡约 123 万。苏军俘虏营中，WASt 可确认的战俘死亡约 36.3 万；Overmans 另估计实际战俘死亡更高（约 110 万量级，含未被登记为战俘的失踪者）——与 1974 年马施克委员会约 120 万战俘死亡的讨论相邻，<strong>并非已关闭的共识</strong>。</li>
+        </ol>
+        <p>方法论争议同样要写：批评者指出他把“死亡卡”与“总卡”两套抽样叠加以外推 220 万额外死亡，误差与时间分布可能偏斜。学习者应把 531.8 万当作<strong>有出处的估计</strong>，把 430 万当作<strong>官方卡片存量</strong>，把 OKW 当作<strong>战时未完成报表</strong>，而不是挑选一个整数为“德国也伤亡惨重”的修辞服务。</p>
+        <p>DRK 本页采用的“约 130 万人命运仍不确定”、SWR 所说“仅国防军仍有约 100 万士兵失踪”，与 Overmans 的“推定死亡”不是同一指标：一个是搜寻处未结案件，一个是人口学家把失踪计入死亡。家庭的等待发生在指标缝里。</p>
+      </div>
+
+      <div class="card" data-nr="KARTE 07" id="f-now">
+        <h3>六、2025–2026：八十年后仍有七千件询问</h3>
+        <p>2025 年 5 月 8 日，tagesschau 在战争结束八十年纪念日报道：<strong>2024 年</strong> DRK 收到约 <strong>7000</strong> 件与二战命运相关的询问；约 <strong>43%</strong> 可借助馆藏推进。询问者仍以“经历世代”为主，孙辈协助增加。服务对亲属免费，自 1953 年起由联邦内政部资助；围绕“是否还有必要”的争论之后，经费<strong>再延至 2028</strong>。红十字会长哈塞尔费尔特希望至少维持到 2045 年。这不是怀旧预算，是承认档案仍在产生新的确定——包括确定死亡。</p>
+        <p>联邦档案馆 2025 年 9 月 1 日起：柏林-Tegel 的“德意志帝国部”接手至 1945 年军人个人问询（此前弗莱堡军事档案部）。<strong>2026 年 3 月</strong>起，PERS 6 等个人卷宗、医院簿、军事法庭档案将从弗莱堡迁往 Tegel，使用可能受限。对仍在填表的家庭，迁档意味着又一次排队。人民盟的迁葬季通常为四月至十二月；识别须经联邦档案馆官方确认后才通知亲属——坟墓与卡片的时间差，继续延长等待。</p>
+        <p>战俘明信片的物质形态在此具有讽刺性：日内瓦格式要求写清营号、姓名、收件人地址格。许多家庭保存的正是这种格子——田字格里写满地址，回信栏空白。2025–2026 年的电子表格，不过是同一格子的数字化。</p>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <h2 class="sec">来源（真实 URL）</h2>
+      <div class="card" data-nr="BELEG">
+        <p>下列网址均经检索或抓取，未编造。抓取失败的条目仅保留检索中出现的稳定官方／馆方地址，并注明。</p>
+        <ol>
+          <li>DRK 搜寻处：战俘与失踪者（1400 万询问、约 130 万未明、1957–1991 与 1992 以后数字）<br><a href="https://www.drk-suchdienst.de/wie-wir-helfen/suchen/zweiter-weltkrieg/kriegsgefangene-und-vermisste/">https://www.drk-suchdienst.de/wie-wir-helfen/suchen/zweiter-weltkrieg/kriegsgefangene-und-vermisste/</a></li>
+          <li>DRK：第二次世界大战总述（约 2000 万寻找者／被寻找者）<br><a href="https://www.drk-suchdienst.de/wie-wir-helfen/suchen/zweiter-weltkrieg">https://www.drk-suchdienst.de/wie-wir-helfen/suchen/zweiter-weltkrieg</a></li>
+          <li>DRK 英文页：Second World War<br><a href="https://www.drk-suchdienst.de/en/how-we-help/tracing/second-world-war">https://www.drk-suchdienst.de/en/how-we-help/tracing/second-world-war</a></li>
+          <li>tagesschau，2025-05-08：八十年后的命运澄清（2024 年约 7000 件、43%、经费至 2028、西蒙与罗斯塔姆案例）<br><a href="https://www.tagesschau.de/inland/gesellschaft/suchdienst-vermisste-zweiter-weltkrieg-100.html">https://www.tagesschau.de/inland/gesellschaft/suchdienst-vermisste-zweiter-weltkrieg-100.html</a></li>
+          <li>SWR：霍夫曼家族与“不确定等于肉体痛苦”（约 100 万国防军士兵仍失踪；2022 年澄清第比利斯死亡）<br><a href="https://www.swr.de/swraktuell/rheinland-pfalz/jahrzehnte-nach-kriegsende-zweiter-weltkrieg-klaert-drk-schicksal-von-vermisstem-soldaten-100.html">https://www.swr.de/swraktuell/rheinland-pfalz/jahrzehnte-nach-kriegsende-zweiter-weltkrieg-klaert-drk-schicksal-von-vermisstem-soldaten-100.html</a></li>
+          <li>NDR：1945 年战争孤儿（梅前 3 万、帕泽瓦尔克单日 3000 名儿童、121 所家园）<br><a href="https://www.ndr.de/geschichte/chronologie/1945-Das-traurige-Schicksal-der-Kriegswaisen,kriegswaisen103.html">https://www.ndr.de/geschichte/chronologie/1945-Das-traurige-Schicksal-der-Kriegswaisen,kriegswaisen103.html</a></li>
+          <li>联邦档案馆：军人个人档案问询；2025-09-01 管辖权与 2026-03 迁档<br><a href="https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/personen-und-familienforschung/personenbezogene-unterlagen-militaerischer-herkunft/">https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/personen-und-familienforschung/personenbezogene-unterlagen-militaerischer-herkunft/</a></li>
+          <li>联邦档案馆：WASt／德意志办事处沿革与 PA 部藏量（1 亿识别牌报告、1500 万减员报告、1850 万名人名卡）<br><a href="https://www.bundesarchiv.de/das-bundesarchiv/aus-unserer-archivarbeit/unterlagen-der-abteilung-personenbezogene-auskuenfte-zum-ersten-und-zweiten-weltkrieg/">https://www.bundesarchiv.de/das-bundesarchiv/aus-unserer-archivarbeit/unterlagen-der-abteilung-personenbezogene-auskuenfte-zum-ersten-und-zweiten-weltkrieg/</a></li>
+          <li>人民盟：坟墓查明（250 万卡片、东欧逾 100 万具寻获、网上近 550 万条）<br><a href="https://www.volksbund.de/ueber-uns/organisation/kriegsgraeberdienst/graebernachweis">https://www.volksbund.de/ueber-uns/organisation/kriegsgraeberdienst/graebernachweis</a></li>
+          <li>人民盟：从寻找到迁葬（须联邦档案馆确认后才通知亲属）<br><a href="https://www.volksbund.de/ueber-uns/organisation/kriegsgraeberdienst/graebernachweis/suche-umbettung-identifizierung">https://www.volksbund.de/ueber-uns/organisation/kriegsgraeberdienst/graebernachweis/suche-umbettung-identifizierung</a></li>
+          <li>Overmans 专著书目页（De Gruyter / Oldenbourg）：<em>Deutsche militärische Verluste im Zweiten Weltkrieg</em><br><a href="https://www.degruyterbrill.com/document/doi/10.1524/9783486594140/html">https://www.degruyterbrill.com/document/doi/10.1524/9783486594140/html</a></li>
+          <li>英语维基综述页（OKW、WASt 430 万、Overmans 531.8 万及方法说明；转述二手，须与上条对照）<br><a href="https://en.wikipedia.org/wiki/German_casualties_in_World_War_II">https://en.wikipedia.org/wiki/German_casualties_in_World_War_II</a></li>
+          <li>NSV：英语维基（种族限制、1935 年会员数、1945-10-10 解散；引 Evans、Burleigh、Aly）<br><a href="https://en.wikipedia.org/wiki/National_Socialist_People%27s_Welfare">https://en.wikipedia.org/wiki/National_Socialist_People%27s_Welfare</a></li>
+          <li>慕尼黑 NS 文献中心 NSV 词条（检索命中；本次直接抓取返回 401）<br><a href="https://www.nsdoku.de/en/lexikon/artikel/ns-volkswohlfahrt-nsv-612">https://www.nsdoku.de/en/lexikon/artikel/ns-volkswohlfahrt-nsv-612</a></li>
+          <li>Polonika：Etzelsdorf 强制劳工儿童之家墓地说明<br><a href="https://baza.polonika.pl/en/obiekty/miejsce-pochowku-dzieci-robotnic-przymusowych-zmarlych-w-sierocincu-na-zamku-etzelsdorf">https://baza.polonika.pl/en/obiekty/miejsce-pochowku-dzieci-robotnic-przymusowych-zmarlych-w-sierocincu-na-zamku-etzelsdorf</a></li>
+          <li>德意志数字图书馆：野战邮局致失踪士兵之妻函（1944-08-17；页面有反爬，条目号可查）<br><a href="https://www.deutsche-digitale-bibliothek.de/item/K4TYNMOL4TOU4OC5SJSWNNTYVQBCEIMW">https://www.deutsche-digitale-bibliothek.de/item/K4TYNMOL4TOU4OC5SJSWNNTYVQBCEIMW</a></li>
+        </ol>
+        <p class="note">检索词（中英，实际使用）：Kriegswaisen Deutschland 1945；Vermisste Wehrmacht DRK Suchdienst；Deutsche Dienststelle WASt 2025 2026；Kriegsgräberfürsorge；missing German soldiers families waiting；NSV 孤儿／纳粹人民福利；Todesanzeige Feldpost；二战德国战争孤儿 失踪士兵 红十字搜寻；Overmans Deutsche militärische Verluste。</p>
+      </div>
+    </section>
+
+    <section id="lesson">
+      <h2 class="sec">对历史学习者的启示</h2>
+      <div class="card" data-nr="LEHRE">
+        <ol>
+          <li><strong>把“失踪”当成一种制度产物来读。</strong>它不只是战场上的失踪，而是报告体系在 1944 年以后崩溃、俘虏登记发生在营门之内、东西德搜寻网分裂的结果。家庭收到的是状态，不是事实。</li>
+          <li><strong>数字必须带作者与卡片类型。</strong>OKW、WASt 存量、Overmans 抽样是三套东西。引用“德国死了五百万士兵”而不说 Overmans 2000 年、WASt 卡片与批评意见，就是在用整数做道德算术。</li>
+          <li><strong>等待发生在种族边界之内。</strong>NSV 的孤儿与母子救济是给“有价值的德意志人”的；强制劳工婴儿在同一缩写下被饿死。学德国战争孤儿，不同时打开阿罗尔森与占领区儿童政策，会把民族共同体的内部悲剧当成战争的全部儿童史。</li>
+          <li><strong>妇女户主是结构，不是感人插曲。</strong>迁居、养家、拒绝再婚或被迫宣告死亡，是配给、户籍与抚恤法的交叉，不是“坚韧女性”的宣传画。</li>
+          <li><strong>2025–2026 的档案馆搬家与经费延期，说明记忆工作仍是行政。</strong>七千件询问、43% 可推进、迁档可能造成使用中断：历史没有在 1945 年 5 月 8 日归档完毕。学习者若只消费“八十年”纪念专题，会错过仍在填表的人。</li>
+        </ol>
+        <p>明信片格子是为了让收信人被找到。本报告借用它的版式，是为了记住：有些格子永远空着，而空着本身，就是平民史的一种证据——在侵略者社会内部，也在它拒绝承认为人的那些孩子身上。</p>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      二战德国平民史调研 · 独立 HTML · 视觉：战俘明信片风（薄纸、红十字戳、田字格地址、检查印）· 字体：Noto Serif SC / EB Garamond / UnifrakturMaguntia / Caveat / Pathway Gothic One · 未使用紫渐变、Inter、Space Grotesk 及项目禁用字体清单 · 不美化独裁 · 不把德国损失与德国罪行对冲 · 文件名时间戳 20260830_1828
+    </footer>
+  </article>
+</div>
+</body>
+</html>

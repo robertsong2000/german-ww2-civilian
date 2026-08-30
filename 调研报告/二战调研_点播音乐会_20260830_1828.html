@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电影院与《点播音乐会》：战争娱乐的心理功能 —— 2025–2026 胶片档案回看与 Heimatfront 的情绪管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Newsreel sprocket-hole darkroom: 35mm leader, safelight red, intertitle cards */
+:root {
+  --void: #080706;
+  --leader: #100e0c;
+  --emulsion: #161210;
+  --safelight: #c41e28;
+  --safelight-dim: #7a141c;
+  --gate: #e8dcc0;
+  --silver: #b9aea0;
+  --titlecard: #f3ead6;
+  --ink: #1c1612;
+  --grain: #2a241e;
+  --frame: #3a322c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--void);
+  color: var(--gate);
+  font-family: "Noto Serif SC", "Lora", serif;
+  line-height: 1.86;
+  min-height: 100vh;
+}
+/* Film grain overlay */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  opacity: .18;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+/* Darkroom safelight wash */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(196,30,40,.22), transparent 36%),
+    radial-gradient(ellipse at 88% 92%, rgba(196,30,40,.08), transparent 40%);
+}
+/* Left / right sprocket rails */
+.sprocket {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 42px;
+  z-index: 30;
+  background: #050403;
+  box-shadow: inset 0 0 0 1px #1a1512;
+}
+.sprocket.left { left: 0; border-right: 2px solid #2a1c18; }
+.sprocket.right { right: 0; border-left: 2px solid #2a1c18; }
+.sprocket span {
+  display: block;
+  width: 16px;
+  height: 11px;
+  margin: 11px auto;
+  background: #2c1814;
+  border-radius: 2px;
+  box-shadow:
+    inset 0 0 0 1px #4a2a24,
+    0 0 0 3px #050403,
+    0 0 8px rgba(196,30,40,.15);
+}
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 28px 64px 72px;
+  position: relative;
+  z-index: 2;
+}
+/* Newsreel leader bar */
+.leader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 4px 14px;
+  border-bottom: 1px solid var(--safelight-dim);
+  font-family: "Source Code Pro", monospace;
+  font-size: 11px;
+  letter-spacing: .22em;
+  color: var(--safelight);
+  text-transform: uppercase;
+}
+.countdown {
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--safelight);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  color: var(--safelight);
+  letter-spacing: 0;
+  box-shadow: 0 0 18px rgba(196,30,40,.35);
+  background: radial-gradient(circle at 40% 35%, rgba(196,30,40,.2), transparent 65%);
+}
+.mast { padding: 22px 0 8px; }
+.serial {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: .28em;
+  font-size: 15px;
+  color: var(--safelight);
+}
+h1 {
+  font-family: "Noto Serif SC", "Lora", serif;
+  font-weight: 700;
+  font-size: clamp(1.42rem, 3.1vw, 1.95rem);
+  line-height: 1.38;
+  margin: 10px 0 12px;
+  color: var(--titlecard);
+}
+.sub {
+  color: var(--silver);
+  font-size: 15px;
+  max-width: 46em;
+}
+.when {
+  margin-top: 14px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+  color: #8a7c70;
+}
+/* Silent-film intertitle */
+.intertitle {
+  margin: 22px 0 8px;
+  padding: 22px 26px 18px;
+  background: #0b0a09;
+  color: var(--titlecard);
+  border: 8px double #5a4a3a;
+  box-shadow: 0 0 0 1px #1a1410, 0 18px 40px rgba(0,0,0,.45);
+  text-align: center;
+}
+.intertitle .label {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: .4em;
+  font-size: 13px;
+  color: var(--safelight);
+  margin-bottom: 8px;
+}
+.intertitle p {
+  font-family: "Lora", "Noto Serif SC", serif;
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0;
+}
+nav.toc {
+  margin: 22px 0;
+  padding: 16px 18px 10px;
+  background: var(--emulsion);
+  border: 1px solid var(--frame);
+  border-left: 5px solid var(--safelight);
+}
+nav.toc h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: .2em;
+  color: var(--safelight);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+nav.toc ol { margin: 0 0 8px 1.25em; font-size: 15px; }
+nav.toc a {
+  color: var(--gate);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(196,30,40,.45);
+}
+nav.toc a:hover { color: var(--safelight); }
+.card {
+  margin: 22px 0;
+  padding: 22px 22px 16px;
+  background: #efe6d2;
+  color: var(--ink);
+  border: 1px solid #c9b89a;
+  box-shadow:
+    0 0 0 6px #0c0a09,
+    0 0 0 7px #3a2e28;
+  position: relative;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 14px;
+  bottom: 14px;
+  width: 8px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #0c0a09 0 10px,
+      #3a201c 10px 16px,
+      #0c0a09 16px 26px
+    );
+}
+.card.red {
+  background: #ead8c4;
+}
+.card.ash { background: #e2d8c6; }
+.card h2 {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.28rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c4ae82;
+}
+.tag {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 13px;
+  letter-spacing: .22em;
+  color: var(--safelight-dim);
+  margin-bottom: 4px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 12px 16px;
+  border-left: 4px solid var(--safelight);
+  background: rgba(28,22,18,.06);
+  font-style: italic;
+  color: #2a221c;
+}
+.note { font-size: 13.5px; color: #5c5348; margin-bottom: 12px; }
+.sources a { color: #6b1c22; word-break: break-all; }
+.statrow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 14px 0 8px;
+}
+.stat {
+  background: #0d0b0a;
+  color: var(--titlecard);
+  padding: 12px 10px 10px;
+  text-align: center;
+  border: 1px solid #3a2a26;
+}
+.stat b {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.55rem;
+  letter-spacing: .04em;
+  color: var(--safelight);
+  font-weight: 400;
+}
+.stat span {
+  font-size: 12px;
+  color: var(--silver);
+  line-height: 1.4;
+}
+.frame-cut {
+  height: 10px;
+  margin: 8px 0 18px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #0a0908 0 18px,
+      #3a201c 18px 24px,
+      #0a0908 24px 42px
+    );
+  opacity: .85;
+}
+footer {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid var(--safelight-dim);
+  font-size: 12px;
+  color: #8a7c70;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  letter-spacing: .06em;
+}
+@media (max-width: 720px) {
+  .sprocket { display: none; }
+  .wrap { padding: 16px 18px 48px; }
+  .statrow { grid-template-columns: 1fr; }
+  .card::before { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Newsreel sprocket rails: punched 35mm leader -->
+<aside class="sprocket left" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</aside>
+<aside class="sprocket right" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</aside>
+
+<article class="wrap">
+  <div class="leader">
+    <span>DEUTSCHE WOCHENSCHAU · REEL 12 · HEIMATFRONT</span>
+    <div class="countdown" title="Film countdown">8</div>
+  </div>
+
+  <header class="mast">
+    <div class="serial">UFA · MASURENALLEE · 15:00 SONNTAG</div>
+    <h1>电影院与《点播音乐会》：战争娱乐的心理功能 —— 2025–2026 胶片档案回看与 Heimatfront 的情绪管理</h1>
+    <p class="sub">周日下午的电台、暗房里的银幕、十亿人次的年度入场：纳粹德国把消遣做成 Heimatfront（大后方）的心理管理。宣传与逃避是同一卷胶片的正反面，不是无害周末。</p>
+    <p class="when">调研时间：2026-08-30 18:28 CST · 平民史系列 · 主题轮换池第12项 · 视觉：新闻纪录片胶片齿孔风</p>
+  </header>
+
+  <div class="intertitle">
+    <div class="label">ZWISCHENTITEL</div>
+    <p>这个“无害而乡土”的片子，以讨喜的形式装进了政权所珍视的几乎一切——除了反犹主义。</p>
+    <p style="margin-top:10px;font-size:.92rem;opacity:.85;">—— Francis Courtade / Pierre Cadars 所引评语，针对 1940 年故事片《Wunschkonzert》</p>
+  </div>
+
+  <nav class="toc" id="toc">
+    <h2>INHALT · 目录</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#radio">周日 15:00：电台《国防军点播音乐会》</a></li>
+      <li><a href="#film">银幕上的 Volksgemeinschaft</a></li>
+      <li><a href="#billion">“十亿观影”：年度人次，不是一周十亿</a></li>
+      <li><a href="#dual">宣传与逃避：同一套节目单</a></li>
+      <li><a href="#football">戈培尔的足球课：泄气的娱乐会被关掉</a></li>
+      <li><a href="#now">2025–2026：胶片迁址与保留放映</a></li>
+      <li><a href="#sources">来源（真实 URL）</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <div class="tag">01 · THEMA</div>
+    <h2>本期主题</h2>
+    <p>本报告写的不是“战时德国人爱看电影”这条民俗印象，而是娱乐如何被编进 Heimatfront 的情绪工程：电台把前线与厨房拴在同一条声波上，电影院用爱情、Schlager（流行歌曲）和强制加映的《德国每周新闻》把战争做成可坐着度过的两小时。核心文本是 1939–1941 年的广播节目《Wunschkonzert für die Wehrmacht》（《国防军点播音乐会》），以及 1940 年 12 月 30 日在柏林动物园旁乌发宫首映的同名故事片。</p>
+    <p>立场需要说清楚：平民走进影院、拧开人民收音机，并不等于他们都是狂热分子；但把这些行为写成“政治之外的休息”，是在替文化工业卸责。德国历史博物馆（DHM）的 LeMO 条目写得很直白：轻松娱乐片的功能，是让观众在战争年代“保持好心情”，并“从日常的困苦中分心”。filmportal.de 则强调：把纳粹电影等同于《意志的胜利》或《犹太人苏斯》会误导——整个影业是一套把娱乐与政治内容按比例调配的系统。公开的宣传片大约只占千余部故事片的十分之一；其余十分之九才是日常的心理管理。</p>
+    <p>2025–2026 年的回看角度落在胶片保管机构自身：德国电影资料馆（Deutsche Kinemathek）于 2025 年 1 月迁入柏林米特区 Mauerstraße 79 的 E-Werk 过渡馆址，图书馆 2025 年 5 月重开，档案 2025 年 9 月重新开放，馆舍于 2026 年 1 月 23 日再次对公众开放；与此同时，DHM 的 Zeughauskino 仍以 35mm 放映《点播音乐会》，并配讲解——提醒学习者：这卷胶片从未变成无害怀旧。</p>
+  </section>
+
+  <div class="frame-cut" aria-hidden="true"></div>
+
+  <section class="card red" id="findings">
+    <div class="tag">02 · BEFUNDE</div>
+    <h2>核心发现</h2>
+    <div class="statrow">
+      <div class="stat"><b>15.5 Mio</b><span>电台点播音乐会为冬季救济等筹得约 1550 万帝国马克</span></div>
+      <div class="stat"><b>2600 万</b><span>故事片《点播音乐会》至战争结束约 2600 万观影人次、票房 760 万马克</span></div>
+      <div class="stat"><b>&gt;10 亿</b><span>LeMO：约 1939/40 年度电影院入场已超十亿人次（年度，非每周）</span></div>
+    </div>
+    <ul>
+      <li><strong>电台先于电影。</strong>节目由宣传部官员 Alfred-Ingemar Berndt 推动，1939 年 10 月 1 日首播，经所有帝国电台联播；现场观众仅限国防军与医务人员，点播只接受士兵及其家属。1940 年起固定周日播出，最后一次按计划播出是 1941 年 5 月 25 日。完整节目录音不存。</li>
+      <li><strong>电影是电台的银幕化 Volksgemeinschaft。</strong>Eduard von Borsody 导演，Ilse Werner 饰“后方等着的女人”。影片获“国家政治上有价值”“艺术上有价值”“民俗上有价值”“对青年有价值”四枚官方评语；盟军管制委员会 1945 年禁映。它镶入里芬施塔尔《奥林匹亚》镜头与战时新闻片，结尾不是吻，而是军舰、轰炸机、卐旗和《我们向英格兰进军》。</li>
+      <li><strong>“一周十亿观影”是误传。</strong>DHM/LeMO 给出的曲线是：1934/35 季约 2.5 亿人次，五年后<strong>每年</strong>超过十亿。把“每年十亿”说成“一周十亿”，会把规模夸大两个数量级，也会把统计当成奇闻。</li>
+      <li><strong>娱乐有开关。</strong>1942 年 9 月 20 日德国队在柏林 2:3 负于瑞典后，戈培尔在日记里写：十万人沮丧离开球场，对这些人来说赢一场球比占领东方某座城市更要紧——此类活动对国内情绪应予拒绝。不能提振 Stimmung（情绪）的大众娱乐，会被宣传部关掉；能提振的，会一直开到剧院歌剧院都关了之后。</li>
+      <li><strong>双功能同时生效。</strong>德国历史博物馆 Zeughauskino 的场刊写：这部“民族和解糊状物”成为纳粹时期第二卖座影片，约 2600 万人在 1941 年前后看过它——“其时对欧洲犹太人的系统性灭绝已经全面展开。”甜蜜的周日节目与屠杀时间表重叠，不是事后对照，而是同一社会的日常结构。</li>
+    </ul>
+  </section>
+
+  <section class="card ash" id="radio">
+    <div class="tag">03 · RUNDFUNK</div>
+    <h2>周日 15:00：电台《国防军点播音乐会》</h2>
+    <p>点播音乐本身并不新。德语维基百科根据广播史研究指出：1924 年法兰克福与柯尼斯堡已有听众点播节目。纳粹时期的创新，是把点播绑上捐款。1935 年圣诞期间，一位听众愿为冬季救济捐 20 马克以换一首曲子；Deutschlandender 播音员 Heinz Goedecke 接过这个即兴，做成《冬季救济点播音乐会》，1936 年 1 月 14 日首播。战争爆发前，14 场据称筹得 23.8 万马克。</p>
+    <p>1939 年 9 月后，士兵大量寄出附带曲目愿望的 Feldpost。宣传部推出《国防军点播音乐会》：首播 1939 年 10 月 1 日 16–20 时，不再只走 Deutschlandsender，而是全部帝国电台。直播来自柏林马苏伦林荫大道广播大厦 Großer Sendesaal。现场只坐军人与医务人员；曲目只来自士兵与家属。至 1939 年底每周三、周日，1940 年起只留周日。英语维基与 GHDI 说明：戈培尔要求德国表演者都来贡献；节目自称播放前线点播，从而把武装部队与大后方缝进 Volksgemeinschaft。</p>
+    <p>美国大屠杀纪念馆（USHMM）在解读 1944 年宣传片《战争中的广播》时写道：周日节目会点播给前线亲人的歌曲，并插入出生、订婚等私人消息，目的是激发情感反应，让“民族共同体”听起来像一个被声波拴住的巨型家庭。纳粹领导人把广播想象成连接后方与前线的“魔法纽带”——这句话本身来自 1940 年故事片《点播音乐会》的官方剧情简介。</p>
+    <p>German History in Documents and Images（GHDI）指出：政权初期广播偏政治演说与古典乐，公众用投诉和关机施压，节目才被迫加入更多音乐与娱乐；战时《点播音乐会》仍是民俗娱乐，但功能是宣传，并继续为冬季救济募款。1940 年 Nibelungen Verlag 出版 Heinz Goedecke 与 Wilhelm Krug 的宣传书《我们开始国防军点播音乐会》，封面把儿童合唱的欢庆叠在休息中的士兵之上。电台于 1941 年 5 月 25 日最后一次按计划播出；原定 9 月 7 日恢复，无说明地取消。筹款总额约 1550 万帝国马克。</p>
+    <p class="note">没有完整节目录音，后人听到的多是片段与事后神话。缺失本身也是宣传史的一部分：被记住的是“前线与家乡的桥梁”，而不是谁的愿望被筛选、谁被排除在“民族家庭”之外。</p>
+  </section>
+
+  <section class="card" id="film">
+    <div class="tag">04 · UFA-PALAST</div>
+    <h2>银幕上的 Volksgemeinschaft</h2>
+    <p>电台太成功，于是被拍成电影。拍摄始于 1940 年 7 月 16 日，12 月 21 日送审（2832 米，103 分钟），12 月 30 日在 Ufa-Palast am Zoo 首映。前帝国电影总监 Fritz Hippler 战后称之为“戈培尔的心头好”：部长参与剧本与对白，指定大场面里的歌手，并迷上 Ilse Werner 这个“现代女性的可亲典范”。Werner 起初拒绝角色；这部“后方坚忍女友”（Durchhaltemieze）形象在 1945 年给她换来短暂演出禁令。</p>
+    <p>情节几乎像公式：1936 年柏林奥运会，Inge 与空军少尉 Herbert 相爱；他被秘密派往秃鹰军团，禁止通信；三年后战争开始，Inge 的青梅竹马 Helmut 分到 Herbert 部下；Herbert 在点播音乐会里点奥运号角，Inge 在收音机前认出这是给她的信号；约定汉堡相会，两人却被派去大西洋侦察、被击落、由潜艇救起；医院里三角关系被“澄清”，恋人重聚。德语维基写：爱情故事本身无足轻重，目的只是强化后方——尤其是思念前线亲人的妇女——的士气。</p>
+    <p>真正的政治力在蒙太奇。奥林匹克段落使用里芬施塔尔《奥林匹亚》素材；战争段落使用新闻片；点播现场由 Heinz Goedecke 本人主持，Marika Rökk、Heinz Rühmann、柏林爱乐（Eugen Jochum 指挥《费加罗的婚礼》序曲）、Wilhelm Strienz 的《晚安，母亲》轮流出场。青年钢琴师在告别晚会上弹贝多芬，后来在教堂弹管风琴为战友导航、把敌人引向自己——一次被美化的“英雄之死”。影片不以爱情田园收束，而以舰队、机群、旗帜和《我们向英格兰进军》作结。</p>
+    <blockquote>这个“无害而乡土”的片子，以讨喜的形式装进了政权所珍视的几乎一切，除了反犹主义。</blockquote>
+    <p>Friedemann Beyer 称之为纳粹电影的“典范”。Karsten Witte 的观察更冷：它把兵种与艺术、智识者与“头脑简单者”、普鲁士人与巴伐利亚人焊在一起，动员的是“情感战线”；从纳尔维克到那不勒斯听同一套点播，节目竞争与交流竞争一并被关掉。DHM 的 Zeughauskino 场刊把这种缝合称作“völkischer Versöhnungsmatsch”（民族和解糊状物）——把纪录、扮演、战前与战时、Schlager 与军乐搅拌成同一口汤。</p>
+    <p>商业数字：与莎拉·莱安德尔的《伟大的爱情》（LeMO：超过 2500 万人）并列战时最卖座；《点播音乐会》至战争结束约 2600 万人次、760 万帝国马克（约合 2021 年 3400 万欧元）。1943 年 11 月推出缩短版仍标为“对青少年适宜”。西德 1980 年 FSK 定为 16 岁，1997 年改为 18 岁。权利现由弗里德里希-威廉-穆尔瑙基金会管理。它不是被遗忘的废片，是被降级、被限制、仍在流转的工业产品。</p>
+  </section>
+
+  <section class="card red" id="billion">
+    <div class="tag">05 · EINE MILLIARDE</div>
+    <h2>“十亿观影”：年度人次，不是一周十亿</h2>
+    <p>中文网络偶见“戈培尔治下每周十亿观影”之类说法。LeMO《日常生活》与《电影院》两条目给出的是可核对的官方叙述：1934/35 季约 2.5 亿人走进影院，五年后已是<strong>每年</strong>超过十亿人次。这仍是惊人的动员规模——在约 8000 万人口的帝国里，意味着人均一年进影院十余次——但它是年度入场合计，包含重复观影，不是一周十亿、也不是十亿独立个人。</p>
+    <p>数字要放回制度。1934 年起，影院业主被强制在正片前至少加映一部“文化片”和新闻周报；文化片常以客观口吻推销种族学说与“血与土”，新闻周报负责把政权的“成就”做成似乎同步的真实。LeMO 写：战争中，这些被摆拍的画面要靠“表面上的时新与真实”为军事胜利鼓劲。影院不是中立的黑屋子，是必须先吞下一勺宣传、再获准吃甜点的配给食堂。</p>
+    <p>1933–1945 年德国生产超过 1200 部故事片。1933 年 9 月戈培尔任帝国文化协会主席，人人须加入帝国电影协会才能从业；约 1500 名电影人离开德国，包括玛琳·黛德丽、弗里茨·朗、比利·怀尔德。1934 年 2 月 16 日《电影法》引入事前审查。至 1941 年，各大公司经国家购股转入国有，表面仍挂 Ufa、Terra、Tobis、Bavaria 的牌子。1942 年 1 月 10 日合并为 Ufa-Film GmbH（UFI）。娱乐工业的私有外观，是集中控制的伪装。</p>
+  </section>
+
+  <section class="card" id="dual">
+    <div class="tag">06 · ZWEI FUNKTIONEN</div>
+    <h2>宣传与逃避：同一套节目单</h2>
+    <p>filmportal.de 的区分仍然有用：纳粹电影宣传（作为系统）不等于纳粹宣传片（作为类型）。纯宣传故事片大约十分之一；纪录片、文化片、尤其 1938 年后强制加映的新闻周报，承担更直白的灌输。故事片的任务被规定为“消遣与娱乐”——但并非没有意识形态，只是配比不同。1941 年后，当速胜无望，战争在故事片里几乎成为禁忌；动员后方的任务交给《美好的一天》、《伟大的爱情》、《点播音乐会》，直到末期的《科尔贝格》。</p>
+    <p>逃避本身是政策。戈培尔清楚：听众若被演说灌满会关机，所以要有轻松音乐。LeMO《日常生活》写：人民收音机使家庭拥有率从 1933 年的 25% 升至 1941 年的 65%；节目以娱乐音乐为主，正是为了防止“宣传厌倦”导致的背离。USHMM 提醒：人民收音机被设计为主要接收国内台，犹太人的收音机被没收，收听外国广播在开战后再成为可罚之罪。被允许的消遣，边界由谁可以听、听什么来划定。</p>
+    <p>逃避也有禁区。LeMO 举例：汉斯·阿尔贝斯与 Ilse Werner 的《大自由 7 号》因“忧郁倾向”被戈培尔禁止在德国放映，1944 年 12 月只能在布拉格首映。1944 年 9 月 1 日剧院与歌剧院关闭，人员抽去国防军或军工；电影院却几乎维持到最后一天——成本再高、胶片再缺，也要留这间黑屋子。不是因为政权热爱艺术，而是因为银幕仍能管理情绪，而舞台被认为浪费人力。</p>
+    <p>双重功能在《点播音乐会》里叠得最紧：爱情提供逃避，蒙太奇提供宣传；点播提供“我被听见了”的幻觉，卐旗提供“我们正在进军”的指令。Courtade 与 Cadars 所引那句“除了反犹主义什么都有”，不可读成这部片子干净。1940 年同期上映的是《犹太人苏斯》《永恒的犹太人》《罗斯柴尔德一家》。轻松片不讲犹太人，并不妨碍观众在加映的新闻周报里看见他们被抹去。种族边界写在节目单的隔壁栏，而不是写在女主角的对白里。</p>
+  </section>
+
+  <section class="card ash" id="football">
+    <div class="tag">07 · STIMMUNG</div>
+    <h2>戈培尔的足球课：泄气的娱乐会被关掉</h2>
+    <p>若电影院是可控的情绪配给，足球证明了不可控的大众娱乐有多危险。研究纳粹部委史的网站 ns-reichsministerien.de 引用戈培尔日记（Elke Fröhlich 主编，第二部 1942 年 7–9 月卷）：1942 年 9 月德国队负于瑞典后，宣传部长写道，十万人沮丧离开球场；对这些人而言，赢一场足球比占领东方某座城市更要紧，为了国内情绪应拒绝此类活动。Welt 与体育史叙述将比赛日期定为 1942 年 9 月 20 日，比分 2:3，观众约十万。同年 11 月对斯洛伐克的比赛成为战时最后一场正式国际赛。</p>
+    <p>此处有一处需要标明的分歧：英文媒体 The Berliner 把这场 2:3（文中误作 3:2）写成“希特勒生日”，并误将引言安到“外交国务秘书”头上。更吻合档案的对照是：希特勒生日（4 月 20 日）那次丢脸，是 1941 年对瑞士 1:2；1942 年瑞典之战在九月。娱乐史里的日期错误，往往把“领袖生日”的戏剧性叠到另一场真正让戈培尔暴怒的比赛上。</p>
+    <p>这件事的要害不在球，在 Stimmung。宣传部衡量大众文化的尺度不是审美，是出场后人群的脸。电台点播与乌发爱情片被鼓励，因为它们把分离写成可治愈、把死亡写成咏叹；足球把失败写成比战报更疼的事实，所以被停掉。1943 年 2 月体育宫演说里，戈培尔宣称体育领域的缓役毫无意义：体育的任务是锤炼体力，以便在民族最紧急时投入使用。Heimatfront 的娱乐从来不是周末权利，是可撤销的情绪配额。</p>
+  </section>
+
+  <section class="card" id="now">
+    <div class="tag">08 · 2025–2026</div>
+    <h2>胶片迁址与保留放映</h2>
+    <p>德国电影资料馆在 2025–2026 年处于“过渡馆址”状态：自 2025 年 1 月起落户 E-Werk（Mauerstraße 79, 10117 Berlin）；波茨坦广场常设展永久关闭。图书馆 2025 年 5 月重开，档案 2025 年 9 月重新可查；馆舍 2026 年 1 月 23 日再次开放。馆方说明将在此过渡至计划中的电影之家落成，并继续 Berlinale 等合作，2026 年开办首批展览。当前展映包括 2026 年 5 月 7 日至 9 月 13 日的《Inventing Queer Cinema》。对二战研究者而言，这意味着：纳粹电影遗产的保管机构本身在搬迁，胶片、文字档案与玛琳·黛德丽档案的可见性随馆址政治而波动——查阅 1940 年的点播工业，必须经过 2025 年的纸箱与 2026 年的新门牌。</p>
+    <p>DHM 的 LeMO 仍把 1940 年《Illustrierter Film-Kurier》第 3166 号《点播音乐会》节目单（藏品 Do2 90/424.3）挂在“日常生活”条目下，并称该片为“迄那时为止最大的德国电影成功”。德国数字图书馆同一对象页显示最近更新为 2026 年 5 月 18 日。Zeughauskino 的场次页（配 Philipp Stiasny 导赏）用现在时讨论这部 35mm 拷贝：电台节目“表面上是娱乐”，实则要填上家乡与战线之间的裂隙，用人民收音机巩固“民族身体”；电影把这一整合视野译成有声片，并在灭绝已经展开的年份里成为第二卖座。</p>
+    <p>2025–2026 年的提醒很具体：资料馆在修门，博物馆在加导赏，档案在更新元数据——没有人把《点播音乐会》当成可以无解说放映的“老爱情片”。保留放映（Vorbehaltsfilm）传统要求：看之前先听人说话。学习者应把这套手续看成历史判断，而不是扫兴。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <div class="tag">09 · QUELLEN</div>
+    <h2>来源（真实 URL）</h2>
+    <p class="note">下列网址均经检索与抓取；不编造链接。维基条目与馆方页面交叉使用，数字以博物馆与文献集优先。</p>
+    <ol class="body">
+      <li>德语维基：《Wunschkonzert für die Wehrmacht》（首播、停播、1550 万马克）<br><a href="https://de.wikipedia.org/wiki/Wunschkonzert_f%C3%BCr_die_Wehrmacht" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Wunschkonzert_für_die_Wehrmacht</a></li>
+      <li>英语维基：《Wunschkonzert》（1940 电影：票房、禁映、戈培尔参与）<br><a href="https://en.wikipedia.org/wiki/Wunschkonzert" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Wunschkonzert</a></li>
+      <li>德语维基：《Wunschkonzert (1940)》（情节、评语、Witte 引文）<br><a href="https://de.wikipedia.org/wiki/Wunschkonzert_(1940)" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Wunschkonzert_(1940)</a></li>
+      <li>GHDI：1940 年 12 月宣传书封面说明（26 百万观众、760 万马克）<br><a href="https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/propagandabuch-ueber-das-wunschkonzert-fuer-die-wehrmacht-dezember-1940" target="_blank" rel="noopener">https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/propagandabuch-ueber-das-wunschkonzert-fuer-die-wehrmacht-dezember-1940</a></li>
+      <li>DHM LeMO：电影院（强制文化片/新闻周报、十亿人次、娱乐片分心功能）<br><a href="https://www.dhm.de/lemo/kapitel/ns-regime/kunst-und-kultur/kino" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/ns-regime/kunst-und-kultur/kino</a></li>
+      <li>DHM LeMO：日常生活（同一十亿数字、人民收音机 25%→65%）<br><a href="https://www.dhm.de/lemo/kapitel/ns-regime/alltagsleben" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/ns-regime/alltagsleben</a></li>
+      <li>DHM LeMO：电影政策（帝国电影协会、1934 年电影法、1200+ 故事片）<br><a href="https://www.dhm.de/lemo/kapitel/ns-regime/kunst-und-kultur/filmpolitik" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/ns-regime/kunst-und-kultur/filmpolitik</a></li>
+      <li>DHM LeMO 藏品：1940 年《点播音乐会》电影说明书<br><a href="https://www.dhm.de/lemo/bestand/objekt/filmprogramm-zu-wunschkonzert-1940" target="_blank" rel="noopener">https://www.dhm.de/lemo/bestand/objekt/filmprogramm-zu-wunschkonzert-1940</a></li>
+      <li>DHM Zeughauskino：场次说明（chl / Stiasny；灭绝已经展开）<br><a href="https://www.dhm.de/zeughauskino/vorfuehrung/das-wunschkonzert-6427/" target="_blank" rel="noopener">https://www.dhm.de/zeughauskino/vorfuehrung/das-wunschkonzert-6427/</a></li>
+      <li>filmportal.de：纳粹宣传片专文（十分之一、Heimatfront 片单含《点播音乐会》）<br><a href="https://www.filmportal.de/en/node/1166075" target="_blank" rel="noopener">https://www.filmportal.de/en/node/1166075</a></li>
+      <li>USHMM Experiencing History：宣传片《战争中的广播》与点播节目<br><a href="https://perspectives.ushmm.org/item/propaganda-film-radio-in-war" target="_blank" rel="noopener">https://perspectives.ushmm.org/item/propaganda-film-radio-in-war</a></li>
+      <li>纳粹部委研究站：戈培尔 1942 年足球日记引文（Fröhlich 版日记）<br><a href="https://ns-reichsministerien.de/2018/06/28/fussball-propaganda-und-erziehung-eine-sportart-und-ihre-instrumentalisierung-durch-nationalsozialistische-reichsministerien/" target="_blank" rel="noopener">https://ns-reichsministerien.de/2018/06/28/fussball-propaganda-und-erziehung-eine-sportart-und-ihre-instrumentalisierung-durch-nationalsozialistische-reichsministerien/</a></li>
+      <li>The Berliner：1936 足球与 1942 年瑞典之战的通俗叙述（日期有误，作对照）<br><a href="https://www.the-berliner.com/politics/hitler-football-match-berlin-poststadion-olympics-german-defeat-history/" target="_blank" rel="noopener">https://www.the-berliner.com/politics/hitler-football-match-berlin-poststadion-olympics-german-defeat-history/</a></li>
+      <li>Deutsche Kinemathek：E-Werk 过渡馆址（2025 迁入，2026-01-23 再开放）<br><a href="https://www.deutsche-kinemathek.de/de/kinemathek/unser-neues-zwischenquartier" target="_blank" rel="noopener">https://www.deutsche-kinemathek.de/de/kinemathek/unser-neues-zwischenquartier</a></li>
+      <li>Deutsche Kinemathek：Inventing Queer Cinema（2026-05-07 至 2026-09-13）<br><a href="https://www.deutsche-kinemathek.de/de/besuch/programm/inventing-queer-cinema" target="_blank" rel="noopener">https://www.deutsche-kinemathek.de/de/besuch/programm/inventing-queer-cinema</a></li>
+      <li>德国数字图书馆：同一电影说明书对象（页记最近更新 2026-05-18）<br><a href="https://www.deutsche-digitale-bibliothek.de/item/LZNWSIKAFNDLVIFYJ4XLHIABH25YXF3Z" target="_blank" rel="noopener">https://www.deutsche-digitale-bibliothek.de/item/LZNWSIKAFNDLVIFYJ4XLHIABH25YXF3Z</a></li>
+    </ol>
+  </section>
+
+  <section class="card red" id="lesson">
+    <div class="tag">10 · LERNEN</div>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，把战时娱乐写成“普通人的小小幸福”，是在重复宣传部的自我描述。点播音乐会的动人之处——母亲听到儿子点的歌、恋人隔着收音机重逢——正是它的功能：把分离、失踪与死亡暂时译成可被满足的愿望。愿望被满足的前提，是你属于被允许点播的那一侧。</p>
+    <p>第二，统计要防住修辞。“每年十亿人次”已经够说明电影院是Heimatfront 的基础设施；改成“一周十亿”只会让讨论变成猎奇。读 LeMO 时跟着季节走，不要跟着标题走。</p>
+    <p>第三，宣传与逃避不是二选一。戈培尔需要轻松音乐，是因为演说会把人赶跑；他停掉国际足球，是因为比分会把人赶出幻觉。同一双手调节音量。学习者看《点播音乐会》时，应同时看见加映的新闻周报、1940 年的反犹片档期、以及 1941 年灭绝机构已经运转的时间表。平民的眼泪是真的，工业的设计也是真的。</p>
+    <p>第四，2025–2026 年的迁馆与保留放映说明：胶片还在，手续还在。资料馆搬家不是逸事，是提醒遗产有保管成本；导赏不是礼貌，是最低限度的历史卫生。不要在没有字幕卡的黑屋子里，把纳粹文化工业当成“老电影课”。</p>
+  </section>
+
+  <footer>
+    REEL END · 调研报告/二战调研_点播音乐会_20260830_1828.html · 仅此 HTML · 未写入调研记录 · 暗房红灯下的齿孔边框
+  </footer>
+</article>
+</body>
+</html>

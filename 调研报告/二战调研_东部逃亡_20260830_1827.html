@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1944–45 东部逃亡：平民崩溃、恐惧与 Trauer —— 2025–2026：柏林文献中心《Ostgebiete》与哀悼的多声部记忆</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Distinctive passport fonts: Yeseva One (cover gold), Saira Extra Condensed (visa headers), Azeret Mono (serials). Chinese: Noto Serif SC. Not reused from prior reports. -->
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@400;600;700&family=Saira+Extra+Condensed:wght@500;600;700;800&family=Yeseva+One&display=swap" rel="stylesheet">
+<style>
+/* Exile-passport / visa-stamp aesthetic: manila booklet, punched holes, rubber seals, visa columns */
+:root {
+  --paper: #efe3c8;
+  --paper-dark: #e2d0a8;
+  --fiber: #d8c49a;
+  --ink: #1b2430;
+  --navy: #1c3148;
+  --navy-deep: #122233;
+  --burgundy: #6e1f28;
+  --stamp-red: #9a2c2c;
+  --stamp-green: #2a5a42;
+  --gold: #c4a15a;
+  --fade: #5d5344;
+  --rule: #c9b48a;
+  --visa-blue: #2c4a6e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 20% 0%, #3a3228 0%, #1a1612 55%, #0e0c0a 100%);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.85;
+  min-height: 100vh;
+}
+/* Desk under the open passport */
+.desk {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 16px 72px;
+}
+.passport {
+  position: relative;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 3px, rgba(90,70,40,.035) 3px 4px),
+    repeating-linear-gradient(0deg, transparent 0 2px, rgba(80,60,30,.03) 2px 3px),
+    linear-gradient(180deg, #f4ead4 0%, var(--paper) 40%, var(--paper-dark) 100%);
+  border: 1px solid #cbb892;
+  box-shadow:
+    0 1px 0 #fff8e6 inset,
+    0 28px 70px rgba(0,0,0,.45),
+    8px 8px 0 rgba(20,14,8,.25);
+  overflow: hidden;
+}
+.passport::before {
+  /* Paper grain overlay */
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: .22;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+/* Left punch-holes like a visa booklet binding */
+.punches {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 28px;
+  z-index: 3;
+  background: linear-gradient(90deg, rgba(18,14,10,.18), transparent 80%);
+  pointer-events: none;
+}
+.punches span {
+  display: block;
+  width: 13px; height: 13px;
+  margin: 22px 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #2a241c, #0c0a08);
+  box-shadow: inset 0 1px 2px #000, 0 0 0 1px rgba(255,240,210,.25);
+}
+.inner {
+  position: relative;
+  z-index: 1;
+  padding: 22px 36px 48px 52px;
+}
+/* Cover band */
+.cover-band {
+  margin: -22px -36px 18px -52px;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--gold);
+  padding: 16px 28px 14px 52px;
+  border-bottom: 4px solid var(--burgundy);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.cover-band .issuer {
+  font-family: "Saira Extra Condensed", sans-serif;
+  letter-spacing: .42em;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cover-band h1 {
+  font-family: "Yeseva One", "Noto Serif SC", serif;
+  font-size: clamp(1.35rem, 3.1vw, 2.05rem);
+  color: #f3e6c4;
+  line-height: 1.32;
+  max-width: 34em;
+  font-weight: 400;
+}
+.serial-block {
+  font-family: "Azeret Mono", monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-align: right;
+  line-height: 1.55;
+}
+.serial-block strong {
+  display: block;
+  font-size: 15px;
+  letter-spacing: .12em;
+  color: #f6e7b8;
+}
+.subtitle {
+  font-size: 15px;
+  color: var(--fade);
+  margin: 4px 0 12px;
+}
+.when {
+  font-family: "Azeret Mono", monospace;
+  font-size: 12px;
+  color: #6a5e4a;
+  border: 1px dashed var(--rule);
+  display: inline-block;
+  padding: 6px 10px;
+  background: rgba(255,250,235,.4);
+}
+/* Rubber stamps */
+.stamp {
+  position: absolute;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.15;
+  opacity: .55;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 4;
+}
+.stamp::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+.stamp-red { color: var(--stamp-red); }
+.stamp-green { color: var(--stamp-green); }
+.stamp-navy { color: var(--visa-blue); }
+.s1 { width: 118px; height: 118px; font-size: 13px; top: 168px; right: 28px; transform: rotate(-18deg); }
+.s2 { width: 92px; height: 92px; font-size: 11px; top: 310px; right: 132px; transform: rotate(12deg); }
+.s3 { width: 104px; height: 104px; font-size: 12px; bottom: 88px; right: 40px; transform: rotate(-8deg); }
+/* Photo corner + visa sticker */
+.photo-plate {
+  float: right;
+  width: 118px;
+  margin: 8px 0 16px 18px;
+  border: 8px solid #f7f0dc;
+  box-shadow: 0 0 0 1px #b9a57a, 2px 3px 0 rgba(0,0,0,.12);
+  background: linear-gradient(160deg, #6a5a48, #3a3228);
+  height: 148px;
+  position: relative;
+}
+.photo-plate::before {
+  content: "FOTO / 证件照栏";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d8c9a8;
+  font-family: "Saira Extra Condensed", sans-serif;
+  letter-spacing: .2em;
+  font-size: 12px;
+  text-align: center;
+}
+.sticker {
+  display: inline-block;
+  background: #f3ead0;
+  border: 1px solid #c4a15a;
+  box-shadow: 2px 3px 0 rgba(90,60,20,.12);
+  padding: 5px 10px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  letter-spacing: .16em;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  transform: rotate(-2deg);
+  margin-right: 8px;
+}
+nav.toc {
+  clear: both;
+  margin: 22px 0 28px;
+  padding: 14px 16px 10px;
+  border: 1px solid var(--rule);
+  background:
+    repeating-linear-gradient(180deg, transparent 0 27px, rgba(44,74,110,.07) 27px 28px),
+    #f6edd6;
+}
+nav.toc h2 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  letter-spacing: .28em;
+  font-size: 15px;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+nav.toc ol {
+  margin-left: 1.4em;
+  font-size: 15px;
+}
+nav.toc a { color: var(--visa-blue); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+nav.toc a:hover { color: var(--burgundy); }
+/* Visa column header strip */
+.visa-head {
+  font-family: "Saira Extra Condensed", sans-serif;
+  letter-spacing: .32em;
+  font-size: 13px;
+  font-weight: 800;
+  color: #f4ead0;
+  background: var(--navy);
+  padding: 6px 12px;
+  margin: 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  background: rgba(255,250,236,.55);
+  border: 1px solid var(--rule);
+  border-top: none;
+  padding: 18px 20px 20px;
+  margin-bottom: 22px;
+  position: relative;
+  box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+}
+.card h2 {
+  font-family: "Yeseva One", "Noto Serif SC", serif;
+  font-size: 1.28rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.card h3 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  letter-spacing: .08em;
+  font-size: 1.12rem;
+  color: var(--burgundy);
+  margin: 16px 0 6px;
+  font-weight: 700;
+}
+p { margin: 0 0 12px; }
+ul, ol { margin: 0 0 12px 1.3em; }
+li { margin-bottom: 6px; }
+.fact {
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+  margin: 14px 0;
+  font-size: 14.5px;
+}
+.fact dt {
+  font-family: "Saira Extra Condensed", sans-serif;
+  letter-spacing: .12em;
+  font-weight: 700;
+  background: #ead9b0;
+  padding: 8px 10px;
+  color: var(--navy);
+  border-bottom: 1px solid var(--rule);
+}
+.fact dd {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--rule);
+  background: #f7f0dc;
+}
+.fact dt:last-of-type, .fact dd:last-of-type { border-bottom: none; }
+blockquote {
+  margin: 14px 0;
+  padding: 10px 14px 10px 16px;
+  border-left: 4px solid var(--burgundy);
+  background: rgba(110,31,40,.06);
+  color: #3a3228;
+  font-size: 15px;
+}
+.note {
+  font-size: 13.5px;
+  color: var(--fade);
+  border-top: 1px dashed var(--rule);
+  padding-top: 10px;
+  margin-top: 8px;
+}
+a.src { color: var(--visa-blue); word-break: break-all; }
+.source-list { list-style: none; margin-left: 0; }
+.source-list li {
+  padding: 10px 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: 14.5px;
+}
+.source-list .tag {
+  font-family: "Azeret Mono", monospace;
+  font-size: 11px;
+  color: var(--stamp-green);
+  letter-spacing: .06em;
+}
+footer.visa-footer {
+  margin-top: 8px;
+  font-family: "Azeret Mono", monospace;
+  font-size: 11px;
+  color: #6a5e4a;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 2px solid var(--navy);
+}
+@media (max-width: 720px) {
+  .inner { padding: 16px 16px 36px 40px; }
+  .cover-band { margin: -16px -16px 14px -40px; padding: 14px 14px 12px 40px; }
+  .s1, .s2, .s3 { display: none; }
+  .fact { grid-template-columns: 1fr; }
+  .photo-plate { float: none; margin: 0 0 12px; }
+}
+</style>
+</head>
+<body>
+<!-- Standalone research report: East Prussian civilian flight 1944-45, passport/visa visual language -->
+<div class="desk">
+<article class="passport">
+  <div class="punches" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="stamp stamp-red s1">EINREISE<br>PILLAU<br>I.1945</div>
+  <div class="stamp stamp-green s2">TRECK<br>HAFF</div>
+  <div class="stamp stamp-navy s3">TRAUERarbeit<br>SFVV<br>2026</div>
+
+  <div class="inner">
+    <header class="cover-band">
+      <div>
+        <div class="issuer">Reisepass · Visa-Seite · 调研签证栏</div>
+        <h1>1944–45 东部逃亡：平民崩溃、恐惧与 Trauer</h1>
+      </div>
+      <div class="serial-block">
+        TYPE / 证件类别　CIVILIAN TRECK
+        <strong>No. OST-1945-1827</strong>
+        ISSUED　2026-08-30　18:27 CST
+      </div>
+    </header>
+
+    <p class="subtitle">副标题（2025–2026）：柏林文献中心《Ostgebiete / Ziemie Zachodnie》特展、常设展中的哀悼空间，以及德国平民逃亡叙事如何与侵略责任同页并存</p>
+    <p class="when">页面时间戳：2026-08-30 18:27 CST（本机 <code>date '+%Y%m%d_%H%M'</code> = 20260830_1827）　视觉风格：流亡护照签证风</p>
+
+    <p style="margin-top:14px">
+      <span class="sticker">Visa 01 · Ostpreußen</span>
+      <span class="sticker" style="transform:rotate(1.5deg);color:var(--navy)">Visa 02 · Trauer 2026</span>
+      <span class="sticker" style="transform:rotate(-4deg);color:var(--stamp-green)">Nicht übertragbar</span>
+    </p>
+
+    <div class="photo-plate" aria-hidden="true"></div>
+    <p>本页不是纪念章，而是一份给历史学习者的签证页：它记下 1944 年秋至 1945 年春，东普鲁士、波美拉尼亚、西里西亚等地德国平民在冰雪、港口与沉船中的崩溃；也记下这场逃亡发生在德国对东欧的侵略与占领之后。恐惧是真的，冻死是真的，性暴力是真的；把德国人写成唯一受害者，则不是史学，而是选择性失忆。</p>
+
+    <nav class="toc" id="toc">
+      <h2>Visa Index / 目录</h2>
+      <ol>
+        <li><a href="#theme">本期主题</a></li>
+        <li><a href="#findings">核心发现</a></li>
+        <li><a href="#sources">来源（真实 URL）</a></li>
+        <li><a href="#lessons">对历史学习者的启示</a></li>
+      </ol>
+    </nav>
+
+    <!-- Section: topic -->
+    <div class="visa-head"><span>VISA COLUMN A</span><span>THEMA / 本期主题</span></div>
+    <section class="card" id="theme">
+      <h2>本期主题</h2>
+      <p><strong>1944–45 东部逃亡</strong>不是一次有序疏散，而是政权拖延、前线崩溃与平民求生叠在一起的灾难。东普鲁士党部把撤离压到最后一刻，擅自逃亡一度以死刑相威胁；1945 年 1 月 12 日苏军冬季攻势开始后，以老人、妇女、儿童为主的 Treck（难民车队）才在零下二十多度中涌上公路与结冰的 Fresh Haff（维斯瓦潟湖）。港口皮劳（Pillau，今波罗茨克）人满为患；海上“汉尼拔行动”把数十万至上百万人送往西方，也把威廉·古斯特洛夫号等船变成波罗的海的坟墓。</p>
+      <p>德语里的 <em>Trauer</em>——哀悼、悲恸、未完成的告别——在 2025–2026 年被重新摆上展台。柏林 Stresemannstraße 90 的<strong>逃亡、驱逐与和解文献中心</strong>（Dokumentationszentrum Flucht, Vertreibung, Versöhnung，由联邦基金会 Bundesstiftung Flucht, Vertreibung, Versöhnung 承办）于 2026 年 5 月 29 日至 2027 年 1 月 17 日举办特展《Ostgebiete / Ziemie Zachodnie. 一次德波寻迹》：同一片土地，对许多德国人是故乡失落，对许多波兰人则是在德国占领废墟上被迫安家。文献中心的常设展明确把德国人的逃亡与驱逐放在“由德国发动的第二次世界大战”之内，并设有供驻足的静默空间（Raum der Stille）。本报告用 2025–2026 的展览与档案回访，重读 1944–45 年平民崩溃，而不是把 Trauer 收成单一民族的护照。</p>
+    </section>
+
+    <!-- Section: findings -->
+    <div class="visa-head"><span>VISA COLUMN B</span><span>BEFUND / 核心发现</span></div>
+    <section class="card" id="findings">
+      <h2>核心发现</h2>
+
+      <h3>1. 逃亡发生在侵略之后：时间顺序不可倒装</h3>
+      <p>中德广播 MDR 写得很硬：东普鲁士曾被当作“帝国粮仓”，直到苏军抵近才打破幻象；<strong>三年前</strong>，希特勒的士兵在“巴巴罗萨”行动中开进苏联。北德广播 NDR 同样点明动机：平民因恐惧报复而逃——报复的对象，是国防军在东方进行的歼灭战。柏林文献中心常设展第二部开篇即写：纳粹德国占领中东欧与东南欧大片土地，实施空前残酷的歼灭战，数百万人被剥削、驱逐、谋杀；正是在此背景下，盟国才规划战后边界变动与人口迁移。</p>
+      <p>德国历史博物馆（DHM）2006 年特展《Flucht, Vertreibung, Integration》把尺度拉得更大：二十世纪上半叶仅欧洲就有约 6000 万至 8000 万人被迫离开家园；由纳粹德国点燃的世界大战使逃亡与驱逐达到新的规模。德国人中约有最多 1400 万难民与被驱逐者——这是巨大的数字，但展览同时强调：他们不是真空里的受害者。2026 年特展更把波兰视角并置：Ziemie Zachodnie（西部领土）的新住民，自身常从更东边被赶走，并携带德国占领的记忆。同一本护照上，必须同时盖两个章：<em>平民灾难</em>与<em>侵略后果</em>。</p>
+
+      <h3>2. 政权把平民留到冰上：拖延、禁逃与 Treck</h3>
+      <p>MDR：东普鲁士大区领导把疏散拖到苏军冬季攻势（1945 年 1 月 12 日）之后，擅自逃亡曾以死刑禁止；铁路与主干道优先军用，难民只能步行或马车，在刺骨严寒与深雪中西行，体弱者与儿童冻死路旁。NDR：气温降至零下 25 度；约十天后苏军坦克在埃尔宾（Elbing）附近抵海，陆路西逃被切断。美国国家二战博物馆史家 Robert Citino 补充：皮劳的帝国防卫委员、大区领导 Erich Koch 不愿在元首面前示弱，与海军元帅邓尼茨就疏散时机与优先名单争执，而难民已把港口撑到约十万人。</p>
+      <p>德国历史博物馆 LeMO 口述：1938 年生于柯尼斯堡的 Renate Seifert 回忆，1945 年 1 月城防司令通过电台宣布俄军已近、不再为平民负责；邻居烧掉希特勒像与军装照，却仍相信还能回来。六岁的她被母亲用父亲的袜子套在鞋上防寒；路上有人看见路边婴儿车，说里面大概又是一个冻死的孩子。她在皮劳看到“像砖块一样码放”的尸体；船票窗口的人讥讽地说：不必买票，直接去港口抢船。她靠假装被踩踏的哭喊，让人群让出“带孩子的母亲优先”的缝隙——这是崩溃中的微观伦理，不是英雄故事。</p>
+
+      <dl class="fact">
+        <dt>冬季攻势</dt><dd>1945-01-12，苏军对德国东线发动大规模冬季攻势（MDR）。</dd>
+        <dt>皮劳港口</dt><dd>原居民约 1.2 万；高峰时饥寒难民达约 7.5 万。墓地停尸房外堆放尸体。1 月下旬起各类舰船进港。至 2 月中经皮劳运走 20 万人以上，另有约 5 万人渡往维斯瓦沙嘴（NDR）。</dd>
+        <dt>海上撤离</dt><dd>“汉尼拔行动”自 1945-01-23。经皮劳海运约 45 万人（1–4 月）。全程获救人数各源不一：约 80 万至 250 万（NDR）；德国之声引海军史说法约 250 万。沉船死亡：NDR 称 2 万以上；MDR 称 4 万以上军民；德国之声称波罗的海疏散中约 3 万人丧生。</dd>
+        <dt>柯尼斯堡</dt><dd>1945-04-09 投降；NDR 称当时废墟中仍约有 7.5 万人。文献中心藏品：Paul Rohrmoser 1945 年 1 月逃离柯尼斯堡时带走房门钥匙，战后未能归还。</dd>
+      </dl>
+
+      <h3>3. 冰上与海上：Haff、古斯特洛夫号与数字争议</h3>
+      <p>陆路切断后，难民尝试穿越结冰的 Fresh Haff（约八公里）到达维斯瓦沙嘴，再赴但泽等港。Planet Wissen：人须涉过约 25 厘米冰水，冰面随时破裂；苏军强击机扫射导致马车坠冰，溺毙与冻死者成群。NDR：皮劳既是登船点，也是渡往沙嘴的渡口；甲板上常站满无法坐下的人，有时只能吃甲板积雪。</p>
+      <p><strong>威廉·古斯特洛夫号</strong>（Wilhelm Gustloff）必须有来源地写。1945 年 1 月 30 日，这艘原“欢乐力量”（KdF）游轮从戈滕哈芬（Gotenhafen，今格丁尼亚）一带出航，被苏联潜艇 S-13 以三枚鱼雷击中，约一小时内沉没。各机构数字并不一致，这本身就是史学状态：</p>
+      <ul>
+        <li>Planet Wissen：船上逾 1 万人（难民与伤兵），逾 9300 人溺死或冻死，1239 人获救。</li>
+        <li>德国之声：约 1252 人幸存，9000 余人死亡；当日约零下 18 度；希特勒当晚电台讲话时，餐厅里的人只想逃命。</li>
+        <li>NDR：船上人数至今有争议，或约 6000，或约 10000；约 1200 人获救。</li>
+        <li>美国国家二战博物馆（Citino，2020）：约 7000–10000 人，其中儿童或达 4000–5000；死亡约 6000–9000；约 1200 人获救。船上约 1000 名海军人员及高射炮，使其在战争法上难以被当作单纯难民船。史家 Heinz Schön（古斯特洛夫号见习士官、幸存者）亦不视击沉为战争罪——船已涂伪装灰、载有士兵并有轻武装（德国之声）。</li>
+        <li>MDR：约 9000 人死亡，或为航海史上最大单船灾难；同系列还有 2 月 10 日“施托伊本号”（Steuben，逾 4000 人）与 4 月 17 日“戈雅号”（Goya，约 6800 人，七分钟内沉没）。</li>
+      </ul>
+      <p>数字打架，并不取消事件。它提醒学习者：灾难被记忆政治拉扯时，精确性会先碎。Citino 还写了一句不该被删的对照：东普鲁士路上的人间惨状，令人想起 1941 年德国入侵时苏联平民所遭受的。</p>
+
+      <h3>4. 强奸、暴力与宣传：史学必须同时反对否认与夸饰</h3>
+      <p>MDR：在苏联境内数百万伤亡与多年苦战后，红军对希特勒德国的仇恨在东普鲁士倾泻，暴力、强奸与处决首先打在平民身上；苏军战斗机扫射无掩护的 Treck，坦克碾过或把人赶回村庄。Planet Wissen 给出一个常被引用的估计：约 140 万妇女遭强奸；被抓住的男子、青少年与战俘以数十万计被当作“活的赔偿”押往苏联。必须标明：<strong>140 万是估计值，不是普查</strong>，史学界对规模、时段与统计方法长期有争议；把它写成精确死亡证，与把它写成谣言，是对称的错误。</p>
+      <p>1944 年 10 月苏军首次踏入东普鲁士后被击退。内梅尔斯多夫（Nemmersdorf）等地的暴行被戈培尔宣传部迅速制成电影与国际观摩材料，用来动员死守。暴行发生过，宣传也发生过：后世研究指出纳粹报道存在夸大与编排。德国之声写，内梅尔斯多夫落入俄军之手的消息不胫而走，加剧港口恐慌。Seifert 的家庭记忆里，表妹 Lydia 在 1945 年 1 月遭强奸后跳井，尸体到 4 月才被捞出——这是具体的、不可被“宣传批判”抹掉的痛苦。正确的写法是：性暴力是红军在东普鲁士战争末期的大规模现象，也是德国在东方长期性暴力与种族战争之后的连锁；纳粹把个别村庄做成全面野蛮的广告，既动员了抵抗，也延误了逃生。</p>
+
+      <h3>5. 2025–2026 的 Trauer：多声部，而不是独奏</h3>
+      <p>文献中心 2021 年 6 月开放，面积逾 5000 平方米；常设展约 1500 平方米，主题是二十世纪欧洲及以外的强制迁移，<strong>重点是德国发动的二战中及战后德国人的逃亡与驱逐</strong>。馆方数字：逾 1400 万人受波及，逾 60 万人死亡；约 1250 万人的融合成为两个德国社会的基本难题，记忆至今有争议。2024 年 10 月 18 日出版常设展图录（ISBN 978-3-95498-839-6），英文版计划 2025 年 5 月刊行。</p>
+      <p>2026 年特展《Ostgebiete / Ziemie Zachodnie》为德波睦邻条约 35 周年而办，十位德波摄影师工作，三语（德/波/英）。策展强调记忆不是封闭叙事，而是多声、矛盾的经验场：风景、家史与被压抑的可见物。柏林博物馆门户注明展期 2026-05-29 至 2027-01-17，入口免费。文献中心一楼有静默空间，供驻足与反思——这是机构化的 Trauer：给悲恸一张椅子，但不把椅子做成唯一民族的神龛。DHM 仍是该联邦基金会的承办机构之一；其 2006 年展览已把逃亡、驱逐与融入放进文学、电影与学术接收史。学习者在 2026 年走进 Anhalter Bahnhof 旁的这座房子，看到的不应是“德国人终于被允许哭泣”，而是：哭泣若不肯看见邻居的钥匙、看见占领、看见犹太人在柯尼斯堡街道上被驱赶（Seifert 童年听到的“可怕景象”），就只是另一本盖错章的护照。</p>
+
+      <p class="note">方法说明：人数（海上获救、沉船死亡、遭强奸妇女）在可靠机构之间已不一致。本报告并列出处，不取悦其中任何一种记忆政治。纳粹徽记不在本页出现。</p>
+    </section>
+
+    <!-- Section: sources -->
+    <div class="visa-head"><span>VISA COLUMN C</span><span>QUELLEN / 来源</span></div>
+    <section class="card" id="sources">
+      <h2>来源（真实 URL，均经检索与抓取）</h2>
+      <p>下列网址均实际打开阅读，不编造。检索至少覆盖中英文：Flucht und Vertreibung 1945 / Ostpreußen Treck、Dokumentationszentrum Flucht Vertreibung Versöhnung 2025–2026、Trauer 东部逃亡展览、DHM Flucht、Bundesstiftung、Königsberg 1945 civilians，以及中文“东普鲁士 1945 逃亡 / Wilhelm Gustloff”。</p>
+      <ol class="source-list">
+        <li><span class="tag">[1] MDR · 抓取</span><br>1945: Die große Flucht aus Ostpreußen<br><a class="src" href="https://www.mdr.de/geschichte/ns-zeit/zweiter-weltkrieg/1945/kriegsende-flucht-aus-ostpreussen-vertreibung-100.html">https://www.mdr.de/geschichte/ns-zeit/zweiter-weltkrieg/1945/kriegsende-flucht-aus-ostpreussen-vertreibung-100.html</a></li>
+        <li><span class="tag">[2] NDR · 抓取</span><br>Flucht aus Ostpreußen 1945: Letzter Ausweg über die Ostsee（Dirk Hempel）<br><a class="src" href="https://www.ndr.de/geschichte/chronologie/kriegsende/Flucht-aus-Ostpreussen-1945-Letzter-Ausweg-ueber-die-Ostsee,flucht228.html">https://www.ndr.de/geschichte/chronologie/kriegsende/Flucht-aus-Ostpreussen-1945-Letzter-Ausweg-ueber-die-Ostsee,flucht228.html</a></li>
+        <li><span class="tag">[3] Planet Wissen / SWR · 抓取</span><br>Deutsche Geschichte: Flucht und Vertreibung（Gregor Delvaux de Fenffe；页内标注末次更新 2020-04-23）<br><a class="src" href="https://www.planet-wissen.de/geschichte/deutsche_geschichte/flucht_und_vertreibung/index.html">https://www.planet-wissen.de/geschichte/deutsche_geschichte/flucht_und_vertreibung/index.html</a></li>
+        <li><span class="tag">[4] SFVV 新闻稿 · 抓取</span><br>Sonderausstellung: OSTGEBIETE / ZIEMIE ZACHODNIE（展期 2026-05-29–2027-01-17）<br><a class="src" href="https://www.flucht-vertreibung-versoehnung.de/de/pressemeldung/sonderausstellung-ostgebiete-ziemie-zachodnie-eine-deutsch-polnische-spurensuche">https://www.flucht-vertreibung-versoehnung.de/de/pressemeldung/sonderausstellung-ostgebiete-ziemie-zachodnie-eine-deutsch-polnische-spurensuche</a></li>
+        <li><span class="tag">[5] SFVV 文献中心介绍 · 抓取</span><br>Das Dokumentationszentrum（2021 年 6 月开放；静默空间；联邦基金会承办）<br><a class="src" href="https://www.flucht-vertreibung-versoehnung.de/de/kennenlernen/dokumentationszentrum">https://www.flucht-vertreibung-versoehnung.de/de/kennenlernen/dokumentationszentrum</a></li>
+        <li><span class="tag">[6] SFVV 常设展 · 抓取</span><br>Dauerausstellung：歼灭战背景、逾 1400 万人、逾 60 万死亡、柯尼斯堡房门钥匙<br><a class="src" href="https://www.flucht-vertreibung-versoehnung.de/de/besuchen/dauerausstellung">https://www.flucht-vertreibung-versoehnung.de/de/besuchen/dauerausstellung</a></li>
+        <li><span class="tag">[7] DHM 档案展 · 抓取</span><br>Flucht, Vertreibung, Integration（2006，Haus der Geschichte 在 DHM 展出）<br><a class="src" href="https://www.dhm.de/archiv/ausstellungen/flucht-vertreibung/">https://www.dhm.de/archiv/ausstellungen/flucht-vertreibung/</a></li>
+        <li><span class="tag">[8] DHM LeMO 口述 · 抓取</span><br>Renate Seifert: Erinnerungen an die Flucht aus Königsberg<br><a class="src" href="https://www.dhm.de/lemo/zeitzeugen/renate-seifert-erinnerungen-an-die-flucht-aus-koenigsberg">https://www.dhm.de/lemo/zeitzeugen/renate-seifert-erinnerungen-an-die-flucht-aus-koenigsberg</a></li>
+        <li><span class="tag">[9] National WWII Museum · 抓取</span><br>Robert Citino, “The Sinking of the Wilhelm Gustloff”（2020-01-30）<br><a class="src" href="https://www.nationalww2museum.org/war/articles/sinking-wilhelm-gustloff">https://www.nationalww2museum.org/war/articles/sinking-wilhelm-gustloff</a></li>
+        <li><span class="tag">[10] 德国之声中文 · 抓取</span><br>「威廉‧古斯特洛夫號」—夢幻之船的死亡之旅<br><a class="src" href="https://www.dw.com/zh-hant/%E5%A8%81%E5%BB%89%E5%8F%A4%E6%96%AF%E7%89%B9%E6%B4%9B%E5%A4%AB%E8%99%9F%E5%A4%A2%E5%B9%BB%E4%B9%8B%E8%88%B9%E7%9A%84%E6%AD%BB%E4%BA%A1%E4%B9%8B%E6%97%85/a-18226260">https://www.dw.com/zh-hant/威廉‧古斯特洛夫號—夢幻之船的死亡之旅/a-18226260</a></li>
+        <li><span class="tag">[11] Museumsportal Berlin · 抓取</span><br>Ostgebiete / Ziemie Zachodnie 展讯（地点、免费、2026 导览）<br><a class="src" href="https://www.museumsportal-berlin.de/de/ausstellungen/ostgebiete-ziemie-zachodnie-eine-deutsch-polnische-spurensuche/">https://www.museumsportal-berlin.de/de/ausstellungen/ostgebiete-ziemie-zachodnie-eine-deutsch-polnische-spurensuche/</a></li>
+      </ol>
+      <p class="note">检索中另行见到、本页未整页抓取但可核对的相关页：文献中心首页 <a class="src" href="https://www.flucht-vertreibung-versoehnung.de/">https://www.flucht-vertreibung-versoehnung.de/</a>；DHM 作为基金会承办方的机构说明见 <a class="src" href="https://www.dhm.de/museum/ueber-uns/">https://www.dhm.de/museum/ueber-uns/</a>。慕尼黑 NS 文献中心 2026 年 7 月 12 日前的当代艺术展涉及战争后的批判性哀悼，与东部逃亡不是同一展览，故不并入主叙事。</p>
+    </section>
+
+    <!-- Section: lessons -->
+    <div class="visa-head"><span>VISA COLUMN D</span><span>LEHRE / 启示</span></div>
+    <section class="card" id="lessons">
+      <h2>对历史学习者的启示</h2>
+      <ol>
+        <li><strong>先问因果，再问眼泪。</strong> 东部逃亡的冰与船是真实的；它们出现在巴巴罗萨、占领、歼灭战与种族政策之后。把顺序写反，Trauerrarbeit 就会变成洗白。</li>
+        <li><strong>平民不是漫画，纳粹不是风景。</strong> 六岁孩子用哭声换船票，母亲用父亲的袜子当鞋套，邻居烧掉领袖像却仍打包“还会回来”的钥匙——这是普通人的恐惧与误判，不是“全体无辜”的证明。禁逃令与 Koch 的虚荣，是政权把平民制成人质。</li>
+        <li><strong>数字要带着出处走路。</strong> 古斯特洛夫号死亡人数从“约六千”到“九千以上”都有机构背书；强奸规模更是估计。学习者应并列来源，而不是挑选最能服务于今天立场的那个整数。</li>
+        <li><strong>性暴力既不可否认，也不可单独国有化。</strong> 东普鲁士的强奸是战争末期的大规模犯罪；德国在东方的性暴力与种族战争是其前置条件。宣传会放大个别村庄，档案会留下一口井。两者都要读。</li>
+        <li><strong>2026 年的德波对视是 antidote。</strong> 《Ostgebiete / Ziemie Zachodnie》坚持同一片土地上的两种抵达：失去的故乡，与占领之后的安家。文献中心把德国逃亡放进“德国发动的战争”，并提供静默空间——哀悼需要房间，房间里还要有别人的钥匙。</li>
+        <li><strong>沉船不是唯一的墓。</strong> 路边的婴儿车、皮劳码放的尸体、Haff 上的破冰、未能登船者、投降后的柯尼斯堡废墟，与古斯特洛夫号同属一个冬天。只记住最大的船，会把其余冻死变成背景。</li>
+      </ol>
+      <blockquote>
+        护照可以盖章，历史不能只盖本民族的入境章。1944–45 年德国平民的崩溃值得被写进同一页——与他们曾生活于其中、或沉默于其中的那个政权所发动的战争写在同一页。
+      </blockquote>
+    </section>
+
+    <footer class="visa-footer">
+      <span>REISEPASS · FORSCHUNGSEXEMPLAR · NICHT GÜLTIG ALS REISEDOKUMENT</span>
+      <span>文件：二战调研_东部逃亡_20260830_1827.html</span>
+    </footer>
+  </div>
+</article>
+</div>
+</body>
+</html>

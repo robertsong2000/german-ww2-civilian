@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>疾病、药品短缺与平民身体 —— 厨房药瓶、胰岛素配给卡与 2026 年卫生博物馆的「你好吗？」</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Yanone+Kaffeesatz:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Gas-lamp kitchen: soot walls, iron stove, bottle labels, grease haze */
+:root {
+  --soot: #16110c;
+  --wall: #2a2118;
+  --grease: #3d3226;
+  --flame: #f4c15a;
+  --ember: #e08a2a;
+  --copper: #b87333;
+  --iron: #2c2a27;
+  --enamel: #f3ead4;
+  --label: #efe3c4;
+  --ink: #22190f;
+  --fade: #6a5744;
+  --wax: #8a2e1f;
+  --sage: #4a5c3a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Spectral", serif;
+  line-height: 1.84;
+  background:
+    radial-gradient(ellipse 70% 45% at 18% 0%, rgba(244,193,90,.28), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 82% 8%, rgba(224,138,42,.12), transparent 50%),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.07) 0 1px, transparent 1px 7px),
+    linear-gradient(180deg, #1c1610 0%, #241c14 40%, #1a140f 100%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .22;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+.lamp {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
+  margin: 0 auto 64px;
+  padding: 0 18px 8px;
+}
+.flame-cap {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+}
+.flame {
+  width: 72px;
+  height: 92px;
+  background:
+    radial-gradient(ellipse at 50% 78%, #fff6d0 0 18%, transparent 42%),
+    radial-gradient(ellipse at 50% 55%, #f4c15a 0 28%, #e08a2a 52%, transparent 70%);
+  filter: blur(.3px);
+  animation: flicker 2.8s ease-in-out infinite;
+  clip-path: ellipse(38% 48% at 50% 58%);
+}
+@keyframes flicker {
+  0%, 100% { opacity: .92; transform: scaleY(1) scaleX(1); }
+  40% { opacity: 1; transform: scaleY(1.06) scaleX(.96); }
+  70% { opacity: .86; transform: scaleY(.96) scaleX(1.04); }
+}
+.kitchen {
+  position: relative;
+  background:
+    repeating-linear-gradient(90deg, #c9b48a 0 14px, #d8c49a 14px 28px),
+    linear-gradient(180deg, #efe3c4, #e6d5ad);
+  background-blend-mode: multiply;
+  border: 14px solid #3a2e22;
+  outline: 3px solid #1a140f;
+  box-shadow:
+    0 0 0 8px #2a2118,
+    0 28px 70px rgba(0,0,0,.55),
+    inset 0 0 80px rgba(60,40,20,.18);
+  padding: 0 36px 42px;
+}
+.kitchen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(244,193,90,.14), transparent 36%),
+    linear-gradient(180deg, transparent 60%, rgba(30,20,10,.08));
+}
+.shelf {
+  margin: 0 -36px;
+  padding: 10px 22px 8px;
+  background:
+    repeating-linear-gradient(90deg, #5c4030 0 8px, #4a3428 8px 16px);
+  color: var(--label);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: .08em;
+  border-bottom: 6px solid #2a1c14;
+}
+.vial {
+  background: var(--label);
+  color: var(--ink);
+  border: 1px solid #c9b48a;
+  padding: 3px 8px 2px;
+  font-size: 13px;
+  letter-spacing: .12em;
+  box-shadow: 2px 2px 0 #2a1c14;
+  transform: rotate(-1.2deg);
+}
+.vial:nth-child(even) { transform: rotate(1.4deg); background: #f7edd4; }
+header { padding-top: 22px; position: relative; z-index: 1; }
+h1 {
+  font-family: "Noto Serif SC", "Spectral", serif;
+  font-size: clamp(1.38rem, 3.1vw, 1.92rem);
+  line-height: 1.36;
+  margin: 6px 0 10px;
+  text-shadow: 0 0 24px rgba(244,193,90,.18);
+}
+.sub { color: var(--fade); font-size: 15px; }
+.when {
+  margin-top: 10px;
+  font-family: "Kalam", cursive;
+  font-size: 15px;
+  color: #6e4e2e;
+}
+.pot-tag {
+  position: absolute;
+  right: 4px;
+  top: 18px;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, #6a6864, #2c2a27 62%, #1a1816);
+  color: #d8c49a;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 13px;
+  letter-spacing: .08em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: inset 0 0 0 6px #1a1816, 0 8px 16px rgba(0,0,0,.35);
+  transform: rotate(7deg);
+  line-height: 1.15;
+}
+nav.toc {
+  margin: 18px 0 6px;
+  padding: 12px 16px 10px;
+  background: repeating-linear-gradient(45deg, #ead9b4 0 8px, #e4d0a8 8px 16px);
+  border: 2px dashed #8a6a32;
+  position: relative;
+  z-index: 1;
+}
+nav.toc h2 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: .16em;
+  color: var(--wax);
+  font-weight: 600;
+}
+nav.toc ol { margin: 6px 0 4px 1.2em; }
+nav.toc a { color: var(--sage); }
+.card {
+  margin: 18px 0;
+  padding: 18px 20px 14px;
+  background:
+    linear-gradient(180deg, rgba(255,248,230,.55), transparent 28%),
+    var(--enamel);
+  border: 1px solid #c9b48a;
+  box-shadow: 4px 6px 0 rgba(42,28,20,.18);
+  position: relative;
+  z-index: 1;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 10px;
+  background: linear-gradient(180deg, var(--ember), var(--wax));
+}
+.card.iron::before { background: linear-gradient(180deg, #4a4844, #2c2a27); }
+.card.sage::before { background: linear-gradient(180deg, #6a7a52, var(--sage)); }
+.card.copper::before { background: linear-gradient(180deg, #d4a056, var(--copper)); }
+.card h2 {
+  font-family: "Noto Serif SC", "Spectral", serif;
+  font-size: 1.28rem;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #d4c19a;
+}
+.tag {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 13px;
+  letter-spacing: .18em;
+  color: var(--wax);
+  margin-bottom: 4px;
+}
+p { margin: 0 0 11px; }
+ul, ol.body { margin: 0 0 11px 1.2em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 10px 0 14px;
+  padding: 8px 12px;
+  border-left: 4px solid var(--ember);
+  background: rgba(224,138,42,.1);
+  font-style: italic;
+  font-family: "Spectral", "Noto Serif SC", serif;
+}
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 10px; }
+.sources a { color: #7a3018; word-break: break-all; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 10px 0 14px;
+}
+.bottle {
+  background: var(--label);
+  border: 1px solid #b8a078;
+  padding: 10px 12px 8px;
+  box-shadow: inset 0 0 0 3px #efe6cc;
+  font-size: 14px;
+}
+.bottle strong {
+  display: block;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: .1em;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+footer {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 4px double #8a6a32;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-size: 14px;
+  color: var(--fade);
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 680px) {
+  .kitchen { padding: 0 16px 28px; }
+  .shelf, .kitchen { margin-left: 0; margin-right: 0; }
+  .pot-tag { display: none; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<!-- Gas-lamp kitchen: soot, iron pot, paper labels, grease haze -->
+<div class="lamp">
+  <div class="flame-cap" aria-hidden="true"><div class="flame"></div></div>
+  <article class="kitchen">
+    <div class="shelf" aria-hidden="true">
+      <span class="vial">INSULIN · BEZUGSKARTE</span>
+      <span class="vial">PERVITIN 3 mg</span>
+      <span class="vial">AUGENTROPFEN</span>
+      <span class="vial">TEE FÜR HEER U. HEIMAT</span>
+      <span class="vial">KRANKENBEHANDLER</span>
+    </div>
+    <header>
+      <h1>疾病、药品短缺与平民身体 —— 厨房药瓶、胰岛素配给卡与 2026 年卫生博物馆的「你好吗？」</h1>
+      <p class="sub">煤气灯厨房风：暖黄火光、铁锅、油烟与褪色标签。写的是平民身体，不是战役序列，也不是“纳粹嗑药”猎奇。</p>
+      <p class="when">调研时间：2026-08-30 18:28 CST · 平民史系列 · 主题轮换池第11项</p>
+      <div class="pot-tag">GUSS<br>EISEN<br>18.28</div>
+    </header>
+
+    <nav class="toc" id="toc">
+      <h2>目录 · REZEPTUR</h2>
+      <ol>
+        <li><a href="#theme">本期主题</a></li>
+        <li><a href="#findings">核心发现</a></li>
+        <li><a href="#pharma">药品：胰岛素配给卡与替药合法化</a></li>
+        <li><a href="#hospital">医院：国防军先拿走床位与医生</a></li>
+        <li><a href="#kitchen">厨房：草药、茶、孩子的两公斤</a></li>
+        <li><a href="#body">身体：营养、白喉、斑疹伤寒</a></li>
+        <li><a href="#pervitin">Pervitin：药房里的醒神药</a></li>
+        <li><a href="#exclusion">排除：犹太人被赶出医疗</a></li>
+        <li><a href="#now">2025–2026：卫生博物馆问「你好吗？」</a></li>
+        <li><a href="#sources">来源</a></li>
+        <li><a href="#lesson">对历史学习者的启示</a></li>
+      </ol>
+    </nav>
+
+    <section class="card" id="theme">
+      <p class="tag">FL. 01 · THEMA</p>
+      <h2>本期主题</h2>
+      <p>战时德国平民的身体，首先是一张配给表：谁能拿到胰岛素，谁只能喝学校交来的草药茶；谁还能等到家庭医生上门，谁必须把孩子交给修女做“预诊”。本报告写 <strong>1933–1945 年德国平民的疾病、药品与医院</strong>——短缺如何被组织，替代疗法如何被动员进厨房，营养下降如何把白喉、猩红热、伤寒与结核重新写进日常。它同时写另一句话：同一套卫生机关，一边给“民族共同体”发药，一边把犹太人、残障者与被判定为“无用进食者”赶出医疗，乃至赶出生命。</p>
+      <p>2026 年 3 月 7 日至 2027 年 4 月 4 日，德累斯顿德国卫生博物馆（Deutsches Hygiene-Museum）举办特展《你好吗？》（Wie geht’s?），把诊断、药物与“何谓健康”重新展成公共问题。这座博物馆曾长期以“民族健康”教育学闻名。看今天的展，需要把 1934 年卫生局国有化、1938 年犹太医生执照作废、1942 年胰岛素改凭证、1943 年儿童交草药的重量叠进同一盏煤气灯下。</p>
+    </section>
+
+    <section class="card sage" id="findings">
+      <p class="tag">FL. 02 · BEFUNDE</p>
+      <h2>核心发现</h2>
+      <ul>
+        <li><strong>药品短缺不是“突然没货”，而是制度选择。</strong>Winfried Süß 据档案写：药品生产直到战争后期仍无中央协调；卫生归内政部，生产归经济部。为避免刺激民心，当局长期不做直接限购，只呼吁节约、勒令医生少开处方，并把约 90 种紧缺药改为更严的处方药。例外是胰岛素：自 1942 年 7 月 1 日起凭证发放。1942 年 10 月，短缺严重到“若不互换，几乎无法按医嘱给药”，卫生部门才追认药房用等效制剂替换的既成事实。</li>
+        <li><strong>医院床位与医生被国防军绝对优先占用。</strong>三军一度合计需要超过 100 万张野战/后方医院床。1943 年夏，约 47 000 张国防军病床设在原疗养与护理机构，约占开战时该类床位的四分之一、已改作他用的精神科床位近一半。同年春，军方占用约 90 000 张民用医院床，接近总容量的五分之一。至 1942 年，可供平民使用的医生约降至战前六成；秋季动员已抽走约三分之一持照医师。</li>
+        <li><strong>厨房与学校被编进国家药柜。</strong>四年计划把草药采购交给帝国药用植物工作共同体（RfH）。学校贡献约九成干草药；每个学童平均须交 2 公斤。1941 年共收 200 万公斤，1943 年达 650 万公斤。曼海姆狮子药房的地下“掩体药房”在 1945 年 1 月后一度成为全城唯一药房：空袭后最缺的是婴儿奶粉、各类镇静剂、眼膏与眼药水。</li>
+        <li><strong>流行病回潮与种族卫生是同一套话语。</strong>H-Net 对 Süß 的书评归纳：斑疹伤寒、痢疾、白喉、猩红热、结核与应激性疾病上升，营养不良加重。斑疹伤寒被宣传成“犹太人=虱子”。USHMM 指出：隔都里的饥馑与拥挤才是疫情条件，德国医生却用“不洁”指控为隔离与拒发药品辩护。</li>
+        <li><strong>犹太人被排除出医疗，早于药品告急。</strong>《德国医师报》：1933 年柏林约 3600 名医保医生中，按纳粹定义有 2000 人以上为犹太人。1938 年 9 月 30 日，第四号《帝国公民法》实施令使犹太医生执照失效。当年 10 月仍约有 709 名“病人处理者”（Krankenbehandler）可仅治疗犹太人；年底或仅 285 人。1933 年初帝国境内约 8000 名犹太医生，绝大多数被驱逐、流亡或后来遭屠杀。</li>
+      </ul>
+    </section>
+
+    <section class="card copper" id="pharma">
+      <p class="tag">FL. 03 · APOTHEKE</p>
+      <h2>药品：胰岛素配给卡与替药合法化</h2>
+      <p>Süß 强调：开战时卫生系统并未为多年战争中的平民用药做计划。经济部相信德国作为世界最大药品出口国，能从现产中挤出增量；结果是原料仓储不足，动员后又抽走药厂技工。直到战争第四年，民用部门几乎仍按“准和平”方式组织生产与分配。一度仍有四万多种制剂在产；卫生总监办公室估计，约两千种基础药即可达到同等目的，却省下大量原料与人力。</p>
+      <p>直接限购被尽量推迟，因为当局担心它在心理上等于承认“后方已经缺药”。胰岛素被单独拎出来，说明糖尿病患者的生存从那一天起进入票证逻辑：不是诊所开了方就有药，而是先有卡片。1942 年 10 月的替药合法化，把厨房里早已发生的事写进公文——药剂师在缺货时用“差不多的药”顶替，病人可能并不知情，或知情却别无选择。</p>
+      <div class="grid">
+        <div class="bottle">
+          <strong>1942-07-01</strong>
+          胰岛素改凭证（Bezugskarten）。Süß：《作为稀缺品的健康》。
+        </div>
+        <div class="bottle">
+          <strong>1942-10</strong>
+          卫生部门承认等效互换：否则“无法再按医嘱给药”。
+        </div>
+      </div>
+      <p>空袭把短缺从仓库搬到柜台上。药剂史家 Caroline Schlick 据曼海姆狮子药房内部小报《狮子报》写：1943 年 10 月一次空袭后，Helmut Kraemer 在灰尘与碎玻璃中配眼药水——“约 600 人在药房处理眼睛，另发出约 500 瓶眼药水”，周围药房关闭。帝国药剂师领袖 Albert Schmierer 回忆：空袭后最急需的是婴儿营养品、各类镇静剂、眼膏与眼药水。身体的紧急清单，从战场绷带换成了厨房里的眼睛、神经与婴儿。</p>
+    </section>
+
+    <section class="card iron" id="hospital">
+      <p class="tag">FL. 04 · KRANKENHAUS</p>
+      <h2>医院：国防军先拿走床位与医生</h2>
+      <p>Conti 在动员阶段的公开说法毫不掩饰顺序：“首先要确保军队的医疗……当然，医院床位也是先满足国防军。”Süß 统计：教会建筑约占帝国境内野战医院的四分之一；精神科与民用医院是另外两大来源。把精神病患者从床上赶走，再把士兵放上去——这不是后勤花絮，而是稍后“安乐死”谋杀得以在战争逻辑里自我辩护的物质前提。</p>
+      <p>平民看见的是另一种不公：鲁多尔施塔特 1940 年 10 月报告，军方征用约 1700 张床、22 名医生，实际只住约 300 人。国防专员写道，百姓“无法理解：一边要忍受最严重的损害，一边预备医院里医生多到过剩”。马格德堡大区同样抱怨：住在民居里的军医“有时成群无所事事”，平民看病却越走越远、等候越来越长。军方拒绝把闲置人力还给地方。</p>
+      <p>医生密度的地理不均被动员放大。1939 年东普鲁士农村、普法尔茨与萨尔每万居民不足 6 名医生，柏林、汉堡则超过 11。1943 年初内政部内部按约 1:2500 估算；勃兰登堡从 1939 年的 1:1512 恶化到 1943 年底的 1:3874。有的县一名医生要管上万居民。第三年汽油配额只剩 1939 年的三分之二，乡村出诊几乎被掐死；战争末期医生改骑自行车或步行。SD 1941 年 10 月已写：许多地方“不能再说平民得到了充分的医生供应”。</p>
+      <p>bpb 提醒制度前史：1934 年 7 月 3 日《卫生事业统一法》把城市卫生局国有化，把卫生警察、“遗传与种族养护”、结核与性病照护、学校卫生捆进同一机关。魏玛市政卫生的多元传统被掐断；预防与选择、照护与排除，从此共用一张办公桌。</p>
+    </section>
+
+    <section class="card" id="kitchen">
+      <p class="tag">FL. 05 · KRÄUTER</p>
+      <h2>厨房：草药、茶、孩子的两公斤</h2>
+      <p>“新德意志医术”在 1935 年成立工作共同体，要把自然疗法与学院医学熔成一种民族医学；1937 年即解散。战争真正实现的不是哲学综合，而是把采集写进学校作息。SPIEGEL 档案文《纳粹的草药计划》写：四年计划（1936 年 10 月 18 日）要求自给；RfH 自 1938 年统筹。正规劳动力不划算，于是让学童采集。孩子只需认识 10–15 种本地植物。成绩好的学校有奖金，孩子没有。</p>
+      <blockquote>总体战要求动用一切手段。其中也包括为军队与家园采购药品与茶。每所学校都有义务倾尽全力，把森林与田野中不可替代的宝藏打捞上来。——纳粹党大区经办人，1943 年 3 月</blockquote>
+      <p>东荷尔斯泰因一所小学 1943 年校志：人均 4.614 公斤，指标仅 1 公斤。教师写道，大家可以“内心喜悦地感到，也用自己的力气投入了这场大战”。草药在阁楼上晾干，标签写着给野战医院的士兵。厨房里的椴花、蓍草、接骨木，被编进“为军队与家园的茶”。这是替代疗法，也是儿童义务劳动；它缓解进口中断，却不能填补磺胺之后、青霉素几乎到不了平民手里的那道缺口。</p>
+      <p>曼海姆的掩体药房把厨房逻辑搬到地下：十个房间，停电时用石油灯，警报期间配制鱼肝油乳剂、胃痛粉、头痛粉。1943 年 9 月 21 日市长下达官方委托。它必须能在必要时顶替多所地上药房。1945 年 1 月 21 日狮子药房被彻底炸毁后，它成为全城唯一供药点。Schlick 指出：没有应急药房，平民用药会局部崩溃；直到 1950 年代初，城市街景里的“应急药房”才逐渐消失。</p>
+    </section>
+
+    <section class="card sage" id="body">
+      <p class="tag">FL. 06 · KÖRPER</p>
+      <h2>身体：营养、白喉、斑疹伤寒</h2>
+      <p>H-Net 书评转述 Süß：战争准备围绕部队，而不是持久冲突中的平民。国防军对医生、物资与床位有第一索取权。斑疹伤寒、痢疾、白喉、猩红热、结核与应激性疾病上升，营养不良使之恶化。空战还迫使医院在危险条件下转运病人。短缺使战前已按“人的等级”分配的护理更容易自我正当化：个人就医权让位于“民族身体”。</p>
+      <p>白喉疫苗并非科学上突然被重新评估，而是卫生系统的回旋余地缩小：必须先压住疫情，以免它吞掉本已不够的资源。斑疹伤寒防疫则把隔离、灭虱与对东欧人口的旧偏见叠在一起，把发病风险往强制劳工身上推。USHMM 展出 1941 年占领波兰的波兰语海报：“犹太人是虱子，他们传播斑疹伤寒。”画面把犹太男子的脸画成骷髅，一只虱子覆在其上。德国公共卫生官员催促进一步隔离犹太人并拒绝给药。专业意见被用来合理化隔都。</p>
+      <p>平民厨房里的热量下降，与医院走廊里的传染病是同一条链。空袭把人赶进拥挤掩体；结核控制在 1945 年春被美军军政府发现已严重解体：城市医院与结核诊所被毁，市外疗养院大量住着伤兵、战俘与非德籍流民。营养、住房、交通与药品同时断裂时，身体不会按宣传部的顺序生病。</p>
+    </section>
+
+    <section class="card copper" id="pervitin">
+      <p class="tag">FL. 07 · PERVITIN</p>
+      <h2>Pervitin：药房里的醒神药</h2>
+      <p>柏林 Temmler 工厂在 1938 年把甲基苯丙胺以商品名 Pervitin 推向民用市场，初期药店可不凭处方出售。它在夜班工人、接线员、护士与部分年轻人中流行，承诺醒神、耐饿、抗疲劳。也可以买到掺药巧克力。这不是秘密武器神话的起点，而是一种被广告推进厨房的工业兴奋剂。</p>
+      <p>TIME（Peter Andreas，2020）写：帝国卫生领袖 Conti 等人在 1939 年底至 1940 年初示警，随后改为处方药。警告常被忽视。军用发放是另一条线，本报告不把它写成“闪电战全靠冰毒”——史学界对 Norman Ohler《Blitzed》的夸大早有批评。对平民更要紧的是：1941 年鸦片法把它列入管控后，民用滥用下降，黑市仍在；战争把药房里的“提神药”收进更紧的管制，同时把医院里的基础药抽走。依赖与短缺可以并存。</p>
+      <p>战后 Pervitin 仍可处方或在黑市买到，用作食欲抑制或改善抑郁情绪，直到东西德分别在 1970–80 年代从医用供应中撤出。把它写进平民史，是为了看见药房柜台：同一只抽屉里，既有后来被神化的兴奋剂，也有越来越难配到的胰岛素与眼药水。</p>
+    </section>
+
+    <section class="card iron" id="exclusion">
+      <p class="tag">FL. 08 · AUSSCHLUSS</p>
+      <h2>排除：犹太人被赶出医疗</h2>
+      <p>药品告急之前，人已经被分类。1933 年 4 月 7 日《职业公务员重建法》、4 月 22 日医保医生条例，把犹太医生与左翼医生从公立医院、大学与医保名单上剔除。柏林校医 Arthur Samuel 收到区政府信件：他的“非雅利安出身”使接触学童“成为不可能”。《德国医师报》指出：例外条款（一战前线、1914 年前开业）不是仁慈，而是怕医疗立刻垮掉——柏林医保医生半数以上按种族法被算作犹太人。</p>
+      <p>1938 年 7 月 25 日第四号实施令：犹太医生执照于 9 月 30 日失效，禁止“从事医术”。少数经内政部长可撤销许可者，降格为“病人处理者”，只准看犹太病人，招牌须有蓝底黄圈大卫星，并写明“仅有权治疗犹太人”。Samuel 在柏林-布里茨坚持到 1945 年，因“雅利安”妻子而未被送进灭绝机制。帝国医师领袖 Wagner 在 1938 年党代会上说：“这些犹太罪犯的行当现在已被制止。”报纸标题可以写成“卫生事业已清除犹太人”。</p>
+      <p>德语维基医学史条目：约 8000 名 1933 年在业的医者作为犹太人被迫害；约 3000 名开业犹太医生在 1933 年即关闭诊所；战后返回德奥者约 5%。约 45% 的 52 000 名医者加入纳粹党。bpb：1933 年 7 月《防止遗传病后代法》允许强制绝育，约 35–40 万人受害；儿童“安乐死”至 1945 年约 5000 人；全欧“安乐死”行动估计 20–30 万人。Hadamar 一地即有约 15 000 人被杀焚化。平民医院的床位统计，必须与这些死亡放在同一页：有些床是空出来的，因为人被运走了。</p>
+    </section>
+
+    <section class="card" id="now">
+      <p class="tag">FL. 09 · 2026</p>
+      <h2>2025–2026：卫生博物馆问「你好吗？」</h2>
+      <p>卫生博物馆官网：特展《你好吗？》2026 年 3 月 7 日–2027 年 4 月 4 日。馆方写道，全球约十亿人有精神疾患，德国约四分之一成年人。展览问：何时算好、何时失衡；诊断与精神药物扮演什么角色；歧视、孤独与富裕如何进入内心。第二章标题是“谢谢关心”：医保要诊断才能给治疗，诊断对患者是解脱、解释，也可能是羞耻。馆方强调诊断是历史地长成的，随科学范式与社会规范而变。</p>
+      <p>ZEIT 与 MDR 2026 年 3 月报道开幕：馆长 Iris Edenheiser 把心理负荷上升联系到疫情、数字化与全球危机；健康与疾病的边界比人们以为的更流动。这不是战时药品史的直接展览，但它把“谁被算作病人、谁配得到药”重新公开。1940 年代，同一座城市的卫生话语曾把健康写成对民族身体的义务，把犹太人写成虱子，把残障儿童写成须申报的“严重先天疾患”。2026 年的展厅问“你好吗？”，历史学习者应当听见 1938 年招牌上的那句限制语：仅有权治疗犹太人。</p>
+      <p>《德国药剂师报》在 2025 年 5 月 7 日刊出《第二次世界大战中的药品供应》条目（在线正文需订阅）。药剂行业在 2025–2026 年回看战时药房，与博物馆回看“何谓健康”，是同一代公共史学的两扇门：一扇对着柜台与地下室，一扇对着诊断与羞耻。</p>
+    </section>
+
+    <section class="card sources" id="sources">
+      <p class="tag">FL. 10 · QUELLEN</p>
+      <h2>来源</h2>
+      <p class="note">下列网址均经本周期检索或抓取核验，不编造链接。DAZ 2025 条为出版方真实 URL，抓取时正文被订阅墙挡住，故不引用其未读段落。</p>
+      <ol class="body">
+        <li>Winfried Süß《战争中的民族身体》章节《作为稀缺品的健康》（胰岛素凭证、替药、床位与医生数字）。<br><a href="https://doi.org/10.1524/9783486596250.181" target="_blank" rel="noopener">https://doi.org/10.1524/9783486596250.181</a></li>
+        <li>H-Net / H-German：Lora Knight 对 Süß 2003 年专著的书评（平民健康恶化、流行病清单、护理按人的等级分配）。<br><a href="https://www.h-net.org/reviews/showrev.php?id=10664" target="_blank" rel="noopener">https://www.h-net.org/reviews/showrev.php?id=10664</a></li>
+        <li>联邦政治教育中心 APuZ：Ulrike Lindner《慢性的卫生问题》（1934 年卫生事业统一法、卫生局与种族养护）。<br><a href="https://www.bpb.de/shop/zeitschriften/apuz/27466/chronische-gesundheitsprobleme/" target="_blank" rel="noopener">https://www.bpb.de/shop/zeitschriften/apuz/27466/chronische-gesundheitsprobleme/</a></li>
+        <li>bpb 背景：1939 年 NS“安乐死”计划开始（强制绝育 35–40 万、儿童约 5000、T4 约 7 万、全欧 20–30 万、Hadamar 15 000）。<br><a href="https://www.bpb.de/kurz-knapp/hintergrund-aktuell/295244/1939-beginn-der-ns-euthanasie-programme/" target="_blank" rel="noopener">https://www.bpb.de/kurz-knapp/hintergrund-aktuell/295244/1939-beginn-der-ns-euthanasie-programme/</a></li>
+        <li>《德国医师报》：Rebecca Schwoch《执照失效》（柏林医保医生、1938-09-30、Krankenbehandler 709/285、Samuel）。<br><a href="https://www.aerzteblatt.de/archiv/approbationsentzug-fuer-juedische-aerzte-bestallung-erloschen-6fd7e817-6423-4cf0-97db-3b718e1154bb" target="_blank" rel="noopener">https://www.aerzteblatt.de/archiv/approbationsentzug-fuer-juedische-aerzte-bestallung-erloschen-6fd7e817-6423-4cf0-97db-3b718e1154bb</a></li>
+        <li>USHMM Experiencing History：宣传海报“犹太人是虱子，他们传播斑疹伤寒”（1941 年 3 月，占领波兰）。<br><a href="https://perspectives.ushmm.org/item/propaganda-poster-jews-are-lice-they-cause-typhus" target="_blank" rel="noopener">https://perspectives.ushmm.org/item/propaganda-poster-jews-are-lice-they-cause-typhus</a></li>
+        <li>SPIEGEL 史档：Uwe Stock /《纳粹的草药计划》（RfH、学童 2 公斤、1941 年 200 万公斤、1943 年 650 万公斤）。<br><a href="https://www.spiegel.de/geschichte/der-kraeuterplan-der-nazis-a-947694.html" target="_blank" rel="noopener">https://www.spiegel.de/geschichte/der-kraeuterplan-der-nazis-a-947694.html</a></li>
+        <li>《药剂报》PZ：Caroline Schlick《紧急时期的药品供应》（曼海姆掩体药房、眼药水 500 瓶、1945-01-21）。<br><a href="https://www.pharmazeutische-zeitung.de/ausgabe-172010/arzneimittelversorgung-in-notzeiten/" target="_blank" rel="noopener">https://www.pharmazeutische-zeitung.de/ausgabe-172010/arzneimittelversorgung-in-notzeiten/</a></li>
+        <li>英语维基：Nazi Germany drug policy（Pervitin 1938 非处方、1941 处方、民用流行与史学争议出处）。<br><a href="https://en.wikipedia.org/wiki/Drug_policy_of_Nazi_Germany" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Drug_policy_of_Nazi_Germany</a></li>
+        <li>TIME：Peter Andreas，2020-01-07，Pervitin 民用广告、Conti 示警、处方化。<br><a href="https://time.com/5752114/nazi-military-drugs/" target="_blank" rel="noopener">https://time.com/5752114/nazi-military-drugs/</a></li>
+        <li>德语维基：Medizin im Nationalsozialismus（约 8000 名犹太医者、3000 所诊所关闭、45%/52 000 入党、新德意志医术）。<br><a href="https://de.wikipedia.org/wiki/Medizin_im_Nationalsozialismus" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Medizin_im_Nationalsozialismus</a></li>
+        <li>德国卫生博物馆：特展《Wie geht’s?》（2026-03-07 至 2027-04-04）。<br><a href="https://www.dhmd.de/ausstellungen/wie-gehts" target="_blank" rel="noopener">https://www.dhmd.de/ausstellungen/wie-gehts</a></li>
+        <li>ZEIT 通讯社：卫生博物馆心理特展开幕报道（2026-03-05）。<br><a href="https://www.zeit.de/news/2026-03/05/hygiene-museum-widmet-sich-psychischer-gesundheit" target="_blank" rel="noopener">https://www.zeit.de/news/2026-03/05/hygiene-museum-widmet-sich-psychischer-gesundheit</a></li>
+        <li>《德国药剂师报》2025-05-07：《第二次世界大战中的药品供应》（URL 核验，正文订阅墙）。<br><a href="https://www.deutsche-apotheker-zeitung.de/news/artikel/2025/05/07/arzneimittelversorgung-im-zweiten-weltkrieg" target="_blank" rel="noopener">https://www.deutsche-apotheker-zeitung.de/news/artikel/2025/05/07/arzneimittelversorgung-im-zweiten-weltkrieg</a></li>
+      </ol>
+    </section>
+
+    <section class="card" id="lesson">
+      <p class="tag">FL. 11 · LEHRE</p>
+      <h2>对历史学习者的启示</h2>
+      <p>第一，短缺是分配。胰岛素凭证、九十种紧缺药的处方化、替药合法化，都比“货架空了”更准确。问“德国人有没有药”，必须问：给士兵、给“有价值的”劳动者，还是给隔都里被说成虱子的人。</p>
+      <p>第二，厨房不是战争的外面。学童的两公斤干草、阁楼里的茶、警报后的眼药水，是国家把采集、替代与护理编进家庭的方式。自然疗法的意识形态在 1937 年已经收摊；战争需要的是可称重的植物与可互换的制剂。</p>
+      <p>第三，医院超载与谋杀共享床位算术。国防军优先占用精神科与民用床位，使“无用进食者”更容易被写成后勤问题。平民抱怨军医闲着，是真实的怨恨；它不能盖过被运走的病人。</p>
+      <p>第四，Pervitin 属于药房史，不属于奇闻专栏。民用兴奋剂、处方管制与基础药崩溃可以写在同一只药柜里，而不必把独裁写成一场集体嗑药。</p>
+      <p>第五，2026 年卫生博物馆问“你好吗？”，是把诊断与羞耻重新公开。历史学习者应把这句话带回 1938 年的招牌与 1941 年的海报：谁被允许生病，谁被禁止被治疗，谁被写成疾病本身。</p>
+    </section>
+
+    <footer>
+      二战德国平民史调研 · 煤气灯厨房风 · 20260830_1828 · 药瓶标签请对着火光读
+    </footer>
+  </article>
+</div>
+</body>
+</html>

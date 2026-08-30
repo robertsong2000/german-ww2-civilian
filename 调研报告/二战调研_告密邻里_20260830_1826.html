@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>告密社会：盖世太保、邻里监视与自我审查 —— 柏林文件中心索引卡上的 2025–2026 回访</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* Berlin Document Center: manila Karteikarten, punch holes, filing-cabinet beige, red Aktenzeichen */
+:root {
+  --cabinet: #6d6458;
+  --cabinet-dark: #4a453c;
+  --manila: #e9dcc3;
+  --card: #f3ead6;
+  --card-edge: #cbb992;
+  --ink: #241e16;
+  --fade: #5a5246;
+  --red: #b31b1b;
+  --stamp: #9a1616;
+  --rule: #c9c0a8;
+  --hole: #3f3a34;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Tinos", serif;
+  line-height: 1.78;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      #7a7268 0 6px,
+      #5e574c 6px 8px,
+      #8a8274 8px 44px,
+      #4e4940 44px 48px
+    );
+}
+.cabinet {
+  max-width: 880px;
+  margin: 28px auto 64px;
+  position: relative;
+  padding: 0 18px 36px;
+}
+.drawer-label {
+  background: linear-gradient(180deg, #d8c9a4, #c4b289);
+  border: 2px solid #3d3830;
+  box-shadow: inset 0 1px 0 #efe3c8, 0 8px 0 #3d3830;
+  padding: 10px 16px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Azeret Mono", monospace;
+  letter-spacing: .12em;
+  font-size: 11px;
+  color: #3a3228;
+}
+.drawer-label .handle {
+  width: 92px;
+  height: 10px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #c0b8a8, #6a6358);
+  border: 1px solid #2e2a26;
+}
+.stack {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(70,90,140,.07) 27px 28px),
+    linear-gradient(180deg, #f7f1e2, var(--manila));
+  border: 1px solid #b9a882;
+  box-shadow:
+    8px 10px 0 #3f3a32,
+    0 0 0 1px #8a7d62;
+  position: relative;
+  padding: 28px 42px 40px 56px;
+}
+.stack::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 36px;
+  bottom: 36px;
+  width: 18px;
+  background:
+    radial-gradient(circle at 9px 18px, var(--hole) 5px, transparent 6px),
+    radial-gradient(circle at 9px 88px, var(--hole) 5px, transparent 6px),
+    radial-gradient(circle at 9px 158px, var(--hole) 5px, transparent 6px),
+    radial-gradient(circle at 9px 228px, var(--hole) 5px, transparent 6px);
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.stack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+  opacity: .55;
+}
+header { position: relative; padding-top: 8px; }
+.bdc-stamp {
+  position: absolute;
+  right: -6px;
+  top: 4px;
+  width: 118px;
+  height: 118px;
+  border: 3px solid var(--stamp);
+  border-radius: 50%;
+  color: var(--stamp);
+  font-family: "Azeret Mono", monospace;
+  text-align: center;
+  transform: rotate(12deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+  font-size: 10px;
+  letter-spacing: .08em;
+  background: rgba(243,234,214,.35);
+}
+.bdc-stamp strong {
+  font-size: 13px;
+  letter-spacing: .16em;
+}
+h1 {
+  font-family: "Tinos", "Noto Serif SC", serif;
+  font-size: clamp(1.46rem, 3.1vw, 2.05rem);
+  line-height: 1.32;
+  max-width: 34rem;
+  margin: 8px 0 10px;
+}
+.sub {
+  color: var(--fade);
+  font-size: 15px;
+  max-width: 38rem;
+}
+.when {
+  margin-top: 12px;
+  font-family: "Azeret Mono", monospace;
+  font-size: 11px;
+  color: var(--stamp);
+  letter-spacing: .04em;
+}
+.meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin: 16px 0 6px;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 13px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 8px 0;
+}
+.meta-row dt {
+  font-family: "Azeret Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .14em;
+  color: var(--red);
+}
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin: 14px 0 0;
+  flex-wrap: wrap;
+}
+.tabs a {
+  background: #d8c9a6;
+  border: 1px solid #a8946c;
+  border-bottom: none;
+  padding: 5px 10px 4px;
+  font-family: "Azeret Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: #3a3228;
+  text-decoration: none;
+}
+.tabs a:hover { background: #efe3c8; }
+nav.toc {
+  margin: 18px 0 8px;
+  padding: 12px 16px 10px 18px;
+  background: #efe6d0;
+  border: 1px dashed #a8946c;
+}
+nav.toc h2 {
+  font-family: "Azeret Mono", monospace;
+  font-size: 12px;
+  letter-spacing: .18em;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+nav.toc ol { margin: 4px 0 4px 1.25em; }
+nav.toc a { color: #5a241c; }
+.karte {
+  margin: 20px 0;
+  padding: 18px 20px 14px 22px;
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  box-shadow: 3px 4px 0 rgba(62,54,42,.18);
+  position: relative;
+}
+.karte h2 {
+  font-family: "Tinos", "Noto Serif SC", serif;
+  font-size: 1.28rem;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+.akten {
+  font-family: "Azeret Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+.redno {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  font-family: "Azeret Mono", monospace;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 13px;
+  border: 1.5px solid var(--red);
+  padding: 2px 7px;
+  transform: rotate(-3deg);
+}
+p { margin: 0 0 11px; }
+ul, ol.body { margin: 0 0 11px 1.2em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 10px 0 14px;
+  padding: 8px 12px;
+  border-left: 4px solid var(--red);
+  background: rgba(179,27,27,.06);
+  font-family: "Tinos", "Noto Serif SC", serif;
+  font-style: italic;
+}
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 10px; }
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0 14px;
+}
+.mini {
+  background: #efe6d0;
+  border: 1px solid var(--card-edge);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.mini strong {
+  display: block;
+  font-family: "Azeret Mono", monospace;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+.sources a { color: #6e241c; word-break: break-all; }
+.sources li { margin-bottom: 9px; }
+footer {
+  margin-top: 26px;
+  padding-top: 12px;
+  border-top: 3px double var(--red);
+  text-align: center;
+  font-family: "Azeret Mono", monospace;
+  font-size: 11px;
+  color: var(--fade);
+  letter-spacing: .04em;
+}
+@media (max-width: 700px) {
+  .stack { padding: 22px 16px 28px 42px; }
+  .bdc-stamp { position: static; width: 90px; height: 90px; margin: 0 0 10px auto; }
+  .grid2, .meta-row { grid-template-columns: 1fr; }
+  .redno { position: static; display: inline-block; margin-bottom: 6px; }
+}
+</style>
+</head>
+<body>
+<!-- Berlin Document Center filing drawer: manila index cards, punch holes, red dossier numbers -->
+<article class="cabinet">
+  <div class="drawer-label">
+    <span>BUNDESARCHIV · BERLIN-LICHTERFELDE · BESTAND BDC</span>
+    <span class="handle" aria-hidden="true"></span>
+  </div>
+  <div class="stack">
+    <header>
+      <div class="bdc-stamp" aria-hidden="true">
+        <span>BERLIN</span>
+        <strong>DOCUMENT<br>CENTER</strong>
+        <span>KARTEI</span>
+      </div>
+      <h1>告密社会：盖世太保、邻里监视与自我审查 —— 柏林文件中心索引卡上的 2025–2026 回访</h1>
+      <p class="sub">告密来自邻居、同事与家庭，而不是只有秘密警察。史学争论的不是“有没有告密”，而是它有多普遍、对谁生效、以及如何把沉默写成日常。</p>
+      <p class="when">调研时间：2026-08-30 18:26 CST · 平民史系列 · 主题轮换池第13项 · 视觉：柏林文件中心索引卡风</p>
+      <dl class="meta-row">
+        <div><dt>AKTENZEICHEN</dt><dd>BDC / DENUNZ / 1933–1945</dd></div>
+        <div><dt>BESTAND</dt><dd>NSDAP-ZMK · Gestapostelle · invenio</dd></div>
+        <div><dt>STICHWORT</dt><dd>Denunziation · Selbstzensur · Nachbarschaft</dd></div>
+        <div><dt>STAND</dt><dd>USHMM 目录页 2026-03-17 修订</dd></div>
+      </dl>
+      <div class="tabs">
+        <a href="#theme">THEMA</a>
+        <a href="#findings">BEFUNDE</a>
+        <a href="#gestapo">GEHEIME STAATSPOLIZEI</a>
+        <a href="#street">NACHBARN</a>
+        <a href="#debate">STREIT</a>
+        <a href="#stasi">STASI / GESTAPO</a>
+        <a href="#now">2025–2026</a>
+        <a href="#sources">QUELLEN</a>
+        <a href="#lesson">LEHRE</a>
+      </div>
+    </header>
+
+    <nav class="toc" id="toc">
+      <h2>INHALTSVERZEICHNIS · 目录</h2>
+      <ol>
+        <li><a href="#theme">本期主题</a></li>
+        <li><a href="#findings">核心发现</a></li>
+        <li><a href="#gestapo">盖世太保很小，神话很大</a></li>
+        <li><a href="#street">邻居、同事、家庭：告密从哪张桌子上开始</a></li>
+        <li><a href="#debate">史学争论：普遍程度，还是选择性恐怖</a></li>
+        <li><a href="#silence">自我审查：不必人人告密，只要人人不敢说</a></li>
+        <li><a href="#stasi">斯塔西对照：比例不能直接换算成“谁更坏”</a></li>
+        <li><a href="#now">2025–2026：索引卡仍在被打开</a></li>
+        <li><a href="#sources">来源（真实 URL）</a></li>
+        <li><a href="#lesson">对历史学习者的启示</a></li>
+      </ol>
+    </nav>
+
+    <section class="karte" id="theme">
+      <p class="akten">KARTE 01 · THEMA</p>
+      <span class="redno">R 13</span>
+      <h2>本期主题</h2>
+      <p>战后许多人把盖世太保（Gestapo，Geheime Staatspolizei）记成无处不在的眼睛。美国大屠杀纪念博物馆（USHMM）的条目写得很干脆：许多人害怕被监视，但人员有限，并不存在对全体德国人的普遍监控；正因为如此，来自公众的告密（Denunziation）才变得关键。告密者可以是邻居、熟人、同事、朋友或家庭成员。</p>
+      <p>本报告站在平民史一侧，不写希姆莱传记，写楼梯间、工厂更衣室和饭桌。立场有两条必须同时成立：第一，告密不是“秘密警察单独完成的工作”，它来自社会内部；第二，不能把全体德国人写成告密者。理查德·埃文斯（Richard J. Evans）的提醒仍然有效：对绝大多数人而言，告密是例外而不是规则；选择性恐怖针对的是政敌、宗教异议者、职业罪犯、辛提与罗姆人、残障者、同性恋者，尤其是犹太人。</p>
+      <p>2025–2026 年的角度不是再发明一个“告密民族”故事，而是看档案柜本身：柏林文件中心（Berlin Document Center, BDC）的数百万张卡片早已并入联邦档案馆利希特费尔德馆；美国大屠杀纪念博物馆对施派尔州档新施塔特盖世太保卷宗的目录页，在 2026 年 3 月 17 日仍被修订，并写明这是一项随保护期届满而持续增补的数字化工程。</p>
+    </section>
+
+    <section class="karte" id="findings">
+      <p class="akten">KARTE 02 · BEFUNDE</p>
+      <span class="redno">BF-02</span>
+      <h2>核心发现</h2>
+      <ul>
+        <li><strong>人员与神话不成比例。</strong>维基百科汇总的估计是 1944 年约 32,000 名雇员。维纳大屠杀图书馆面向学校的条目给出约 1 名秘密警察对 10,000 名居民。盖拉特利（Robert Gellately）常用埃森的例子：约 43 名官员对应约 65 万居民。下弗兰肯（含维尔茨堡）约 22 名官员对应 84 万以上居民。神话靠宣传、酷刑与“保护性拘留”（Schutzhaft）放大，不是靠人手铺满每个街区。</li>
+        <li><strong>告密是启动机制，不是唯一机制。</strong>在种族隔离、禁止接触波兰劳工、偷听敌台这类案件里，平民告密常常占到一半上下；赖因哈德·曼（Reinhard Mann）对秘密警察档案的统计常被引为：可识别的告密约占 26%，且须视为下限。对共产党、社民党和教派的镇压，埃里克·约翰逊（Eric A. Johnson）指出克雷费尔德 1933–1939 年由盖世太保或警察主动立案占多数，市民告密最多约 8%。</li>
+        <li><strong>动机大多不“高尚”。</strong>杜塞尔多夫 213 件告密样本中，37% 可归为私人冲突，24% 可归为对政权的支持，39% 无法判定。伯恩瓦德·德尔纳（Bernward Dörner）强调：除叛国等少数罪名外，一般没有法律义务去告发；1937 年仅“阴险法”（Heimtückegesetz）相关检举就达 17,168 人。曼海姆盖世太保甚至在报上警告：盖世太保不是“居民恶劣情绪的垃圾桶”。</li>
+        <li><strong>普遍程度仍是争论，不是定论。</strong>盖拉特利在《Backing Hitler》（2001）中写“告密的洪水”和“自我监视社会”；约翰逊批评样本偏窄、有把偶发写成常态的危险；卡尔-海因茨·罗伊班德（Karl-Heinz Reuband）指出：案件中告密占比高，并不等于人口中告密者占比高。利珀地区 1933–1945 年下层与中层纳粹机构只记下 292 件告密，当地人口约 176,000。</li>
+        <li><strong>自我审查比告密更日常。</strong>不必人人告密。只要笑话、问候语、收音机和面包都可能变成卷宗，沉默就会成为生存技术。联邦政治教育中心（bpb）写道：战争期间约两百万人或多或少定期偷听敌台；同时，“只要不被告发”，笑话和“上帝保佑”（Grüß Gott）代替“希特勒万岁”才可能发生。</li>
+      </ul>
+    </section>
+
+    <section class="karte" id="gestapo">
+      <p class="akten">KARTE 03 · PERSONALSTÄRKE</p>
+      <span class="redno">G-32K</span>
+      <h2>盖世太保很小，神话很大</h2>
+      <p>USHMM 把盖世太保的工作方式写成四种动作的组合：追查公众告密、任意搜查、残酷审讯、由经办人决定命运。1933 年 2 月 28 日的国会纵火法令撕掉了住宅、信件与电话的法律保护。1934 年 12 月的“阴险法”把对党、国家和领袖的“恶毒言论”变成可罚行为。bpb 称之为套在“发牢骚者”嘴上的口套。盖世太保还可以绕过法院，签发保护性拘留，把人直接送进集中营。</p>
+      <p>这套权力很大，编制并不大。1939 年斯德丁与法兰克福合计只有 41 名盖世太保；杜塞尔多夫 281 人要覆盖下莱茵约 400 万人。萨尔布吕肯 1939 年有 50 名专职线民；纽伦堡管区 1943–1945 年专职线民约 80–100 人。维基百科转述的判断是：大多数告密者并不是编制内的卧底，而是选择向盖世太保举报的普通人。</p>
+      <div class="grid2">
+        <div class="mini">
+          <strong>1934 · HEIMTÜCKE</strong>
+          公开对党政要人作“仇恨、煽动或卑劣”言论可判监禁。德尔纳：这等于把私人饭桌也向告密者打开。
+        </div>
+        <div class="mini">
+          <strong>1935 · NÜRNBERG</strong>
+          纽伦堡法把“种族玷污”和与犹太人的社交接近变成可告发行为。同情也可以被写成罪证。
+        </div>
+      </div>
+      <p>盖拉特利的命题因此才有力量：如果没有社会配合，这支小队伍无法把种族政策执行到楼梯口。但他自己后来也澄清——在《Denunciation as a Subject of Historical Research》里——强调告密并不是为警察开脱；警察与告密者“显然配合得很好”。对共产党和 1944 年 7 月密谋者，警察高度主动；战争最后几个月，他们变得近乎狂热。把盖世太保写成只会坐等检举信，是另一种简化。</p>
+    </section>
+
+    <section class="karte" id="street">
+      <p class="akten">KARTE 04 · NACHBARSCHAFT</p>
+      <span class="redno">NB-04</span>
+      <h2>邻居、同事、家庭：告密从哪张桌子上开始</h2>
+      <p>维纳图书馆的教学页列出告密动机：反犹、种族主义、对纳粹的信仰、恐惧、个人与职业利益、私人争执。大多数告密者知道后果。德尔纳举过 1937 年代特莫尔德的例子：食客向纳粹党部检举旅店老板“仍在招待犹太人”，措辞把同桌吃饭写成对“体面民族同志”的侮辱。被告发者常常付出生命。德尔纳拒绝“我们当时必须告发”的事后说辞：不告发阴险言论，通常什么也不会发生。</p>
+      <p>孙传钊介绍盖拉特利《Backing Hitler》时，把样本说清楚了：下弗兰肯、莱茵—鲁尔、普法尔茨三地约 670 份卷宗。下弗兰肯 1933–1945 年“种族玷污”案 210 件，居民检举占 59%。偷听敌台案中，约 75% 的告密看不出政治信仰动机；由刑警与盖世太保自己掌握的线索不到 10%。维尔茨堡 84 件种族玷污案中，45 件（54%）由普通人告密启动，盖世太保自己的“观察”为零。</p>
+      <p>家庭不是免疫区。盖拉特利在评述中被引用：告密发生在家庭内部，也发生在朋友与熟人之间。约翰逊的批评同样必须写进同一张卡片：作者举了罕见的亲友告密，却可能让读者以为这是典型。罗伊班德补充：在埃森特区法院的偷听敌台案里，告发丈夫的妻子常常提到家暴——弱者有时把国家暴力当成逃离家庭暴力的出口。这不是美化，而是说明告密可以同时是伤害与扭曲的自救。</p>
+      <p>告密也并不总是直接寄到盖世太保。它常常先经过街区管理员（Blockwart）、纳粹党、区领导或德国劳工阵线，口头多过书面。罗伊班德引用施密兴-阿克曼：1930 年代中期街区管理员估计约两百万人。他们填家庭表，问收音机型号和政治可靠度。盖世太保是末端，不是唯一的耳朵。把“告密社会”写成只有秘密警察，会漏掉这张更密的党务网。</p>
+    </section>
+
+    <section class="karte" id="debate">
+      <p class="akten">KARTE 05 · FORSCHUNGSSTREIT</p>
+      <span class="redno">HS-05</span>
+      <h2>史学争论：普遍程度，还是选择性恐怖</h2>
+      <p>1980 年代末以后，研究发生范式转移。旧叙事把盖世太保写成全知全能，战后记忆也乐于把责任推给“他们”。盖拉特利、曼、保罗与马尔曼等人打开地方卷宗后，画面变成：许多日常案件由居民启动。德国广播电台（Deutschlandfunk）引用德尔纳：没有告密，纳粹统治不会那样迅速而有效地建立。</p>
+      <p>争论从这里才真正开始。约翰逊在 2002 年 H-Net 书评里承认：三类案件中一半以上由平民告密启动，这确实显示可观的民间卷入。但他问：这能否证明盖世太保几乎不需要特工网、主要是“反应型”机关？把盖世太保酷刑与偶尔为了私人纠纷递纸条的邻居写成同一类“德国人”，有滑向集体罪责的危险。水晶之夜后数万犹太男子被送进集中营、后来的驱逐，并不需要邻里检举才能启动。</p>
+      <blockquote>“纳粹恐怖是选择性恐怖。”——埃里克·约翰逊<br>“恐吓很少触及大多数普通德国人的生活。就绝大多数德国人的行为而言，告密是例外，不是规则。”——理查德·埃文斯</blockquote>
+      <p>罗伊班德把方法漏洞写得更硬：不能从“案件的多数由告密启动”推出“居民的多数在告密”。这是把流入比例当成人口比例。利珀的 292 件对 17.6 万人，说明参与告密的只是很小一部分。即便 1937 年阴险案件约 17,200 件，放到当时人口里也不是“全民运动”。联邦德国 1981 年仅国家安全类公民检举就曾到 10,949 件——罗伊班德用这个刺耳的对照提醒：告密不是纳粹德国的专利，把“海量”当成民族性格，会把历史比较做坏。</p>
+      <p>盖泽拉·迪瓦尔德-克尔克曼等人曾用“难以想象的规模”“大众现象”来描述告密意愿。罗伊班德认为，在把绝对数字除以居民数之前，这些形容词过重。正确的句子大概是：告密足够多，足以让一套人员很少的警察系统在邻里尺度上运转；它仍然不是大多数人的日常职业。</p>
+    </section>
+
+    <section class="karte" id="silence">
+      <p class="akten">KARTE 06 · SELBSTZENSUR</p>
+      <span class="redno">SZ-06</span>
+      <h2>自我审查：不必人人告密，只要人人不敢说</h2>
+      <p>告密的政治效果，常常不发生在被送进集中营的那个人身上，而发生在还没开口的人身上。USHMM 写：绝大多数“雅利安”德国人在 1930 年代并不预期自己会遇见盖世太保；对政敌、耶和华见证人、同性恋者和犹太人，它却是持续威胁。恐惧不需要平均分配。它只要让“民族同志”相信隔壁可能听见。</p>
+      <p>bpb 把日常拒绝写成狭窄的缝：可以讲笑话，只要不被告发；天主教地区可以用“上帝保佑”代替希特勒问候。战争开始后，偷听敌台、动摇军心、对战俘与强制劳工表示同情（例如给面包）都变成罪名。约两百万人仍在听敌台，包括托马斯·曼对“德国听众”的广播。这组数字同时说明两件事：禁令没有把收音机关掉；禁令把收听变成必须对邻居隐瞒的行为。</p>
+      <p>德尔纳统计的 1937 年一万七千余件阴险检举，是自我审查的制度条件：法律把闲话升级为国家案件。盖世太保随后抱怨检举太多、太私、太假，甚至起诉诬告。政权要的是“正确的人告发正确的事”，不是让每个离婚、争浴室、争铺面的争执都变成卷宗。自我审查就在这缝里生长：人不知道哪一句话会被写成政治，于是少说。</p>
+      <p>把所有沉默写成罪，和把所有沉默写成无辜，一样粗糙。有人沉默是因为同意；有人沉默是因为怕；有人在沉默的同时藏人、递面包、装听不见。告密社会的残酷在于：它让这三种人共用同一套空气。</p>
+    </section>
+
+    <section class="karte" id="stasi">
+      <p class="akten">KARTE 07 · VERGLEICH</p>
+      <span class="redno">MfS</span>
+      <h2>斯塔西对照：比例不能直接换算成“谁更坏”</h2>
+      <p>维森塔尔有一句流传很广的话：若只看对本国人民的压迫，斯塔西比盖世太保更糟——盖世太保约 40,000 人盯 8,000 万，斯塔西约 102,000 人控制 1,700 万。维基百科常用的编制对照是：盖世太保约 1 名官员对 2,000 人，斯塔西约 1 对 166；加上非正式雇员（IM），有估计到 1 对 6.5。1989 年前后，斯塔西约 91,015 名雇员、约 173,081 名线民。</p>
+      <p>盖拉特利 1996 年的长文专门比较两个德国的告密：两者都靠居民提供信息来弥补编制，但形态不同。纳粹德国大量是自发、私人动机的检举；东德中后期把告密吸收进可合同化的 IM 系统。德国广播电台采访的心理学家克劳斯·贝恩克坚持区分：告密是自己起意，IM 被嵌进秘密警察的契约。档案学者安妮塔·克雷茨纳不完全同意：对受害者而言，信息从哪来并不改变后果。</p>
+      <p>罗伊班德认为，拿 1989 年的斯塔西去比只存在十二年、还要抽调人员去别动队的盖世太保，在时间上不公平。1961 年斯塔西约 20,000 人，1971 年超过 45,500，1989 年才到九万；IM 网从 1950 年代中期的两三万扩到 1988/89 年的约 17.3 万。东德用四十年把监控做成日常行政；纳粹德国用十二年把恐怖做成选择性、可见、且高度依赖邻里告发的系统。比例说明机构密度，不能单独说明“哪个社会更告密”，更不能用来为另一方减刑。</p>
+    </section>
+
+    <section class="karte" id="now">
+      <p class="akten">KARTE 08 · 2025–2026</p>
+      <span class="redno">BDC</span>
+      <h2>2025–2026：索引卡仍在被打开</h2>
+      <p>本报告的视觉来自柏林文件中心。联邦档案馆的介绍写：美国陆军在战争结束后于柏林设立 BDC，为纽伦堡审判和去纳粹化集中缴获的纳粹文件；1994 年联邦档案馆从美方接管（先作为采伦多夫外馆），1996 年迁入利希特费尔德，与“德意志帝国”部类合并。因初期整理急于用人名检索，许多文件被从原形成脉络中抽出，造成混合来源。1950 年代末起，非传记性材料大多移交科布伦茨。</p>
+      <p>最重要的卡片柜仍然是人名柜：纳粹党中共党员卡约 1,270 万张；党通讯约 130 万个保管单位；种族与移居总局人员档约 24 万；党卫队人员档约 35 万；冲锋队人员档约 55 万；另有移民中心与帝国文化院人员档。检索必须提供姓名与出生日期。这些卡片不是“告密目录”，它们是党员、干部与文化许可的官僚遗骸。把 BDC 写成告密博物馆是错的；把它写成理解告密如何被归档的入口，则正好。</p>
+      <p>地方盖世太保卡则更直接。USHMM 收藏的新施塔特（Neustadt an der Weinstraße）盖世太保档案含 14,767 份按字母排列的侦查卷，罪名包括抵抗、阴险言论、偷听敌台、“反社会”、同性恋、共产党/社民党党籍，以及针对犹太人、外籍劳工与战俘的种族化逮捕。第三部分卡片明确登录被调查者，以及法国军政府后来整理的线民、检举人和其他协助盖世太保的私人。馆藏 509,837 幅 JPEG。来源为施派尔州档，2021 年 8 月入藏，2022 年 6 月增补；说明写道：这是持续项目，个人卷宗保护期届满后还会增加。该目录页最近修订时间为 <strong>2026-03-17 15:57:13</strong>。</p>
+      <p>维尔茨堡州档的盖世太保逮捕档（USHMM RG-14.158）含 24,780 份逮捕文件，其中 3,071 份涉及犹太人，并有遣送相册。奥斯纳布吕克大学与下萨克森州档合作的 DFG 项目“监视。权力。秩序”用人工智能完整提取当地盖世太保卡片（约 49,000 张卡、约 47,000 人），以便重建 1929–1945 年卡片柜的历史状态。2020 年代的技术没有让告密变少，它让我们第一次按姓名、案由和时间把告密的官僚手续看清楚。</p>
+      <p class="note">BDC 的人名检索受隐私法限制；USHMM 的数字化副本通常只能在馆内阅览。卡片柜打开了，并不等于互联网上可以随便点开邻居的告密信。</p>
+    </section>
+
+    <section class="karte sources" id="sources">
+      <p class="akten">KARTE 09 · QUELLEN</p>
+      <span class="redno">URL</span>
+      <h2>来源（真实 URL）</h2>
+      <p class="note">下列网址均经本轮检索或抓取核对，不编造。抓取时间：2026-08-30。</p>
+      <ol class="body">
+        <li>USHMM，《The Gestapo: Overview》：告密、有限监控、保护性拘留。<br><a href="https://encyclopedia.ushmm.org/content/en/article/gestapo">https://encyclopedia.ushmm.org/content/en/article/gestapo</a></li>
+        <li>The Wiener Holocaust Library / The Holocaust Explained，《Informants》：约 1:10,000，邻居与家人告密。<br><a href="https://www.theholocaustexplained.org/resistance-responses-collaboration/german-collaboration-and-complicity/informants">https://www.theholocaustexplained.org/resistance-responses-collaboration/german-collaboration-and-complicity/informants</a></li>
+        <li>Bundesarchiv，《Berlin Document Center》：1994 接管、1996 利希特费尔德、1,270 万党员卡。<br><a href="https://www.bundesarchiv.de/das-bundesarchiv/aus-unserer-archivarbeit/berlin-document-center/">https://www.bundesarchiv.de/das-bundesarchiv/aus-unserer-archivarbeit/berlin-document-center/</a></li>
+        <li>USHMM 目录，Geheime Staatspolizei Neustadt records（2026-03-17 修订）。<br><a href="https://collections.ushmm.org/search/catalog/irn724382">https://collections.ushmm.org/search/catalog/irn724382</a></li>
+        <li>Eric A. Johnson 评 Robert Gellately, <em>Backing Hitler</em>，H-German，2002。<br><a href="https://www.h-net.org/reviews/showrev.php?id=5903">https://www.h-net.org/reviews/showrev.php?id=5903</a></li>
+        <li>bpb，Wolfgang Benz，《Verweigerung im Alltag und Widerstand im Krieg》：阴险法、敌台、日常拒绝。<br><a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/dossier-nationalsozialismus/39563/verweigerung-im-alltag-und-widerstand-im-krieg/">https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/dossier-nationalsozialismus/39563/verweigerung-im-alltag-und-widerstand-im-krieg/</a></li>
+        <li>Deutschlandfunk，《Für 30 Silberlinge ...》：德尔纳、1937 年 17,168 件、无告发义务、斯塔西对照。<br><a href="https://www.deutschlandfunk.de/fuer-30-silberlinge-100.html">https://www.deutschlandfunk.de/fuer-30-silberlinge-100.html</a></li>
+        <li>Karl-Heinz Reuband，<em>Denunziation im Dritten Reich</em>，HSR 26 (2001)。<br><a href="https://doi.org/10.12759/hsr.26.2001.2/3.219-234">https://doi.org/10.12759/hsr.26.2001.2/3.219-234</a></li>
+        <li>Wikipedia, Gestapo：编制约 32,000（1944）、地方人力、约翰逊/埃文斯引文。<br><a href="https://en.wikipedia.org/wiki/Gestapo">https://en.wikipedia.org/wiki/Gestapo</a></li>
+        <li>孙传钊，《他们为什么告密？——关于罗伯特·盖拉特莱的纳粹研究》，爱思想。<br><a href="https://www.aisixiang.com/data/31705.html">https://www.aisixiang.com/data/31705.html</a></li>
+      </ol>
+      <p class="note">检索词（中英，本轮实际使用）：Gestapo denunciation neighbors Germany；Denunziation NS-Zeit Forschung；Berlin Document Center Gestapo files archive；Robert Gellately Backing Hitler Gestapo denunciation；Gestapo files 2025 2026 archive digitization；bpb Denunziation Nationalsozialismus；Stasi vs Gestapo 告密比例 史学争论。</p>
+    </section>
+
+    <section class="karte" id="lesson">
+      <p class="akten">KARTE 10 · LEHRE</p>
+      <span class="redno">ETHIK</span>
+      <h2>对历史学习者的启示</h2>
+      <p>学习这段历史，不要在两张假卡片之间选一张。一张写“全是盖世太保”，把邻居洗成受害者；另一张写“全是德国人”，把酷刑官与递纸条的人写成同罪。卷宗显示的是更难看、也更准确的结构：政权立法把闲话变成武器；一小支不受法律约束的警察挑选目标、使用酷刑；一部分居民——不是全部——用这套武器解决私人恩怨、执行反犹、或表现忠诚；更多人学会闭嘴。平民的苦难与纳粹的罪行必须写在同一句里：被炸的城市和被检举的犹太人，不是互相抵消的账。</p>
+      <p>德尔纳后来要求一种“信息行为的伦理”：有些报告（例如虐待儿童）在道德上必要，有些报告会毁掉一个人。纳粹德国的教训是制度先把后一类报告变成国家事业。2025–2026 年打开的卡片柜没有替任何人赎罪，它们只是把启动调查的那一行字——邻居、同事、妻子、匿名信——重新放到光线下。读者若只记住“告密很普遍”，学歪了；若只记住“告密是例外”，也学歪了。要记住的是：普遍的是恐惧与可利用的法律；例外的是把邻居送进那套法律的人；两者加在一起，才让一套人数很少的秘密警察看起来像无处不在。</p>
+    </section>
+
+    <footer>
+      BDC KARTEI · 调研报告/二战调研_告密邻里_20260830_1826.html · 仅此一份独立 HTML · 未改调研记录 · 未作 git commit
+    </footer>
+  </div>
+</article>
+</body>
+</html>

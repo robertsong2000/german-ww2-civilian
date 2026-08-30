@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>废墟清运与“零时”：饥饿冬天与记忆建构 —— 2025–2026：威尼斯德国馆的《废墟妇女》与史学拆解</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* Rubble-cart report: dust, brick chips, iron wheels, wheel-ruts. No purple, no Inter. */
+:root {
+  --dust: #c9bba8;
+  --ash: #8a8074;
+  --brick: #8c4030;
+  --brick-dark: #5c2a20;
+  --mortar: #b8a894;
+  --iron: #2c2622;
+  --rust: #7a3a24;
+  --wood: #4a3728;
+  --plank: #e4d6c2;
+  --plank2: #d7c6ae;
+  --ink: #241c16;
+  --fade: #5e5348;
+  --moss: #4a5c3e;
+  --paper: #efe4d2;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Spectral", serif;
+  line-height: 1.84;
+  min-height: 100vh;
+  background-color: #6e6458;
+  background-image:
+    repeating-linear-gradient(92deg, transparent 0 38px, rgba(36,28,22,.18) 38px 41px, transparent 41px 86px),
+    repeating-linear-gradient(-8deg, transparent 0 70px, rgba(36,28,22,.12) 70px 73px, transparent 73px 140px),
+    linear-gradient(180deg, #7a7064 0%, #5a5248 40%, #4a433c 100%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .22;
+  background-image:
+    repeating-linear-gradient(0deg, #8c4030 0 11px, #6b3428 11px 12px, #a85a42 12px 23px, #5c2a20 23px 24px),
+    repeating-linear-gradient(90deg, #8c4030 0 22px, #5c2a20 22px 23px, #9a4e38 23px 46px, #4a241c 46px 47px);
+  background-size: 47px 24px;
+  mix-blend-mode: multiply;
+}
+.ruts {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 90px;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 18px at 20% 40%, rgba(28,22,18,.55) 0, transparent 70%),
+    radial-gradient(ellipse 90% 16px at 70% 62%, rgba(28,22,18,.5) 0, transparent 70%),
+    repeating-linear-gradient(90deg, transparent 0 28px, rgba(36,28,22,.35) 28px 32px, transparent 32px 64px);
+}
+.cart {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 36px auto 110px;
+  background:
+    repeating-linear-gradient(90deg, rgba(74,55,40,.08) 0 1px, transparent 1px 92px),
+    linear-gradient(180deg, #efe6d4, var(--plank));
+  border: 14px solid var(--wood);
+  outline: 3px solid #2a2018;
+  box-shadow:
+    0 0 0 8px #3a2c20,
+    18px 28px 0 rgba(36,28,22,.35),
+    0 40px 70px rgba(0,0,0,.45);
+  padding: 0 34px 42px;
+}
+.cart::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed rgba(74,55,40,.35);
+  pointer-events: none;
+}
+.iron-bar {
+  height: 10px;
+  margin: 0 -34px;
+  background:
+    linear-gradient(90deg, #1c1814, #4a3c32 8%, #2a2420 20%, #5a4a3e 50%, #2a2420 80%, #1c1814);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.12), 0 3px 0 #1a1410;
+}
+.wheels {
+  position: absolute;
+  left: -38px; right: -38px; bottom: -78px;
+  height: 78px;
+  pointer-events: none;
+}
+.wheel {
+  position: absolute;
+  bottom: 0;
+  width: 92px; height: 92px;
+  border: 10px solid var(--iron);
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(from 0deg, #3a322c 0 8deg, #1e1a16 8deg 16deg);
+  box-shadow: inset 0 0 0 8px #5a4a3c, 4px 8px 0 rgba(0,0,0,.4);
+}
+.wheel.left { left: 48px; }
+.wheel.right { right: 48px; }
+.wheel::before {
+  content: "";
+  position: absolute;
+  inset: 28%;
+  border-radius: 50%;
+  background: #1a1612;
+  box-shadow: 0 0 0 5px #6a4a32;
+}
+header {
+  padding-top: 18px;
+  position: relative;
+}
+.badge {
+  display: inline-block;
+  font-family: "Karla", sans-serif;
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--brick);
+  padding: 5px 12px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-family: "Noto Serif SC", "Spectral", serif;
+  font-size: clamp(1.38rem, 3.1vw, 1.92rem);
+  line-height: 1.36;
+  font-weight: 700;
+  color: var(--iron);
+}
+.sub {
+  margin-top: 8px;
+  color: var(--fade);
+  font-size: 15.5px;
+}
+.when {
+  margin-top: 12px;
+  font-family: "Karla", sans-serif;
+  font-size: 12.5px;
+  letter-spacing: .04em;
+  color: var(--rust);
+  border-top: 2px solid var(--brick);
+  border-bottom: 2px solid var(--brick);
+  padding: 7px 0;
+}
+.brick-chip {
+  position: absolute;
+  right: -6px;
+  top: 22px;
+  width: 54px;
+  height: 28px;
+  background: linear-gradient(135deg, #a85a42, #6b2e22);
+  transform: rotate(14deg);
+  box-shadow: 3px 4px 0 #2a1c16;
+}
+nav.toc {
+  margin: 20px 0 6px;
+  padding: 14px 16px 10px;
+  background: var(--plank2);
+  border: 2px solid var(--wood);
+  position: relative;
+}
+nav.toc h2 {
+  font-family: "Alfa Slab One", "Noto Serif SC", serif;
+  font-size: 1.05rem;
+  color: var(--brick-dark);
+  letter-spacing: .04em;
+  font-weight: 400;
+}
+nav.toc ol { margin: 8px 0 6px 1.25em; }
+nav.toc a {
+  color: var(--moss);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+nav.toc a:hover { color: var(--brick); }
+.card {
+  margin: 20px 0;
+  padding: 18px 20px 14px;
+  background: var(--paper);
+  border: 1px solid #c4b39a;
+  box-shadow: 6px 6px 0 rgba(92,42,32,.18);
+  position: relative;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 9px;
+  background:
+    repeating-linear-gradient(180deg, var(--brick) 0 10px, var(--mortar) 10px 12px, var(--brick-dark) 12px 22px);
+}
+.card.moss::before { background: repeating-linear-gradient(180deg, var(--moss) 0 10px, #6a7a5c 10px 12px, #3a4a32 12px 22px); }
+.card.iron::before { background: repeating-linear-gradient(180deg, #3a322c 0 10px, #6a5a4c 10px 12px, #2a221c 12px 22px); }
+.card.rust::before { background: repeating-linear-gradient(180deg, var(--rust) 0 10px, #c47a48 10px 12px, #5a2a18 12px 22px); }
+.card h2 {
+  font-family: "Alfa Slab One", "Noto Serif SC", serif;
+  font-size: 1.18rem;
+  font-weight: 400;
+  margin: 0 0 10px 6px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #cbb89a;
+  color: var(--brick-dark);
+  letter-spacing: .01em;
+}
+.tag {
+  font-family: "Karla", sans-serif;
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 4px 6px;
+}
+p { margin: 0 0 11px 6px; }
+ul, ol.body { margin: 0 0 11px 1.45em; }
+li { margin-bottom: 7px; }
+blockquote {
+  margin: 10px 0 14px 6px;
+  padding: 10px 14px;
+  border-left: 5px solid var(--brick);
+  background: rgba(140,64,48,.08);
+  font-family: "Spectral", "Noto Serif SC", serif;
+  font-style: italic;
+  color: #3a2e26;
+}
+.note {
+  font-size: 13.5px;
+  color: var(--fade);
+  margin: 0 0 10px 6px;
+}
+.sources a {
+  color: #6e2c1c;
+  word-break: break-all;
+}
+.src-list { list-style: none; margin-left: 6px; }
+.src-list li {
+  padding: 8px 0;
+  border-bottom: 1px dotted #c4b39a;
+}
+.src-list strong { display: block; font-size: 14.5px; }
+footer {
+  margin: 26px 6px 0;
+  padding-top: 12px;
+  border-top: 4px double var(--wood);
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+  color: var(--fade);
+}
+.dust {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .07;
+  background-image: radial-gradient(#2a2018 0.7px, transparent 0.8px);
+  background-size: 4px 4px;
+}
+@media (max-width: 700px) {
+  .cart { margin: 12px 8px 96px; padding: 0 16px 28px; border-width: 8px; }
+  .iron-bar { margin: 0 -16px; }
+  .wheels, .brick-chip { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Dust, brick chips, iron wheels: a handcart hauling rubble, not a blank restart -->
+<div class="ruts" aria-hidden="true"></div>
+<article class="cart">
+  <div class="dust" aria-hidden="true"></div>
+  <div class="iron-bar" aria-hidden="true"></div>
+  <div class="brick-chip" aria-hidden="true"></div>
+  <header>
+    <span class="badge">Trümmerlore · Stunde Null</span>
+    <h1>废墟清运与“零时”：饥饿冬天与记忆建构 —— 2025–2026：威尼斯德国馆的《废墟妇女》与史学拆解</h1>
+    <p class="sub">手推车里是碎砖、强制劳工和配给卡，不是道德空白。1945 年没有把德国人从历史里卸下来。</p>
+    <p class="when">调研时间：2026-08-30 18:28 CST · 平民史系列 · 主题轮换池第15项 · 视觉：碎石清运手推车风</p>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2>目录 · Ladung</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#rubble">谁在清运：强制劳工、男性、妇女</a></li>
+      <li><a href="#null">“零时”是事后建构</a></li>
+      <li><a href="#hunger">饥饿冬天：占领期的饥寒，接在战时破坏之后</a></li>
+      <li><a href="#now">2025–2026：威尼斯德国馆重提“废墟妇女”</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">01 · Thema</p>
+    <h2>本期主题</h2>
+    <p>头巾、铁桶、废墟上的笑容：这组图像被写成“德国妇女用手把国家重新垒起来”，再被写成 1945 年的道德重新开始。本报告把这组图像拆开。清运废墟的，是建筑公司与重型机械、战俘、集中营囚犯、前纳粹党员的强制劳动、失业者，以及一部分妇女——主要在柏林与苏占区，而且常常是为了较好的食品卡，不是为了给后来的“经济奇迹”当海报。</p>
+    <p>饥饿冬天（Hungerwinter 1946/47）发生在占领时期，但它吃的是战时炸毁的住房、中断的铁路、被切断的东部粮仓，以及一套早已把欧洲变成补给战场的掠夺结构。把 1945 年写成“零时”（Stunde Null），等于把碎砖从手推车里倒掉，只留下一块擦干净的车牌。2026 年威尼斯双年展德国馆仍在调用“废墟妇女”这个词；史学要做的，是把车轮辙连回轰炸、强制劳动与罪行，而不是把废墟当成无罪的风景。</p>
+  </section>
+
+  <section class="card moss" id="findings">
+    <p class="tag">02 · Befunde</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>“废墟妇女”不是一代人，而是区域性、少数性的劳动力。</strong>莱奥妮·特雷贝尔（Leonie Treber）在杜伊斯堡–埃森大学的博士论文（2014 年出版为《Mythos Trümmerfrauen》）指出：全国尺度上，妇女清运不是大众现象。德国广播电台（DLF）转述：柏林约 6 万名妇女投入清运，约占当地女性人口 5%；英占区仅约 0.3%。法兰克福的市民义务劳动是两次、每次两天、每天八小时。波恩联邦德国历史之家的阿希姆·韦斯特霍尔特（Achim Westholt）强调：约 4 亿立方米碎石，主要靠专业建筑企业与大型机械。</li>
+      <li><strong>清运从战争中就开始，劳动力首先是被强制的人。</strong>特雷贝尔指出，1940 年起纳粹已组织战俘与集中营囚犯清运。战争结束后，最先被赶上废墟的是德国战俘与前纳粹党员。这项劳动在当时被编码为“惩罚劳动”（Strafarbeit），带着耻辱，不是后来纪念碑上的光荣。妇女上废墟，往往是为了更好的食品卡，或因为苏占区把失业者编入义务劳动。</li>
+      <li><strong>“零时”是事后的咒语，不是 1945 年的社会事实。</strong>德国历史博物馆（DHM）在警察史展览中直接写：“新开端，但不是零时”——西占区很快重新启用大部分旧警察人员。DHM 关于 documenta 的展览说明：第一届 documenta 的组织者中近半数曾加入纳粹党、冲锋队或党卫队；被谋杀的犹太艺术家、流亡者与共产主义者在这个“新开始”里没有位置。巴伐利亚广播（BR）称“零时”是暗示性的标题：政权垮了，态度、人事与日常的连续性没有一笔勾销。</li>
+      <li><strong>1946/47 年饥饿冬天主要在占领期，但原因链必须拉回战争。</strong>联邦德国历史之家 LeMO 条目《Überlebensmittel》写：1947 年是整个战后营养状况最危急的一年；配给卡远远不够，仓鼠采购、黑市与“弗林斯”（Fringsen）成为生存技术。北德广播（NDR）写：1946 年 11 月至 1947 年 3 月是 20 世纪最冷的冬天之一；德国境内因饥寒死亡的人数只能粗估，史家高估到数十万。住房在战争结束时约 20% 被毁，交通线约 40% 中断；原先约 30% 的土豆与谷物来自后来被割走的东部产区。没有战时破坏与种族战争造成的人口、土地与运输断裂，就不会有这个冬天。</li>
+      <li><strong>神话有政治功能：把劳动从惩罚改写成荣誉，把罪责从现场挪走。</strong>东德把“废墟妇女”树成社会主义新女性样板；西德 1950 年代几乎不提这个形象，直到 1980 年代养老金辩论与妇女史写作才把它扩成“一代人”。奥地利科学院（ÖAW）与《当代史季刊》2022 年的研究显示：维也纳清运主要由被宪法强制劳动的前纳粹党员完成，男性过半；“废墟妇女”作为新的受害者叙事，是在奥地利“自身是纳粹受害者”神话松动之后才被发明出来的。</li>
+    </ul>
+  </section>
+
+  <section class="card rust" id="rubble">
+    <p class="tag">03 · Trümmerräumung</p>
+    <h2>谁在清运：强制劳工、男性、妇女</h2>
+    <p>手推车（Trümmerlore）比头巾更接近现场。波恩历史之家展出的是一辆碎石矿车，不是一组摆拍的微笑。DLF 采访中，韦斯特霍尔特说得很直白：需要大型机械。特雷贝尔补充：纳粹已经为清运设计过一套系统——战俘与集中营囚犯。战争没有在 1945 年 5 月 8 日把这套系统从城市里抽走，只是换了监工。</p>
+    <p>战后第一批劳动力：德国战俘，以及被新市政当局与占领当局征用的前纳粹党员。人手不够，才动员居民。西占区多以“自愿”或短期市民义务出现；苏占区与柏林则大量动用失业者，其中女性比例较高。即便在柏林，6 万这个数字也撑不起“一代废墟妇女”的说法。英占区 0.3% 的妇女参与率，更说明海报不等于人口统计。</p>
+    <blockquote>
+      “重要的是要知道，妇女以那种形式清运废墟，只是很小的一圈人，是一种区域现象。不能说德国是被废墟妇女重建的，也不能说德国到处都有废墟妇女。”——莱奥妮·特雷贝尔，转述自德国广播电台
+    </blockquote>
+    <p>工作本身脏、重、危险，并且被看成惩罚。特雷贝尔的论点是：正因为战俘、集中营囚犯、前党员都曾被罚去铲砖，这项劳动带着耻辱。要动员更多人——包括为了食品卡而来的妇女——媒体必须把惩罚改写成荣誉。1945/46 年起，柏林与苏占区城市的妇女杂志、日报展开宣传：化妆过的妇女、摆好的队形、几乎看不见擦汗。韦斯特霍尔特说，他见过的影片里找不到一个刚把汗从额上抹掉的女人。</p>
+    <p>这不是要否认真实劳动过的妇女。她们在废墟上挣钱、换卡、养活孩子，身体代价是真的。否认神话，不等于把这些劳动从历史上抹掉。需要抹掉的是那句偷换：男人打仗、女人重建，所以 1945 年可以把账清零。特雷贝尔明确拒绝这种黑白分工——妇女也曾是受害者、追随者、加害者，曾在纳粹体制里生活并起作用。把清运写成女性的集体救赎，是把她们从体制里摘出去。</p>
+    <p>专业公司、男性工人、碎石回收企业承担了绝大部分体积。妇女的可见性来自照片：站成一排、铁桶传递、废墟作背景。可见性不等于主力。Slow Travel Berlin 转述特雷贝尔：战时空袭后，恢复城市基础设施的主要是保安与救护勤务（SHD）以及防空警察，而不是“母亲们自发上街”。清运史从 1940 年写起，1945 年就不再像创世。</p>
+  </section>
+
+  <section class="card iron" id="null">
+    <p class="tag">04 · Stunde Null</p>
+    <h2>“零时”是事后建构</h2>
+    <p>德语 Stunde Null 听起来像电表归零。它描述的是一种愿望：把崩溃写成切断，把占领写成白纸。政治上，1945 年当然是切口——政权覆灭，国土被占、被分。社会上，切口没有把人换掉。DHM 警察展厅的标题已经足够：“新开端，但不是零时”。西占区出于实用，很快起用大部分旧警察；许多警察犯罪未被追究，1950 年代末的审判才让公众看见警察如何参与纳粹罪行，而调查对象往往人还在警队里。</p>
+    <p>文化上的“零时”同样是发明。DHM 馆长拉斐尔·格罗斯（Raphael Gross）在 2021 年新闻稿中说，两场展览要纠正那种与 documenta 绑在一起的“审美上激进的新开始”。第一届 documenta（1955）把曾被骂成“堕落艺术”的现代主义送上西德的国家舞台，同时拒绝认真面对纳粹过往：组织者中近半数有纳粹党、冲锋队或党卫队党籍；犹太、流亡、共产主义艺术家缺席。所谓“零时”的艺术，是选择性地遗忘受害者，并让一部分旧人继续占据公共空间。</p>
+    <blockquote>
+      “零时这个公式与其说是对现实的描述，不如说是一种咒语——而且是后果严重的咒语，因为它也意味着把过去挤出去。”——巴伐利亚广播《神话“零时”》
+    </blockquote>
+    <p>BR 指出：年轻联邦议院在 1949 年底就通过赦免法，让许多纳粹分子受益。算计很清楚：前科太多，新国家不好做。同一年成立的民主德国以“反法西斯”自我定义，仿佛纳粹罪行在制度上与自己无关。两边都需要一个切断点。废墟妇女的图像后来填进这个切断点：头巾比党证好拍，铁桶比人事档案好讲。</p>
+    <p>特雷贝尔的书名副标题把清运与“德国记忆场所的生成”连在一起。评审者在《军事史杂志》书评里特别称赞：她拆神话时，既不否定那一代人的困苦，也不否认从纳粹经所谓“零时”进入战后的人事连续性。清运现场本身就是连续性：同一类强制劳动，换了占领当局的印章。</p>
+  </section>
+
+  <section class="card" id="hunger">
+    <p class="tag">05 · Hungerwinter</p>
+    <h2>饥饿冬天：占领期的饥寒，接在战时破坏之后</h2>
+    <p>把饥饿冬天单独写成“占领者让德国人挨饿”，是另一套记忆政治。事实更硬：1946/47 年的饥寒发生在占领期，热量数字低得可怕，但原因不是从 1945 年 5 月凭空长出来的。LeMO《Überlebensmittel》写：国家食品供应在战争结束时完全崩溃，各城只能吃自己的存货；配给卡上的食物远远不够，只有交换与“补偿交易”能保命。仓鼠采购（Hamsterfahrten）在战后立即开始——城里人坐超载火车、步行、骑车下乡，用家具、衣服、值钱物件换黄油、培根和土豆。</p>
+    <p>科隆枢机主教约瑟夫·弗林斯（Joseph Kardinal Frings）在 1946/47 年跨年布道中宣布：若无法靠劳动或乞求得到维生所需，取走必需品在道德上可被允许。“Fringsen”从此成为组织煤炭与食物的俚语。黑市上，香烟代替贬值的帝国马克。盟军禁黑市失败。直到 1948 年 6 月货币改革，货架重新有意义，黑市才干涸。LeMO 把 1947 年定为整个战后营养最危急的一年——中间还曾有过一次较好的收成，然后被这个冬天吞掉。</p>
+    <p>NDR 把这个冬天放进更大的死亡账本里：十二年纳粹独裁与德国发动的侵略战争，约 5500 万死者；苏联为战胜纳粹德国付出约 2700 万人。1946–48 年苏联饥饿年，史家估计再死约 200 万人。德国不是唯一挨饿的地方，更不是这场饥荒的原点。德国大城市——柏林、汉堡、科隆——面对的是已经被轰炸、营养耗尽的人口。科隆在 1946 年能把日配给维持在 1000 卡以上就算幸运，800 卡及以下并不罕见。</p>
+    <p>NDR 列出必须连着战争读的结构原因：农业劳动力死于战争；数百万难民与被驱逐者涌入，往往一无所有；交通约 40% 被毁，残存机器还被拆迁；莱茵与奥得之间的工业德国，约 30% 的土豆与谷物曾靠东部产区输入，这条线被新边界切断；分区占领又切断传统供货路线。战争结束时约 20% 住房被毁，人们挤在漏风的破房子里过这个世纪最冷的冬天之一。莱茵河封冻约 60 公里，易北河完全结冰，内河运煤运粮停摆。土豆在严寒中腐烂。这是占领期的管理失败与气候极端，也是空袭、种族战争、东部驱逐与战时经济崩溃的延期账单。</p>
+    <p>平民的求生并不自动成为无罪证明。仓鼠采购、黑市、口粮盗窃，是厨房里的伦理，不是法庭上的赦免。同一座城市里，犹太人、强制劳工、被剥夺配给的人，在战争年代已经被推出“正常生活”的边界。战后德国人排队领 800 卡，不能用来覆盖战时那些被饿死、被运走、被关进营里的人。饥饿冬天必须写，但必须与战时破坏、战时掠夺写在同一句里。</p>
+    <p class="note">NDR 相关节目档期仍出现在 2026 年 1 月 5 日《Unsere Geschichte》重播信息中。饥饿冬天没有从公共记忆里消失；危险在于它被单独做成“德国受难年表”的一章。</p>
+  </section>
+
+  <section class="card moss" id="now">
+    <p class="tag">06 · 2025–2026</p>
+    <h2>2025–2026：威尼斯德国馆重提“废墟妇女”</h2>
+    <p>2026 年威尼斯艺术双年展德国馆，亨丽克·瑙曼（Henrike Naumann）的沉浸装置《内心战线》（Die Innere Front）把空间分成战争、战后、1990、战前。威尼斯垂直舞蹈团体 Il Posto 在圆形大厅墙面上演出她构思的作品《Trümmerfrau》。馆方文字写：她的实践一直在追问历史与共同体如何被建构。瑙曼于 2026 年 2 月筹备期间去世，年 41 岁。现场把“废墟妇女”从头巾照片里拽出来，变成沿墙垂降的身体——记忆符号仍在被使用，但已经不再是 1950 年代的光荣海报，也不再是 1980 年代养老金辩论里的一代人称号。</p>
+    <p>这正是史学要盯住的缝：艺术可以调用神话，历史不能把调用当成事实。特雷贝尔之后，德语公共讨论已能说出“废墟妇女是神话”；同时，纪念碑、导游词、极右翼的“德国也是受害者”叙事仍在回收这张图。DLF 书评提醒：统一之后，东德与西德两套很不一样的废墟妇女传统迅速熔成一个全德记忆场所，政客需要动员“奉献”时就把它请出来，极右翼则用它把德国写成二战的受害者。</p>
+    <p>奥地利提供对照。2018 年当时的副总理海因茨–克里斯蒂安·施特拉赫（Heinz-Christian Strache）为维也纳“废墟妇女”纪念碑揭幕。马丁·奇格尔（Martin Tschiggerl）与托马斯·瓦拉赫（Thomas Walach）在《当代史季刊》2022 年论文及奥地利科学院新闻稿中指出：1945/46 年维也纳清运几乎全是被强制劳动的前纳粹党员，男性过半；“废墟妇女”一词在奥地利公共讨论里直到 1980 年代末几乎不存在，真正坐实是在 1990–2000 年代——也就是奥地利“自身是纳粹受害者”神话松动、需要新的受难角色的时候。真实的匮乏被织进英勇与牺牲的故事，纳粹年代再次被挡在画框外。</p>
+    <p>2025–2026 年的任务不是再竖一座头巾铜像，也不是把所有上过废墟的妇女说成虚假。任务是：看见手推车里还有谁，看见“零时”擦掉了哪一段连续性，看见饥饿冬天如何被单独展览。威尼斯墙上的舞蹈可以问“我们是否仍在前线”；档案要回答的是：前线从来没有在 1945 年 5 月从德国人的人事表、配给卡和碎石场上消失。</p>
+  </section>
+
+  <section class="card iron" id="sources">
+    <p class="tag">07 · Quellen</p>
+    <h2>来源</h2>
+    <p class="note">以下均为本次检索与抓取的真实页面，不编造网址。抓取时间以本页调研时间为准。</p>
+    <ol class="src-list body">
+      <li>
+        <strong>德国广播电台：特雷贝尔访谈与历史之家展陈</strong>
+        <a href="https://www.deutschlandfunk.de/truemmerfrauen-den-kriegsschutt-raeumten-andere-weg-100.html">https://www.deutschlandfunk.de/truemmerfrauen-den-kriegsschutt-raeumten-andere-weg-100.html</a>
+      </li>
+      <li>
+        <strong>德国广播电台书评：谁真正清走了碎石</strong>
+        <a href="https://www.deutschlandfunk.de/truemmerfrauen-studie-wer-deutschland-wirklich-vom-schutt-100.html">https://www.deutschlandfunk.de/truemmerfrauen-studie-wer-deutschland-wirklich-vom-schutt-100.html</a>
+      </li>
+      <li>
+        <strong>联邦德国历史之家 LeMO：《Überlebensmittel》（饥饿、仓鼠采购、弗林斯、黑市）</strong>
+        <a href="https://hdg.de/lemo/kapitel/nachkriegsjahre/alltag/ueberlebensmittel.html">https://hdg.de/lemo/kapitel/nachkriegsjahre/alltag/ueberlebensmittel.html</a>
+      </li>
+      <li>
+        <strong>北德广播：饥饿冬天 1946/47（“白死”与“黑饥”，结构原因，2026 年节目信息）</strong>
+        <a href="https://www.ndr.de/geschichte/chronologie/Hungerwinter-1946-47-Weisser-Tod-und-schwarzer-Hunger,hungerwinter166.html">https://www.ndr.de/geschichte/chronologie/Hungerwinter-1946-47-Weisser-Tod-und-schwarzer-Hunger,hungerwinter166.html</a>
+      </li>
+      <li>
+        <strong>德国历史博物馆：documenta 如何发明 1945 年后艺术中的“零时”</strong>
+        <a href="https://www.dhm.de/pressemitteilung/wie-die-documenta-die-stunde-null-in-der-kunst-nach-1945-erfand/">https://www.dhm.de/pressemitteilung/wie-die-documenta-die-stunde-null-in-der-kunst-nach-1945-erfand/</a>
+      </li>
+      <li>
+        <strong>德国历史博物馆展览：“新开端，但不是零时”（警察人事连续性）</strong>
+        <a href="https://www.dhm.de/archiv/ausstellungen/ordnung-und-vernichtung/raum7.html">https://www.dhm.de/archiv/ausstellungen/ordnung-und-vernichtung/raum7.html</a>
+      </li>
+      <li>
+        <strong>巴伐利亚广播：神话“零时”——咒语而非现实</strong>
+        <a href="https://www.br.de/radio/bayern2/sendungen/radiothema/mythos-stunde-null-102.html">https://www.br.de/radio/bayern2/sendungen/radiothema/mythos-stunde-null-102.html</a>
+      </li>
+      <li>
+        <strong>2026 威尼斯双年展德国馆：亨丽克·瑙曼与演出《Trümmerfrau》</strong>
+        <a href="https://deutscher-pavillon.org/de/exhibition/henrike-naumann">https://deutscher-pavillon.org/de/exhibition/henrike-naumann</a>
+      </li>
+      <li>
+        <strong>奥地利科学院：义务劳动而非自愿援助（维也纳清运）</strong>
+        <a href="https://www.oeaw.ac.at/news/mythos-der-truemmerfrauen-arbeitspflicht-statt-freiwillige-hilfe-1">https://www.oeaw.ac.at/news/mythos-der-truemmerfrauen-arbeitspflicht-statt-freiwillige-hilfe-1</a>
+      </li>
+      <li>
+        <strong>《当代史季刊》2022：被发明的“废墟妇女”（Tschiggerl / Walach）</strong>
+        <a href="https://www.degruyterbrill.com/document/doi/10.1515/vfzg-2022-0018/html?lang=de">https://www.degruyterbrill.com/document/doi/10.1515/vfzg-2022-0018/html?lang=de</a>
+      </li>
+      <li>
+        <strong>Klartext 出版社：特雷贝尔《Mythos Trümmerfrauen》样章（记忆场所）</strong>
+        <a href="https://klartext-verlag.de/zusatzangebote/978-3-8375-1178-9.pdf">https://klartext-verlag.de/zusatzangebote/978-3-8375-1178-9.pdf</a>
+      </li>
+      <li>
+        <strong>De Gruyter 书评：特雷贝尔与“零时”人事连续性</strong>
+        <a href="https://www.degruyter.com/document/doi/10.1515/mgzs-2016-0129/pdf?licenseType=free">https://www.degruyter.com/document/doi/10.1515/mgzs-2016-0129/pdf?licenseType=free</a>
+      </li>
+      <li>
+        <strong>英文综述：废墟妇女神话与记忆（Slow Travel Berlin）</strong>
+        <a href="https://www.slowtravelberlin.com/mythos-trummerfrauen/">https://www.slowtravelberlin.com/mythos-trummerfrauen/</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="card rust" id="lesson">
+    <p class="tag">08 · Lehre</p>
+    <h2>对历史学习者的启示</h2>
+    <p>学 1945 年，不要先学“重新开始”。先看碎石是谁运的，食品卡发给谁，旧警察回到哪一张办公桌。零时是后来写给自己的标题，用来把连续性从画面里裁掉。废墟妇女的图像能感动人，也能替人卸责：它把强制劳动、男性工人、机械与前党员从画面边缘推出去，把头巾留在正中。</p>
+    <p>学饥饿冬天，不要把它从战争里剪下来。1946/47 年的卡路里、封冻的河、腐烂的土豆，是占领期的灾难，也是空袭、种族战争、东部产区丧失与人口移动的后果。德国人在废墟里挨饿是事实；欧洲被德国发动的战争先饿死、先炸死、先运走的人，同样是事实。两句话必须挨着写。</p>
+    <p>看见 2026 年艺术馆再次举起“废墟妇女”这个词，先问：它在纪念劳动，还是在征用一个已经被洗过的象征？拆神话不是羞辱上过废墟的人，而是拒绝把 1945 年写成道德空白。手推车还在。车轮辙通向轰炸，也通向集中营的劳动队。不要只拍车轮上的灰。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 独立 HTML 报告 · 2026-08-30 18:28 CST<br>
+    碎石清运手推车风 · 不美化独裁 · 平民苦难与纳粹罪行写在同一句
+  </footer>
+  <div class="wheels" aria-hidden="true">
+    <div class="wheel left"></div>
+    <div class="wheel right"></div>
+  </div>
+</article>
+</body>
+</html>
