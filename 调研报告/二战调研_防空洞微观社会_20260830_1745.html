@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>防空洞微观社会：空袭、恐惧与邻里规训 —— 2026年奎德林堡掩体考古与“命运共同体”神话</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Noto+Serif+SC:wght@400;600;700&family=Overpass+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Bunker-lamp concrete: wet rammed walls, amber bulb pools, Luftschutz hazard stripes */
+:root {
+  --pit: #121410;
+  --wall: #3a3d36;
+  --wall2: #2a2d27;
+  --lamp: #e8b44a;
+  --lamp-dim: #c4922e;
+  --glow: rgba(232, 180, 74, .22);
+  --paper: #e4d3b0;
+  --paper2: #d7c29a;
+  --ink: #1c1a14;
+  --fade: #5c5344;
+  --stripe-y: #d4b03a;
+  --stripe-k: #141512;
+  --rust: #8a3a28;
+  --moss: #6a7a58;
+  --warn: #c4a04a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--stripe-k) 0 18px,
+      var(--stripe-y) 18px 36px
+    );
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Songti SC", "Fraunces", serif;
+  line-height: 1.84;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  opacity: .28;
+  mix-blend-mode: multiply;
+  z-index: 9;
+}
+.shaft {
+  max-width: 920px;
+  margin: 28px auto 80px;
+  background:
+    radial-gradient(ellipse at 18% 8%, var(--glow), transparent 36%),
+    radial-gradient(ellipse at 82% 12%, rgba(232,180,74,.12), transparent 32%),
+    radial-gradient(ellipse at 50% 100%, rgba(0,0,0,.35), transparent 48%),
+    linear-gradient(180deg, #4a4e44 0%, var(--wall) 18%, var(--wall2) 100%);
+  border: 10px solid #1c1e19;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.55),
+    inset 0 0 0 1px rgba(232,180,74,.18),
+    inset 0 40px 80px rgba(0,0,0,.25);
+  position: relative;
+  padding: 0 42px 48px;
+  color: var(--paper);
+}
+.shaft::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0; height: 14px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--stripe-k) 0 16px,
+    var(--stripe-y) 16px 32px
+  );
+}
+.shaft::after {
+  /* Formwork grain on rammed-concrete vault */
+  content: "";
+  pointer-events: none;
+  position: absolute; inset: 14px 0 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(0,0,0,.07) 47px 48px);
+  opacity: .55;
+}
+.mast {
+  position: relative;
+  z-index: 1;
+  padding: 42px 8px 18px;
+  border-bottom: 1px dashed rgba(232,180,74,.35);
+}
+.mast .serial {
+  font-family: "Overpass Mono", monospace;
+  letter-spacing: .32em;
+  font-size: 11px;
+  color: var(--lamp);
+  text-transform: uppercase;
+}
+h1 {
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: clamp(1.48rem, 3.2vw, 2.05rem);
+  line-height: 1.38;
+  margin: 14px 0 10px;
+  color: #f3e6c4;
+  text-shadow: 0 0 28px rgba(232,180,74,.25);
+}
+.sub { color: #cbb892; font-size: 15px; }
+.when {
+  margin-top: 12px;
+  font-family: "Overpass Mono", monospace;
+  font-size: 12px;
+  color: #a89870;
+}
+.lamp-badge {
+  position: absolute;
+  right: 4px; top: 36px;
+  width: 96px; height: 96px;
+  border: 2px solid var(--lamp);
+  border-radius: 50%;
+  color: var(--lamp);
+  font-family: "Anton", sans-serif;
+  font-size: 13px;
+  letter-spacing: .06em;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  transform: rotate(-8deg);
+  opacity: .82;
+  background: radial-gradient(circle at 40% 35%, rgba(232,180,74,.28), transparent 62%);
+  box-shadow: 0 0 24px rgba(232,180,74,.25);
+  line-height: 1.25;
+}
+nav.toc {
+  position: relative;
+  z-index: 1;
+  margin: 22px 0 8px;
+  padding: 16px 18px 10px;
+  background: linear-gradient(180deg, rgba(20,20,16,.55), rgba(28,30,24,.72));
+  border: 1px solid rgba(232,180,74,.28);
+  color: var(--paper);
+}
+nav.toc h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: .14em;
+  color: var(--lamp);
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+nav.toc ol { margin: 0 0 8px 1.2em; font-size: 15px; }
+nav.toc a {
+  color: #f0e2bc;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(232,180,74,.45);
+}
+nav.toc a:hover { border-bottom-style: solid; color: var(--lamp); }
+.card {
+  position: relative;
+  z-index: 1;
+  margin: 22px 0;
+  padding: 22px 22px 18px;
+  background:
+    linear-gradient(180deg, var(--paper) 0%, var(--paper2) 100%);
+  color: var(--ink);
+  border: 1px solid #b9a57a;
+  box-shadow: 4px 8px 0 rgba(0,0,0,.28);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: -7px; left: 22px;
+  width: 42px; height: 14px;
+  background: #c9b27a;
+  opacity: .85;
+  transform: rotate(-2deg);
+  box-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+.card.amber { background: linear-gradient(180deg, #ead6a4, #dcc48a); }
+.card.ash { background: linear-gradient(180deg, #d8d2c4, #c8c0b0); }
+.card.moss { background: linear-gradient(180deg, #d5dcc8, #c3ccb4); }
+.card h2 {
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: 1.38rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c4ae82;
+  color: #1a1812;
+}
+.tag {
+  font-family: "Overpass Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: var(--rust);
+  margin-bottom: 6px;
+}
+p { margin: 0 0 12px; }
+ul, ol.body { margin: 0 0 12px 1.25em; }
+li { margin-bottom: 6px; }
+blockquote {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--lamp-dim);
+  background: rgba(138, 58, 40, .08);
+  font-style: italic;
+  color: #3a3224;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 10px 0 16px;
+  background: #f4ead4;
+}
+th, td {
+  border: 1px solid #c9b087;
+  padding: 7px 8px;
+  text-align: left;
+}
+th { background: #e0c888; font-weight: 600; }
+.note { font-size: 13.5px; color: var(--fade); margin-bottom: 12px; }
+.sources a { color: #6e2c1c; word-break: break-all; }
+.sign {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  letter-spacing: .12em;
+  color: var(--lamp);
+  font-size: 13px;
+}
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(232,180,74,.35);
+  font-size: 13px;
+  color: #b8a878;
+  text-align: center;
+  font-family: "Overpass Mono", monospace;
+}
+@media (max-width: 640px) {
+  .shaft { padding: 0 22px 36px; margin: 10px 8px 40px; }
+  .lamp-badge { display: none; }
+}
+</style>
+</head>
+<body>
+<!-- Cellar-lamp layout: rammed-concrete vault, occupancy board, tacked notices -->
+<article class="shaft">
+  <header class="mast">
+    <div class="serial">LS-KELLER 07 · SELBSTSCHUTZRAUM · FORSCHUNGSBLATT</div>
+    <h1>防空洞微观社会：空袭、恐惧与邻里规训 —— 2026年奎德林堡掩体考古与“命运共同体”神话</h1>
+    <p class="sub">纳粹德国平民如何在地下室里活下来：黄灯、邻里、排除与士气——对照萨克森-安哈尔特 2026 考古与德累斯顿八十周年</p>
+    <p class="when">调研时间：2026-08-30 17:45 CST · 平民史系列第1期 · 主题轮换池第1项</p>
+    <div class="lamp-badge">ALARM<br>GELB<br>08.30</div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <h2 class="sign">目录 · BELEGUNGSPLAN</h2>
+    <ol>
+      <li><a href="#theme">本期主题</a></li>
+      <li><a href="#findings">核心发现</a></li>
+      <li><a href="#space">空间：从公共掩体到夯土壕沟</a></li>
+      <li><a href="#psych">心理：士气下降，举止未崩</a></li>
+      <li><a href="#exclude">排除：谁被留在“犹太人地窖”</a></li>
+      <li><a href="#now">2025–2026：考古出土与纪念争夺</a></li>
+      <li><a href="#sources">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="card" id="theme">
+    <p class="tag">ABSCLN. 01 · THEMA</p>
+    <h2>本期主题</h2>
+    <p>本系列从平民视角进入 1933–1945 年的德国：不写元帅与战役序列，而写警报响起之后，人怎样挤进地下室、怎样挨过一夜、怎样在第二天继续排队买面包。第一期把观察点放在<strong>防空洞与房屋地窖</strong>——这是战时德国最大规模的集体身体经验之一，也是宣传机器最爱写成“命运共同体”（Schicksalsgemeinschaft）的地方。</p>
+    <p>2026年7月，萨克森-安哈尔特州文物局在奎德林堡一处住宅工地记录了一条约20米长的夯土混凝土掩体壕（Deckungsgraben）。它没有钢筋、抗不住直击，战后被填土、盖上游戏场，从地方记忆里消失了八十多年。把它与维克多·克伦佩勒（Victor Klemperer）的德累斯顿日记、达姆施塔特的性别化士气研究、美国战略轰炸调查（USSBS）并置，可以看到：地下室既是求生空间，也是规训空间；它保护一部分人，也把另一部分人留在更差的角落。</p>
+  </section>
+
+  <section class="card amber" id="findings">
+    <p class="tag">ABSCLN. 02 · BEFUNDE</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>多数人并不坐在“真正的地堡”里。</strong>公共钢筋混凝土掩体容量远小于城市人口。达姆施塔特市内公共掩体大约只能容纳两万人，其余居民挤进房屋加固地窖（Selbstschutzräume）。奎德林堡出土的那种无钢筋拱顶壕，只能挡破片与坍塌，挡不住直接命中。</li>
+      <li><strong>“命运共同体”首先是宣传用语。</strong>尼尔·格雷戈尔（Neil Gregor）对纽伦堡 1942–1945 的研究表明：轰炸往往把邻里矛盾、城乡怨恨与资源争夺推到表面，导致社会纽带松动，而不是把城市焊成一个命运整体。纳粹党的动员话语在空袭后迅速失效。</li>
+      <li><strong>士气（Stimmung）与举止（Haltung）被情报机构刻意拆开。</strong>USSBS 估计约 30.5 万人死于空袭、78 万人受伤、约 186.5 万所住宅被毁；受访者中“高士气”自开战时 32% 降至终战 6%。但秘密警察网络、告密与纪律习惯使失败主义很少变成有组织颠覆。1944–45 年冬已出现所谓“地堡热”（Bunkerfieber）。</li>
+      <li><strong>地窖准入是种族文件。</strong>克伦佩勒在“犹太人之家”使用单独的“犹太人地窖”；1944 年一次防空演习中，一名“体面”的防空管理员先否认犹太人会被丢下不管，随即承认“我很想帮你们，可我的手被绑住了”。1945 年 2 月 13 日夜，伊娃·克伦佩勒被拉进“雅利安人地窖”才逃出火海。</li>
+      <li><strong>当代出土与周年纪念，把地下室重新变成公共议题。</strong>2025 年 2 月德累斯顿八十周年，市政文告写明该城“既非无辜，也非单纯受害者”；2026 年 7 月的考古新闻则让一条被遗忘的平民壕沟重新被看见——看见它的简陋，比看见它的“英勇”更重要。</li>
+    </ul>
+  </section>
+
+  <section class="card" id="space">
+    <p class="tag">ABSCLN. 03 · RAUM</p>
+    <h2>空间：从公共掩体到夯土壕沟</h2>
+    <p>德意志历史博物馆（DHM / LeMO）指出：国家防空措施在 1933 年纳粹掌权后立即启动，但长期落后于私人准备；住房补贴甚至与是否预留防空设施挂钩。1935 年 3 月柏林首次模拟空袭警报与灯火管制；同年 5 月立法规定掩体、卫生、灭火与清瓦。隶属戈林航空部、1933 年 4 月底成立的帝国防空同盟（Reichsluftschutzbund）到 1939 年发展到超过 1350 万成员。口号是“防空势在必行”（Luftschutz tut not）。灯火管制被当成最有效的伪装：DHM 藏 1940 年海报写着“敌人看得见你的灯光！遮光！”——直到面积轰炸开始，遮光几乎失效。</p>
+    <p>对多数城市居民而言，真正过夜的地方不是宣传画上的高炮塔楼，而是自家楼下的加固地窖。房屋共同体（Hausgemeinschaft）被责令打通邻楼地窖通道——达姆施塔特的访谈表明，这一规定后来救过不少人。同一座城市里，防空官员曾认为危险等级低、不必建大型地堡；居民则抱怨：“他们该建掩体，而不是让我们坐在这些地窖里。”1944 年 9 月达姆施塔特火风暴中，这些地窖中的一部分变成了死亡陷阱：火抽走氧气，通道被瓦砾封死。</p>
+    <p>2026 年 7 月 28 日，萨克森-安哈尔特州文物局（LDA）公布奎德林堡发现：工地揭开约 2.50 米宽的混凝土拱顶，确认为约 20 米长的掩体壕，连同进出侧臂占地约 20×14 米。建造方式是分段夯筑、无钢骨：先做底板与约 0.45 米厚侧墙，再覆约 0.20 米厚半圆顶。内壁留下清晰的模板木纹；顶上五个 0.25×0.25 米通风口；两套气闸式双门。东北端盲端可能是应急厕所。东德时期经扩大的通风井填入约三分之二的土，上面一度是游戏场。考古人员只找到电缆夹与保险丝盒残件，长凳已无存。</p>
+    <blockquote>一方面，人挤在里面多少有一点遮挡；另一方面，面对直接命中，他们几乎没有防护。——萨克森-安哈尔特州文物局 2026 年新闻稿</blockquote>
+    <p>中国学者季羡林在哥廷根的战时记述，提供了另一条平民感官记录：警报分前警报（Voralarm）、警报（Alarm）、解除（Entwarnung）；有人躲进种蘑菇的山洞或掩体壕，腿冻得像冰，神经“仿佛要爆炸”。《中华读书报》转述：《留德十年》写的是无法回国的中国留学生如何与德国人一起经历大轰炸与饥饿——这不是“德国人的独家苦难”，而是同一套警报制度下、位置不同的身体经验。</p>
+  </section>
+
+  <section class="card ash" id="psych">
+    <p class="tag">ABSCLN. 04 · PSYCHE</p>
+    <h2>心理：士气下降，举止未崩</h2>
+    <p>空袭把死亡从“前线亲人的电报”变成大城市居民的日常陪伴。DHM 写道：1939 年 9 月德国社会并没有战争狂热，第一次世界大战的饥馑记忆仍在；政权刻意为“雅利安”消费者维持可忍的日常，同时用占领区掠夺供养这条线。从 1942 年起，大城市防空警报越来越密，人们在拥挤的防空室里度过一个个磨人的夜晚；火、焦肉与腐烂的气味在战后多年仍被记得。</p>
+    <p class="note">下表据 USSBS《战略轰炸对德国士气的影响》（1947 年刊，AOAV 摘要）整理。人口基数约 6980 万。数字是调查估计，不是精确户籍。</p>
+    <table>
+      <thead>
+        <tr><th>指标</th><th>估计</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>空袭死亡</td><td>约 305,000</td></tr>
+        <tr><td>受伤</td><td>约 780,000</td></tr>
+        <tr><td>住宅被毁</td><td>约 1,865,000</td></tr>
+        <tr><td>疏散</td><td>约 4,885,000</td></tr>
+        <tr><td>公用设施中断波及</td><td>约 20,000,000</td></tr>
+        <tr><td>高士气（开战 → 终战）</td><td>32% → 6%</td></tr>
+        <tr><td>低士气（开战 → 终战）</td><td>17% → 78%</td></tr>
+      </tbody>
+    </table>
+    <p>调查区分心理与行为。心理上：失败主义、恐惧、冷漠、听天由命；约三分之一受访者经历较持久的惊吓——下一次警报就能把恐惧重新激活。行为上：1944 年全工业约 4% 工时因空袭损失；但怠工、破坏与起义并未随士气同比出现。纳粹情报本就使用 Stimmung / Haltung 这组对立：感觉可以沉到零点，公开举止仍被要求“过得去”。联邦政治教育中心（bpb）摘录 1944 年 7 月 22 日 SD 各区报告：东线崩溃使情绪“降到零点”，慕尼黑空袭继续压低士气；民众从国防军公报只提“高炮击落”、不提空战，自行推断战斗机已近枯竭。人们会读官方语言的缝隙，缝隙里却没有组织起来的拒绝。</p>
+    <p>卡塔琳娜·施赖特尔（Katharina Schreiter）对达姆施塔特 1942–1945 的研究把士气写成性别化的情感劳动。退休化学教授弗里茨·利默（Fritz Limmer）在 1944 年夏的日记里忧虑妻子与女儿午餐后仍要去电影院：“在我们只能靠和睦挨过这段日子的时候……”。娱乐不是逃离政治，而是政权允许、家庭内部又互相责备的减压阀。空袭可以粉碎窗户，却不能自动粉碎统治；它也没有自动把邻里变成相亲相爱的共同体。格雷戈尔在纽伦堡看到的是相反过程：地方当局迅速被规模压垮，党的宣传几乎不再起作用，社会关系趋于原子化。</p>
+  </section>
+
+  <section class="card moss" id="exclude">
+    <p class="tag">ABSCLN. 05 · AUSSCHLUSS</p>
+    <h2>排除：谁被留在“犹太人地窖”</h2>
+    <p>如果只写“德国平民在防空洞里互相取暖”，叙事就缺了一面墙。克伦佩勒日记把这面墙写进了门牌号。德累斯顿“犹太人之家”有单独的地窖；犹太人被禁止走上布吕尔露台。1945 年 2 月 13 日白天，他被派去给城中尚余约 70 名犹太人递送“劳动征召”——收件人几乎都确信那是死亡通知。当晚九点半全警报。有人在地窖里哭，有人喊“但愿他们把一切砸烂”。第一次袭击后他们爬回堆满碎玻璃的房间，点蜡烛喝冷咖啡；一点过后电力中断，手摇警报再起。克伦佩勒冲向“我们的犹太人地窖”，门大开着，一群人缩在右侧哭泣。伊娃失踪。他被一群逃出的苏联人拽着跑，脸被灼热破片划伤，毯子裹头——毯子同时盖住了黄星。</p>
+    <p>天亮后他在露台上找到伊娃。关键时刻，有人把伊娃从 3 号门厅拉进“雅利安人地窖”，她从地窖窗爬到街上。次日她用小刀割下丈夫外套上的星。盖世太保的递解名单在火里烧掉。克伦佩勒后来在日记里写下近乎本能的句子：每次想到军火库街 1 号与 3 号的废墟，他都有一种“耶和华”的感觉——1938 年这座城市烧掉了犹太会堂，1945 年烧掉了几乎整座城。这不是把空袭写成救赎神话，而是记录一个被排除者的位置：同一场火，对多数居民是灾难，对少数即将被递解的人是缝隙。</p>
+    <p>Commentary 杂志对克伦佩勒 1944 年 8 月一条记载的转述更为日常，也更冷：防空演习时，管理员先义愤地否认犹太人若地窖坍塌会被丢下，随后说手被绑住。克伦佩勒的评注是：连“体面人”也把禁令内化成自己的无能为力。地下室里的互助，从来不是对所有身体开放的。</p>
+    <p>把这一层放回“平民如何活下来”，不是要否定空袭死者的痛苦，而是拒绝用平均数抹掉准入资格。灯火管制、沙袋、手压水泵与“人民防毒面具”，在燃烧弹与缺氧的火风暴面前几乎无效——DHM 写得直白。无效的防护，仍然按种族与国籍分配。</p>
+  </section>
+
+  <section class="card amber" id="now">
+    <p class="tag">ABSCLN. 06 · 2025–2026</p>
+    <h2>2025–2026：考古出土与纪念争夺</h2>
+    <p>2010 年德累斯顿史学家委员会在约六年研究后，将 1945 年 2 月 13–15 日空袭死亡人数定为最多约 2.5 万，对应英美投下的大量燃烧弹。戈培尔 1945 年 3 月已抛出 25 万，以便在国际舆论中对冲德国自身对城市的摧毁。德奥数字媒体观察组织 GADMO 在事实核查中重申：六位数死亡数字没有档案基础；市内警察 1945 年 3 月 10 日前计约 1.83 万具尸体，3 月 31 日约 2.21 万，当时即估计约 2.5 万。</p>
+    <p>2025 年 2 月 13 日，法新社/法国 24 台报道八十周年：数千人手拉手组成人链，悼念死者，并抵制把周年变成极右动员场的企图。市政文告写明纪念的是“国家社会主义暴政加诸人类的无量苦难”，并指出德累斯顿“既非孤立事件，该城既非‘无辜’也非‘受害者’”，同时点出考文垂与列宁格勒曾遭国防军严重摧毁。晚间 9 时 45 分全城钟声标记第一波炸弹落下的时刻。选择联邦选举前十天做这一姿态，说明空袭记忆仍是民主与修正主义的角力场。“炸弹大屠杀”（Bombenholocaust）把平民死亡写成与灭绝营等价，是极右翼的固定话术。痛苦是事实；等价是谎言。</p>
+    <p>2026 年 7 月的奎德林堡考古，把讨论从数字之争拉回物质遗存：一条不能抗直击的壕沟、五个通风口、一套气闸门、后来被游戏场覆盖的填土。它提醒学习者：平民防空从来不是英雄史诗里的地下宫殿，而是一套分级、即兴、事后被遗忘的基础设施。州文物局新闻稿的收束句并不华丽——和平值得被保存——但它有一个史学前提：先看清这些人当时挤进去的，究竟是怎样的空间，以及谁根本挤不进去。</p>
+  </section>
+
+  <section class="card sources" id="sources">
+    <p class="tag">ABSCLN. 07 · QUELLEN</p>
+    <h2>来源</h2>
+    <p class="note">下列网址均经本周期检索核验，不编造链接。回忆录与调查数字均标明机构或版本。</p>
+    <ol class="body">
+      <li>萨克森-安哈尔特州文物局 / idw：2026-07-28《第二次世界大战防空掩体壕在奎德林堡的再发现》（20 米壕、夯土无钢筋、通风口与气闸门、东德填埋）。<br><a href="https://nachrichten.idw-online.de/2026/07/28/wiederentdeckung-eines-luftschutz-deckungsgrabens-aus-dem-zweiten-weltkrieg-in-quedlinburg" target="_blank" rel="noopener">https://nachrichten.idw-online.de/2026/07/28/wiederentdeckung-eines-luftschutz-deckungsgrabens-aus-dem-zweiten-weltkrieg-in-quedlinburg</a></li>
+      <li>Archaeology News Online Magazine：Hidden World War II air raid shelter found beneath home construction site in Germany（2026-07，同批考古的英文报道）。<br><a href="https://archaeologymag.com/2026/07/hidden-world-war-ii-air-raid-shelter-germany/" target="_blank" rel="noopener">https://archaeologymag.com/2026/07/hidden-world-war-ii-air-raid-shelter-germany/</a></li>
+      <li>德意志历史博物馆 LeMO：防空（RLB、1935 年立法、灯火管制、防毒面具之无效）。<br><a href="https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/kriegsverlauf/luftschutz" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/kriegsverlauf/luftschutz</a></li>
+      <li>DHM 藏品：《敌人看得见你的灯光！遮光！》海报，柏林，1940。<br><a href="https://www.dhm.de/lemo/bestand/objekt/verdunkeln-1940" target="_blank" rel="noopener">https://www.dhm.de/lemo/bestand/objekt/verdunkeln-1940</a></li>
+      <li>德意志历史博物馆 LeMO：战时日常生活（士气、警报、疏散、娱乐与“国内战线”）。<br><a href="https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben" target="_blank" rel="noopener">https://www.dhm.de/lemo/kapitel/zweiter-weltkrieg/alltagsleben</a></li>
+      <li>Action on Armed Violence：USSBS《战略轰炸对德国士气的影响》（1947）摘要与数据表。<br><a href="https://aoav.org.uk/2020/the-effects-of-strategic-bombing-in-wwii-on-german-morale/" target="_blank" rel="noopener">https://aoav.org.uk/2020/the-effects-of-strategic-bombing-in-wwii-on-german-morale/</a></li>
+      <li>联邦政治教育中心：迪特马尔·聚斯等语境下的《德意志战争社会》（含 1944-07-22 SD 报告摘录）。<br><a href="https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/" target="_blank" rel="noopener">https://www.bpb.de/themen/nationalsozialismus-zweiter-weltkrieg/der-zweite-weltkrieg/199403/die-deutsche-kriegsgesellschaft/</a></li>
+      <li>Katharina Schreiter，《Revisiting Morale under the Bombs: The Gender of Affect in Darmstadt, 1942–1945》，Central European History；KCL 开放稿。<br><a href="https://doi.org/10.1017/s0008938917000632" target="_blank" rel="noopener">https://doi.org/10.1017/s0008938917000632</a><br><a href="https://kclpure.kcl.ac.uk/ws/files/74925990/Schreiter_Revisiting_Morale_under_the_Bombs.pdf" target="_blank" rel="noopener">https://kclpure.kcl.ac.uk/ws/files/74925990/Schreiter_Revisiting_Morale_under_the_Bombs.pdf</a></li>
+      <li>Neil Gregor，《A Schicksalsgemeinschaft? Allied bombing, civilian morale, and social dissolution in Nuremberg, 1942–1945》，The Historical Journal；南安普顿大学开放记录。<br><a href="https://eprints.soton.ac.uk/394107/" target="_blank" rel="noopener">https://eprints.soton.ac.uk/394107/</a></li>
+      <li>《明镜》周刊国际版：克伦佩勒德累斯顿日记（1945-02-22 至 24 日补记火风暴、犹太人地窖、布吕尔露台）。<br><a href="https://www.spiegel.de/international/victor-klemperer-s-dresden-diaries-surviving-the-firestorm-a-341230.html" target="_blank" rel="noopener">https://www.spiegel.de/international/victor-klemperer-s-dresden-diaries-surviving-the-firestorm-a-341230.html</a></li>
+      <li>《犹太总汇报》：Holger Böning，《Rettendes Inferno》（约 70 名犹太人的递解通知与黄星被割下）。<br><a href="https://www.juedische-allgemeine.de/kultur/rettendes-inferno/" target="_blank" rel="noopener">https://www.juedische-allgemeine.de/kultur/rettendes-inferno/</a></li>
+      <li>France 24：德累斯顿空袭八十周年（2025-02-13）——2.5 万死亡数字、极右“炸弹大屠杀”话术、人链与市政文告。<br><a href="https://www.france24.com/en/europe/20250213-on-the-80th-anniversary-of-the-bombing-of-dresden-tributes-to-victims-are-hijacked-by-far-right" target="_blank" rel="noopener">https://www.france24.com/en/europe/20250213-on-the-80th-anniversary-of-the-bombing-of-dresden-tributes-to-victims-are-hijacked-by-far-right</a></li>
+      <li>GADMO 事实核查：德累斯顿 1945 年空袭可证实约 2.5 万死者（警察内部数字与委员会结论）。<br><a href="https://gadmo.eu/nachweislich-rund-25-000-tote-bei-angriffen-auf-dresden-1945/" target="_blank" rel="noopener">https://gadmo.eu/nachweislich-rund-25-000-tote-bei-angriffen-auf-dresden-1945/</a></li>
+      <li>德累斯顿市：史学家委员会关于 1945 年 2 月 13–15 日空袭的终结报告 PDF。<br><a href="https://www.dresden.de/media/pdf/infoblaetter/Historikerkommission_Dresden1945_Abschlussbericht_V1_14a.pdf" target="_blank" rel="noopener">https://www.dresden.de/media/pdf/infoblaetter/Historikerkommission_Dresden1945_Abschlussbericht_V1_14a.pdf</a></li>
+      <li>《中华读书报》/ 光明网：百年留德史——季羡林《留德十年》节选中与德国人共同经历轰炸与饥饿。<br><a href="https://www.gmw.cn/01ds/2006-09/20/content_482583.htm" target="_blank" rel="noopener">https://www.gmw.cn/01ds/2006-09/20/content_482583.htm</a></li>
+      <li>《中华读书报》2023-08-09：读季羡林《留德十年》（哥廷根、饥饿与危殆）。<br><a href="https://epaper.gmw.cn/zhdsb/html/2023-08/09/nw.D110000zhdsb_20230809_1-19.htm" target="_blank" rel="noopener">https://epaper.gmw.cn/zhdsb/html/2023-08/09/nw.D110000zhdsb_20230809_1-19.htm</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="lesson">
+    <p class="tag">ABSCLN. 08 · LEHRE</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，先问空间，再谈“人民”。防空洞史不是温情的邻里故事，而是一份可以按门牌、种族标记与房屋共同体职责拆开的建筑档案。公共掩体坐不下整座城市；夯土壕抗不住直击；“犹太人地窖”与“雅利安人地窖”可以隔着同一条走廊。</p>
+    <p>第二，恐惧是真实的，恐惧不自动变成反抗。USSBS 与 SD 报告一致显示：士气可以崩，举止仍可被纪律、告密与生存忙碌钉住。研究平民心理，要同时看见惊吓、冷漠、电影院、谣言和对公报缝隙的阅读——以及这些情绪为何没有汇成起义。</p>
+    <p>第三，空袭痛苦与战争罪责必须放在同一句话里。平民死于燃烧弹是事实；把这一事实写成与灭绝营等价，是在偷换加害结构。德累斯顿 2010 年的约 2.5 万与戈培尔的 25 万之间，差的不是同情心，而是方法与政治。</p>
+    <p>第四，2026 年从游戏场下挖出的那条壕沟，适合作为阅读入口：它简陋、被遗忘、又突然重新可见。学习平民史，不是为了把祖父一辈写成人质或写成同谋的单色块，而是为了练习一种更难的注视——看见他们怎样活下来，也看见这套活法把谁关在门外。</p>
+  </section>
+
+  <footer>
+    二战德国平民史调研 · 系列第1期 · 防空洞黄灯混凝土风 · 20260830_1745
+  </footer>
+</article>
+</body>
+</html>
