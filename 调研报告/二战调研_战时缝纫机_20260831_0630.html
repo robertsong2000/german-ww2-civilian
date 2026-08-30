@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时缝纫机 —— 踏板上的国界：还能把机头留在客厅的人，以及机器必须先送进隔都修理坊的人</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Black-enamel sewing head, gold decal, cast-iron treadle, oak table */
+:root {
+  --enamel: #141210;
+  --gold: #c4a056;
+  --oak: #6e4a2c;
+  --linen: #e6d8c4;
+  --iron: #3a3733;
+  --thread: #8a2e2a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 18% 12%, #2a241c 0, transparent 46%),
+    repeating-linear-gradient(90deg, #1a1714 0 1px, #12100e 1px 11px);
+  color: var(--linen);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.bed {
+  max-width: 820px;
+  margin: 28px auto 68px;
+  background:
+    linear-gradient(180deg, #1c1916 0, #161310 100%);
+  border: 14px solid var(--oak);
+  box-shadow:
+    inset 0 0 0 3px var(--gold),
+    0 24px 48px rgba(0,0,0,.62);
+  padding: 28px 24px 34px;
+  position: relative;
+}
+.bed::before {
+  content: "";
+  position: absolute;
+  left: 18px; right: 18px; top: 10px;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, var(--gold) 0 10px, transparent 10px 22px);
+  opacity: .55;
+}
+.kicker {
+  font-family: Fraunces, serif;
+  letter-spacing: .26em;
+  font-size: 12.5px;
+  color: var(--gold);
+  text-align: center;
+  margin-top: 10px;
+}
+h1 {
+  font-family: Fraunces, "Noto Serif SC", serif;
+  font-size: clamp(1.1rem, 3vw, 1.58rem);
+  font-weight: 600;
+  line-height: 1.34;
+  margin: 8px 0 10px;
+  text-align: center;
+  color: var(--linen);
+}
+.sub { font-size: 15.5px; }
+.when { font-size: 13.5px; color: #b8aa96; margin: 8px 0 14px; text-align: center; }
+nav.toc {
+  background: var(--iron);
+  color: var(--linen);
+  padding: 12px 16px 10px;
+  margin: 8px 0 16px;
+  border-top: 4px solid var(--gold);
+}
+nav.toc h2 { font-family: Fraunces, serif; font-size: 1.24rem; color: var(--gold); }
+nav.toc ol { margin: 6px 0 4px 1.3em; }
+nav.toc a { color: #f0e4d0; }
+.plate {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #221e1a;
+  border-left: 6px solid var(--gold);
+}
+.plate.oak {
+  background: #dccab0;
+  color: var(--enamel);
+  border-left-color: var(--thread);
+}
+.plate.oak a { color: #6a221c; }
+.st {
+  font-family: Fraunces, serif;
+  letter-spacing: .14em;
+  font-size: 12.5px;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.plate.oak .st { color: var(--thread); }
+h2 {
+  font-family: Fraunces, serif;
+  font-size: 1.34rem;
+  font-weight: 600;
+  margin: 4px 0 8px;
+}
+.plate ul { margin: 6px 0 4px 1.2em; }
+.plate li { margin: 8px 0; }
+a { color: #e0c48a; }
+.wheel {
+  width: 72px; height: 72px;
+  margin: 6px auto 4px;
+  border: 8px solid var(--gold);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 10px var(--enamel), 0 0 0 2px #8a7038;
+}
+footer {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: #9a8c7a;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<article class="bed">
+  <div class="wheel" aria-hidden="true"></div>
+  <p class="kicker">PFAFF · Litzmannstadt · 1.2.2026</p>
+  <h1>战时缝纫机 —— 踏板上的国界：还能把机头留在客厅的人，以及机器必须先送进隔都修理坊的人</h1>
+  <p class="sub">德国平民把补衣服写成还能踩一下铸铁踏板。同一只牌子的机头，在罗兹被写成隔都里的强制劳动。踏板已经不是中性的。</p>
+  <p class="when">调研时间：2026-08-31 06:30 CST · 平民史系列第69期 · 服装卡黄星 / 强制劳工日常的子角度</p>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#topic">本期主题</a></li>
+      <li><a href="#find">核心发现</a></li>
+      <li><a href="#parlor">客厅</a></li>
+      <li><a href="#ghetto">隔都</a></li>
+      <li><a href="#now">2026：罗兹纺织博物馆把时装系统写进展柜</a></li>
+      <li><a href="#src">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="plate oak" id="topic">
+    <p class="st">01 · 机</p>
+    <h2>本期主题</h2>
+    <p>本报告写踏板上的国界。凯泽斯劳滕的普法夫厂把家用缝纫机产线改成机枪枪机，1939–1945 年厂里有 369 名法国平民劳工、119 名意大利人、201 名波兰人、44 名苏联战俘。到 1944 年底，约三分之二厂区被盟军空袭毁掉。德国客厅里还能踩的，多半是战前留下的黑漆机头。机已经不是中性的。</p>
+    <p>同一只普法夫，美国大屠杀纪念馆藏工业脚踏机（馆藏号 1990.78.3，目录 2025 年 1 月 2 日更新）写明：这是罗兹隔都 1940 年 5 月至 1944 年夏犹太强制劳工使用的那一类。威斯巴登的德意志妇女团向卡塞尔财政总署要“被遣送犹太人家里留下的缝纫机”，说要给民族同志补伤员和病人的衣物。请求被拒：利茨曼施塔特市长对所有被遣送犹太人的缝纫机有先取权。踏板已经不是中性的。</p>
+  </section>
+
+  <section class="plate" id="find">
+    <p class="st">02 · 针</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>德国客厅把补丁写成还能踩一下踏板。</strong> 新机难买：普法夫把产线改成机枪枪机，到 1944 年底约三分之二厂区被毁。服装卡上的点数买不到成衣时，被承认有权自救的主妇仍在橡木台前踩战前留下的黑漆机头。踩的是被承认还属于自己的那一台。</li>
+      <li><strong>被遣送的人，机器不许留给邻居。</strong> 威斯巴登地方史研究：德意志妇女团区部请财政总署把“被遣送犹太人家庭留下的缝纫机”拨给纳粹妇女缝纫室，用于“伤员与患病民族同志的内衣和衣服修补”。财政总署无法照办：利茨曼施塔特市长——即罗兹隔都德国管理机构——对所有此类机器有先取权。隔都里另有两座大型缝纫机修理坊，把旧机、坏机再拼成能用的。</li>
+      <li><strong>罗兹把机头写成活命的赌注。</strong> 以色列犹太大屠杀纪念馆：1940 年 5 月第一座缝纫“度假区”（resort）开工，300 名裁缝把自己家里的缝纫机和工作台搬去。起初德国人不供原料，订单从隔都内部挤。约 120 座工厂、逾 7 万人做工，以纺织为主。美国大屠杀纪念馆：1943 年 1 月有 96 个劳动部门、78,946 名工人。1944 年 6 月还剩约 7.7 万人，约九成在厂。1944 年夏隔都被清空，幸存者估计不超过 7,000 人；波兰电台转述展览时写 7,000 至 13,000 人，数字本身仍有争议。</li>
+      <li><strong>一半不是军服，是给德国中产的成衣。</strong> 罗兹中央纺织博物馆展览《时装系统》策展人帕韦尔·米赫纳：比博长期宣称隔都产出九成供战争，是为了强调“有用”而夸大。新研究更接近对半：一半军需，一半是连衣裙、帽子、内衣、鞋，乃至儿童地毯，面向纳粹德国中产趣味，也包括至今仍在营业的品牌。目录寄往德国，商人来下单。成品照片上的犹太面孔被涂黑或换成手绘模特。</li>
+      <li><strong>2026 年 2 月 1 日展期才结束。</strong> 展览 2025 年 4 月 3 日至 2026 年 2 月 1 日，策展卡罗利娜·苏莱伊、帕韦尔·米赫纳，德国“纪念、责任与未来”基金会参与资助。走进展柜之前，先问：德国客厅里那一针，线是从哪一座隔都车间绕过来的。</li>
+    </ul>
+  </section>
+
+  <section class="plate oak" id="parlor">
+    <p class="st">03 · 厅</p>
+    <h2>客厅</h2>
+    <p>德国主妇把空袭后的裤子写成还能在橡木台上补一针。补的是被承认有权把机头留在家里的人。妇女团想把遣送后留下的机器拨给民族同志缝纫室，财政总署说不行：罗兹先要。厅已经不是中性的。</p>
+  </section>
+
+  <section class="plate" id="ghetto">
+    <p class="st">04 · 都</p>
+    <h2>隔都</h2>
+    <p>1940 年 5 月，三百名裁缝把家里的机头搬进第一座缝纫车间。搬的不是志愿献纳。搬完之后，威斯巴登被遣送者家里再留下的机器，也要优先运往同一座城。德国平民明天还踩客厅踏板。板已经不是中性的。</p>
+  </section>
+
+  <section class="plate oak" id="now">
+    <p class="st">05 · 2026</p>
+    <h2>2026：罗兹纺织博物馆把时装系统写进展柜</h2>
+    <p>展柜里很少有原件衣服，多的是目录、照片和品牌化材料。米老鼠图案的儿童地毯、寄往德国的时装册、被涂掉的面孔，都还在。2026 年 2 月 1 日才闭展。问上一任是谁有权把这台普法夫留在客厅，不是失礼，是把踏板上的国界念出来。</p>
+  </section>
+
+  <section class="plate" id="src">
+    <p class="st">06 · 源</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>美国大屠杀纪念馆：普法夫工业脚踏缝纫机，罗兹隔都所用类型；目录最近修改 2025-01-02；1943 年 1 月 96 个劳动部门、78,946 名工人。<br><a href="https://collections.ushmm.org/search/catalog/irn4097" target="_blank" rel="noopener">https://collections.ushmm.org/search/catalog/irn4097</a></li>
+      <li>以色列犹太大屠杀纪念馆：1940 年 5 月第一座缝纫车间、300 名裁缝自带机器；约 120 厂、逾 7 万人；幸存者估计不超过 7,000。<br><a href="https://www.yadvashem.org/holocaust/this-month/february/1941-2.html" target="_blank" rel="noopener">https://www.yadvashem.org/holocaust/this-month/february/1941-2.html</a></li>
+      <li>凯泽斯劳滕普法夫厂区史：改产机枪枪机；369 名法国平民劳工、119 意大利、201 波兰、44 苏联战俘；1944 年底约三分之二厂区被毁。<br><a href="https://www.pfaff-quartier.de/informieren/historie" target="_blank" rel="noopener">https://www.pfaff-quartier.de/informieren/historie</a></li>
+      <li>威斯巴登地方史：德意志妇女团索取被遣送犹太人缝纫机被拒；利茨曼施塔特市长先取权；隔都两座大型缝纫机修理坊。<br><a href="https://moebus-flick.de/der-grosse-raubzug/raub-des-uebrigen-juedischen-vermoegens-und-der-kulturgueter/" target="_blank" rel="noopener">https://moebus-flick.de/der-grosse-raubzug/raub-des-uebrigen-juedischen-vermoegens-und-der-kulturgueter/</a></li>
+      <li>罗兹中央纺织博物馆：展览《时装系统》2025-04-03 至 2026-02-01；军服与给德国公民的成衣。<br><a href="https://cmwl.pl/public/aktualnosci/otwarcie-wystawy-system-mody-ubrania-w-strategiach-przemocy,422" target="_blank" rel="noopener">https://cmwl.pl/public/aktualnosci/otwarcie-wystawy-system-mody-ubrania-w-strategiach-przemocy,422</a></li>
+      <li>波兰电台英语稿，据 PAP：策展人称产出约对半军需、对半民用；比博九成军需说被重新估计；幸存者数字 7,000–13,000。<br><a href="https://www.polskieradio.pl/395/7791/artykul/3507259,exhibition-at-polish-textile-museum-sheds-light-on-history-of-litzmannstadt-ghetto" target="_blank" rel="noopener">https://www.polskieradio.pl/395/7791/artykul/3507259,exhibition-at-polish-textile-museum-sheds-light-on-history-of-litzmannstadt-ghetto</a></li>
+    </ol>
+  </section>
+
+  <section class="plate oak" id="lesson">
+    <p class="st">07 · 启示</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，缝纫机不只管补丁，也管谁还能把机头写成客厅里的家具。谁的踏板还能踩，谁的机器必须先运往罗兹修理坊，写在同一只黑漆机头上。</p>
+    <p>第二，写德国平民空袭后在橡木台上补裤子，下一句写普法夫改产机枪枪机。再下一句写妇女团要“被遣送犹太人家里的缝纫机”。再下一句写罗兹隔都对所有此类机器有先取权。踏板不是中性的。</p>
+    <p>第三，不要把“每家都有一台缝纫机”写成所有人共用一次针脚。针脚的下一句是：隔都里的下一件连衣裙，是给德国中产目录准备的。</p>
+    <p>第四，2026 年 2 月罗兹还在展这套时装系统。踩踏板之前，先问：线轴上的下一米，是从哪一座被先取的机器上绕过来的。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第69期 · 踏板铸铁风 · 20260831_0630</footer>
+</article>
+</body>
+</html>
