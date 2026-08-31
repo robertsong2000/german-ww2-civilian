@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时手杖 —— 杖头上的国界：还能把体面拄上街的人，以及杖必须先卖掉才能买船票的人</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Silver knob, malacca shaft, promenade cobble, glove leather */
+:root {
+  --knob: #c9c2b4;
+  --shaft: #6b3d1e;
+  --glove: #2a2018;
+  --stone: #d8d0c4;
+  --ink: #1a1612;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    repeating-linear-gradient(90deg, #cfc6b8 0 28px, #c4bbad 28px 29px);
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.cane {
+  max-width: 800px;
+  margin: 28px auto 68px;
+  background: var(--stone);
+  border-left: 14px solid var(--shaft);
+  box-shadow:
+    inset 0 0 0 1px #b8b0a4,
+    0 22px 40px rgba(40,20,8,.22);
+  padding: 26px 24px 34px;
+  position: relative;
+}
+.cane::before {
+  content: "";
+  position: absolute;
+  left: -28px; top: 22px;
+  width: 36px; height: 36px;
+  background: radial-gradient(circle at 35% 35%, #efe8dc, var(--knob) 55%, #8a8276);
+  border-radius: 50%;
+  box-shadow: 2px 4px 8px rgba(0,0,0,.25);
+}
+.kicker {
+  font-family: "Source Serif 4", serif;
+  letter-spacing: .2em;
+  font-size: 12px;
+  color: var(--shaft);
+}
+h1 {
+  font-family: "Source Serif 4", "Noto Serif SC", serif;
+  font-size: clamp(1.06rem, 3vw, 1.48rem);
+  font-weight: 600;
+  line-height: 1.34;
+  margin: 10px 0 10px;
+  padding-left: 8px;
+}
+.sub { font-size: 15.5px; }
+.when { font-size: 13.5px; color: #6a5c4c; margin: 8px 0 14px; }
+nav.toc {
+  background: var(--glove);
+  color: var(--stone);
+  padding: 12px 16px 10px;
+  margin: 8px 0 16px;
+  border-top: 4px solid var(--knob);
+}
+nav.toc h2 { font-family: "Source Serif 4", serif; font-size: 1.22rem; color: var(--knob); }
+nav.toc ol { margin: 6px 0 4px 1.3em; }
+nav.toc a { color: var(--stone); }
+.tap {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #efe8dc;
+  border-left: 6px solid var(--shaft);
+}
+.tap.dark {
+  background: var(--glove);
+  color: var(--stone);
+  border-left-color: var(--knob);
+}
+.tap.dark a { color: #d4c4a8; }
+.st {
+  font-family: "Source Serif 4", serif;
+  letter-spacing: .14em;
+  font-size: 12.5px;
+  color: var(--shaft);
+  margin-bottom: 4px;
+}
+.tap.dark .st { color: var(--knob); }
+h2 {
+  font-family: "Source Serif 4", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 4px 0 8px;
+}
+.tap ul { margin: 6px 0 4px 1.2em; }
+.tap li { margin: 8px 0; }
+a { color: #5a3010; }
+footer {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: #6a5c4c;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<article class="cane">
+  <p class="kicker">Spazierstock · Fuchs · VoMi</p>
+  <h1>战时手杖 —— 杖头上的国界：还能把体面拄上街的人，以及杖必须先卖掉才能买船票的人</h1>
+  <p class="sub">德国平民把空袭后的出门写成还能把银头杖点在石板上。同一根杖，对维也纳的律师齐格弗里德·福克斯，写成必须先卖掉才能凑出上海入境所需的四百美元。杖已经不是中性的。</p>
+  <p class="when">调研时间：2026-08-31 10:00 CST · 平民史系列第76期 · 保温瓶 / 空袭邻里的子角度</p>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#topic">本期主题</a></li>
+      <li><a href="#find">核心发现</a></li>
+      <li><a href="#walk">石板</a></li>
+      <li><a href="#sale">船票</a></li>
+      <li><a href="#now">2024：展柜故意不把手杖拿出来</a></li>
+      <li><a href="#src">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="tap" id="topic">
+    <p class="st">01 · 头</p>
+    <h2>本期主题</h2>
+    <p>本报告写杖头上的国界。保温瓶管热，手杖管还能不能把体面点在街上。《来源在说话》Dok. 16-032：1942 年 9 月 26 日弗兰克密令 f 项把手杖与雨伞、保温瓶、童车并列，交给民族德意志人中央处。那是营里收来的普通杖。维也纳还有另一条路：收藏家的杖，在出逃前被市立收藏以低价买走。</p>
+    <p>《标准报》：福克斯在逃往上海前，把 34 根手杖卖给市立收藏；归还继承人之后，维也纳博物馆又买了回来。《新闻报》：杖、纽扣、扇子不是克里姆特。1938 年他被禁止执业，1940 年出走上海。奥地利返还咨询委员会 2021 年 6 月 29 日决议：上海公共租界 1939 年 10 月起要求入境前存入至少 400 美元；福克斯 1940 年 12 月初离开维也纳，1946 年 7 月 25 日死在上海。2012 年一份较早决议曾写死于巴勒斯坦。以 2021 年决议与维也纳历史维基为准。生年月日也有分歧：决议写 1883 年 12 月 26 日，维基写 9 月 26 日。</p>
+  </section>
+
+  <section class="tap dark" id="find">
+    <p class="st">02 · 杆</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>德国石板把体面写成还能点一下杖头。</strong> 空袭后的碎砖路上，老人、伤残者和还想把出门写成“正常”的人，仍把杖点在地上。点的是被承认还属于自己的那一根。</li>
+      <li><strong>营里的杖走 VoMi，收藏家的杖走博物馆收购簿。</strong> 普通杖按密令交给民族德意志人。福克斯的 34 根杖按“自愿出售”进了市立收藏。德国失落艺术基金会 2024 年 9 月 24 日评论维也纳双展《掠夺》：福克斯在律所被关后，不得不一件件卖掉收藏换活命。馆长卡尔·瓦格纳曾向文物保护中央局申请“防止外流”的保全——《新闻报》写申请了出口禁令。两条路都把杖从原主人手里拿走。</li>
+      <li><strong>四百美元把杖写成船票。</strong> 2021 年决议：要进上海，须先把至少 400 美元打进欧洲难民援助委员会账户。卖杖不是雅好，是凑这笔钱。德国平民明天还把杖点上街。点已经不是中性的。</li>
+      <li><strong>展柜故意不把手杖拿出来。</strong> 策展人苏尔岑巴赫尔说：它已经不在了，所以我们也不拿出来给人看。维也纳博物馆在归还后又买回若干福克斯的杖。《新闻报》：馆方称已归还约 4,000 件，来源研究满二十五年。1998 年市历史博物馆馆长还曾称馆藏“几乎没有非法获得之物”。基金会评论记下他随后改口：“这座机构的清白，并不完全像我以为的那样。”</li>
+    </ul>
+  </section>
+
+  <section class="tap" id="walk">
+    <p class="st">03 · 街</p>
+    <h2>石板</h2>
+    <p>德国行人把灯火管制后的街道写成还能把杖点稳。点的是被承认有权把杖留在手里的人。墙那边的杖，有的进了 VoMi 仓库，有的进了博物馆收购簿。街已经不是中性的。</p>
+  </section>
+
+  <section class="tap dark" id="sale">
+    <p class="st">04 · 票</p>
+    <h2>船票</h2>
+    <p>12 月不是旅行季。12 月是把一种人的手杖写成另一种人博物馆里的廉价入藏。德国平民明天还把杖点上街。上已经不是中性的。</p>
+  </section>
+
+  <section class="tap" id="now">
+    <p class="st">05 · 2024</p>
+    <h2>2024：展柜故意不把手杖拿出来</h2>
+    <p>犹太广场把物装箱，卡尔广场再拆开。手杖在视频里一闪。基金会把展期写到 2024 年 10 月 27 日。问下一根杖头是谁的手，是把石板上的国界念出来。</p>
+  </section>
+
+  <section class="tap dark" id="src">
+    <p class="st">06 · 源</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>《来源在说话》Dok. 16-032：1942-09-26 弗兰克密令德文，f 项点名手杖交 VoMi。<br><a href="https://die-quellen-sprechen.de/16-032.html" target="_blank" rel="noopener">https://die-quellen-sprechen.de/16-032.html</a></li>
+      <li>《新闻报》：福克斯收藏含手杖；1938 年禁业、1940 年赴上海；维也纳博物馆买回若干杖；约 4,000 件已归还。<br><a href="https://www.diepresse.com/18535572/packe-packe-raubgut-wie-das-eigentum-von-wiener-juden-in-museen-landete" target="_blank" rel="noopener">https://www.diepresse.com/18535572/packe-packe-raubgut-wie-das-eigentum-von-wiener-juden-in-museen-landete</a></li>
+      <li>奥地利返还咨询委员会 2021-06-29：上海入境须预存至少 400 美元；1940 年 12 月初离维也纳；1946-07-25 卒于上海。<br><a href="https://www.provenienzforschung.gv.at/beiratsbeschluesse/Fuchs_Siegfried_2021-06-29.pdf" target="_blank" rel="noopener">https://www.provenienzforschung.gv.at/beiratsbeschluesse/Fuchs_Siegfried_2021-06-29.pdf</a></li>
+      <li>《标准报》：福克斯将 34 根手杖卖给市立收藏，归还后再由维也纳博物馆购回。<br><a href="https://www.derstandard.de/story/3000000200557/duerftige-bilanz-25-jahre-nach-washingtoner-erklaerung-zu-raubkunst" target="_blank" rel="noopener">https://www.derstandard.de/story/3000000200557/duerftige-bilanz-25-jahre-nach-washingtoner-erklaerung-zu-raubkunst</a></li>
+      <li>德国失落艺术基金会：2024-09-24 评维也纳双展《掠夺》；福克斯纽扣与日常物；1998 年馆长改口。<br><a href="https://kulturgutverluste.de/en/blog/theft" target="_blank" rel="noopener">https://kulturgutverluste.de/en/blog/theft</a></li>
+    </ol>
+  </section>
+
+  <section class="tap" id="lesson">
+    <p class="st">07 · 启示</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，手杖不只管走路，也管谁还能把体面点在石板上。谁的杖还能响，谁的杖必须先卖掉才能凑四百美元，写在同一根银头上。</p>
+    <p>第二，写德国平民空袭后把杖点上碎砖路，下一句写弗兰克密令把手杖交给 VoMi。再下一句写福克斯的 34 根杖进了博物馆收购簿。杖不是中性的。</p>
+    <p>第三，不要把“每家都有一根手杖”写成所有人共用一次出门。出门的下一句是：下一根从拍卖场或收购簿上来的杖，申请表上已经填过是不是配得上。</p>
+    <p>第四，2024 年维也纳故意不把手杖摆进展柜。拄杖之前，先问：这根银头，是从哪一位必须先卖掉收藏才能买船票的律师手里来的。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第76期 · 银头藤杖风 · 20260831_1000</footer>
+</article>
+</body>
+</html>
