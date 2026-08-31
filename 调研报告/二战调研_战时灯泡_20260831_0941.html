@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时灯泡 —— 钨丝上的国界：还能把灯拧进灯座的人，以及必须用干手去做灯的人</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Frosted glass bulb, tungsten filament glow, brass Edison screw */
+:root {
+  --room: #1a1208;
+  --glow: #f0b45a;
+  --glass: #f4ead4;
+  --brass: #b8863a;
+  --ink: #1c140c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(circle at 50% 8%, #3a2810 0, var(--room) 42%);
+  color: var(--glass);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.socket {
+  max-width: 820px;
+  margin: 36px auto 68px;
+  background: linear-gradient(180deg, #2a1e10 0, #1c140c 28%, #f4ead4 28%);
+  border-radius: 48% 48% 8px 8px / 18% 18% 8px 8px;
+  box-shadow:
+    0 0 80px rgba(240,180,90,.18),
+    inset 0 80px 80px rgba(240,180,90,.08);
+  padding: 48px 24px 28px;
+  position: relative;
+}
+.socket::before {
+  content: "";
+  position: absolute;
+  left: 50%; top: -14px;
+  transform: translateX(-50%);
+  width: 28px; height: 22px;
+  background: var(--brass);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 10px 0 #9a7028, 0 18px 0 var(--brass);
+}
+.kicker {
+  font-family: "IBM Plex Serif", serif;
+  letter-spacing: .2em;
+  font-size: 12px;
+  color: var(--brass);
+  text-align: center;
+}
+h1 {
+  font-family: "IBM Plex Serif", "Noto Serif SC", serif;
+  font-size: clamp(1.08rem, 3vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.34;
+  margin: 10px 0 10px;
+  text-align: center;
+  color: var(--glow);
+}
+.sub { font-size: 15.5px; text-align: center; color: #e8d8b8; }
+.when { font-size: 13.5px; color: #c4b090; margin: 8px 0 14px; text-align: center; }
+nav.toc {
+  background: #1c140c;
+  color: var(--glass);
+  padding: 12px 16px 10px;
+  margin: 8px 0 16px;
+  border-top: 4px solid var(--glow);
+}
+nav.toc h2 { font-family: "IBM Plex Serif", serif; font-size: 1.22rem; color: var(--glow); }
+nav.toc ol { margin: 6px 0 4px 1.3em; }
+nav.toc a { color: var(--glass); }
+.fil {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #f4ead4;
+  color: var(--ink);
+  border-left: 6px solid var(--brass);
+}
+.fil.dark {
+  background: #16100a;
+  color: var(--glass);
+  border-left-color: var(--glow);
+}
+.fil.dark a { color: var(--glow); }
+.st {
+  font-family: "IBM Plex Serif", serif;
+  letter-spacing: .14em;
+  font-size: 12.5px;
+  color: #8a5a18;
+  margin-bottom: 4px;
+}
+.fil.dark .st { color: var(--glow); }
+h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.32rem;
+  font-weight: 600;
+  margin: 4px 0 8px;
+}
+.fil ul { margin: 6px 0 4px 1.2em; }
+.fil li { margin: 8px 0; }
+a { color: #6a3a10; }
+footer {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: #8a7050;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<article class="socket">
+  <p class="kicker">Glühlampe · Osram · Plauen 1944</p>
+  <h1>战时灯泡 —— 钨丝上的国界：还能把灯拧进灯座的人，以及必须用干手去做灯的人</h1>
+  <p class="sub">德国平民把晚上写成还能拧亮一只灯。同一只灯，在普劳恩的半自动机上，由从奥斯维辛挑来的、被要求“手要干”的女囚做出来。钨丝已经不是中性的。</p>
+  <p class="when">调研时间：2026-08-31 09:41 CST · 平民史系列第74期 · 灯火管制 / 强制劳工日常的子角度</p>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#topic">本期主题</a></li>
+      <li><a href="#find">核心发现</a></li>
+      <li><a href="#socket">灯座</a></li>
+      <li><a href="#hands">干手</a></li>
+      <li><a href="#now">2026：灯还在，厂房不在了</a></li>
+      <li><a href="#src">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="fil" id="topic">
+    <p class="st">01 · 丝</p>
+    <h2>本期主题</h2>
+    <p>本报告写钨丝上的国界。遮光纸管窗缝，蜡烛管停电；灯泡管还能不能把晚上写成自己的。欧司朗把商标写成锇与钨。德文维基：因柏林空袭，1942 年起把被定为战争重要的生产东迁；普劳恩承接钼、钨前工序与多种灯泡。1944 年春公司与党卫队经济管理总局谈 500 名“囚犯”。员工先挑 250 名“年轻、健康、手要干”的女人，9 月中旬送到普劳恩，编进弗洛森比格的两个分营。18 日上工，十二小时班，半自动机上做各种灯型。</p>
+    <p>弗洛森比格纪念馆：工业厂分营 300 名来自奥斯维辛的女囚（逾 200 名波兰人，40 名俄国人，35 名意大利人，4 名南斯拉夫人，1 名克罗地亚人）；棉纺厂分营 200 人。维基把两营写成欧司朗谈下来的 500 人。数字有缝。缝已经不是中性的。</p>
+  </section>
+
+  <section class="fil dark" id="find">
+    <p class="st">02 · 泡</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>德国灯座把体面写成还能拧亮。</strong> 空袭后的厨房、黑纸后的客厅、早班前的过道，都靠一只还留在灯座里的泡。被承认有权自救的人，仍把灯拧紧。拧的是被承认还属于自己的那一只。</li>
+      <li><strong>做灯的手被写成必须先干。</strong> 维基：欧司朗要“手要干”的女人。潮湿的手碰钨丝与玻壳，灯就做不成。挑选标准把人体写成生产工具。弗洛森比格工业厂页：先因伤寒嫌疑隔离三周，再上机；住在停产纺织厂阁楼，厨房在地窖，铺位紧挨工位。</li>
+      <li><strong>德国工人把灯写成自己的班。</strong> 棉纺厂分营页：一次逃跑失败后，宿舍窗户被焊死。两名师傅帮过女囚，大多数欧司朗工人态度严厉、不友好。维基也写棉纺厂的欧司朗工人敌视她们。平民明天还把灯拧进自家灯座。座已经不是中性的。</li>
+      <li><strong>厂房可以拆，灯的来路拆不掉。</strong> 工业厂房屋 2022 年已不在，现址有一处说明牌；棉纺厂原址现为购物中心，纪念馆写“无纪念标志”。1945 年 4 月 11 日空袭摧毁棉纺厂；14 日撤营，女囚被驱往卡尔斯巴德方向，在塔豪附近被红军解放。柏林舍讷魏德强制劳动文献中心的巡回展《Forced to Work – Willing to Survive》2026 年 5 月 21 日至 10 月 25 日仍在展期。拧灯之前，先问钨丝是谁的手。</li>
+    </ul>
+  </section>
+
+  <section class="fil" id="socket">
+    <p class="st">03 · 座</p>
+    <h2>灯座</h2>
+    <p>德国主妇把灯火管制后的晚上写成还能留一只低瓦灯泡。留的是被承认有权把灯拧进灯座的人。墙那边的灯，是从奥斯维辛被挑来的手做出来的。座已经不是中性的。</p>
+  </section>
+
+  <section class="fil dark" id="hands">
+    <p class="st">04 · 手</p>
+    <h2>干手</h2>
+    <p>9 月不是换季。9 月是把一种人的手写成另一种人灯座上的短缺货。手要干，才能碰钨。德国平民明天还把灯拧亮。亮已经不是中性的。</p>
+  </section>
+
+  <section class="fil" id="now">
+    <p class="st">05 · 2026</p>
+    <h2>2026：灯还在，厂房不在了</h2>
+    <p>工业厂的楼 2022 年拆了，说明牌还在。棉纺厂变成购物中心，纪念馆写没有纪念标志。柏林强制劳动文献中心 2026 年夏天仍在用跨国传记讲强制劳动。拧下一只灯泡之前，先问：这只玻壳，是从哪一条十二小时班上的半自动机上下来的。</p>
+  </section>
+
+  <section class="fil dark" id="src">
+    <p class="st">06 · 源</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>德文维基百科《KZ-Außenlager Plauen》：欧司朗东迁、500 名囚犯谈判、“手要干”的挑选标准、十二小时班。<br><a href="https://de.wikipedia.org/wiki/KZ-Au%C3%9Fenlager_Plauen" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/KZ-Außenlager_Plauen</a></li>
+      <li>弗洛森比格纪念馆：普劳恩工业厂分营，300 名奥斯维辛女囚国籍构成；厂房 2022 年拆除。<br><a href="https://www.gedenkstaette-flossenbuerg.de/de/geschichte/aussenlager/plauen-industriewerke" target="_blank" rel="noopener">https://www.gedenkstaette-flossenbuerg.de/de/geschichte/aussenlager/plauen-industriewerke</a></li>
+      <li>弗洛森比格纪念馆：普劳恩棉纺厂分营，200 人；窗户焊死；欧司朗工人多数不友好；现为购物中心、无纪念标志。<br><a href="https://www.gedenkstaette-flossenbuerg.de/de/geschichte/aussenlager/plauen-baumwollspinnerei" target="_blank" rel="noopener">https://www.gedenkstaette-flossenbuerg.de/de/geschichte/aussenlager/plauen-baumwollspinnerei</a></li>
+      <li>德文维基百科《Osram》：1942 年起战争重要生产东迁；与党卫队设分营；弗里德里希斯海因厂亦用强制劳工与战俘。<br><a href="https://de.wikipedia.org/wiki/Osram" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Osram</a></li>
+      <li>柏林强制劳动文献中心：《Forced to Work – Willing to Survive》，2026-05-21 至 2026-10-25。<br><a href="https://www.ns-zwangsarbeit.de/ausstellungen/forced-to-work" target="_blank" rel="noopener">https://www.ns-zwangsarbeit.de/ausstellungen/forced-to-work</a></li>
+    </ol>
+  </section>
+
+  <section class="fil" id="lesson">
+    <p class="st">07 · 启示</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，灯泡不只管晚上，也管谁还能把亮写成自己的。谁的灯座还能拧，谁的手必须先干，写在同一条钨丝上。</p>
+    <p>第二，写德国平民空袭后拧亮一只低瓦灯，下一句写欧司朗向党卫队要 500 名囚犯。再下一句写挑选标准是“手要干”。再下一句写宿舍窗户被焊死。灯不是中性的。</p>
+    <p>第三，不要把“每家都有一只灯泡”写成所有人共用一次晚上。晚上的下一句是：下一只从半自动机上下来的灯，已经在十二小时班里被手碰过。</p>
+    <p>第四，2026 年柏林还在用传记讲强制劳动。普劳恩的厂房可以拆成购物中心。拧灯之前，先问：这只玻壳，是从哪一双被要求必须干燥的手上来的。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第74期 · 钨丝玻壳风 · 20260831_0941</footer>
+</article>
+</body>
+</html>
