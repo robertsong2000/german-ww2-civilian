@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战时闹钟 —— 铃锤上的国界：还能被铃叫醒去上工的人，以及闹钟必须先修给前线的人</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Brass double-bell, black enamel dial, radium numerals, winding key */
+:root {
+  --night: #1c1712;
+  --brass: #c9a24a;
+  --dial: #0e0d0b;
+  --lume: #c8d48a;
+  --wood: #4a3220;
+  --paper: #efe4cf;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(ellipse at 50% 0, #2a2218 0, var(--night) 55%);
+  color: var(--paper);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1.88;
+}
+.case {
+  max-width: 820px;
+  margin: 28px auto 68px;
+  background: #2a241c;
+  border: 8px solid var(--brass);
+  box-shadow:
+    inset 0 0 0 3px #1a1610,
+    0 24px 50px rgba(0,0,0,.45);
+  padding: 28px 24px 36px;
+  position: relative;
+}
+.case::before,
+.case::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  width: 52px; height: 28px;
+  border: 5px solid var(--brass);
+  border-bottom: 0;
+  border-radius: 52px 52px 0 0;
+  background: transparent;
+}
+.case::before { left: 28%; }
+.case::after { right: 28%; }
+.kicker {
+  font-family: Bitter, serif;
+  letter-spacing: .22em;
+  font-size: 12px;
+  color: var(--brass);
+  text-align: center;
+  margin-top: 8px;
+}
+h1 {
+  font-family: Bitter, "Noto Serif SC", serif;
+  font-size: clamp(1.08rem, 3vw, 1.52rem);
+  font-weight: 600;
+  line-height: 1.34;
+  margin: 10px 0 10px;
+  text-align: center;
+  color: var(--lume);
+}
+.sub { font-size: 15.5px; text-align: center; color: #d8ccb4; }
+.when { font-size: 13.5px; color: #a89880; margin: 8px 0 14px; text-align: center; }
+nav.toc {
+  background: var(--dial);
+  color: var(--lume);
+  padding: 12px 16px 10px;
+  margin: 8px 0 16px;
+  border-top: 4px solid var(--brass);
+}
+nav.toc h2 { font-family: Bitter, serif; font-size: 1.22rem; color: var(--brass); }
+nav.toc ol { margin: 6px 0 4px 1.3em; }
+nav.toc a { color: var(--lume); }
+.tick {
+  margin: 14px 0;
+  padding: 14px 16px 12px;
+  background: #efe4cf;
+  color: #1c1712;
+  border-left: 6px solid var(--brass);
+}
+.tick.night {
+  background: #16120e;
+  color: var(--paper);
+  border-left-color: var(--lume);
+}
+.tick.night a { color: var(--brass); }
+.st {
+  font-family: Bitter, serif;
+  letter-spacing: .14em;
+  font-size: 12.5px;
+  color: #8a6a28;
+  margin-bottom: 4px;
+}
+.tick.night .st { color: var(--lume); }
+h2 {
+  font-family: Bitter, serif;
+  font-size: 1.32rem;
+  font-weight: 600;
+  margin: 4px 0 8px;
+}
+.tick ul { margin: 6px 0 4px 1.2em; }
+.tick li { margin: 8px 0; }
+a { color: #6a4a14; }
+footer {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: #a89880;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<article class="case">
+  <p class="kicker">Wecker · 26. Sept. 1942 · Junghans</p>
+  <h1>战时闹钟 —— 铃锤上的国界：还能被铃叫醒去上工的人，以及闹钟必须先修给前线的人</h1>
+  <p class="sub">德国平民把早班写成还能被床头铃锤敲醒。同一份 1942 年 9 月 26 日密令，把闹钟写成必须先送进党卫队专修坊、再卖给前线的物件。铃已经不是中性的。</p>
+  <p class="when">调研时间：2026-08-31 09:31 CST · 平民史系列第73期 · 手表 / 配给种族边界的子角度</p>
+
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+      <li><a href="#topic">本期主题</a></li>
+      <li><a href="#find">核心发现</a></li>
+      <li><a href="#shift">早班</a></li>
+      <li><a href="#fuse">引信</a></li>
+      <li><a href="#now">2025–2026：展柜里的腕表，档案里的铃</a></li>
+      <li><a href="#src">来源</a></li>
+      <li><a href="#lesson">对历史学习者的启示</a></li>
+    </ol>
+  </nav>
+
+  <section class="tick" id="topic">
+    <p class="st">01 · 铃</p>
+    <h2>本期主题</h2>
+    <p>本报告写铃锤上的国界。手表写在手腕上，闹钟写在床头。WatchTime 2025 年 8 月 1 日回顾：容汉斯在 1900 年后一度是世界最大钟表厂，产量主要来自床头闹钟与怀表，而不是后来被展柜宠爱的腕表。同一只铃，对德国主妇和上早班的人写成还能把工厂、厨房、防空时间敲出来；对奥斯维辛与卢布林的被剥夺者，写成必须先修、先估、再卖给前线的“赃物、窝赃与囤积货”。</p>
+    <p>《来源在说话》德文原件（Dok. 16-032）：1942 年 9 月 26 日，奥古斯特·弗兰克密令第 1 条 c 项把“各类钟表、闹钟”与钢笔、剃须刀、手电筒并列，送进党卫队经济管理总局专修坊，然后尽快交给前线。金表另议。腕表限额每人最多一只。闹钟被单独点名。铃已经不是中性的。</p>
+  </section>
+
+  <section class="tick night" id="find">
+    <p class="st">02 · 锤</p>
+    <h2>核心发现</h2>
+    <ul>
+      <li><strong>德国床头把体面写成还能被铃叫醒。</strong> 早班、灯火管制、空袭后的出门，都靠一只还留在柜子上的机械铃。被承认有权自救的人，仍把发条拧紧。拧的是被承认还属于自己的那一只。</li>
+      <li><strong>闹钟被点名送去前线，而不是送去民族德意志人中央处。</strong> 童车、雨伞走 VoMi；闹钟与手表走专修坊和市场小卖部。英译 Wikisource 与德文原件一致：先修、先洗、先估价，再尽快交给前线。每人最多买一只表。金表由弗兰克本人处置。闹钟不进客厅再分配的那张单，进的是前线的抽屉。</li>
+      <li><strong>造铃的厂改去造引信。</strong> 德文维基《容汉斯》：战时施兰贝格防空洞车间里超过 9,000 人主要生产弹药引信与军用精密钟；容汉斯研制的引信还在普福尔茨海姆大规模代工。1942 年厂区安置 440 名“东方劳工”、332 名战俘与法国强制劳工、90 名波兰强制劳工。苏联与波兰工人住营房。德国平民明天还被自家的铃叫醒去上工。工已经不是中性的。</li>
+      <li><strong>展柜爱腕表，档案把闹钟写成赃物。</strong> 容汉斯阶梯楼博物馆 2025 年 7 月 25 日开幕《容汉斯腕表——钟表史里程碑》，约 370 件，馆长 Grünberger 策展。WatchTime：1900 年后的世界第一，主要靠床头闹钟。富特旺根德国钟表博物馆的 Mauthe 闹钟条目 2026 年 1 月 1 日仍在更新。问上一任铃是谁的床头，不是失礼，是把铃锤上的国界念出来。</li>
+    </ul>
+  </section>
+
+  <section class="tick" id="shift">
+    <p class="st">03 · 班</p>
+    <h2>早班</h2>
+    <p>德国工人把天亮写成还能被双铃敲醒。敲的是被承认有权把闹钟留在柜子上的人。墙那边带进营的钟表，命令里已经写成赃物、窝赃与囤积货。班已经不是中性的。</p>
+  </section>
+
+  <section class="tick night" id="fuse">
+    <p class="st">04 · 信</p>
+    <h2>引信</h2>
+    <p>床头铃差一两秒，工厂还能开门。引信差百分之一秒，炮弹才算完成。同一条黑森林的精密链条，把平民的起床时间与前线的爆炸时间焊在一起。焊已经不是中性的。</p>
+  </section>
+
+  <section class="tick" id="now">
+    <p class="st">05 · 2025–2026</p>
+    <h2>2025–2026：展柜里的腕表，档案里的铃</h2>
+    <p>阶梯楼博物馆把约 370 只腕表排进曾经做表的车间。德文钟表门户写地址为 Geißhaldenstraße 49，WatchTime 写 Lauterbacher Str. 68，门牌有分歧，展本身能核验。富特旺根馆 2026 年 1 月 1 日仍维护一只约 1910 年的 Mauthe 闹钟卡片。展柜把设计史写得很满。下一句写：1942 年 9 月 26 日，闹钟被点名送去前线。</p>
+  </section>
+
+  <section class="tick night" id="src">
+    <p class="st">06 · 源</p>
+    <h2>来源</h2>
+    <p>下列网址均经本周期检索核验，不编造链接。</p>
+    <ol>
+      <li>《来源在说话》Dok. 16-032：1942-09-26 弗兰克密令德文，c 项点名“各类钟表、闹钟”。<br><a href="https://die-quellen-sprechen.de/16-032.html" target="_blank" rel="noopener">https://die-quellen-sprechen.de/16-032.html</a></li>
+      <li>Wikisource 英译同一密令（纽伦堡 NO-724）。<br><a href="https://en.wikisource.org/wiki/August_Frank_memorandum" target="_blank" rel="noopener">https://en.wikisource.org/wiki/August_Frank_memorandum</a></li>
+      <li>英文维基百科《August Frank memorandum》背景与波尔审判引用。<br><a href="https://en.wikipedia.org/wiki/August_Frank_memorandum" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/August_Frank_memorandum</a></li>
+      <li>德文维基百科《Junghans》：战时逾 9,000 人产引信；1942 年强制劳工数字。<br><a href="https://de.wikipedia.org/wiki/Junghans" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Junghans</a></li>
+      <li>Deutsches Uhrenportal：2025-07-25 阶梯楼博物馆腕表特展开幕，约 370 件。<br><a href="https://www.deutsches-uhrenportal.de/2025/07/29/zeitreise-am-handgelenk-junghans-eroeffnet-sonderausstellung-meilensteine-der-uhrengeschichte/" target="_blank" rel="noopener">https://www.deutsches-uhrenportal.de/2025/07/29/zeitreise-am-handgelenk-junghans-eroeffnet-sonderausstellung-meilensteine-der-uhrengeschichte/</a></li>
+      <li>WatchTime，2025-08-01：容汉斯世界第一产量主要来自床头闹钟与怀表；特展地址与 370 件。<br><a href="https://www.watchtime.net/brands/deutsche-uhrenhersteller/sonderausstellung-junghans-zeigt-die-meilensteine-seiner-historischen-armbanduhren" target="_blank" rel="noopener">https://www.watchtime.net/brands/deutsche-uhrenhersteller/sonderausstellung-junghans-zeigt-die-meilensteine-seiner-historischen-armbanduhren</a></li>
+      <li>德国钟表博物馆（富特旺根）Mauthe 闹钟，约 1910；条目最近更新 2026-01-01。<br><a href="https://nat.museum-digital.de/object/861440" target="_blank" rel="noopener">https://nat.museum-digital.de/object/861440</a></li>
+    </ol>
+  </section>
+
+  <section class="tick" id="lesson">
+    <p class="st">07 · 启示</p>
+    <h2>对历史学习者的启示</h2>
+    <p>第一，闹钟不只管起床，也管谁还能把时间写成自己的。谁的铃还能响，谁的铃必须先修给前线，写在同一条 c 项里。</p>
+    <p>第二，写德国平民被床头铃敲醒去上工，下一句写弗兰克密令把闹钟改名为囤积货。再下一句写容汉斯车间改产引信，东方劳工住营房。铃不是中性的。</p>
+    <p>第三，不要把“每家都有一只闹钟”写成所有人共用一次早晨。早晨的下一句是：下一只从市场小卖部买来的铃，已经在专修坊里洗过。</p>
+    <p>第四，2025 年的腕表特展把设计史排得很满。拧发条之前，先问：这只双铃，是从哪一张必须立即腾空的床头柜上来的。</p>
+  </section>
+  <footer>二战德国平民史调研 · 系列第73期 · 铃锤铜壳风 · 20260831_0931</footer>
+</article>
+</body>
+</html>
